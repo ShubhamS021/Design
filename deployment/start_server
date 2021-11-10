@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /home/ubuntu/design
+pm2 start pm2_config.json

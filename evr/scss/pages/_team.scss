@@ -1,0 +1,261 @@
+.page-team {
+  .section-home-contact {
+    .contact-panel {
+      background-color: $ui-yellow;
+    }
+  }
+}
+
+.banner-team {
+  max-width: 1440px;
+
+  .media {
+    @include media-breakpoint-up(lg) {
+      display: flex;
+    }
+  }
+
+  .media-body {
+    flex: 1;
+    position: relative;
+    padding: 100px 24px 24px;
+
+    @include media-breakpoint-up(lg) {
+      padding: 100px 100px 60px;
+    }
+  }
+
+  h1 {
+    font-size: 48px;
+    font-family: $ff-secondary;
+    color: $color-tx-01;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 56px;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+    font-size: 18px;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 23px;
+    }
+  }
+
+  .media-right {
+    padding: 48px 24px;
+    position: relative;
+    background-color: $ui-yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include media-breakpoint-up(lg) {
+      padding: 64px;
+      width: 460px;
+    }
+
+    a {
+      font-family: $ff-secondary;
+      font-weight: 700;
+      font-size: 15px;
+      color: #fff;
+      position: relative;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      + a {
+        margin-top: 30px;
+
+        @include media-breakpoint-up(lg) {
+          margin-top: 50px;
+        }
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        height: 2px;
+        background-color: #fff;
+        border-radius: 2px;
+        display: inline-block;
+      }
+
+      &::before {
+        width: 40px;
+        margin-right: 10px;
+      }
+
+      &::after {
+        width: 12px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.section-team {
+  .row {
+    margin-left: -15px;
+    margin-right: -15px;
+    justify-content: center;
+
+    > div {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .media {
+    position: relative;
+    padding: 20px 0;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      padding: 30px 0;
+    }
+
+    + .media { margin-top: -1px; }
+  }
+
+  .media-img {
+    display: block;
+    width: 100px;
+    height: auto;
+    border-radius: 4px;
+
+    @include media-breakpoint-up(lg) {
+      width: 270px;
+      height: 300px;
+      flex-shrink: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      object-fit: cover;
+    }
+  }
+
+  .media-body {
+    padding-top: 25px;
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 0;
+      padding-left: 30px;
+      flex: 1;
+    }
+  }
+
+  .media-team-name {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: $ff-secondary;
+    color: $color-tx-01;
+    margin-bottom: 3px;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+  }
+
+  .media-team-position {
+    font-size: 18px;
+    color: rgba($body-color, .4);
+    margin-bottom: 15px;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .media-team-info { font-size: 18px; }
+
+  .link {
+    display: block;
+    color: $ui-yellow;
+    font-size: 24px;
+    line-height: 1;
+  }
+}
+
+.card-team {
+  background-color: rgba($ui-yellow, .08);
+  border-color: rgba($ui-yellow, .1);
+  height: 100%;
+
+  .card-body { padding: 40px 25px; }
+
+  .card-img {
+    display: block;
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin: 0 auto 25px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .card-team-name {
+    text-align: center;
+    color: $color-tx-01;
+    font-family: $ff-secondary;
+    font-size: 24px;
+    font-weight: 700;
+
+    a {
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        color: inherit;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .card-team-position {
+    font-size: 16px;
+    margin-bottom: 0;
+    color: rgba($body-color, .8);
+    text-align: center;
+
+    @media (min-width: 1440px) {
+      font-size: 18px;
+    }
+  }
+}
+
+.modal-team {
+  .modal-content {
+    border-width: 0;
+    position: relative;
+    @include shadow-diffuse($gray-900);
+  }
+
+  .btn-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .modal-body {
+    padding: 80px 40px 40px;
+    font-size: 18px;
+
+    p:last-child { margin-bottom: 0; }
+  }
+}

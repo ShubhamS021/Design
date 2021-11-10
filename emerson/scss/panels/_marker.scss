@@ -1,0 +1,33 @@
+
+.marker {
+  width: 380px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  border-radius: 4px;
+  background-image: linear-gradient(to right, #beb2ab, #6a463a, #545754, #563328, #463a25);
+  position: relative;
+  opacity: .85;
+}
+
+.marker::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 20px;
+  border-top: 10px solid #6a463a;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.marker p {
+  margin-bottom: 0;
+  max-width: 60%;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: .5px;
+}

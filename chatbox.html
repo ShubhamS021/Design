@@ -1,0 +1,713 @@
+<div id="qcMinGroup" class="qc-min-group">
+  <a id="qcLink" href="" class="qc-link">
+    <i class="ri-question-answer-fill"></i>
+    <span class="unread-count">2</span>
+  </a>
+  <div data-id="1" class="qc-min-item blinking">
+    <div class="avatar online"><i>21</i></div>
+    <span class="unread-count">2</span>
+    <a href="" class="qc-close"></a>
+  </div>
+</div><!-- qc-min-group -->
+
+<div id="qcGroup" class="qc-group">
+  <div id="qcPanel" class="qc-panel d-none">
+    <div class="qc-panel-header">
+      <nav id="qcNav" class="nav">
+        <a href="#qcCallList" class="nav-link active">Calls</a>
+        <a href="#qcChatList" class="nav-link">Chat<span>2</span></a>
+        <a href="#qcSmsList" class="nav-link">SMS<span>1</span></a>
+      </nav>
+      <div id="availableChat" data-toggle="tooltip" data-title="Available to chat" class="mg-r-10 d-none"><div class="form-switcher inactive"></div></div>
+      <a id="qcPanelClose" href="" class="qc-header-link qc-link-close"><i class="ri-close-fill"></i></a>
+    </div><!-- qc-panel-header -->
+
+    <div id="qcCallSubHeader" class="qc-panel-subheader">
+      <div class="qc-search">
+        <i class="ri-search-line"></i>
+        <input type="text" class="form-control" placeholder="Search my calls">
+      </div><!-- qc-search -->
+      <div class="dropdown">
+        <a href="" class="btn btn-icon" data-toggle="dropdown"><i class="ri-list-settings-line"></i></a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a href="#" class="dropdown-item active"><i class="ri-phone-fill"></i> My Calls</a>
+          <a href="#" class="dropdown-item"><i class="ri-phone-fill"></i> All Calls</a>
+          <a href="#" class="dropdown-item"><i class="ri-user-fill"></i> Prospects</a>
+          <a href="#" class="dropdown-item"><i class="ri-home-7-fill"></i> Residents</a>
+          <a href="#" class="dropdown-item"><i class="ri-user-fill"></i> Vendors</a>
+          <a href="#" class="dropdown-item"><i class="ri-home-7-fill"></i> Blocked</a>
+        </div>
+      </div><!-- dropdown -->
+    </div><!-- qc-panel-subheader -->
+
+    <div id="qcChatSubHeader" class="qc-panel-subheader d-none">
+      <div class="qc-search">
+        <i class="ri-search-line"></i>
+        <input type="text" class="form-control" placeholder="Filter prospects">
+      </div><!-- qc-search -->
+      <div class="dropdown">
+        <a href="" class="btn btn-icon" data-toggle="dropdown"><i class="ri-list-settings-line"></i></a>
+        <div id="chatFilterOption" class="dropdown-menu dropdown-menu-right">
+          <a href="" data-type="active" class="dropdown-item active"><i class="ri-message-2-fill"></i> Active Prospects</a>
+          <a href="" data-type="my" class="dropdown-item"><i class="ri-chat-4-fill"></i> My Chats</a>
+          <a href="" data-type="qc-list-item" class="dropdown-item"><i class="ri-question-answer-fill"></i> All Prospects</a>
+          <a href="" data-type="archived" class="dropdown-item"><i class="ri-chat-download-fill"></i> Archived Prospects</a>
+        </div>
+      </div><!-- dropdown -->
+    </div><!-- qc-panel-subheader -->
+    <div class="qc-panel-body">
+      <ul id="qcChatListSkeleton" class="qc-list qc-list-skeleton active">
+        <li class="qc-list-item">
+          <div class="skeleton-avatar"></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6><div class="skeleton-text wd-100"></div></h6>
+              <div class="skeleton-text xs wd-40"></div>
+            </div><!-- list-item-header -->
+            <div class="skeleton-text sm wd-100p"></div>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li class="qc-list-item">
+          <div class="skeleton-avatar"></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6><div class="skeleton-text wd-100"></div></h6>
+              <div class="skeleton-text xs wd-40"></div>
+            </div><!-- list-item-header -->
+            <div class="skeleton-text sm wd-100p"></div>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li class="qc-list-item">
+          <div class="skeleton-avatar"></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6><div class="skeleton-text wd-100"></div></h6>
+              <div class="skeleton-text xs wd-40"></div>
+            </div><!-- list-item-header -->
+            <div class="skeleton-text sm wd-100p"></div>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li class="qc-list-item">
+          <div class="skeleton-avatar"></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6><div class="skeleton-text wd-100"></div></h6>
+              <div class="skeleton-text xs wd-40"></div>
+            </div><!-- list-item-header -->
+            <div class="skeleton-text sm wd-100p"></div>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li class="qc-list-item">
+          <div class="skeleton-avatar"></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6><div class="skeleton-text wd-100"></div></h6>
+              <div class="skeleton-text xs wd-40"></div>
+            </div><!-- list-item-header -->
+            <div class="skeleton-text sm wd-100p"></div>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li class="qc-list-item">
+          <div class="skeleton-avatar"></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6><div class="skeleton-text wd-100"></div></h6>
+              <div class="skeleton-text xs wd-40"></div>
+            </div><!-- list-item-header -->
+            <div class="skeleton-text sm wd-100p"></div>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li class="qc-list-item">
+          <div class="skeleton-avatar"></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6><div class="skeleton-text wd-100"></div></h6>
+              <div class="skeleton-text xs wd-40"></div>
+            </div><!-- list-item-header -->
+            <div class="skeleton-text sm wd-100p"></div>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li class="qc-list-item">
+          <div class="skeleton-avatar"></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6><div class="skeleton-text wd-100"></div></h6>
+              <div class="skeleton-text xs wd-40"></div>
+            </div><!-- list-item-header -->
+            <div class="skeleton-text sm wd-100p"></div>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li class="qc-list-item">
+          <div class="skeleton-avatar"></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6><div class="skeleton-text wd-100"></div></h6>
+              <div class="skeleton-text xs wd-40"></div>
+            </div><!-- list-item-header -->
+            <div class="skeleton-text sm wd-100p"></div>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li class="qc-list-item">
+          <div class="skeleton-avatar"></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6><div class="skeleton-text wd-100"></div></h6>
+              <div class="skeleton-text xs wd-40"></div>
+            </div><!-- list-item-header -->
+            <div class="skeleton-text sm wd-100p"></div>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li class="qc-list-item">
+          <div class="skeleton-avatar"></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6><div class="skeleton-text wd-100"></div></h6>
+              <div class="skeleton-text xs wd-40"></div>
+            </div><!-- list-item-header -->
+            <div class="skeleton-text sm wd-100p"></div>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+      </ul>
+
+      <ul id="qcCallList" class="qc-list d-none">
+        <li class="qc-list-item qc-list-call">
+          <div class="avatar offline"><span>gm</span></div>
+          <div class="list-item-body">
+            <div class="list-item-header mg-b-0-f">
+              <h6>George McGovern</h6>
+              <div class="call-playable">
+                <a href="" class="call-play">
+                  <i class="ri-play-circle-fill"></i>
+                  <i class="ri-pause-circle-line"></i>
+                </a>
+                <div class="time time-end">0:48</div>
+              </div><!-- call-playable -->
+            </div><!-- list-item-header -->
+            <span class="text-xs text-muted">Jan 20, 2021 09:30am</span>
+          </div><!-- list-item-body -->
+          <a href="" class="btn btn-icon btn-primary mg-l-10"><i class="ri-phone-fill"></i></a>
+        </li><!-- qc-list-item -->
+        <li data-id="14" class="qc-list-item qc-list-call">
+          <div class="avatar online"><span>al</span></div>
+          <div class="list-item-body">
+            <div class="list-item-header mg-b-0-f">
+              <h6>Alina Loman</h6>
+              <div class="call-playable">
+                <a href="" class="call-play">
+                  <i class="ri-play-circle-fill"></i>
+                  <i class="ri-pause-circle-line"></i>
+                </a>
+                <div class="time time-end">1:05</div>
+              </div><!-- call-playable -->
+            </div><!-- list-item-header -->
+            <span class="text-xs text-muted">Jan 18, 2021 11:00am</span>
+          </div><!-- list-item-body -->
+          <a href="" class="btn btn-icon btn-primary mg-l-10"><i class="ri-phone-fill"></i></a>
+        </li><!-- qc-list-item -->
+        <li data-id="15" class="qc-list-item qc-list-call">
+          <div class="avatar bg-dark online"><span>pa</span></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6>Property Agent</h6>
+              <div class="call-playable">
+                <a href="" class="call-play">
+                  <i class="ri-play-circle-fill"></i>
+                  <i class="ri-pause-circle-line"></i>
+                </a>
+                <div class="time time-end">0:21</div>
+              </div><!-- call-playable -->
+            </div><!-- list-item-header -->
+            <span class="text-xs text-muted">Jan 18, 2021 02:15am</span>
+          </div><!-- list-item-body -->
+          <a href="" class="btn btn-icon btn-primary mg-l-10"><i class="ri-phone-fill"></i></a>
+        </li><!-- qc-list-item -->
+      </ul><!-- qc-list -->
+      <ul id="qcChatList" class="qc-list d-none">
+        <li data-id="0" class="qc-list-item active new">
+          <div class="avatar offline"><i>22</i></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6>Prospect#22</h6>
+              <small>10:30PM</small>
+            </div><!-- list-item-header -->
+            <p>Sure, I can help get you check prices</p>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li data-id="1" class="qc-list-item active new">
+          <div class="avatar online"><i>21</i></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6>Prospect#21</h6>
+              <span class="mute-indicator"><i class="ri-notification-off-fill"></i></span>
+              <small>06:15PM</small>
+            </div><!-- list-item-header -->
+            <p>Nemo enim ipsam volup tatem quia voluptas</p>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li data-id="2" class="qc-list-item active qc-join">
+          <div class="avatar bg-dark online"><span>gw</span></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6>George Washington</h6>
+              <small>05:40PM</small>
+            </div><!-- list-item-header -->
+            <p>It is a long established fact that a reader will be</p>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li data-id="3" class="qc-list-item active new">
+          <div class="avatar bg-indigo offline"><span>te</span></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6>Thomas Edison</h6>
+              <small>04:00PM</small>
+            </div><!-- list-item-header -->
+            <p>There are many variations of passages of lorem ipsum availab</p>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li data-id="4" class="qc-list-item active">
+          <div class="avatar online"><i>20</i></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6>Prospect#20</h6>
+              <span class="mute-indicator"><i class="ri-notification-off-fill"></i></span>
+              <small>03:30PM</small>
+            </div><!-- list-item-header -->
+            <p>Nemo enim ipsam volup tatem quia voluptas</p>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li data-id="5" class="qc-list-item active qc-join">
+          <div class="avatar bg-teal offline"><span>ag</span></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6>Alex Gonzaga</h6>
+              <span class="mute-indicator"><i class="ri-notification-off-fill"></i></span>
+              <small>02:20PM</small>
+            </div><!-- list-item-header -->
+            <p>All the lorem ipsum generators on the internet tend to repeat</p>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li data-id="6" class="qc-list-item active">
+          <div class="avatar online"><i>18</i></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6>Prospect#18</h6>
+              <small>11:10AM</small>
+            </div><!-- list-item-header -->
+            <p>Nemo enim ipsam volup tatem quia voluptas</p>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li data-id="7" class="qc-list-item active qc-join">
+          <div class="avatar offline"><i>17</i></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6>Prospect#17</h6>
+              <small>10:38AM</small>
+            </div><!-- list-item-header -->
+            <p>Nemo enim ipsam voluptatem quia voluptas sit</p>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li data-id="8" class="qc-list-item active qc-join">
+          <div class="avatar bg-purple offline"><span>da</span></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6>Dyanne Aceron</h6>
+              <span class="mute-indicator"><i class="ri-notification-off-fill"></i></span>
+              <small>Oct 28</small>
+            </div><!-- list-item-header -->
+            <p>Quae ab illo inventore veritatis et quasi architecto beatae</p>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li data-id="11" class="qc-list-item my">
+          <div class="avatar bg-warning offline"><span>ac</span></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6>Annie Christensen</h6>
+              <small>Oct 28</small>
+            </div><!-- list-item-header -->
+            <p>Quae ab illo inventore veritatis et quasi architecto beatae</p>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li data-id="12" class="qc-list-item archived">
+          <div class="avatar bg-danger online"><span>ob</span></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6>Owen Bongcaras</h6>
+              <small>Oct 27</small>
+            </div><!-- list-item-header -->
+            <p>Quae ab illo inventore veritatis et quasi architecto beatae</p>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+      </ul><!-- qc-list -->
+      <ul id="qcSmsList" class="qc-list d-none">
+        <li data-id="9" class="qc-list-item new">
+          <div class="avatar bg-primary online"><span>rl</span></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6>Reynante Labares</h6>
+              <small>05:40PM</small>
+            </div><!-- list-item-header -->
+            <p>It is a long established fact that a reader will be</p>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+        <li data-id="10" class="qc-list-item">
+          <div class="avatar bg-pink online"><span>eo</span></div>
+          <div class="list-item-body">
+            <div class="list-item-header">
+              <h6>Elson Ocaba</h6>
+              <small>04:00PM</small>
+            </div><!-- list-item-header -->
+            <p>There are many variations of passages of lorem ipsum availab</p>
+          </div><!-- list-item-body -->
+        </li><!-- qc-list-item -->
+      </ul><!-- qc-list -->
+    </div><!-- qc-panel-body -->
+  </div><!-- qc-panel -->
+
+  <div id="qcItemGroup" class="d-flex align-items-end flex-row-reverse">
+    <div class="qc-item">
+      <div class="qc-item-header">
+        <div class="media">
+          <div class="avatar"></div>
+          <div class="media-body">
+            <h6 class="mg-b-0"></h6>
+            <span></span>
+          </div><!-- media-body -->
+          <div class="dropdown">
+            <a href="" class="qc-header-link" data-toggle="dropdown" data-display="static"><i class="ri-more-2-fill"></i></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="" class="dropdown-item"><i class="ri-user-2-fill"></i> Link to new Lead</a>
+              <a href="" class="dropdown-item"><i class="ri-user-2-fill"></i> Link to existing Lead</a>
+              <a href="" class="dropdown-item"><i class="ri-chat-download-fill"></i> Archive Chat</a>
+              <a href="" class="dropdown-item"><i class="ri-notification-off-fill"></i> Mute Chat</a>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+          <a href="" class="qc-header-link qc-link-close"><i class="ri-close-fill"></i></a>
+        </div><!-- media -->
+      </div><!-- qc-item-header -->
+      <div class="qc-item-body">
+        <ul>
+          <li>
+            <div class="avatar"></div>
+            <div class="qc-item-msg">
+              <p></p>
+              <small></small>
+            </div>
+          </li>
+        </ul>
+      </div><!-- qc-item-body -->
+      <div class="qc-item-footer">
+        <div class="msg-input">
+          <input type="text" class="form-control" placeholder="Write a chat message">
+          <a href="" class="msg-send"><i class="ri-send-plane-fill"></i></a>
+          <div class="dropdown dropup">
+            <a href="" class="dropdown-link"><i class="ri-add-fill"></i></a>
+          </div><!-- dropdown -->
+        </div><!-- msg-input -->
+        <button class="btn btn-primary btn-block btn-join">Join</button>
+      </div><!-- qc-item-footer -->
+    </div><!-- qc-item -->
+    <div id="callLog" class="qc-item qc-item-call d-none">
+      <div class="qc-item-header">
+        <div class="media">
+          <div class="avatar"><span></span></div>
+          <div class="media-body">
+            <h6 class="mg-b-0"></h6>
+            <span>Prospect</span>
+          </div><!-- media-body -->
+
+          <a href="" class="qc-header-link qc-link-close"><i class="ri-close-fill"></i></a>
+        </div><!-- media -->
+      </div><!-- qc-item-header -->
+      <div class="qc-item-body pd-5">
+        <a href="" class="btn btn-primary btn-call justify-content-center mg-x-5 mg-t-5">Call</a>
+        <ul class="qc-call-list">
+          <li class="call-item">
+            <div class="avatar"><span>gm</span></div>
+            <div class="call-item-body">
+              <div>
+                <h6>Inbound</h6>
+                <div class="call-playable">
+                  <a href="" class="call-play">
+                    <i class="ri-play-circle-fill"></i>
+                    <i class="ri-pause-circle-line"></i>
+                  </a>
+                  <div class="time time-end">2:23</div>
+                </div><!-- call-playable -->
+              </div>
+              <span>March 09, 2021 3:20am</span>
+            </div><!-- media-body -->
+          </li>
+          <li class="call-item">
+            <div class="avatar bg-dark"><span>pa</span></div>
+            <div class="call-item-body">
+              <div>
+                <h6>Outbound</h6>
+                <div class="call-playable">
+                  <a href="" class="call-play">
+                    <i class="ri-play-circle-fill"></i>
+                    <i class="ri-pause-circle-line"></i>
+                  </a>
+                  <div class="time time-end">4:12</div>
+                </div><!-- call-playable -->
+              </div>
+              <span>March 07, 2021 10:00am</span>
+            </div><!-- media-body -->
+          </li>
+          <li class="call-item">
+            <div class="avatar"><span>gm</span></div>
+            <div class="call-item-body">
+              <div>
+                <h6>Inbound</h6>
+                <div class="call-playable">
+                  <a href="" class="call-play">
+                    <i class="ri-play-circle-fill"></i>
+                    <i class="ri-pause-circle-line"></i>
+                  </a>
+                  <div class="time time-end">2:23</div>
+                </div><!-- call-playable -->
+              </div>
+              <span>March 07, 2021 5:10am</span>
+            </div><!-- media-body -->
+          </li>
+        </ul>
+      </div><!-- qc-item-body -->
+      <div class="qc-item-footer">
+        <div class="msg-input">
+          <input type="text" class="form-control" placeholder="Write a chat message">
+          <a href="" class="msg-send"><i class="ri-send-plane-fill"></i></a>
+          <div class="dropdown dropup">
+            <a href="" class="dropdown-link"><i class="ri-add-fill"></i></a>
+          </div><!-- dropdown -->
+        </div><!-- msg-input -->
+        <button class="btn btn-primary btn-block btn-join">Join</button>
+      </div><!-- qc-item-footer -->
+    </div><!-- qc-item -->
+  </div>
+</div><!-- qc-group -->
+<script>
+  $(document).ready(function() {
+    'use strict'
+
+    const qc = new PerfectScrollbar('.qc-panel-body ', {
+      suppressScrollX: true
+    });
+
+    // open chat panel
+    $('#qcLink').on('click', function(e){
+      e.preventDefault();
+      $('#qcPanel').removeClass('d-none');
+
+      setTimeout(function(){
+        $('#qcChatListSkeleton').addClass('d-none');
+        $('#qcCallList').removeClass('d-none');
+        qc.update();
+      }, 1000);
+    });
+
+    $('#availableChat').tooltip();
+
+    // close chat panel
+    $('#qcPanelClose').on('click', function(e){
+      e.preventDefault();
+
+      $('#qcPanel').addClass('d-none');
+    });
+
+    // chat nav
+    $('#qcNav .nav-link').on('click', function(e){
+      e.preventDefault();
+      var target = $(this).attr('href');
+
+      $(this).addClass('active').siblings().removeClass('active');
+
+      $('#availableChat').toggleClass('d-none', target!='#qcChatList');
+
+      $('#qcChatListSkeleton').removeClass('d-none active my archived').toggleClass('sms', target === '#qcSmsList');
+      $('#qcChatListSkeleton').siblings('.qc-list').addClass('d-none');
+      qc.update();
+
+      setTimeout(function(){
+        $(target).removeClass('d-none').siblings('.qc-list').addClass('d-none');
+        if(target === '#qcCallList') {
+          $('#qcCallSubHeader').removeClass('d-none');
+          $('#qcChatSubHeader').addClass('d-none');
+        } else {
+          $('#qcCallSubHeader').addClass('d-none');
+          $('#qcChatSubHeader').removeClass('d-none');
+          $('#qcChatSubHeader .dropdown').toggleClass('d-none', (target=='#qcSmsList'));
+        }
+        qc.update();
+      }, 1000);
+    });
+
+    // chat filter option
+    $('#chatFilterOption .dropdown-item').on('click', function(e) {
+      e.preventDefault();
+
+      var t = $(this);
+      var d = t.attr('data-type');
+      var c = $('#qcChatList li.'+d).length;
+      console.log(c);
+
+      $('#qcChatListSkeleton').removeClass('d-none active my archived').toggleClass(d, d!=='qc-list-item');
+      $('#qcChatList').addClass('d-none');
+      qc.update();
+
+      setTimeout(function(){
+        $('#qcChatListSkeleton').addClass('d-none');
+        $('#qcChatList').removeClass('d-none');
+
+        $('#qcChatList li').each(function(){
+          $(this).toggleClass('d-none', !$(this).hasClass(d));
+        });
+
+        t.addClass('active').siblings().removeClass('active');
+        qc.update();
+      }, 1000);
+    });
+
+    // chat search
+    $('.qc-search .form-control').on('focusin focusout', function(e){
+      $(this).parent().toggleClass('onfocus', e.type === 'focusin');
+    });
+
+
+    // open chat
+    $('.qc-list-item').on('click', function(e){
+      e.preventDefault();
+
+      if($(this).hasClass('qc-list-call')) {
+        var ct = $(this).find('.list-item-header h6').text();
+        var av = $(this).find('.avatar span').text();
+
+        if($('#callLog').hasClass('d-none')) {
+          $('#callLog').removeClass('d-none');
+          $('#callLog .media-body h6').text(ct);
+          $('#callLog .qc-item-header .avatar span').text(av);
+        } else {
+          var an = $('#callLog').clone().appendTo('#qcItemGroup').removeAttr('id');
+          an.find('.media-body h6').text(ct);
+          an.find('.qc-item-header .avatar span').text(av);
+        }
+
+
+
+      } else {
+        var qc = $(this);
+        var did = qc.attr('data-id');
+
+        qc.removeClass('new').addClass('selected');
+        qc.siblings().removeClass('selected');
+
+        $.getJSON('../assets/data/chat.json', function(data) {
+          if(!$('.qc-item[data-id="'+did+'"]').length) {
+            var ci = $('#qcItemGroup .qc-item:first-child').clone().attr('data-id',did);
+            var ib = ci.find('.qc-item-body');
+            var dd = ci.find('.dropdown');
+
+            if(qc.hasClass('qc-join')) {
+              ci.addClass('qc-join');
+            }
+
+            dd.on('show.bs.dropdown', function(){
+              dd.closest('.qc-item').removeClass('minimize');
+            });
+
+            const qci = new PerfectScrollbar(ib[0], {
+              suppressScrollX: true,
+              wheelPropagation: true
+            });
+
+            $(ib).on('ps-scroll-y', function(){
+              qci.update();
+            });
+
+            if(qc.closest('#qcSmsList').length) {
+              ci.addClass('qc-item-sms');
+              ci.find('.qc-item-footer input').attr('placeholder', 'Write an SMS message');
+            }
+
+            if(typeof data[did].initial === 'undefined') {
+              ci.find('.qc-item-header .avatar').html('<i>'+data[did].id+'</i>');
+            } else {
+              ci.find('.qc-item-header .avatar').html('<span>'+data[did].initial+'</span>');
+            }
+
+            ci.find('.qc-item-header .avatar').attr('class', qc.find('.avatar').attr('class'));
+            ci.find('.media-body > h6').text(data[did].name);
+            ci.find('.media-body span').text(data[did].page);
+
+            $.each(data[did].chat, function(i,v){
+              var ms = ci.find('ul li:first-child').clone().appendTo(ci.find('ul'));
+
+              if(v.you === 'yes') {
+                ms.find('.avatar').addClass('bg-dark').html('<span>m</span>');
+                ms.addClass('you');
+              } else {
+                ms.find('.avatar').html(ci.find('.qc-item-header .avatar').html());
+                ms.find('.avatar').attr('class', ci.find('.qc-item-header .avatar').attr('class'));
+              }
+
+              ms.find('p').text(v.msg);
+              ms.find('small').text(v.time);
+            });
+
+            var qcl = $('#qcItemGroup .qc-item').length;
+            if(qcl > 3) {
+              var qcm = $('#qcItemGroup .qc-item:nth-child(2)');
+              var avatar = qcm.find('.qc-item-header .avatar');
+              var mi = '<div data-id="'+qcm.attr('data-id')+'" class="qc-min-item">'+avatar.prop('outerHTML')+'<a href="" class="qc-close"></a></div>';
+
+              $(mi).appendTo('#qcMinGroup');
+              qcm.remove();
+            }
+
+            ci.appendTo('#qcItemGroup');
+          }
+
+          // remove minimized chat avatar
+          $('#qcMinGroup').find('.qc-min-item[data-id="'+did+'"]').remove();
+        });
+      }
+    });
+
+    $('#qcItemGroup').on('click', '.qc-item-header', function(e){
+      if($(e.target).closest('.qc-header-link').length === 0) {
+        $(this).closest('.qc-item').toggleClass('minimize');
+      }
+    });
+
+    // join chat
+    $('#qcItemGroup').on('click', '.btn-join', function(e){
+      $(this).closest('.qc-item').removeClass('qc-join');
+    });
+
+    // close chat
+    $('#qcItemGroup').on('click', '.qc-link-close', function(e){
+      e.preventDefault();
+      var id = $(this).attr('data-id');
+
+      $('#qcMinGroup').find('.qc-min-item[data-id="'+id+'"]').remove();
+      $(this).closest('.qc-item').remove();
+    });
+
+    // open chat window from minimized thumb
+    $('#qcMinGroup').on('click', '.qc-min-item', function(e){
+      e.preventDefault();
+
+      if($(e.target).closest('.qc-close').length) {
+        $(this).remove();
+
+      } else {
+
+        var id = $(this).attr('data-id');
+        var qc = $('.qc-panel-body').find('.qc-list-item[data-id="'+id+'"');
+
+        qc.trigger('click');
+      }
+    });
+
+
+
+  });
+</script>

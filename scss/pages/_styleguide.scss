@@ -1,0 +1,71 @@
+
+// variables
+$sg-spacing:        50px;
+
+.sg-sidebar {
+  position: fixed;
+  top: $sg-spacing;
+  left: $sg-spacing;
+  bottom: $sg-spacing;
+  width: 200px;
+
+  label {
+    display: block;
+    line-height: 1;
+    margin-bottom: 20px;
+    color: $color-tx-03;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  .nav {
+    flex-direction: column;
+    counter-reset: nav-counter;
+  }
+
+  .nav-link {
+    counter-increment: nav-counter;
+    position: relative;
+    padding: 0;
+    color: $color-tx-02;
+
+    &::before {
+      content: '0' counter(nav-counter) '.';
+      margin-right: 10px;
+      color: $color-tx-03;
+    }
+
+    + .nav-link { margin-top: 10px; }
+  }
+}
+
+.sg-content {
+  position: fixed;
+  top: $sg-spacing;
+  right: $sg-spacing;
+  bottom: $sg-spacing;
+  left: 300px;
+  counter-reset: sec-counter;
+}
+
+.sg-section {
+  counter-increment: nav-counter;
+  margin-bottom: 50px;
+}
+
+.sg-title {
+  position: relative;
+
+  &::before {
+    content: '0' counter(nav-counter) '.';
+    margin-right: 10px;
+    color: $color-tx-03;
+    font-weight: 300;
+  }
+}
+
+.sg-text {
+  color: $color-tx-02;
+  margin-bottom: 25px;
+}

@@ -1,0 +1,105 @@
+.content-body-roommate {
+  padding: 30px;
+  display: flex;
+  min-height: calc(100vh - 260px);
+}
+
+.roommate-group {
+  display: flex;
+  align-self: flex-start;
+
+  .card {
+    + .card { margin-left: 20px; }
+  }
+}
+
+.card-roommate {
+  width: 170px;
+  border-color: $color-bg-02;
+  border-radius: 5px;
+  @include shadow-sharp($color-bg-02);
+
+  .card-icon {
+    background-color: $color-bg-02;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 110px;
+    overflow: hidden;
+    color: #fff;
+    margin-bottom: 15px;
+    border-radius: 5px;
+
+    i {
+      font-size: 100px;
+      line-height: .8;
+    }
+  }
+
+  .card-body { padding: 10px; }
+
+  h6 {
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    margin-bottom: 2px;
+    color: $color-tx-01;
+  }
+
+  p {
+    color: $color-tx-02;
+    font-size: $font-size-sm;
+    margin-bottom: 0;
+  }
+
+  .card-footer {
+    border-top-width: 0;
+    padding: 0 15px 12px;
+    background-color: transparent;
+    font-size: $font-size-xs;
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+      color: $color-tx-03;
+      @include hover-focus() { color: $blue; }
+
+      + a { margin-left: 8px; }
+    }
+  }
+}
+
+.card-roommate-new {
+  width: 170px;
+  border-width: 1.5px;
+  border-style: dashed;
+  border-color: rgba($color-bg-03, .6);
+  border-radius: 5px;
+  background-color: transparent;
+  color: $color-tx-03;
+  @include transition(all 0.25s);
+
+  @include hover-focus() {
+    cursor: pointer;
+    background-color: #fff;
+    border-color: rgba($color-bg-03, .6);
+    @include shadow-sharp($color-bg-03);
+    color: $color-tx-02;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  i {
+    font-size: 60px;
+    line-height: .8;
+  }
+
+  span {
+    display: block;
+    margin-top: 15px;
+  }
+}

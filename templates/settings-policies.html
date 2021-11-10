@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body>
+
+    <div class="content">
+      <div class="container-fluid">
+        <div class="content-header align-items-center mg-b-30">
+          <div class="mg-r-auto">
+            <h4 class="content-title mg-b-0">Property Settings</h4>
+          </div>
+        </div><!-- content-header -->
+        <div class="content-body content-body-settings">
+          <div class="settings-sidebar">
+            <label class="content-label">General Settings</label>
+            <nav class="nav">
+              <a href="settings.html" class="nav-link"><i class="ri-shield-user-line"></i> Assignment Rules</a>
+              <a href="settings-email.html" class="nav-link"><i class="ri-mail-line"></i> Email templates</a>
+              <a href="settings-calendar.html" class="nav-link"><i class="ri-calendar-todo-line"></i> Email &amp; Calendar sync</a>
+              <a href="settings-business.html" class="nav-link"><i class="ri-time-line"></i> Business hours</a>
+              <a href="../settings/community-features.html" class="nav-link"><i class="ri-community-line"></i> Community features</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">Report Settings</label>
+            <nav class="nav">
+              <a href="settings-competitors.html" class="nav-link"><i class="ri-group-line"></i> Competitors</a>
+              <a href="settings-paid-sources.html" class="nav-link"><i class="ri-wallet-3-line"></i> Paid sources</a>
+              <a href="settings-budget.html" class="nav-link"><i class="ri-bank-card-2-line"></i> Paid source budgets</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">Leasing</label>
+            <nav class="nav">
+              <a href="settings-lease.html" class="nav-link"><i class="ri-community-line"></i> Lease Defaults</a>
+              <a href="settings-policies.html" class="nav-link active"><i class="ri-article-line"></i> Property Policies</a>
+              <a href="settings-rentable.html" class="nav-link"><i class="ri-handbag-line"></i> Rentable Items</a>
+              <a href="settings-screening.html" class="nav-link"><i class="ri-survey-line"></i> Screening Criteria</a>
+              <a href="settings-addenda.html" class="nav-link"><i class="ri-file-list-3-line"></i> Addenda</a>
+              <a href="../settings/pricing-duration.html" class="nav-link"><i class="ri-community-line"></i> Duration Pricing</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">Communication</label>
+            <nav class="nav">
+              <a href="settings-call-block.html" class="nav-link"><i class="ri-lock-line"></i> Call Block List</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">IVR Settings</label>
+            <nav class="nav">
+              <a href="../settings/vendors-list.html" class="nav-link"><i class="ri-contacts-line"></i> Vendors List</a>
+              <a href="../settings/default-assignees.html" class="nav-link"><i class="ri-user-star-line"></i> Default Assignees</a>
+              <a href="../settings/oncall-schedule.html" class="nav-link"><i class="ri-calendar-event-line"></i> On-Call Schedule</a>
+              <a href="../settings/leasing-prompt.html" class="nav-link"><i class="ri-user-voice-line"></i> Leasing Prompt</a>
+            </nav>
+          </div><!-- settings-sidebar -->
+          <div class="settings-body">
+            <h5 class="content-title-sm">Property Policies</h5>
+            <p class="content-text">Set policy guidelines to inform applications, leasing, and property usage, and apply to all leases and residents.</p>
+
+            <hr class="op-0">
+
+
+            <div class="settings-group">
+              <div class="row row-sm">
+                <div class="col-4">Household income requirements</div>
+                <div class="col">
+                  <div class="d-flex align-items-center">
+                    Monthly household income must be
+                    <input type="text" class="form-control wd-50 mg-x-10">
+                    times monthly rent
+                  </div>
+                </div><!-- col -->
+              </div><!-- row -->
+            </div><!-- settings-group -->
+
+            <hr class="mg-y-20">
+
+            <div class="settings-group">
+              <div class="row row-sm">
+                <div class="col-4">Co-signers allowed</div>
+                <div class="col">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" checked>
+                    <label class="custom-control-label" for="customRadioInline1">Yes, allow co-signers</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">No, do not allow co-signers</label>
+                  </div>
+                </div><!-- col -->
+              </div><!-- row -->
+            </div><!-- settings-group -->
+
+            <hr class="mg-y-20">
+
+            <div class="settings-group">
+              <div class="row row-sm">
+                <div class="col-4">Lease Terms</div>
+                <div class="col">Offer month-to-month</div>
+                <div class="col"><div class="form-switcher"></div></div>
+              </div><!-- row -->
+              <div class="row row-sm">
+                <div class="col-4"></div>
+                <div class="col">Shortest lease term (months)</div>
+                <div class="col"><input type="text" class="form-control"></div>
+              </div><!-- row -->
+              <div class="row row-sm">
+                <div class="col-4"></div>
+                <div class="col">Longest lease term (months)</div>
+                <div class="col"><input type="text" class="form-control"></div>
+              </div><!-- row -->
+            </div><!-- settings-group -->
+
+            <hr class="mg-y-20">
+
+            <div class="settings-group">
+              <div class="row row-sm">
+                <div class="col-4">Utilities resident is responsible for</div>
+                <div class="col">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="cc1">
+                    <label class="custom-control-label" for="cc1">Electric</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="cc2">
+                    <label class="custom-control-label" for="cc2">Water</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="cc3">
+                    <label class="custom-control-label" for="cc3">Trash</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="cc4">
+                    <label class="custom-control-label" for="cc4">Gas</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="cc5">
+                    <label class="custom-control-label" for="cc5">Sewer</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="cc6">
+                    <label class="custom-control-label" for="cc6">Renters Insurance</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="cc7">
+                    <label class="custom-control-label" for="cc7">Valet Trash Service</label>
+                  </div>
+                </div>
+              </div><!-- row -->
+            </div><!-- settings-group -->
+
+            <hr class="mg-y-20">
+
+            <div class="settings-group">
+              <div class="row row-sm">
+                <div class="col-4">Acceptable forms of payment</div>
+                <div class="col">
+                  <select class="custom-select">
+                    <option value="">Select Payment Method</option>
+                    <option value="1">Personal Check</option>
+                    <option value="1">Cashier Check</option>
+                  </select>
+                </div><!-- col -->
+              </div><!-- row -->
+            </div><!-- settings-group -->
+
+            <hr class="mg-y-20">
+
+            <div class="settings-group">
+              <div class="row row-sm">
+                <div class="col-4">Checks paid to</div>
+                <div class="col"><input type="text" class="form-control"></div>
+              </div><!-- row -->
+            </div><!-- settings-group -->
+
+            <hr class="mg-y-20">
+
+            <div class="settings-group">
+              <div class="row row-sm">
+                <div class="col-4">Waitlist fee</div>
+                <div class="col"><input type="text" class="form-control"></div>
+              </div><!-- row -->
+            </div><!-- settings-group -->
+
+            <hr class="mg-y-20">
+
+            <div class="settings-group">
+              <div class="row row-sm">
+                <div class="col-4">Required days notice to vacate</div>
+                <div class="col">Standard lease</div>
+                <div class="col-4">
+                  <select class="custom-select">
+                    <option value="">Select an option</option>
+                  </select>
+                </div>
+              </div><!-- row -->
+              <div class="row row-sm">
+                <div class="col-4"></div>
+                <div class="col">Month-to-month</div>
+                <div class="col-4">
+                  <select class="custom-select">
+                    <option value="">Select an option</option>
+                  </select>
+                </div>
+              </div><!-- row -->
+            </div><!-- settings-group -->
+
+            <hr class="mg-y-20">
+
+            <div class="settings-group">
+              <div class="row row-sm">
+                <div class="col-4">Apartment hold length (after first application)</div>
+                <div class="col">
+                  <select class="custom-select">
+                    <option value="">Select an option</option>
+                  </select>
+                </div>
+              </div><!-- row -->
+            </div><!-- settings-group -->
+
+            <hr class="mg-y-20">
+
+            <div class="settings-group">
+              <div class="row row-sm">
+                <div class="col-4">Guest parking allowed</div>
+                <div class="col">
+                  <select class="custom-select">
+                    <option value="">Select an option</option>
+                  </select>
+                </div>
+              </div><!-- row -->
+            </div><!-- settings-group -->
+
+            <hr class="mg-y-20">
+
+            <div class="settings-group">
+              <div class="row row-sm">
+                <div class="col-4">Occupancy standards</div>
+                <div class="col">Max studio occupants</div>
+                <div class="col-4"><input type="text" class="form-control"></div>
+              </div><!-- row -->
+              <div class="row row-sm mg-t-5-f">
+                <div class="col-4"></div>
+                <div class="col">Max 1 bedroom occupants</div>
+                <div class="col-4"><input type="text" class="form-control"></div>
+              </div><!-- row -->
+              <div class="row row-sm mg-t-5-f">
+                <div class="col-4"></div>
+                <div class="col">Max 2 bedrooms occupants</div>
+                <div class="col-4"><input type="text" class="form-control"></div>
+              </div><!-- row -->
+              <div class="row row-sm mg-t-5-f">
+                <div class="col-4"></div>
+                <div class="col">Max 3 bedrooms occupants</div>
+                <div class="col-4"><input type="text" class="form-control"></div>
+              </div><!-- row -->
+            </div><!-- settings-group -->
+
+            <hr class="mg-y-20">
+
+            <div class="settings-group">
+              <div class="row row-sm">
+                <div class="col-4">Vehicle standards</div>
+                <div class="col">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline3" name="customRadioInline3" class="custom-control-input" checked>
+                    <label class="custom-control-label" for="customRadioInline3">Max vehicles by Unit</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline4" name="customRadioInline4" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline4">Max vehicles by Leaseholder(s)</label>
+                  </div>
+                </div><!-- col -->
+              </div><!-- row -->
+              <div class="row row-sm mg-t-30-f">
+                <div class="col-4"></div>
+                <div class="col">Max vehicles for studio</div>
+                <div class="col-4"><input type="text" class="form-control"></div>
+              </div><!-- row -->
+              <div class="row row-sm mg-t-10-f">
+                <div class="col-4"></div>
+                <div class="col">Max vehicles for 1 bedroom</div>
+                <div class="col-4"><input type="text" class="form-control"></div>
+              </div><!-- row -->
+              <div class="row row-sm mg-t-10-f">
+                <div class="col-4"></div>
+                <div class="col">Max vehicles for 2 bedrooms</div>
+                <div class="col-4"><input type="text" class="form-control"></div>
+              </div><!-- row -->
+              <div class="row row-sm mg-t-10-f">
+                <div class="col-4"></div>
+                <div class="col">Max vehicles for 3 bedrooms</div>
+                <div class="col-4"><input type="text" class="form-control"></div>
+              </div><!-- row -->
+            </div><!-- settings-group -->
+
+            <hr class="mg-y-20">
+
+            <div class="settings-group">
+              <div class="row row-sm">
+                <div class="col-4">Pet Policy</div>
+                <div class="col">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline5" name="customRadioInline5" class="custom-control-input" checked>
+                    <label class="custom-control-label" for="customRadioInline5">Max pets per Unit</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline6" name="customRadioInline6" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline6">Max pets per Leaseholder(s)</label>
+                  </div>
+                </div><!-- col -->
+              </div><!-- row -->
+              <div class="row row-sm">
+                <div class="col-4"></div>
+                <div class="col"><input type="text" class="form-control"></div>
+              </div><!-- row -->
+              <div class="row row-sm">
+                <div class="col-4"></div>
+                <div class="col"><hr class="mg-y-0"></div>
+              </div><!-- row -->
+              <div class="row row-sm">
+                <div class="col-4"></div>
+                <div class="col">Dogs acceptable</div>
+                <div class="col-5"><div class="form-switcher"></div></div>
+              </div><!-- row -->
+              <div class="row row-sm mg-t-10-f">
+                <div class="col-4"></div>
+                <div class="col">Size limit</div>
+                <div class="col-5"><input type="text" class="form-control"></div>
+              </div><!-- row -->
+              <div class="row row-sm mg-t-10-f">
+                <div class="col-4"></div>
+                <div class="col">Breed restrictions</div>
+                <div class="col-5"><input type="text" class="form-control"></div>
+              </div><!-- row -->
+              <div class="row row-sm">
+                <div class="col-4"></div>
+                <div class="col"><hr class="mg-y-0"></div>
+              </div><!-- row -->
+              <div class="row row-sm">
+                <div class="col-4"></div>
+                <div class="col">Cats acceptable</div>
+                <div class="col-5"><div class="form-switcher"></div></div>
+              </div><!-- row -->
+              <div class="row row-sm mg-t-10-f">
+                <div class="col-4"></div>
+                <div class="col">Size limit</div>
+                <div class="col-5"><input type="text" class="form-control"></div>
+              </div><!-- row -->
+              <div class="row row-sm mg-t-10-f">
+                <div class="col-4"></div>
+                <div class="col">Breed restrictions</div>
+                <div class="col-5"><input type="text" class="form-control"></div>
+              </div><!-- row -->
+              <div class="row row-sm">
+                <div class="col-4"></div>
+                <div class="col"><hr class="mg-y-0"></div>
+              </div><!-- row -->
+              <div class="row row-sm">
+                <div class="col-4"></div>
+                <div class="col">Birds acceptable</div>
+                <div class="col-5"><div class="form-switcher"></div></div>
+              </div><!-- row -->
+              <div class="row row-sm mg-t-10-f">
+                <div class="col-4"></div>
+                <div class="col">Size limit</div>
+                <div class="col-5"><input type="text" class="form-control"></div>
+              </div><!-- row -->
+              <div class="row row-sm mg-t-10-f">
+                <div class="col-4"></div>
+                <div class="col">Breed restrictions</div>
+                <div class="col-5"><input type="text" class="form-control"></div>
+              </div><!-- row -->
+            </div><!-- settings-group -->
+
+            <div class="settings-footer mg-t-20">
+              <button type="button" class="btn btn-primary">Save Changes</button>
+            </div><!-- settings-footer -->
+          </div><!-- settings-body -->
+        </div><!-- content-body -->
+      </div><!-- container -->
+    </div><!-- content -->
+
+
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/select2/js/select2.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('.select2').select2({
+          minimumResultsForSearch: Infinity,
+          placeholder: 'Unassigned'
+        });
+
+      });
+    </script>
+  </body>
+</html>

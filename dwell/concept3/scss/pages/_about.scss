@@ -1,0 +1,54 @@
+
+.media-about {
+  display: flex;
+  color: $gray-700;
+  font-size: 16px;
+}
+
+.media-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  background-color: rgba($primary, .1);
+  color: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+
+  i {
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+
+.img-double-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  img { border-radius: 10px; }
+
+  img:first-child {
+    width: 65%;
+    align-self: flex-end;
+  }
+
+  img:last-child {
+    width: 55%;
+    position: relative;
+    margin-top: -25%;
+    @include shadow-dreamy($gray-900);
+  }
+}
+
+.progress-group {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li + li { margin-top: 30px; }
+
+  .progress { height: 5px; }
+}

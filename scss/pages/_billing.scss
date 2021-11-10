@@ -1,0 +1,69 @@
+
+.content-navbar-billing {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+
+  .content-title {
+    margin-bottom: 3px;
+    font-size: 20px;
+  }
+
+  .content-text { font-size: $font-size-sm; }
+
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .select2-container--default .select2-selection--single { border-radius: 5px; }
+
+  .form-search {
+    height: 38px;
+    border-radius: 5px;
+  }
+}
+
+.table-billing {
+  tbody td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  strong { font-weight: $font-weight-medium; }
+
+  .nav-link {
+    line-height: 1;
+    padding: 0;
+    color: $color-tx-03;
+
+    @include hover-focus() { color: $color-tx-02; }
+
+    + .nav-link { margin-left: 10px; }
+
+    i {
+      font-size: 18px;
+    }
+  }
+
+  .table-compete {
+    margin-bottom: 0;
+    border-collapse: separate;
+
+    thead th { color: $color-tx-02; }
+  }
+
+  .row-view { display: none; }
+  .selected + .row-view { display: table-row; }
+}
+
+.modal-edit-billing {
+  @extend .modal-new-user;
+
+  input.form-control {
+    height: 38px;
+    border-radius: 5px;
+  }
+
+  .select2-container--default .select2-selection--single { border-radius: 5px; }
+}

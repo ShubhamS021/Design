@@ -1,0 +1,136 @@
+.leftbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: $leftbar-width;
+  z-index: 900;
+  background-color: #fff;
+  box-shadow: 0 3px 5px rgba($color-bg-03, .2);
+  border-right: 1px solid $color-bg-02;
+  @include transition(all 0.25s);
+
+  .tooltip {
+
+    .tooltip-inner {
+      border-radius: 3px;
+      white-space: nowrap;
+      padding: 0 12px;
+      height: $height-sm - 2px;
+      display: flex;
+      align-items: center;
+      font-size: $font-size-sm;
+      background-color: rgba(#000, .95);
+    }
+  }
+
+  .header-switch-menu { border-right-width: 0; }
+
+  ~ .content {
+    margin-left: $leftbar-width;
+    margin-top: $header-height;
+  }
+}
+
+.leftbar-header {
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftbar-logo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 10px;
+    background-color: $color-ui-03;
+    border-radius: 1px;
+  }
+
+  span {
+    width: 4px;
+    height: 16px;
+    background-color: $color-ui-01;
+    display: block;
+    margin: 0 3px;
+    border-radius: 1px;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 22px;
+    background-color: $color-ui-02;
+    border-radius: 1px;
+  }
+}
+
+.leftbar-body {
+  height: calc(100vh - #{$header-height});
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0 20px;
+
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav-link {
+    position: relative;
+    outline: none;
+    padding: 0;
+    font-size: 22px;
+    font-weight: 400;
+    color: rgba($color-tx-02, .75);
+    height: $height-base;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $border-radius;
+
+    i { line-height: 1; }
+
+    i.ri-group-fill,
+    i.ri-group-line {
+      font-size: 21px;
+    }
+
+    @include hover-focus() {
+      color: $color-ui-01;
+    }
+
+    + .nav-link { margin-top: 15px; }
+
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: -12px;
+      border-left: 1px solid $color-ui-01;
+      display: none;
+    }
+
+    &.active {
+      //background-color: #fff;
+      color: $color-ui-01;
+    }
+  }
+}
+
+.leftbar-nav {
+  .nav-link {
+    + .nav-link { margin-top: 10px; }
+  }
+}

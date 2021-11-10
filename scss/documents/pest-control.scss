@@ -1,0 +1,45 @@
+@import "variables";
+
+.multipage-body {
+  &.to-pdf {
+    width: 430pt;
+    font-size: 8pt;
+    line-height: 1.25;
+    padding-left: 16pt;
+    word-spacing: -1pt;
+
+    p { margin-bottom: 12px; }
+
+    .page {
+      padding: 0;
+      width: auto;
+      margin: 0 0 45px;
+      height: 755px;
+
+      &.num-bottom-center::after {
+        top: auto;
+        bottom: 0;
+        font-size: 8pt;
+        position: absolute;
+        padding-top: 5px;
+        display: block;
+      }
+
+      &:first-child { padding-top: 5px; }
+
+      &:nth-child(2) {
+        height: 748px;
+        line-height: 1.22;
+      }
+
+      &:nth-child(3) { height: 748px; }
+      &:nth-child(4) { height: 748px; }
+      &:nth-child(5) {
+        height: 748px;
+        margin-bottom: 0;
+      }
+    }
+
+    .ordered-list li + li { margin-top: 8px; }
+  }
+}

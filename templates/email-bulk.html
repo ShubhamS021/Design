@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body>
+
+    <div class="content content-bulk">
+      <div class="container-fluid">
+        <div class="content-header align-items-center mg-b-25">
+          <div class="mg-r-auto">
+            <h3 class="content-title mg-b-3">Bulk Email</h3>
+            <span class="content-text">Choose who will receive this email blast?</span>
+          </div>
+        </div><!-- content-header -->
+        <div class="row">
+          <div class="col-9">
+            <div class="card card-bulk">
+              <div class="card-header">
+                <div class="mg-r-auto">
+                  <h6 class="card-title">Select Recipients</h6>
+                </div>
+                <nav class="nav nav-circle">
+                  <a href="#" class="nav-link active">1</a>
+                  <a href="#" class="nav-link">2</a>
+                </nav>
+              </div><!-- card-header -->
+              <div class="card-body">
+                <div class="form-group">
+                  <label class="form-label">Select recipients that match the following conditions</label>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" checked>
+                    <label class="custom-control-label" for="customRadioInline1">All</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">Any</label>
+                  </div>
+                </div><!-- form-group -->
+                <div class="form-group">
+                  <label class="form-label">Conditions</label>
+                  <div id="conditionWrapper" class="condition-wrapper">
+                    <div class="row row-xs">
+                      <div class="col-3">
+                        <select class="custom-select">
+                          <option value="1">Baths</option>
+                          <option value="2">Beds</option>
+                          <option value="3">Best contact method</option>
+                          <option value="4">Best contact time</option>
+                          <option value="5" selected>Created</option>
+                          <option value="6">Days to move-in</option>
+                          <option value="7">Desired rent</option>
+                          <option value="8">Email address</option>
+                        </select>
+                      </div><!-- col -->
+                      <div class="col-2">
+                        <select class="custom-select">
+                          <option value="1" selected>on</option>
+                          <option value="2">between</option>
+                          <option value="3">on or before</option>
+                          <option value="4">on or after</option>
+                          <option value="5">not set</option>
+                        </select>
+                      </div><!-- col -->
+                      <div class="col-4">
+                        <input type="text" class="form-control" placeholder="Choose date">
+                      </div><!-- col -->
+                      <div class="col">
+                        <a href="" class="link-remove"><i class="ri-close-circle-fill"></i></a>
+                      </div><!-- col -->
+                    </div><!-- row -->
+                  </div><!-- condition-wrapper -->
+                  <button id="addCondition" class="btn btn-sm btn-add-condition"><span>&plus;</span> Add Condition</button>
+                </div><!-- form-group -->
+              </div><!-- card-body -->
+              <div class="card-footer">
+                <a href="email-bulk-compose.html" class="btn btn-primary">Next</a>
+              </div><!-- card-footer -->
+            </div><!-- card -->
+          </div><!-- col -->
+          <div class="col">
+            <div class="card card-bulk-info">
+              <div class="card-body">
+                <h6 class="card-title">Recipients</h6>
+                <p class="card-text">When you send the email blast, it will be delivered to:</p>
+                <h1 class="card-number">15</h1>
+                <label class="card-label">Number of recipients</label>
+                <small>Max recipients: 800</small>
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+        </div><!-- row -->
+      </div><!-- container-fluid -->
+    </div><!-- content -->
+
+
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('.nav-item-communication .nav-link').addClass('active');
+
+        $('#addCondition').on('click', function(e){
+          e.preventDefault();
+
+          $('#conditionWrapper .row:first-child').clone().appendTo('#conditionWrapper');
+        });
+
+        $('.card-bulk').on('click', '.link-remove', function(e){
+          e.preventDefault();
+          $(this).closest('.row').remove();
+        });
+
+
+      });
+    </script>
+  </body>
+</html>

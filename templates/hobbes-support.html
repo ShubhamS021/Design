@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body class="hs-show">
+
+    <div id="hsPanel" class="proschat-panel hs-panel show">
+      <div class="proschat-header">
+        <div class="avatar online"><i class="ri-rocket-2-fill"></i></div>
+        <div class="proschat-agent">
+          <h6>Hobbes Support</h6>
+          <div class="agent-type"><span>Bot</span></div>
+        </div><!-- proschat-agent -->
+        <a href="" id="hsClose" class="proschat-close"><i class="ri-close-fill"></i></a>
+      </div><!-- proschat-header -->
+      <div class="proschat-body">
+        <ul id="responseGroup" class="response-group">
+          <li id="responseWelcome" class="response-item response-item-welcome show">
+            <div class="avatar"><i class="ri-rocket-2-fill"></i></div>
+            <div class="card card-response-welcome">
+              <h5>Hi Testo</h5>
+              <p>Please choose a help option below</p>
+            </div><!-- card -->
+          </li>
+          <li id="responseTyping" class="response-item">
+            <div class="avatar"><i class="ri-rocket-2-fill"></i></div>
+            <div class="response-typing">
+              <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+              </div><!-- spinner -->
+            </div><!-- response-typing -->
+          </li>
+          <li id="hsResponseOptions" class="response-options response-options-hs show">
+            <div class="row row-xs mg-t-10">
+              <div class="col-6">
+                <div id="hsSupportVideos" class="card card-response-option">
+                  <i class="ri-live-line"></i>
+                  <label>Dwell Support<br>Videos</label>
+                </div><!-- card -->
+              </div><!-- col -->
+              <div class="col-6">
+                <div id="hsPropertyInfo" class="card card-response-option">
+                  <i class="ri-file-search-line"></i>
+                  <label>Search<br>Property Info</label>
+                </div><!-- card -->
+              </div><!-- col -->
+              <div class="col-6 mg-t-10">
+                <div id="hsDwellSupport" class="card card-response-option">
+                  <i class="ri-question-answer-line"></i>
+                  <label>Contact<br>Dwell Support</label>
+                </div><!-- card -->
+              </div><!-- col -->
+              <div class="col-6 mg-t-10">
+                <div id="hsWhatsNew" class="card card-response-option">
+                  <i class="ri-bookmark-3-line"></i>
+                  <label>What's New<br>With Dwell</label>
+                </div><!-- card -->
+              </div><!-- col -->
+            </div><!-- row -->
+          </li>
+          <li id="responsePropertyInfo" class="response-item">
+            <div class="avatar"><i class="ri-rocket-2-fill"></i></div>
+            <div class="card card-response">
+              <p>Sure, I can help with property info.</p>
+              <p class="mg-b-0">Please choose or type a topic below:</p>
+            </div><!-- card -->
+          </li>
+          <li id="responseKnowledgebase" class="response-item">
+            <div class="card card-response card-response-list">
+              <div id="stepWrapper" class="step-wrapper">
+                <div id="propInfo1" class="step-item">
+                  <div class="response-search">
+                    <input type="text" class="form-control" placeholder="Search Knowledgebase">
+                    <button class="btn btn-icon"><i class="ri-search-line"></i></button>
+                  </div><!-- response-search -->
+                  <ul id="kbList" class="pc-qlist hs-qlist mg-t-10 mg-b-0">
+                    <li>Leasing</li>
+                    <li>Amenities</li>
+                    <li>Units</li>
+                    <li>Tours</li>
+                    <li>Promotions</li>
+                    <li>Office</li>
+                  </ul>
+                  <a id="propInfoCancel" href="" class="btn btn-white hs-response-close">Cancel</a>
+                </div><!-- step-item -->
+                <div id="propInfo2" class="step-item">
+                  <div class="response-search">
+                    <input type="text" class="form-control" placeholder="Search leasing">
+                    <button class="btn btn-icon"><i class="ri-search-line"></i></button>
+                  </div><!-- response-search -->
+                  <ul id="kbList2" class="pc-qlist hs-qlist mg-t-10 mg-b-0">
+                    <li>Pets</li>
+                    <li>Utilities</li>
+                    <li>Qualifications</li>
+                    <li>Fees &amp; Costs</li>
+                    <li>Rentable Items</li>
+                    <li>Application</li>
+                  </ul>
+                  <a id="toKB" href="" class="btn btn-white hs-response-close"><i class="ri-arrow-left-s-line"></i> Knowledgebase</a>
+                </div><!-- step-item -->
+                <div id="propInfo3" class="step-item">
+
+                  <ul id="qList" class="pc-qlist hs-qlist2 mg-b-0">
+                    <li><strong>Q75</strong> Do you accept Section 8?</li>
+                    <li><strong>Q76</strong> Will the screening show as a soft or hard inquiry on my credit report?</li>
+                    <li><strong>Q77</strong> Do you accept unemployment as verified income?</li>
+                    <li><strong>Q78</strong> How do I qualify for the apartment?</li>
+                    <li><strong>Q79</strong> What are the properties' income requirements?</li>
+                  </ul>
+                  <a id="toKB2" href="" class="btn btn-white hs-response-close"><i class="ri-arrow-left-s-line"></i> Leasing</a>
+                </div><!-- step-item -->
+              </div><!-- step-wrapper -->
+            </div><!-- card -->
+          </li>
+          <li id="responsePropAnswer" class="response-item">
+            <div class="avatar"><i class="ri-rocket-2-fill"></i></div>
+            <div class="card card-response">
+              <p class="mg-b-0">Our community income requirement is the monthly household income must be 3 times monthly rent.</p>
+              <hr>
+              <div class="hs-response-footer">
+                <a href="" class="btn btn-white mg-r-auto">Copy</a>
+                <a href="" class="btn btn-white btn-icon"><i class="ri-thumb-up-line"></i></a>
+                <a href="" class="btn btn-white btn-icon"><i class="ri-thumb-down-line"></i></a>
+              </div><!-- card-response-footer -->
+
+              <a id="toQList" href="" class="btn btn-white hs-response-close"><i class="ri-arrow-left-s-line"></i> Qualification Questions</a>
+            </div><!-- card -->
+          </li>
+          <li id="responseVideoAnswer" class="response-item">
+            <div class="avatar"><i class="ri-rocket-2-fill"></i></div>
+            <div class="card card-response">
+              <p>Sure, here is a link to the Dwell Support video catalog.</p>
+              <a href="" class="btn btn-white tx-13"><i class="ri-movie-line tx-18 mg-r-5"></i> support.dwell.io/videos</a>
+            </div><!-- card -->
+          </li>
+          <li id="responseDwellAnswer" class="response-item">
+            <div class="avatar"><i class="ri-rocket-2-fill"></i></div>
+            <div class="card card-response card-response-help">
+              <p class="mg-b-3">Sure, please fill out the form below.</p>
+              <small class="tx-11 text-muted op-7">Average response time is less than 45 minutes</small>
+              <hr class="mg-y-8 op-0">
+              <textarea id="supportMessage" class="form-control" placeholder="Enter message here" rows="4"></textarea>
+              <select id="supportUrgency" class="custom-select mg-t-10">
+                <option value="">Select urgency</option>
+                <option value="1">Urgent</option>
+                <option value="2">Very urgent</option>
+              </select>
+              <a href="" class="d-block mg-t-5">&plus; Attach File</a>
+              <div class="card-footer">
+                <button class="btn btn-white">Cancel</button>
+                <button id="supportSend" class="btn btn-primary">Send</button>
+              </div><!-- card-footer -->
+            </div><!-- card -->
+          </li>
+          <li id="responseWhatsNew" class="response-item">
+            <div class="avatar"><i class="ri-rocket-2-fill"></i></div>
+            <div class="card card-response">
+              <p>Sure, here is a link of our latest Dwell features and fixes.</p>
+              <a href="" class="btn btn-white tx-13"><i class="ri-star-line tx-18 mg-r-5"></i> support.dwell.io/new</a>
+            </div><!-- card -->
+          </li>
+        </ul><!-- response-group -->
+      </div><!-- proschat-body -->
+      <div class="proschat-chatbox">
+        <input id="inputQuestion" type="text" class="form-control" placeholder="Ask Hobbes">
+        <button id="btnSubmitQuestion" class="btn btn-primary btn-icon"><i class="ri-send-plane-fill"></i></button>
+      </div><!-- proschat-chatbox -->
+    </div><!-- proschat-panel -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/jqueryui/jquery-ui.min.js"></script>
+    <script src="../lib/mentions/mentions.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        // open support panel
+        $('body').on('click', '#hsMenu', function(e){
+          e.preventDefault();
+
+          $('body').addClass('hs-show');
+          $('#hsPanel').addClass('show');
+
+          setTimeout(function(){
+            $('.hs-panel .response-item-welcome').addClass('show');
+            $('#hsResponseOptions').addClass('show');
+          }, 500);
+        });
+
+        // close support panel
+        $('body').on('click', '#hsClose', function(e){
+          e.preventDefault();
+
+          $('#hsPanel').removeClass('show');
+          $('body').removeClass('hs-show');
+        });
+
+        // typing effect
+        function response_typing() {
+          $('#responseTyping').appendTo('#responseGroup');
+
+          setTimeout(function(){
+            $('#responseTyping').addClass('show');
+          }, 500);
+
+          setTimeout(function(){
+            $('#responseTyping').removeClass('show');
+          }, 1500);
+        }
+
+        // property info
+        $('#hsPropertyInfo').on('click', function(e) {
+          $('#hsResponseOptions').removeClass('show');
+          //$('#responseWelcome').removeClass('show');
+
+          response_typing();
+          setTimeout(function(){
+            $('#responsePropertyInfo').appendTo('#responseGroup').addClass('show');
+            $('#responseKnowledgebase').appendTo('#responseGroup').addClass('show');
+          }, 1500);
+
+        });
+
+        $('#propInfoCancel').on('click', function(e){
+          e.preventDefault();
+          $('#hsResponseOptions').appendTo('#responseGroup').addClass('show');
+          $('#responsePropertyInfo').removeClass('show');
+          $('#responseKnowledgebase').removeClass('show');
+        })
+
+        $('#kbList li').on('click', function(){
+          $('#stepWrapper').addClass('slide');
+        });
+
+        $('#kbList2 li').on('click', function(){
+          $('#stepWrapper').addClass('slide2');
+        });
+
+        $('#toKB').on('click', function(e){
+          e.preventDefault();
+          $('#stepWrapper').removeClass('slide');
+        });
+
+        $('#toKB2').on('click', function(e){
+          e.preventDefault();
+          $('#stepWrapper').removeClass('slide2');
+        });
+
+        $('#qList li').on('click', function(){
+          var q = $(this).html();
+          //console.log(q);
+          $('#responseKnowledgebase').removeClass('show');
+          $('<li class="response-item show"><div class="response-chat">'+q+'</div></li>').appendTo('#responseGroup');
+
+          response_typing();
+
+          setTimeout(function(){
+            $('#responsePropAnswer').appendTo('#responseGroup').addClass('show');
+          }, 2000);
+
+        });
+
+        $('#toQList').on('click', function(e){
+          e.preventDefault();
+          $('#stepWrapper').addClass('slide slide2');
+
+          setTimeout(function(){
+            $('#responseKnowledgebase').appendTo('#responseGroup').addClass('show');
+            $('#responsePropAnswer').removeClass('show');
+          }, 200);
+
+        });
+
+        $('#hsSupportVideos').on('click', function(e){
+          e.preventDefault();
+
+          $('<li class="response-item show"><div class="response-chat">Dwell Support Videos</div></li>').appendTo('#responseGroup');
+
+          response_typing();
+
+          setTimeout(function(){
+            $('#responseVideoAnswer').appendTo('#responseGroup').addClass('show');
+          }, 2000);
+        });
+
+        $('#hsDwellSupport').on('click', function(e){
+          e.preventDefault();
+
+          $('<li class="response-item show"><div class="response-chat">Contact Dwell Support</div></li>').appendTo('#responseGroup');
+
+          response_typing();
+
+          setTimeout(function(){
+            $('#responseDwellAnswer').appendTo('#responseGroup').addClass('show');
+          }, 2000);
+        });
+
+        $('#supportSend').on('click', function(e){
+          var msg = $('#supportMessage').val();
+          var ugc = $('#supportUrgency').val();
+          var k = (msg == '' && ugc == '')? false : true;
+
+          $('#supportMessage').toggleClass('required', (msg == ''));
+          $('#supportUrgency').toggleClass('required', (ugc == ''));
+
+          $('#responseDwellAnswer').removeClass('show');
+          $('<li class="response-item show"><div class="response-chat"><div class="rc-header">Very urgent</div>'+msg+'<div class="rc-footer">Feb 01 4:00PM</div></div></li>').appendTo('#responseGroup');
+
+          setTimeout(function(){
+            $('#hsResponseOptions').appendTo('#responseGroup').addClass('show');
+          }, 2000);
+        });
+
+        $('#hsWhatsNew').on('click', function(e){
+          e.preventDefault();
+
+          $('<li class="response-item show"><div class="response-chat">What\'s New With Dwell</div></li>').appendTo('#responseGroup');
+
+          response_typing();
+
+          setTimeout(function(){
+            $('#responseWhatsNew').appendTo('#responseGroup').addClass('show');
+
+            setTimeout(function(){
+              $('#hsResponseOptions').appendTo('#responseGroup').addClass('show');
+            }, 2000);
+
+          }, 2000);
+        });
+
+        $('#inputQuestion').mentionsInput({
+          source: [
+            { value: 'Mira Sante', uid: 'prop:1'},
+            { value: 'Azul at Spectrum', uid: 'prop:2'},
+            { value: 'Park on Bell', uid: 'prop:3'},
+            { value: 'Retreat at the Raven', uid: 'prop:4'},
+            { value: 'Ravenwood Heights', uid: 'prop:5'},
+            { value: 'Waterside at Ocotillo', uid: 'prop:6'}
+          ],
+          showAtCaret: true,
+          suffix: ' '
+        });
+
+      });
+    </script>
+  </body>
+</html>

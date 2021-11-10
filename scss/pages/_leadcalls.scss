@@ -1,0 +1,50 @@
+
+.content-body-calls {
+  height: calc(100vh - 65px);
+  padding: 30px;
+
+  .table-responsive {
+    overflow: inherit;
+  }
+}
+
+.msg-item-reverse {
+  .call-block a {
+    color: $gray-500;
+    @include hover-focus() { color: $gray-600; }
+  }
+}
+
+
+.call-block {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h6 { margin-bottom: 15px; }
+
+  a {
+    font-size: 64px;
+    line-height: .7;
+    color: rgba(#fff, .75);
+
+    @include hover-focus() {
+      color: #fff;
+    }
+  }
+}
+
+.lpc-calls {
+  .table-calls {
+    tr {
+      @include hover-focus() {
+        box-shadow: none;
+        td { background-color: $body-bg; }
+      }
+    }
+
+    strong { font-weight: 500; }
+  }
+}

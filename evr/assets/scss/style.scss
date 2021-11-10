@@ -1,0 +1,30 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Nunito:wght@300;400;600;700&display=swap');
+
+// Variables & Mixins
+@import "variables";
+@import "mixins";
+
+// Bootstrap Framework
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Components
+@import "components/button";
+@import "components/link";
+
+// Panels
+@import "panels/header";
+@import "panels/menu";
+@import "panels/section";
+@import "panels/footer";
+
+// Pages
+@import "pages/home";
+@import "pages/about";
+@import "pages/comm";
+@import "pages/lifestyle";
+@import "pages/team";
+@import "pages/contact";
+
+// Utils
+@import "utils";

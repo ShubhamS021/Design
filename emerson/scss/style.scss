@@ -1,0 +1,30 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&display=swap');
+
+// Variables & Mixins
+@import "variables";
+@import "mixins";
+
+// Bootstrap Framework
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Components
+@import "components/buttons";
+
+// Panels
+@import "panels/header";
+@import "panels/sidebar";
+@import "panels/section";
+@import "panels/footer";
+@import "panels/marker";
+
+// Pages
+@import "pages/home";
+@import "pages/gallery";
+@import "pages/amenities";
+@import "pages/floorplans";
+@import "pages/virtual";
+@import "pages/neighborhood";
+@import "pages/contacts";
+@import "pages/marker";

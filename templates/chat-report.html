@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body>
+
+    <div class="content content-chat-report">
+      <div class="container-fluid pd-25-f">
+        <div class="content-header align-items-center mg-b-30">
+          <div class="content-title-wrapper mg-r-auto">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Chat Overview</a></li>
+                <li class="breadcrumb-item active">Report</li>
+              </ol>
+            </nav>
+            <h3 class="content-title mg-b-3">Chat Report</h3>
+            <p class="mg-b-0">April 2021 Session</p>
+          </div><!-- content-title-wrapper -->
+          <a href="" class="btn btn-white btn-icon" data-toggle="tooltip" title="Export monthly session data"><i class="ri-share-forward-line"></i></a>
+        </div><!-- content-header -->
+
+        <div class="row row-sm">
+          <div class="col-4">
+            <div class="card card-comprop">
+              <div class="card-header">
+                <h6 class="card-title">Conversation Report</h6>
+              </div><!-- card-header -->
+              <div class="card-body row">
+                <div class="col">
+                  <div class="breakdown-item">
+                    <h2>258</h2>
+                    <label>Total Conversations</label>
+                  </div><!-- breakdown-item -->
+                </div><!-- col -->
+                <div class="col">
+                  <div class="breakdown-item">
+                    <h2>83.3%</h2>
+                    <label>Avg Conversation Score</label>
+                  </div><!-- breakdown-item -->
+                </div><!-- col -->
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+          <div class="col">
+            <div class="card card-comprop">
+              <div class="card-header">
+                <h6 class="card-title">Responses Report</h6>
+              </div><!-- card-header -->
+              <div class="card-body row">
+                <div class="col">
+                  <div class="breakdown-item">
+                    <h2>1,000</h2>
+                    <label>Total Responses</label>
+                  </div><!-- breakdown-item -->
+                </div><!-- col -->
+                <div class="col">
+                  <div class="breakdown-item correct">
+                    <h2><i class="ri-chat-check-line"></i> 500 <span>(50.0%)</span></h2>
+                    <label>Correct</label>
+                  </div><!-- breakdown-item -->
+                </div><!-- col -->
+                <div class="col">
+                  <div class="breakdown-item incorrect">
+                    <h2><i class="ri-chat-delete-line"></i> 250 <span>(25.0%)</span></h2>
+                    <label>Incorrect</label>
+                  </div><!-- breakdown-item -->
+                </div><!-- col -->
+                <div class="col">
+                  <div class="breakdown-item cantanswer">
+                    <h2><i class="ri-chat-off-line"></i> 250 <span>(25.0%)</span></h2>
+                    <label>Can't Answer</label>
+                  </div><!-- breakdown-item -->
+                </div><!-- col -->
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+        </div><!-- row -->
+      </div><!-- container-fluid -->
+    </div><!-- content -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/select2/js/select2.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        //$('[data-toggle="tooltip"]').tooltip();
+
+        $('.nav-item-communication .nav-link').addClass('active');
+
+        new PerfectScrollbar('.chatspanel-sidebar-body ', {
+          suppressScrollX: true
+        });
+
+        new PerfectScrollbar('.chatspanel-body-content ', {
+          suppressScrollX: true
+        });
+
+        // add class to chat item when selected
+        $('.chats-item').on('click', function(){
+          $(this).addClass('selected');
+          $(this).siblings().removeClass('selected');
+        });
+
+        $('.message-item .nav-link').on('click', function(e){
+          e.preventDefault();
+
+          var c = $(this).attr('class').split(' ');
+
+          $(this).closest('.message-item').removeClass('correct incorrect cantanswer');
+          $(this).closest('.message-item').addClass(c[1]);
+
+          $(this).addClass('active').siblings().removeClass('active');
+        });
+
+      });
+    </script>
+  </body>
+</html>

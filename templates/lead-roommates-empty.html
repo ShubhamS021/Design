@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link href="../lib/quill/quill.core.css" rel="stylesheet">
+    <link href="../lib/quill/quill.snow.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body>
+
+    <div class="content content-lead">
+      <div class="content-header content-header-lead">
+        <div class="media media-lead">
+          <div class="media-avatar"><span>s</span></div>
+          <div class="media-body">
+            <h5>Scott <strong>Richardson</strong></h5>
+            <div class="media-summary">
+              <span><i class="ri-refresh-line"></i>Not synced (7 months ago)</span>
+            </div>
+          </div><!-- media-body -->
+          <div class="media-info">
+            <label class="media-label">Move-in Date</label>
+            <h6 class="media-value">February 10, 2020</h6>
+          </div><!-- media-info -->
+          <div class="media-info">
+            <label class="media-label">Last Followup Date</label>
+            <h6 class="media-value">2 weeks ago</h6>
+          </div><!-- media-info -->
+          <div class="media-info">
+            <label class="media-label">Last Activity Date</label>
+            <h6 class="media-value">Yesterday</h6>
+          </div><!-- media-info -->
+          <div class="media-info">
+            <label class="media-label">Date Created</label>
+            <h6 class="media-value">January 30, 2020</h6>
+          </div><!-- media-info -->
+          <nav class="nav">
+            <a id="sendMail" href="#modalComposeMail" data-toggle="modal" class="nav-link active"><i class="ri-mail-line"></i></a>
+            <a id="sendText" href="" class="nav-link"><i class="ri-message-2-line"></i></a>
+          </nav>
+        </div><!-- media -->
+      </div><!-- content-header -->
+      <div class="content-navbar">
+        <nav class="nav nav-pager">
+          <a href="" class="nav-link"><i class="ri-arrow-left-s-line"></i></a>
+          <a href="" class="nav-link"><i class="ri-arrow-right-s-line"></i></a>
+        </nav>
+        <nav class="nav nav-line">
+          <a href="lead.html" class="nav-link">Overview</a>
+          <a href="lead-roommates.html" class="nav-link active">Roommates</a>
+          <a href="lead-notes.html" class="nav-link">Notes</a>
+          <a href="lead-email.html" class="nav-link">Email</a>
+          <a href="lead-calls.html" class="nav-link">Calls</a>
+          <a href="lead-chats.html" class="nav-link">Chats</a>
+        </nav>
+        <nav class="nav nav-lead-option">
+          <div class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-link dropdown-link-stage apppending">Application Pending</a>
+            <div class="dropdown-menu dropdown-menu-stage">
+              <a href="" class="dropdown-item">Inquiry</a>
+              <a href="" class="dropdown-item">Contact Made</a>
+              <a href="" class="dropdown-item">Tour Set</a>
+              <a href="" class="dropdown-item">Tour Completed</a>
+              <a href="" class="dropdown-item">Waitlist</a>
+              <a href="" class="dropdown-item">Application Pending</a>
+              <a href="" class="dropdown-item">Application Complete</a>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+          <div class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-link dropdown-link-owner">Unassigned</a>
+            <div class="dropdown-menu">
+              <a href="" class="dropdown-item">Mienard Lumaad</a>
+              <a href="" class="dropdown-item">Socrates Itumay</a>
+              <a href="" class="dropdown-item">Ryan Salahid Cerro</a>
+              <a href="" class="dropdown-item">Clark Mejorada</a>
+              <a href="" class="dropdown-item">Diana Zubiri</a>
+              <a href="" class="dropdown-item">Yassi Pressman</a>
+              <a href="" class="dropdown-item">Liza Soberano</a>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+          <div class="dropdown">
+            <a href="#" data-toggle="dropdown" data-display="static" class="dropdown-link">Active</a>
+            <div class="dropdown-menu">
+              <a href="" class="dropdown-item">Active</a>
+              <a href="" class="dropdown-item">Leased</a>
+              <a href="" class="dropdown-item">Lost</a>
+              <a href="" class="dropdown-item">Deleted</a>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+          <a href="#modalShareLead" data-toggle="modal" class="nav-icon"><i class="ri-share-line"></i></a>
+          <a href="" class="nav-icon"><i class="ri-delete-bin-line"></i></a>
+        </nav>
+      </div><!-- content-navbar -->
+      <div class="content-body content-lead-empty">
+        <i class="ri-team-line"></i>
+        <h5>No roommates</h5>
+        <p>There are no roommates linked to this lead yet.</p>
+        <a href="#modalAddRoommate" data-toggle="modal" class="btn btn-primary"><span>&plus;</span>Add Roommate</a>
+      </div><!-- content-body -->
+    </div><!-- content -->
+
+    <div class="modal modal-compose-mail fade" id="modalComposeMail" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title">Compose Mail</h5>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="form-label">To:</label>
+              <h6 class="form-value">Sam Smith <span>(samsmith@gmail.com)</span></h6>
+            </div><!-- form-group -->
+            <div class="form-group">
+              <label class="form-label">From:</label>
+              <h6 class="form-value">Staging Team <span>(jake@liftlytics.com)</span></h6>
+            </div><!-- form-group -->
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Subject">
+            </div><!-- form-group -->
+            <div class="form-group form-group-block">
+              <div id="mailToolbar">
+                <span class="ql-formats">
+                  <select class="ql-font"></select>
+                  <select class="ql-size"></select>
+                </span>
+                <span class="ql-formats">
+                  <button class="ql-bold"></button>
+                  <button class="ql-italic"></button>
+                  <button class="ql-underline"></button>
+                </span>
+                <span class="ql-formats">
+                  <select class="ql-color"></select>
+                  <select class="ql-background"></select>
+                </span>
+                <span class="ql-formats">
+                  <button class="ql-list" value="ordered"></button>
+                  <button class="ql-list" value="bullet"></button>
+                </span>
+                <span class="ql-formats">
+                  <button class="ql-link"></button>
+                  <button class="ql-image"></button>
+                </span>
+                <span class="ql-formats">
+                  <select class="ql-pholder">
+                    <option value="[=Lead full name=]">Lead full name</option>
+                    <option value="[=Lead first name=]">Lead first name</option>
+                    <option value="[=Lead last name=]">Lead last name</option>
+                  </select>
+                </span>
+              </div><!-- #mailToolbar -->
+
+              <div id="mailEditor"></div>
+            </div><!-- form-group -->
+          </div><!-- modal-body -->
+          <div class="modal-footer">
+            <div class="d-flex mg-r-auto">
+              <select class="custom-select mg-r-10">
+                <option value="">Insert Template</option>
+                <option value="1">Test Template A</option>
+                <option value="2">Facetime remind email</option>
+                <option value="3">Self guided remind email</option>
+                <option value="4">Guided virtual tour remind email</option>
+                <option value="5">Confirmation of tour date</option>
+                <option value="6">In person remind email</option>
+              </select>
+              <button type="button" class="btn btn-white btn-icon" data-toggle="tooltip" title="Upload file"><i class="ri-upload-2-fill"></i></button>
+            </div>
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-white">Preview mail</button>
+            <button type="button" class="btn btn-primary">Send mail</button>
+          </div>
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-new-lead fade" id="modalAddRoommate" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title">Add Roommate</h5>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="row row-sm">
+              <div class="col-6">
+                <label class="form-label">Firstname</label>
+                <input type="text" class="form-control" placeholder="Enter firstname">
+              </div><!-- col -->
+              <div class="col-6">
+                <label class="form-label">Lastname</label>
+                <input type="text" class="form-control" placeholder="Enter lastname">
+              </div><!-- col -->
+              <div class="col-12 mg-t-20">
+                <label class="form-label">Email address</label>
+                <input type="text" class="form-control" placeholder="Enter email address">
+              </div><!-- col -->
+              <div class="col-6 mg-t-20">
+                <label class="form-label">Phone number</label>
+                <input type="text" class="form-control" placeholder="Enter phone number">
+              </div><!-- col -->
+              <div class="col-6 mg-t-20">
+                <label class="form-label">Relationship to lead</label>
+                <select class="custom-select">
+                  <option value="">Choose relationship</option>
+                  <option value="1">Spouse</option>
+                  <option value="2">Partner</option>
+                  <option value="3">Roommate</option>
+                  <option value="4">Child</option>
+                  <option value="5">Guarantor</option>
+                </select>
+              </div><!-- col -->
+            </div><!-- row -->
+          </div><!-- modal-body -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Add Roommate</button>
+          </div>
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-new-user fade" id="modalShareLead" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title">Share Lead</h5>
+              <p>Select the properties to share the lead with:</p>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body mg-t-0-f">
+            <div class="row row-sm">
+              <div class="col-6">
+                <div class="form-property">
+                  <div class="form-property-search">
+                    <i data-feather="search"></i>
+                    <input type="text" placeholder="Search...">
+                  </div><!-- form-property-search -->
+                  <div class="form-property-header">
+                    <a href="" class="mg-l-auto">Select None</a>
+                    <a href="">Select All</a>
+                  </div><!-- form-property-header -->
+                  <div class="form-property-body">
+                    <ul class="prop-group">
+                      <li class="prop-item">
+                        <div class="prop-label">
+                          <div class="form-checkbox"><input type="checkbox"></div>
+                          <span>Rosewood</span>
+                        </div><!-- prop-label -->
+                        <ul class="prop-sub">
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>Jeferson Chandler</span>
+                          </li>
+                        </ul><!-- prop-sub -->
+                      </li>
+                      <li class="prop-item">
+                        <div class="prop-label">
+                          <div class="form-checkbox"><input type="checkbox"></div>
+                          <span>Warren Beecroft</span>
+                        </div><!-- prop-label -->
+                        <ul class="prop-sub">
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>Lakeside Drive Apartments</span>
+                          </li>
+                        </ul><!-- prop-sub -->
+                      </li>
+                      <li class="prop-item">
+                        <div class="prop-label">
+                          <div class="form-checkbox"><input type="checkbox"></div>
+                          <span>Beecroft Management</span>
+                        </div><!-- prop-label -->
+                        <ul class="prop-sub">
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>Waterside at Ocotillo</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>The Reserve at Gilbert Town</span>
+                          </li>
+                        </ul><!-- prop-sub -->
+                      </li>
+                      <li class="prop-item">
+                        <div class="prop-label">
+                          <div class="form-checkbox"><input type="checkbox"></div>
+                          <span>Trammel Crow Company</span>
+                        </div><!-- prop-label -->
+                        <ul class="prop-sub">
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>The Astor at Osborn</span>
+                          </li>
+                        </ul><!-- prop-sub -->
+                      </li>
+                      <li class="prop-item">
+                        <div class="prop-label">
+                          <div class="form-checkbox"><input type="checkbox"></div>
+                          <span>Colin Brown</span>
+                        </div><!-- prop-label -->
+                        <ul class="prop-sub">
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>District Lofts</span>
+                          </li>
+                        </ul><!-- prop-sub -->
+                      </li>
+                      <li class="prop-item">
+                        <div class="prop-label">
+                          <div class="form-checkbox"><input type="checkbox"></div>
+                          <span>Richmark Holdings</span>
+                        </div><!-- prop-label -->
+                        <ul class="prop-sub">
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Norterra</span>
+                          </li>
+                        </ul><!-- prop-sub -->
+                      </li>
+                      <li class="prop-item">
+                        <div class="prop-label">
+                          <div class="form-checkbox"><input type="checkbox"></div>
+                          <span>Kevan Millstein</span>
+                        </div><!-- prop-label -->
+                        <ul class="prop-sub">
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Posada</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Hacienda</span>
+                          </li>
+                        </ul><!-- prop-sub -->
+                      </li>
+                      <li class="prop-item">
+                        <div class="prop-label">
+                          <div class="form-checkbox"><input type="checkbox"></div>
+                          <span>Mark Taylor</span>
+                        </div><!-- prop-label -->
+                        <ul class="prop-sub">
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Portales</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Milan</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Capella</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Valencia</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Prado</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Privada</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Travesia</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Palmilla</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Sonoma</span>
+                          </li>
+                        </ul><!-- prop-sub -->
+                      </li>
+                      <li class="prop-item">
+                        <div class="prop-label">
+                          <div class="form-checkbox"><input type="checkbox"></div>
+                          <span>The Hudye Group</span>
+                        </div><!-- prop-label -->
+                        <ul class="prop-sub">
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>Retreat at the Raven</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>Ravenwood Heights</span>
+                          </li>
+                        </ul><!-- prop-sub -->
+                      </li>
+                    </ul>
+                  </div><!-- form-property-body -->
+                </div><!-- form-property -->
+              </div><!-- col -->
+              <div class="col-6">
+                <div class="form-property">
+                  <div class="form-property-search">
+                    <i data-feather="search"></i>
+                    <input type="text" placeholder="Search...">
+                  </div><!-- form-property-search -->
+                  <div class="form-property-header">
+                    <span>4 selected</span>
+                    <a href="" class="mg-l-auto">Clear all</a>
+                  </div><!-- form-property-header -->
+                  <div class="form-property-body">
+                    <ul class="prop-list">
+                      <li class="prop-list-item">
+                        <span>San Marbeya</span>
+                        <a href=""><i class="ri-close-line"></i></a>
+                      </li>
+                      <li class="prop-list-item">
+                        <span>Emerson Mill Avenue</span>
+                        <a href=""><i class="ri-close-line"></i></a>
+                      </li>
+                      <li class="prop-list-item">
+                        <span>San Portales</span>
+                        <a href=""><i class="ri-close-line"></i></a>
+                      </li>
+                      <li class="prop-list-item">
+                        <span>Remington Ranch</span>
+                        <a href=""><i class="ri-close-line"></i></a>
+                      </li>
+                    </ul>
+                  </div><!-- form-property-body -->
+                </div><!-- form-property -->
+              </div><!-- col -->
+            </div><!-- row -->
+          </div><!-- modal-body -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Save Changes</button>
+          </div>
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/quill/quill.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/compose.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+
+      });
+    </script>
+  </body>
+</html>

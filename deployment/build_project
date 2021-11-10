@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /home/ubuntu/design
+chown ubuntu:ubuntu /home/ubuntu/design
+npm install

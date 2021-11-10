@@ -1,0 +1,223 @@
+
+.content-body-notes {
+  .tooltip-inner {
+    font-size: $font-size-xs;
+  }
+}
+
+.note-sidebar-header {
+  .btn {
+    min-height: inherit;
+    width: $height-xs;
+    height: $height-xs;
+    padding: 0;
+
+    span {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.nav-notes {
+  position: relative;
+  display: block;
+  flex-direction: column;
+  height: calc(100% - #{$header-height});
+  overflow: hidden;
+}
+
+.note-link {
+  display: flex;
+  padding: 15px;
+  padding-right: 13px;
+  outline: none;
+  border-right: 1.5px solid transparent;
+  border-bottom: 1px solid $color-bg-01;
+  @include transition(all 0.2s);
+
+  @include hover-focus() {
+    background-color: rgba($color-bg-01, .6);
+  }
+
+  &.active {
+    border-right-color: $color-ui-01;
+    background-color: #fff;
+
+    .note-icon {
+      color: $color-ui-01;
+      svg { fill: rgba($color-ui-01, .1); }
+    }
+
+    .note-body h6 { color: $color-ui-01; }
+  }
+}
+
+.note-icon {
+  margin-right: 8px;
+  line-height: 1;
+  color: $color-tx-02;
+
+  i {
+    font-size: 28px;
+    line-height: 0;
+  }
+
+  svg {
+    width: 36px;
+    height: 36px;
+    stroke-width: 1px;
+    margin-left: -5px;
+    fill: rgba(#fff, .2);
+  }
+}
+
+.note-body {
+  flex: 1;
+
+  h6 {
+    color: $color-tx-01;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-sm;
+    margin-bottom: 3px;
+  }
+
+  span {
+    display: block;
+    font-size: $font-size-xs;
+    color: $color-tx-03;
+  }
+}
+
+.content-note-group {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 320px;
+  overflow-y: auto;
+  height: calc(100vh - 228px);
+
+  .note-pane {
+    position: relative;
+    padding: 30px 25px;
+
+    + .note-pane { border-top: 1px solid $color-bg-02; }
+
+    h6 { margin-bottom: 15px; }
+
+    &:last-child::after {
+      content: '';
+      display: block;
+      height: 30px;
+    }
+  }
+
+  .content-note-footer { padding-top: 10px; }
+}
+
+.content-note-body {
+  padding: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 320px;
+  overflow-y: auto;
+
+  .ql-toolbar.ql-snow {
+    border-width: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    display: flex;
+
+    + .ql-container.ql-snow { border-top: 1px solid $color-bg-02; }
+
+    .ql-formats {
+      margin-right: 20px;
+      display: flex;
+    }
+
+    button {
+      background-color: #fff;
+      border: 1px solid rgba($color-bg-03, .6);
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: $height-base;
+      height: $height-base;
+      border-radius: 4px;
+      float: none;
+      outline: none;
+      @include transition(all 0.2s);
+
+      @include hover-focus() {
+        border-color: transparent;
+        @include shadow-sharp($color-tx-03);
+      }
+
+      svg {
+        width: 50%;
+        height: 50%;
+      }
+
+      + button { margin-left: 5px; }
+
+      .ql-stroke {
+        stroke: $color-tx-02;
+      }
+
+      &.ql-active {
+        background-color: $blue;
+        border-color: transparent;
+
+        .ql-stroke { stroke: #fff; }
+      }
+    }
+  }
+
+  .ql-container.ql-snow {
+    padding: 25px;
+    background-color: #fff;
+    border: 1px solid $color-bg-02;
+    border-radius: 6px;
+    font-size: $font-size-base;
+    color: $color-tx-01;
+    height: calc(100% - 120px);
+    @include shadow-dreamy($color-bg-02);
+  }
+
+  .ql-editor {
+    padding: 0;
+
+    &.ql-blank::before { left: 25px; }
+  }
+}
+
+.content-note-footer {
+  display: flex;
+  align-items: center;
+  padding: 25px 0 0;
+
+  span {
+    margin-left: 15px;
+    font-size: $font-size-xs;
+    color: $color-tx-03;
+  }
+
+  .btn {
+    height: $height-base;
+    + .btn { margin-left: 8px; }
+
+    &.btn-white { border-color: rgba($color-bg-03, .75); }
+  }
+}

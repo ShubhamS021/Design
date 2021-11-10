@@ -1,0 +1,45 @@
+.page-body.to-pdf .page {
+  height: 755px; }
+  .page-body.to-pdf .page.num-bottom-center::after {
+    top: auto;
+    bottom: 0;
+    position: absolute; }
+
+.page-body.to-pdf .ordered-list li {
+  line-height: 1.25; }
+  .page-body.to-pdf .ordered-list li + li {
+    margin-top: 8px; }
+
+.page-body.to-pdf .mb-4 {
+  margin-bottom: 20px !important; }
+
+.page-body.to-pdf .mb-30 {
+  margin-bottom: 20px; }
+
+.card {
+  border: 1px solid #000; }
+  .card span[contenteditable="true"] {
+    font-weight: 700;
+    outline: none; }
+  .card .input-field {
+    border-bottom: 0; }
+
+.card-header {
+  padding: 10px;
+  background-color: #f7f8fc;
+  border-bottom: 1px solid #000;
+  font-weight: 700; }
+
+.card-body .row > div {
+  padding: 8px 10px; }
+  .card-body .row > div + div {
+    border-left: 1px solid #000; }
+
+.card-body .row + .row {
+  border-top: 1px solid #000; }
+
+.pl-15 {
+  padding-left: 15px; }
+
+.lh-4 {
+  line-height: 1.4; }

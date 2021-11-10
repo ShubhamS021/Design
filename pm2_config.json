@@ -1,0 +1,8 @@
+{
+  "apps": [
+    {
+      "name": "Server",
+      "script": "node_modules/gulp/bin/gulp.js serve"
+    }
+  ]
+}

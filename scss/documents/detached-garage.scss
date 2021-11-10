@@ -1,0 +1,57 @@
+@import "variables";
+
+.page-body.to-pdf {
+
+  .page {
+    height: 755px;
+
+    &.num-bottom-center::after {
+      top: auto;
+      bottom: 0;
+      position: absolute;
+    }
+  }
+
+  .ordered-list li {
+    line-height: 1.25;
+
+    + li { margin-top: 8px; }
+  }
+
+  .mb-4 { margin-bottom: 20px !important; }
+  .mb-30 { margin-bottom: 20px; }
+}
+
+.card {
+  border: 1px solid $border-color;
+
+  span[contenteditable="true"] {
+    font-weight: 700;
+    outline: none;
+  }
+
+  .input-field { border-bottom: 0; }
+}
+
+.card-header {
+  padding: 10px;
+  background-color: $body-bg;
+  border-bottom: 1px solid $border-color;
+  font-weight: 700;
+}
+
+.card-body {
+  .row > div {
+    padding: 8px 10px;
+
+    + div {
+      border-left: 1px solid $border-color;
+    }
+  }
+
+  .row + .row { border-top: 1px solid $border-color; }
+}
+
+// Utils
+.pl-15 { padding-left: 15px; }
+.lh-4 { line-height: 1.4; }

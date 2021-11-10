@@ -1,0 +1,107 @@
+.page-contact {
+  .section-home-contact {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    background-color: $ui-cyan;
+
+    @include media-breakpoint-up(lg) { padding-top: 80px; }
+
+    .contact-panel {
+      background-color: transparent;
+      padding-bottom: 0;
+      padding-right: 0;
+
+      @include media-breakpoint-down(md) { padding-left: 0; }
+      @include media-breakpoint-up(lg) { padding-top: 0; }
+    }
+  }
+}
+
+.banner-contact {
+  max-width: 1440px;
+  height: 100vh;
+  max-height: 900px;
+  position: relative;
+
+  .banner-img {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .banner-left {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+
+    @include media-breakpoint-up(lg) {
+      width: 450px;
+      padding-bottom: 80px;
+      background-color: rgba($ui-blue, .2);
+    }
+  }
+
+  .banner-title {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    background-color: #fff;
+    color: $color-tx-01;
+    padding: 0 24px;
+    font-family: $ff-secondary;
+    font-size: 40px;
+
+    @include media-breakpoint-up(lg) {
+      height: 180px;
+      padding: 0 50px;
+      font-size: 80px;
+      background-color: $ui-cyan;
+      color: #fff;
+    }
+  }
+}
+
+.contact-group {
+  position: relative;
+
+  label {
+    display: block;
+    color: rgba(#fff, .4);
+    margin-bottom: 5px;
+  }
+
+  h6 {
+    margin-bottom: 0;
+    font-size: 18px;
+    font-family: $ff-secondary;
+    font-weight: 700;
+    color: #fff;
+
+    @includde media-breakpoint-up(lg) { font-size: 24px; }
+  }
+
+  + .contact-group { margin-top: 30px; }
+}
+
+.contact-map {
+  height: 100%;
+  border-radius: 4px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+  }
+}

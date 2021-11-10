@@ -1,0 +1,26 @@
+@import "variables";
+
+.page-body.to-pdf {
+  line-height: 1.3;
+  font-size: 8pt;
+  width: 430pt;
+
+  p { margin-bottom: 8px; }
+
+  .ordered-list {
+    line-height: inherit;
+
+    li + li { margin-top: 7px; }
+
+    strong.d-block { margin-bottom: 2px; }
+  }
+
+  .page {
+    height: auto;
+
+    &::after { font-size: 8pt; }
+
+    &:first-child .ordered-list { margin-bottom: 68px; }
+    &:nth-child(2) .mb-4 { margin-bottom: 15px !important; }
+  }
+}

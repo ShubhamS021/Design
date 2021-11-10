@@ -1,0 +1,24 @@
+
+.welcome-img {
+  border: 1px solid $border-color;
+}
+
+.list-group-welcome {
+  .list-group-item {
+    font-size: 14px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-width: 0;
+
+    + .list-group-item {
+      border-top-width: 1px;
+      border-top-color: rgba($border-color, .4);
+    }
+
+    span:last-child {
+      color: $color-tx-01;
+    }
+  }
+}

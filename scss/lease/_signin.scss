@@ -1,0 +1,99 @@
+
+.page-signin {
+  padding: 25px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signin {
+  width: 420px;
+  border: 1px solid rgba($border-color, .6);
+  background-color: #fff;
+  @include shadow-sharp($color-bg-02);
+
+  .avatar {
+    width: 42px;
+    height: 42px;
+
+    span {
+      font-size: 18px;
+      font-weight: 300;
+    }
+  }
+
+  .media { align-items: center; }
+
+  .media-body {
+    padding-left: 10px;
+
+    h6 {
+      font-weight: 700;
+      color: $color-tx-01;
+      letter-spacing: -.5px;
+      margin-bottom: 2px;
+    }
+
+    span {
+      display: block;
+      font-size: 14px;
+      color: $color-tx-03;
+      line-height: 1.2;
+    }
+  }
+}
+
+.signin-body {
+  position: relative;
+  padding: 30px;
+
+  .form-group { margin-bottom: 20px; }
+
+  .form-control {
+    height: auto;
+    padding: 10px 12px;
+    border-radius: 5px;
+    line-height: 1.533;
+    border-color: $border-color;
+    border-radius: 0;
+    font-size: 15px;
+
+    &::placeholder {
+      text-shadow: none;
+      color: $color-tx-03;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 .5px rgba($color-ui-01, .6);
+      border-color: rgba($color-ui-01, .6);
+    }
+  }
+
+  .link-forgot {
+    font-size: 13px;
+    display: inline-block;
+    margin-top: 5px;
+  }
+
+  .btn {
+    padding: 10px 12px;
+    font-size: 15px;
+    line-height: 1.533; //1.643;
+  }
+}
+
+.signin-title {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: $font-family-secondary;
+  letter-spacing: -.5px;
+  color: $color-tx-01;
+  margin-bottom: 8px;
+}
+
+.signin-text {
+  font-size: 15px;
+  margin-bottom: 30px;
+  color: $color-tx-02;
+}

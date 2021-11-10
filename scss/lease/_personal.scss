@@ -1,0 +1,136 @@
+
+.nav-section {
+  flex-direction: column;
+  border: 1px solid $color-bg-02;
+  padding: 15px 20px;
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    + .nav-item { border-top: 1px solid $color-bg-01; }
+
+    &.incomplete {
+      div {
+        line-height: 1;
+        font-size: 18px;
+        font-weight: 400;
+        color: $red;
+        position: relative;
+        top: 1px;
+      }
+    }
+
+    &.active {
+      color: $color-ui-01;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -21px;
+        bottom: 0;
+        border-left: 3px solid $color-ui-01;
+      }
+    }
+
+    &.completed::after {
+      content: '\EB7A';
+      color: $success;
+      font-family: 'remixicon';
+      font-size: 18px;
+      font-weight: 400;
+      position: relative;
+      top: calc(50% - 12px);
+      line-height: 1;
+    }
+
+    &.disabled .nav-link {
+      color: $color-tx-03;
+      font-weight: 400;
+      cursor: default;
+    }
+  }
+
+  .nav-link {
+    flex: 1;
+    padding: 8px 0;
+    position: relative;
+    outline: none;
+    color: $color-tx-01;
+    font-weight: 600;
+    font-size: 14px;
+  }
+}
+
+.popover-nav-section {
+  border-radius: 0;
+  border-width: 0;
+
+  .popover-body {
+    background-color: $gray-900;
+    color: rgba(#fff, .75);
+    font-size: 13px;
+  }
+
+  > .arrow::after { display: none; }
+
+  &.bs-popover-left > .arrow::before {
+    border-left-color: $gray-900;
+    right: 1px;
+  }
+
+  &.bs-popover-right > .arrow::before {
+    border-right-color: $gray-900;
+    left: 1px;
+  }
+
+  &.bs-popover-top > .arrow::before {
+    border-top-color: $gray-900;
+    top: -1px;
+  }
+}
+
+.upload-panel {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-bg-01;
+  border: 1.5px dashed $color-bg-03;
+
+  h6 {
+    margin-bottom: 15px;
+    color: $color-tx-01;
+  }
+
+  span {
+    font-size: 12px;
+    color: $color-tx-03;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 15px;
+  }
+}
+
+.btn-upload {
+  height: 38px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .2px;
+  text-transform: uppercase;
+
+  @include media-breakpoint-up(sm) { height: 40px; }
+  @include media-breakpoint-up(lg) { height: 45px; }
+
+  i {
+    line-height: 1;
+    margin-right: 5px;
+  }
+}

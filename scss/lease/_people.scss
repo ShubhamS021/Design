@@ -1,0 +1,81 @@
+
+.label-occupant span:not(:first-of-type) {
+  font-weight: 600;
+  color: $color-tx-02;
+}
+
+.nav-occupant {
+  border-bottom: 1px solid $color-bg-02;
+  padding-bottom: 5px;
+
+  .nav-link {
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .2px;
+    color: $color-tx-03;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      right: 0;
+      border-bottom: 1px solid $color-ui-01;
+      display: none;
+    }
+
+    &.active {
+      color: $color-tx-01;
+      font-weight: 700;
+
+      &::before { display: block; }
+    }
+
+    + .nav-link { margin-left: 25px; }
+  }
+}
+
+.occupant-more-data {
+  .ed-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      border-bottom: 1px solid $border-color;
+    }
+
+    h6 {
+      font-size: inherit;
+      font-weight: 500;
+      background-color: #fff;
+      padding-right: 5px;
+      position: relative;
+    }
+  }
+
+  .remove-employer {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding-left: 5px;
+    position: relative;
+    font-size: 13px;
+
+    i {
+      font-size: 16px;
+      line-height: 1;
+      margin-right: 3px;
+    }
+  }
+}

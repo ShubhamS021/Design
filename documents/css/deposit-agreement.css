@@ -1,0 +1,178 @@
+.page::after {
+  content: attr(data-num);
+  position: absolute;
+  top: calc(100% - 50px);
+  left: calc(50% - 1px);
+  opacity: .75; }
+  @media print {
+    .page::after {
+      display: none; } }
+
+.header-logo {
+  display: flex;
+  justify-content: center; }
+  .header-logo img {
+    width: 200px;
+    height: auto; }
+    @media print {
+      .header-logo img {
+        width: 140px; } }
+
+.content-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700; }
+  @media (min-width: 850px) {
+    .content-title {
+      font-size: 20px; } }
+  @media print {
+    .content-title {
+      font-size: 18px; } }
+
+.list {
+  margin: 0 0 20px;
+  padding: 0;
+  display: flex;
+  list-style: none; }
+  .list li {
+    white-space: nowrap;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer; }
+    .list li::before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #000;
+      margin-right: 5px;
+      margin-bottom: 1px;
+      opacity: .6;
+      flex-shrink: 0; }
+    .list li::after {
+      content: '\EB7A';
+      font-family: 'remixicon';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none; }
+    .list li + li {
+      margin-left: 25px; }
+    .list li[data-checked="true"]::after {
+      display: block; }
+
+.table-docs {
+  width: 95%; }
+  .table-docs thead th {
+    text-transform: uppercase;
+    text-decoration: underline;
+    white-space: nowrap; }
+    .table-docs thead th span {
+      text-transform: lowercase !important; }
+  .table-docs tbody td {
+    text-transform: uppercase; }
+    .table-docs tbody td:first-child {
+      width: 35%; }
+    .table-docs tbody td:not(:first-child) {
+      text-align: right; }
+
+.list2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .list2 li {
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+    align-items: center; }
+
+.multipage-body.to-pdf {
+  width: 428pt;
+  font-size: 8pt;
+  line-height: 1.25;
+  padding-left: 16pt;
+  word-spacing: -1pt;
+  letter-spacing: -.2px; }
+  .multipage-body.to-pdf p {
+    margin-bottom: 12px; }
+  .multipage-body.to-pdf .page {
+    padding: 0;
+    width: auto;
+    height: auto;
+    margin: 0 0 10px;
+    height: 790px; }
+    .multipage-body.to-pdf .page.num-bottom-center::after {
+      top: auto;
+      bottom: 0;
+      font-size: 8pt;
+      position: absolute; }
+    .multipage-body.to-pdf .page:nth-child(2) {
+      height: 784px; }
+    .multipage-body.to-pdf .page:nth-child(3) {
+      height: 782px; }
+    .multipage-body.to-pdf .page:nth-child(4) {
+      height: 780px; }
+    .multipage-body.to-pdf .page:nth-child(5) {
+      height: 780px; }
+    .multipage-body.to-pdf .page:nth-child(6) {
+      height: 784px; }
+    .multipage-body.to-pdf .page:nth-child(7) {
+      height: 773px;
+      margin-bottom: 0; }
+      .multipage-body.to-pdf .page:nth-child(7)::after {
+        padding-top: 8px; }
+  .multipage-body.to-pdf .header-logo img {
+    width: 140px; }
+  .multipage-body.to-pdf .content-title {
+    font-size: 16px; }
+  .multipage-body.to-pdf .list {
+    margin-bottom: 10px; }
+  .multipage-body.to-pdf .list li::before {
+    width: 11px;
+    height: 11px;
+    margin-top: 2px;
+    margin-right: 3px; }
+  .multipage-body.to-pdf .list li + li {
+    margin-left: 12px; }
+  .multipage-body.to-pdf .checkbox {
+    width: 12px;
+    height: 12px;
+    margin-top: 1px; }
+    .multipage-body.to-pdf .checkbox.sm {
+      width: 10px;
+      height: 10px;
+      margin-top: 1.5px;
+      margin-right: 2px; }
+  .multipage-body.to-pdf .table-docs {
+    width: 100%;
+    line-height: 1.2; }
+  .multipage-body.to-pdf .mw-75 {
+    width: 40px; }
+  .multipage-body.to-pdf .mb-15 {
+    margin-bottom: 8px; }
+  .multipage-body.to-pdf .mb-25 {
+    margin-bottom: 12px; }
+
+.ml-18 {
+  margin-left: 18px; }
+
+.mw-39p {
+  min-width: 38.8%; }
+
+.mw-12p {
+  min-width: 12%; }
+
+.mw-21p {
+  min-width: 21%; }
+
+.mw-41p {
+  min-width: 41.3%; }
+
+.mw-43p {
+  min-width: 43%; }

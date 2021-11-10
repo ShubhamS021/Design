@@ -1,0 +1,118 @@
+<a id="pcMenu" href="#" class="proschat-menu">
+  <i class="ri-question-answer-fill"></i>
+</a>
+
+<div id="pcPanel" class="proschat-panel">
+  <div class="proschat-header">
+    <div class="avatar online"><i class="ri-rocket-2-fill"></i></div>
+    <div class="proschat-agent">
+      <h6>Hobbes</h6>
+      <div class="agent-type"><span>Bot</span></div>
+    </div><!-- proschat-agent -->
+    <a id="pcLiveAgent" href="" class="btn btn-live-agent mg-l-auto mg-r-15"><i class="ri-customer-service-2-fill"></i> Live Agent</a>
+    <a href="" id="pcClose" class="proschat-close"><i class="ri-close-fill"></i></a>
+  </div><!-- proschat-header -->
+  <div class="proschat-body">
+    <ul id="responseGroup" class="response-group">
+      <li class="response-item response-item-welcome">
+        <div class="avatar"><i class="ri-rocket-2-fill"></i></div>
+        <div class="card card-response">
+          <h6 class="tx-semibold">Hi John!</h6>
+          <p class="mg-b-0">Hi! I'm Hobbes, Emerson Mill Avenue's bot assistant and I can help answer your application related questions.</p>
+        </div><!-- card -->
+      </li>
+      <li class="response-item response-item-app-question"><div id="responseAppQuestion" class="response-chat">Tell me about <span>Floor Plans</span></div></li>
+      <li class="response-item response-item-answer">
+        <div class="avatar"><i class="ri-rocket-2-fill"></i></div>
+        <div class="card card-response">
+          <p class="mg-b-0">A Floor Plan is the desired layout of your new home and includes the number of bedrooms, the amount of square feet and price range.</p>
+        </div><!-- card -->
+      </li>
+      <li id="responseTyping" class="response-item">
+        <div class="avatar"><i class="ri-rocket-2-fill"></i></div>
+        <div class="response-typing">
+          <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+          </div><!-- spinner -->
+        </div><!-- response-typing -->
+      </li>
+      <li class="response-item response-item-name">
+        <div class="avatar"><i class="ri-rocket-2-fill"></i></div>
+        <div class="card-response card-response-form">
+          <div class="form-group mg-b-0">
+            <div class="form-label">
+              <label class="mg-b-0"><span>1 of 3:</span> <strong>What is your name?</strong></label>
+              <a href="" class="link-thanks">No thanks</a>
+            </div>
+            <div class="form-field">
+              <input id="inputFullName" type="text" class="form-control" placeholder="Write your full name">
+              <button id="btnSubmitName" class="btn btn-primary btn-icon"><i class="ri-arrow-right-line"></i></button>
+            </div><!-- form-field -->
+          </div><!-- form-group -->
+        </div><!-- card-response -->
+      </li>
+      <li class="response-item response-item-email">
+        <div class="avatar"><i class="ri-rocket-2-fill"></i></div>
+        <div class="card-response card-response-form">
+          <div class="form-group mg-b-0">
+            <div class="form-label">
+              <label class="mg-b-0"><span>2 of 3:</span> <strong>Email address</strong></label>
+              <a href="">No thanks</a>
+            </div>
+            <div class="form-field">
+              <input id="inputEmailAddress" type="text" class="form-control" placeholder="Your email address">
+              <button id="btnSubmitEmail" class="btn btn-primary btn-icon"><i class="ri-arrow-right-line"></i></button>
+            </div><!-- form-field -->
+            <small>By providing your email address, you agree to Terms of Use and Privacy Policy and consent to be contacted via email.</small>
+          </div><!-- form-group -->
+        </div><!-- card-response -->
+      </li>
+      <li class="response-item response-item-comment">
+        <div class="avatar"><i class="ri-rocket-2-fill"></i></div>
+        <div class="card-response card-response-form">
+          <div class="form-group mg-b-0">
+            <div class="form-label">
+              <label class="mg-b-0"><span>3 of 3:</span> <strong>Comment (optional)</strong></label>
+              <a href="">No thanks</a>
+            </div>
+            <div class="form-field">
+              <input id="inputComment" type="text" class="form-control" placeholder="Wrie some comment">
+              <button id="btnSubmitComment" class="btn btn-primary btn-icon"><i class="ri-arrow-right-line"></i></button>
+            </div><!-- form-field -->
+          </div><!-- form-group -->
+        </div><!-- card-response -->
+      </li>
+      </li>
+    </ul><!-- response-group -->
+  </div><!-- proschat-body -->
+  <div class="proschat-chatbox d-flex">
+    <input id="inputQuestion" type="text" class="form-control" placeholder="Write your question">
+    <button id="btnSubmitQuestion" class="btn btn-primary btn-icon"><i class="ri-send-plane-fill"></i></button>
+  </div><!-- proschat-chatbox -->
+  <div class="proschat-footer">Powered by: <a href="">Dwell</a></div>
+</div><!-- proschat-panel -->
+<script>
+  'use strict'
+
+  $('body').on('click', '.link-hobbes', function(e){
+    e.preventDefault();
+
+    var s = $(this).attr('data-subject');
+
+    $('#responseAppQuestion span').text(s);
+    $('#pcMenu').trigger('click');
+
+    $('.response-item-app-question').addClass('show');
+    $('.response-item-welcome').removeClass('show');
+
+    $('#responseTyping').addClass('show');
+
+    setTimeout(function(){
+      $('.response-item-answer').addClass('show');
+      $('#responseTyping').removeClass('show');
+    }, 1000);
+
+  });
+</script>

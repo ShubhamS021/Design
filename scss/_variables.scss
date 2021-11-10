@@ -1,0 +1,98 @@
+
+$body-color:                      #344563;
+$body-bg:                         #f7f8fc;
+
+$red:                             #f3505c7a;
+
+// Border
+$border-color:                    #d5dcf4;
+$border-radius:                   6px;
+$border-radius-sm:                5px;
+$border-radius-md:                8px;
+$border-radius-lg:                10px;
+
+// Colors
+$gray-900:                        #091534;
+$gray-800:                        #15274d;
+$gray-700:                        #233457;
+$gray-600:                        #657697;
+$gray-500:                        #a0a9bd;
+$gray-400:                        #ccced9;
+$gray-300:                        #dfe1e8;
+$gray-200:                        #e9eaf0;
+$gray-100:                        #f7f8fc;
+
+$color-ui-01:                     #0168fa;
+$color-ui-02:                     #243782;
+$color-ui-03:                     #09a8fa; //#00d7d2;
+
+$color-light-01:                  #ebf2fe;
+
+$color-tx-01:                     #0b2151;
+$color-tx-02:                     #4a5e8a;
+$color-tx-03:                     #929eb9;
+$color-tx-04:                     #c0ccda;
+
+$color-bg-01:                     #f0f2f9;
+$color-bg-02:                     #e1e6f7;
+$color-bg-03:                     #c1c8de;
+
+$color-bd-01:                     #eef1f9;
+$color-bd-02:                     #e2e7f4;
+
+$blue:                            $color-ui-01;
+$blue2:                           #5999f0;
+$green:                           #24ba7b;
+$indigo:                          #5e2fc6;
+$purple:                          #6c4cd6;
+$red:                             #f3505c;
+$teal:                            #21c6b7;
+
+// Fonts
+$font-family-primary:             'IBM Plex Sans', sans-serif;
+$font-family-secondary:           'Helvetica Neue', Arial, sans-serif;
+$font-family-numeric:             'Rubik', sans-serif;
+$font-family-base:                $font-family-primary;
+
+$font-weight-medium:              500;
+$font-weight-semibold:            600;
+$font-weight-bold:                700;
+
+$font-size-base:                  .875rem;
+$font-size-sm:                    13px;
+$font-size-xs:                    12px;
+$font-size-md:                    15px;
+
+$font-color:                      darken($color-ui-02, 15%);
+
+// Input
+$input-border-color:              desaturate($border-color, 15%);
+
+// Links
+$link-hover-decoration:           none;
+
+// Shadow
+$shadow-base:                     0 3px 10px rgba($color-ui-02, .06);
+$shadow-01:                       1px 2px 8px rgba($color-ui-02, 0.06);
+$shadow-02:                       1px 2px 25px rgba($color-ui-02, 0.04);
+$shadow-03:                       2px 5px 45px rgba($color-ui-02, .12);
+$shadow-04:                       4px 5px 10px rgba($color-ui-02, .07);
+
+// Template Variables
+$gutter-width:                    30px;
+
+$height-base:                     38px;
+$height-sm:                       36px;
+$height-xs:                       34px;
+$height-md:                       40px;
+$height-lg:                       42px;
+
+$header-height:                   64px;
+$header-height-sm:                60px;
+$leftbar-width:                   64px;
+$sidebar-width:                   260px;
+$offsetmenu-width:                280px;
+
+
+// Skeleton loader
+$skeleton-bg:                     $color-bg-01;

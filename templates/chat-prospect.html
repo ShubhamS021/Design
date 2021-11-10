@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body class="bg-gray-100">
+
+
+    <a id="pcMenu" href="#" class="proschat-menu">
+      <i class="ri-question-answer-fill"></i>
+      <span class="unread-count">3</span>
+    </a>
+
+    <nav id="pcNav" class="nav nav-proschat">
+      <a href="" class="close"><i class="ri-close-fill"></i></a>
+      <a href="" class="nav-link">Schedule a Tour</a>
+      <a href="" class="nav-link">View Photos</a>
+      <a href="" class="nav-link">Prices/Availability</a>
+    </nav>
+
+    <div id="pcPanel" class="proschat-panel">
+      <div class="proschat-header">
+        <div class="avatar online"><i class="ri-rocket-2-fill"></i></div>
+        <div class="proschat-agent">
+          <h6>Hobbes</h6>
+          <div class="agent-type"><span>Bot</span></div>
+        </div><!-- proschat-agent -->
+        <a id="pcLiveAgent" href="" class="btn btn-live-agent mg-l-auto mg-r-15"><i class="ri-customer-service-2-fill"></i> Live Agent</a>
+        <a href="" id="pcClose" class="proschat-close"><i class="ri-close-fill"></i></a>
+      </div><!-- proschat-header -->
+      <div class="proschat-body">
+        <ul id="responseGroup" class="response-group">
+          <li class="response-item response-item-welcome">
+            <div class="avatar"><i class="ri-rocket-2-fill"></i></div>
+            <div class="card card-response-welcome">
+              <h5>Welcome to</h5>
+              <h3>Emerson Mill Avenue</h3>
+              <p>What can I help you with today?</p>
+            </div><!-- card -->
+          </li>
+          <li id="responseTyping" class="response-item">
+            <div class="avatar"><i class="ri-rocket-2-fill"></i></div>
+            <div class="response-typing">
+              <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+              </div><!-- spinner -->
+            </div><!-- response-typing -->
+          </li>
+          <li id="responsePhotos" class="response-item">
+            <div class="avatar"><i class="ri-rocket-2-fill"></i></div>
+            <div class="card card-response">
+              <h6 class="card-title mg-b-5">Entire guest suite to yourself</h6>
+              <p class="mg-b-10">A tropical apartment to unwind with your families</p>
+              <div class="card-gallery mg-b-15">
+                <div><img src="../assets/img/img30.jpg" alt=""></div>
+                <div>
+                  <img src="../assets/img/img31.jpg" alt="">
+                  <img src="../assets/img/img32.jpg" alt="">
+                </div>
+              </div><!-- card-gallery -->
+
+              <a href="" class="btn btn-white justify-content-center">Open Gallery</a>
+            </div><!-- card-response -->
+          </li>
+          <li class="response-item response-item-tour">
+            <div class="avatar"><i class="ri-rocket-2-fill"></i></div>
+            <div class="card-response card-response-type">
+              <div class="form-group">
+                <div class="form-label">
+                  <label class="mg-b-0"><span>1 of 9:</span> <strong>Tour Type</strong></label>
+                  <a class="cancel-tour" href="">Cancel tour</a>
+                </div>
+                <div class="d-flex">
+                  <div class="dropdown dropup flex-fill mg-r-8">
+                    <a href="" class="dropdown-link btn btn-white" data-toggle="dropdown" data-display="static">Choose tour type</a>
+                    <div class="dropdown-menu">
+                      <a href="" class="dropdown-item">
+                        <strong>In Person</strong>
+                        <span>On property, guided in-person by a property team member</span>
+                      </a>
+                      <a href="" class="dropdown-item">
+                        <strong>Guided Virtual Tour</strong>
+                        <span>From your computer, guided by a property team member</span>
+                      </a>
+                      <a href="" class="dropdown-item">
+                        <strong>Virtual Tour</strong>
+                        <span>From your computer, view now</span>
+                      </a>
+                    </div><!-- dropdown-menu -->
+                  </div><!-- dropdown -->
+                  <button class="btn btn-secondary btn-icon btn-type-submit"><i class="ri-arrow-right-line"></i></button>
+                </div>
+              </div><!-- form-group -->
+            </div><!-- card-response -->
+            <div class="card-response card-response-date">
+              <div class="form-group mg-b-0">
+                <div class="form-label">
+                  <label class="mg-b-0"><span>2 of 9:</span> <strong>Date</strong></label>
+                  <a class="cancel-tour" href="">Cancel tour</a>
+                </div>
+                <div class="row row-xs">
+                  <div class="col-10">
+                    <div id="datepicker"></div>
+                  </div><!-- col -->
+                  <div class="col">
+                    <button data-type="date" class="btn btn-primary btn-icon btn-tour-submit"><i class="ri-arrow-right-line"></i></button>
+                  </div><!-- col -->
+                </div><!-- row -->
+              </div><!-- form-group -->
+            </div><!-- card-response -->
+            <div class="card-response card-response-time">
+              <div class="form-group mg-b-0">
+                <div class="form-label">
+                  <label class="mg-b-0"><span>3 of 9:</span> <strong>Time</strong></label>
+                  <a class="cancel-tour" href="">Cancel tour</a>
+                </div>
+                <div class="row row-xs">
+                  <div class="col">
+                    <select class="custom-select" name="hour">
+                      <option value="12">12</option>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                    </select>
+                  </div><!-- col -->
+                  <div class="col">
+                    <select class="custom-select" name="minute">
+                      <option value="00">00</option>
+                      <option value="30">30</option>
+                    </select>
+                  </div><!-- col -->
+                  <div class="col">
+                    <select class="custom-select" name="ampm">
+                      <option value="AM">AM</option>
+                      <option value="PM">PM</option>
+                    </select>
+                  </div><!-- col -->
+                  <div class="col-2"><button data-type="time" class="btn btn-primary btn-icon btn-tour-submit"><i class="ri-arrow-right-line"></i></button></div>
+                </div><!-- row -->
+              </div><!-- form-group -->
+            </div><!-- card-response -->
+            <div class="card-response card-response-name">
+              <div class="form-group mg-b-0">
+                <div class="form-label">
+                  <label class="mg-b-0"><span>2 of 7:</span><span class="d-none">4 of 9:</span> <strong>Name</strong></label>
+                  <a class="cancel-tour" href="">Cancel tour</a>
+                </div>
+                <div class="row row-xs">
+                  <div class="col-5"><input type="text" class="form-control" name="fname" placeholder="Firstname"></div>
+                  <div class="col-5"><input type="text" class="form-control" name="lname" placeholder="Lastname"></div>
+                  <div class="col"><button data-type="name" class="btn btn-secondary btn-icon btn-tour-submit"><i class="ri-arrow-right-line"></i></button></div>
+                </div>
+              </div><!-- form-group -->
+            </div><!-- card-response -->
+            <div class="card-response card-response-email">
+              <div class="form-group mg-b-0">
+                <div class="form-label">
+                  <label class="mg-b-0"><span>3 of 7:</span><span class="d-none">5 of 9:</span> <strong>Email address</strong></label>
+                  <a class="cancel-tour" href="">Cancel tour</a>
+                </div>
+                <div class="d-flex">
+                  <input type="email" class="form-control flex-fill mg-r-8" placeholder="Email address">
+                  <button data-type="email" class="btn btn-secondary btn-icon btn-tour-submit"><i class="ri-arrow-right-line"></i></button>
+                </div>
+                <small>By providing your email address, you agree to Terms of Use and <a href="">Privacy Policy</a> and consent to be contacted via email.</small>
+              </div><!-- form-group -->
+            </div><!-- card-response -->
+            <div class="card-response card-response-phone">
+              <div class="form-group mg-b-0">
+                <div class="form-label">
+                  <label class="mg-b-0"><span>4 of 7:</span><span class="d-none">6 of 9:</span> <strong>Phone</strong></label>
+                  <a class="cancel-tour" href="">Cancel tour</a>
+                </div>
+                <div class="d-flex">
+                  <input type="text" class="form-control flex-fill mg-r-8" placeholder="Phone number">
+                  <button data-type="phone" class="btn btn-secondary btn-icon btn-tour-submit"><i class="ri-arrow-right-line"></i></button>
+                </div>
+                <small>By providing your phone number, you agree to Terms of Use and <a href="">Privacy Policy</a> and consent to be contacted via email.</small>
+              </div><!-- form-group -->
+            </div><!-- card-response -->
+            <div class="card-response card-response-move">
+              <div class="form-group mg-b-0">
+                <div class="form-label">
+                  <label class="mg-b-0"><span>5 of 7:</span><span class="d-none">7 of 9:</span> <strong>Move-in Date</strong></label>
+                  <a class="cancel-tour" href="">Cancel tour</a>
+                </div>
+                <div class="row row-xs">
+                  <div class="col-10">
+                    <div id="datepicker1"></div>
+                  </div><!-- col -->
+                  <div class="col">
+                    <button data-type="move" class="btn btn-primary btn-icon btn-tour-submit"><i class="ri-arrow-right-line"></i></button>
+                  </div><!-- col -->
+                </div><!-- row -->
+              </div><!-- form-group -->
+            </div><!-- card-response -->
+            <div class="card-response card-response-bedrooms">
+              <div class="form-group mg-b-0">
+                <div class="form-label">
+                  <label class="mg-b-0"><span>6 of 7:</span><span class="d-none">8 of 9:</span> <strong>Bedrooms</strong></label>
+                  <a class="cancel-tour" href="">Cancel tour</a>
+                </div>
+                <div class="d-flex">
+                  <select class="custom-select flex-fill mg-r-8">
+                    <option value="">Choose bedrooms</option>
+                    <option value="1">1 Bedroom</option>
+                    <option value="2">2 Bedrooms</option>
+                    <option value="3">3 Bedrooms</option>
+                    <option value="4">4 Bedrooms</option>
+                  </select>
+                  <button data-type="bedrooms" class="btn btn-secondary btn-icon btn-tour-submit"><i class="ri-arrow-right-line"></i></button>
+                </div>
+              </div><!-- form-group -->
+            </div><!-- card-response -->
+            <div class="card-response card-response-floor">
+              <div class="form-group mg-b-0">
+                <div class="form-label">
+                  <label class="mg-b-0"><span>7 of 7:</span><span class="d-none">9 of 9:</span> <strong>Floor Plan</strong></label>
+                  <a class="cancel-tour" href="">Cancel tour</a>
+                </div>
+                <div class="d-flex">
+                  <select class="custom-select flex-fill mg-r-8">
+                    <option value="">Choose floor plan</option>
+                    <option value="1A">1A</option>
+                    <option value="2A">2A</option>
+                    <option value="3B">3B</option>
+                    <option value="4B">4B</option>
+                  </select>
+                  <button data-type="floor" class="btn btn-primary btn-icon btn-tour-submit"><i class="ri-arrow-right-line"></i></button>
+                </div>
+              </div><!-- form-group -->
+            </div><!-- card-response -->
+          </li>
+          <li class="response-item response-item-name">
+            <div class="avatar"><i class="ri-rocket-2-fill"></i></div>
+            <div class="card-response card-response-form">
+              <div class="form-group mg-b-0">
+                <div class="form-label">
+                  <label class="mg-b-0"><span>1 of 3:</span> <strong>What is your name?</strong></label>
+                  <a href="" class="link-thanks">No thanks</a>
+                </div>
+                <div class="form-field">
+                  <input id="inputFullName" type="text" class="form-control" placeholder="Write your full name">
+                  <button id="btnSubmitName" class="btn btn-primary btn-icon"><i class="ri-arrow-right-line"></i></button>
+                </div><!-- form-field -->
+              </div><!-- form-group -->
+            </div><!-- card-response -->
+          </li>
+          <li class="response-item response-item-email">
+            <div class="avatar"><i class="ri-rocket-2-fill"></i></div>
+            <div class="card-response card-response-form">
+              <div class="form-group mg-b-0">
+                <div class="form-label">
+                  <label class="mg-b-0"><span>2 of 3:</span> <strong>Email address</strong></label>
+                  <a href="">No thanks</a>
+                </div>
+                <div class="form-field">
+                  <input id="inputEmailAddress" type="text" class="form-control" placeholder="Your email address">
+                  <button id="btnSubmitEmail" class="btn btn-primary btn-icon"><i class="ri-arrow-right-line"></i></button>
+                </div><!-- form-field -->
+                <small>By providing your email address, you agree to Terms of Use and Privacy Policy and consent to be contacted via email.</small>
+              </div><!-- form-group -->
+            </div><!-- card-response -->
+          </li>
+          <li class="response-item response-item-comment">
+            <div class="avatar"><i class="ri-rocket-2-fill"></i></div>
+            <div class="card-response card-response-form">
+              <div class="form-group mg-b-0">
+                <div class="form-label">
+                  <label class="mg-b-0"><span>3 of 3:</span> <strong>Comment (optional)</strong></label>
+                  <a href="">No thanks</a>
+                </div>
+                <div class="form-field">
+                  <input id="inputComment" type="text" class="form-control" placeholder="Wrie some comment">
+                  <button id="btnSubmitComment" class="btn btn-primary btn-icon"><i class="ri-arrow-right-line"></i></button>
+                </div><!-- form-field -->
+              </div><!-- form-group -->
+            </div><!-- card-response -->
+          </li>
+          <li id="responseOptions" class="response-options">
+            <label class="option-label mg-t-15">Choose one of options below</label>
+            <div class="row row-xs">
+              <div class="col-4">
+                <div id="pcScheduleTour" class="card card-response-option">
+                  <i class="ri-map-pin-line"></i>
+                  <label>Schedule a Tour</label>
+                </div><!-- card -->
+              </div><!-- col -->
+              <div class="col-4">
+                <div id="pcViewPhotos" class="card card-response-option">
+                  <i class="ri-image-line"></i>
+                  <label>View Photos</label>
+                </div><!-- card -->
+              </div><!-- col -->
+              <div class="col-4">
+                <div id="pcPricesAvailability" class="card card-response-option">
+                  <i class="ri-price-tag-line"></i>
+                  <label>Prices / Availability</label>
+                </div><!-- card -->
+              </div><!-- col -->
+              <div class="col-4 mg-t-10">
+                <div id="pcResidentAccess" class="card card-response-option">
+                  <i class="ri-lock-2-line"></i>
+                  <label>Resident Access</label>
+                </div><!-- card -->
+              </div><!-- col -->
+              <div class="col-4 mg-t-10">
+                <div id="pcAskQuestion" class="card card-response-option">
+                  <i class="ri-question-line"></i>
+                  <label>I have a Question</label>
+                </div><!-- card -->
+              </div><!-- col -->
+            </div><!-- row -->
+          </li>
+        </ul><!-- response-group -->
+      </div><!-- proschat-body -->
+      <div class="proschat-chatbox">
+        <input id="inputQuestion" type="text" class="form-control" placeholder="Write your question">
+        <button id="btnSubmitQuestion" class="btn btn-primary btn-icon"><i class="ri-send-plane-fill"></i></button>
+      </div><!-- proschat-chatbox -->
+      <div class="proschat-footer">Powered by: <a href="">Dwell</a></div>
+    </div><!-- proschat-panel -->
+
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/jqueryui/jquery-ui.min.js"></script>
+
+    
+    <script src="../assets/js/prospect-chat.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('#btnCloseQuestion').on('click', function(e){
+          e.preventDefault();
+
+          $('.proschat-panel').removeClass('show-chatbox');
+
+          setTimeout(function(){
+            $('#responseOptions').removeClass('d-none').addClass('show');
+          }, 1000);
+        });
+      });
+    </script>
+  </body>
+</html>

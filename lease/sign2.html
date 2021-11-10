@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell Lease</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/lease.min.css">
+  </head>
+  <body>
+
+    <div class="ls-content">
+      <div class="ls-body">
+        <div class="container container-review">
+          <div class="row">
+            <div class="col-md-7 col-lg-8 pd-lg-r-15-f">
+              <h6 class="ls-page-title mg-b-40">Sign Application</h6>
+
+              <h6 class="tx-16 tx-semibold text-dark mg-b-5">Policy Documents</h6>
+              <p class="tx-15">The documents below must be viewed and initiated before submitting your rental application.</p>
+
+              <div class="formpanel">
+                <label class="form-label mg-b-10-f">Screening Authorization and Rights</label>
+                <div class="policy-initials">
+                  <input type="text" class="form-control" placeholder="Initials">
+                  <button class="btn btn-primary">View Document(s)</button>
+                </div><!-- policy-initials -->
+
+                <hr class="op-0">
+
+                <label class="form-label mg-b-10-f">Consumer Authorization and Electronic Transaction Document</label>
+                <div class="policy-initials">
+                  <input type="text" class="form-control" placeholder="Initials">
+                  <button class="btn btn-primary">View Document(s)</button>
+                </div><!-- policy-initials -->
+              </div><!-- formpanel -->
+
+              <hr class="mg-t-30 mg-lg-t-50 mg-b-25 mg-lg-b-30">
+
+              <h6 class="tx-16 text-dark tx-semibold mg-b-20">Digital Signature</h6>
+
+              <p class="tx-14">By typing my name in the following box, I certify the above statements to be true and correct to the best of my knowledge.</p>
+              <p class="tx-14">By typing your name in the following box below, you are explicitly indicating that you have read and that you agree to terms and conditions of this application and the terms and conditions of the policy documents, and that you have signed them electronically. </p>
+
+              <label class="tx-14">Full Name: <strong class="tx-dark">Ethan Lacey</strong></label>
+              <input id="inputSign" type="text" class="form-control ls-form-control">
+              <div class="custom-control custom-checkbox tx-14 mg-t-15">
+                <input type="checkbox" class="custom-control-input custom-control-occupant" id="ck3">
+                <label class="custom-control-label" for="ck3">I agree to the Terms and Conditions of Electronic Document Delivery</label>
+              </div>
+
+
+              <hr class="mg-t-50 mg-b-30">
+
+              <div class="page-pager d-md-flex justify-content-end">
+                <a href="" class="btn btn-white mg-r-15">Save &amp; Exit</a>
+                <a id="signContinue" href="pay.html" class="btn btn-primary mg-md-t-0-f disabled">Sign &amp; Continue</a>
+              </div><!-- page-pager -->
+
+            </div><!-- col -->
+            <div class="col-md-5 col-lg-4 d-none d-md-block">
+              <div class="ls-sidebar">
+                <ul class="nav nav-section text-sm mg-b-20">
+                  <li class="nav-item completed"><a href="create.html" class="nav-link">Create Account</a></li>
+                  <li class="nav-item incomplete">
+                    <a href="personal2.html" class="nav-link">Personal Info</a>
+                    <div data-toggle="popover" data-content="Not all required information has been provided for this section"><i class="ri-information-line"></i></div>
+                  </li>
+                  <li class="nav-item completed"><a href="#" class="nav-link">Income</a></li>
+                  <li class="nav-item completed"><a href="#" class="nav-link">Background</a></li>
+                </ul><!-- nav -->
+
+                <div id="unitTotal" class="unit-total">
+                  <div class="justify-content-start">
+                    <strong class="mg-r-auto">Monthly Total</strong>
+                    <strong>$1,550</strong>
+                  </div>
+                  <div class="justify-content-start">
+                    <span class="mg-r-auto">Application Fees</span>
+                    <span>$325.00</span>
+                  </div>
+                  <div class="justify-content-start">
+                    <span class="mg-r-auto">Tax (2.3%)</span>
+                    <span>$7.48</span>
+                  </div>
+                  <div class="justify-content-start">
+                    <strong class="mg-r-auto">Due Today</strong>
+                    <strong>$332.48</strong>
+                  </div>
+                </div><!-- unit-total -->
+              </div><!-- ls-sidebar -->
+            </div><!-- col -->
+          </div><!-- row -->
+        </div><!-- container -->
+      </div><!-- ls-body -->
+    </div><!-- ls-content -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+
+    <script src="../assets/js/lease.js"></script>
+    <script src="../assets/js/prospect-chat.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('.incomplete div').popover({
+          template: '<div class="popover popover-nav-section" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>',
+          trigger: 'hover'
+        });
+
+        $('#inputSign').on('change keyup', function(){
+          if($(this).val() !== '' && $('#ck3').is(':checked')) {
+            $('#signContinue').removeClass('disabled');
+          } else {
+            $('#signContinue').addClass('disabled');
+          }
+        });
+
+        $('#ck3').on('click', function(){
+          if($(this).is(':checked') && $('#inputSign').val() !== '') {
+            $('#signContinue').removeClass('disabled');
+          } else {
+            $('#signContinue').addClass('disabled');
+          }
+        })
+
+      });
+    </script>
+  </body>
+</html>

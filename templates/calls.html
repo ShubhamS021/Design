@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body>
+
+    <div class="content content-calls">
+      <div class="content-header mg-b-30">
+        <div class="leadbar-pager">
+          <nav class="nav nav-pager">
+            <a href="" class="nav-link"><i class="ri-arrow-left-s-line"></i></a>
+            <a id="navNextTask" href="pipeline-lead.html" class="nav-link nav-link-next"><span>Next Task</span> <i class="ri-arrow-right-s-line"></i></a>
+          </nav>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- leadbar-pager -->
+        <div class="card-task-today">
+          <div class="card-body">
+            <div class="task-label">
+              <h6 class="mg-b-0">Next Task</h6>
+              <span>3 of 5 complete</span>
+            </div>
+            <div class="task-item">
+              <span class="task-dot bg-danger"></span>
+              <p>2nd Follow-up</p>
+              <p>Courtney Osborne</p>
+            </div><!-- task-item -->
+
+            <hr class="mg-y-10 op-0">
+
+            <div class="task-label">
+              <h6 class="mg-b-0">Tours</h6>
+              <span>1 of 3 complete</span>
+            </div>
+            <div class="task-item">
+              <span class="task-dot bg-danger"></span>
+              <p>Alina Loman</p>
+              <p>2:30 PM <small class="text-danger">(1 hour ago)</small></p>
+              <nav class="nav">
+                <a href="" data-toggle="tooltip" title="Tour completed"><i class="ri-checkbox-circle-fill"></i></a>
+                <a href="" data-toggle="tooltip" title="Cancel Tour"><i class="ri-close-circle-fill"></i></a>
+              </nav>
+            </div><!-- task-item -->
+            <div class="task-item">
+              <span class="task-dot bg-secondary"></span>
+              <p>David Terrence</p>
+              <p>3:30 PM</p>
+              <nav class="nav">
+                <a href="" data-toggle="tooltip" title="Tour completed"><i class="ri-checkbox-circle-fill"></i></a>
+                <a href="" data-toggle="tooltip" title="Cancel Tour"><i class="ri-close-circle-fill"></i></a>
+              </nav>
+            </div><!-- task-item -->
+          </div><!-- card-body -->
+        </div><!-- card-task-today -->
+        <div class="content-title-wrapper mg-r-auto">
+          <h4 class="content-title mg-b-0">Calls</h4>
+        </div>
+        <div>
+          <div class="dropdown-select">
+            <a href="#" data-toggle="dropdown" class="dropdown-link">
+              <i class="ri-list-check-2"></i> <span>All Agents</span>
+            </a>
+            <div id="ddCalls" class="dropdown-menu dropdown-menu-right">
+              <a href="" class="dropdown-item disabled">All Agents</a>
+              <div class="dropdown-divider"></div>
+              <a href="" class="dropdown-item">My Calls (6)</a>
+              <a href="" class="dropdown-item today">Today's Call Tasks (4)</a>
+              <div class="dropdown-divider"></div>
+              <a href="" class="dropdown-item">John Smith (2)</a>
+              <a href="" class="dropdown-item">Jane Doe (5)</a>
+              <a href="" class="dropdown-item">Doug Douglas (9)</a>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+          <div id="showCompleted" class="custom-control custom-checkbox d-none">
+            <input type="checkbox" class="custom-control-input" id="cc1" checked>
+            <label class="custom-control-label" for="cc1">Show completed (3)</label>
+          </div>
+        </div>
+      </div><!-- content-header -->
+      <div class="container-fluid">
+        <div class="table-responsive">
+          <table id="tableCalls" class="table table-alpha table-calls mg-b-0">
+            <thead>
+              <tr>
+                <th><div id="checkAll" class="form-checkbox"><input type="checkbox" name="checkall"></div></th>
+                <th>
+                  <div class="dropdown dropdown-all">
+                    <a href="" class="dropdown-link" data-toggle="dropdown">All</a>
+                    <div class="dropdown-menu">
+                      <a href="" class="dropdown-item active"><small class="bg-secondary"></small>All</a>
+                      <a href="" class="dropdown-item"><small class="bg-danger"></small>Overdue</a>
+                      <a href="" class="dropdown-item"><small class="bg-warning"></small>Due Today</a>
+                      <a href="" class="dropdown-item"><small class="bg-success"></small>Complete</a>
+                      <a href="" class="dropdown-item"><small class="bg-secondary"></small>Upcoming</a>
+                    </div><!-- dropdown-menu -->
+                  </div><!-- dropdown -->
+                </th>
+                <th class="wd-15p">Call Source</th>
+                <th class="text-right">Phone Number</th>
+                <th>Call Status</th>
+                <th class="wd-20p">Call Record</th>
+                <th class="wd-15p text-right">Date</th>
+                <th class="wd-15p"></th>
+                <th class="wd-10p"></th>
+              </tr>
+            </thead>
+            <tbody class="skeleton-content">
+              <tr class="completed">
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-gray-light"><i class="ri-phone-fill"></i></div></td>
+                <td><strong>Standalone Website</strong></td>
+                <td class="text-right">(267) 986-7739</td>
+                <td><i data-feather="phone-call"></i> Answered</td>
+                <td>
+                  <div class="call-playable">
+                    <a href="" class="call-play">
+                      <i class="ri-play-circle-fill"></i>
+                      <i class="ri-pause-circle-line"></i>
+                    </a>
+                    <div class="time time-start">0:09</div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="time time-end">0:48</div>
+                    <div class="dropdown dropdown-speed">
+                      <a href="" class="time speed-control" data-toggle="dropdown" data-display="static"><span>1x</span></a>
+                      <div class="dropdown-menu">
+                        <a href="" class="dropdown-item">1x</a>
+                        <a href="" class="dropdown-item">1.25x</a>
+                        <a href="" class="dropdown-item">1.5x</a>
+                        <a href="" class="dropdown-item">1.75x</a>
+                        <a href="" class="dropdown-item">2x</a>
+                      </div><!-- dropdown-menu -->
+                    </div>
+                    <a href="" class="call-trans"><span data-toggle="tooltip" data-title="Call transcription"><i class="ri-voiceprint-line"></i></span></a>
+                  </div><!-- call-playable -->
+                </td>
+                <td class="text-right">Oct 03, 2020 11:05am</td>
+                <td>
+                  <nav class="nav nav-status">
+                    <a href="" class="nav-check tour-completed active">Task Completed</a>
+                  </nav>
+                </td>
+                <td>
+                  <nav class="nav nav-icon">
+                    <a href="#modalNewLead" data-toggle="modal"><span data-toggle="tooltip" data-title="Add as a new lead"><i class="ri-user-add-line"></i></span></a>
+                    <a href="#modalExtLead" data-toggle="modal"><span data-toggle="tooltip" data-title="Link to existing lead"><i class="ri-user-shared-2-line"></i></span></a>
+                    <a href=""><span data-toggle="tooltip" data-title="Archive call"><i class="ri-archive-drawer-line"></i></span></a>
+                  </nav>
+                </td>
+              </tr>
+              <tr class="trans-row">
+                <td colspan="9">
+                  <div class="card card-call-trans">
+                    <div class="card-header">
+                      <h6 class="card-title">Call Transcription</h6>
+                    </div><!-- card-header -->
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <div class="avatar bg-dark"><span>A</span></div>
+                        <div class="list-item-name">Person A</div>
+                        <div class="list-item-time">00:00:00</div>
+                        <div class="list-item-text">Your call has been forwarded to</div>
+                      </li><!-- list-group-item -->
+                      <li class="list-group-item">
+                        <div class="avatar bg-primary"><span>B</span></div>
+                        <div class="list-item-name">Person B</div>
+                        <div class="list-item-time">00:00:01</div>
+                        <div class="list-item-text">An automatic voice</div>
+                      </li><!-- list-group-item -->
+                    </ul><!-- list-group -->
+                  </div><!-- card -->
+                </td>
+              </tr>
+              <tr>
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-gray-light"><i class="ri-phone-fill"></i></div></td>
+                <td><strong>Standalone Website</strong></td>
+                <td class="text-right">(267) 986-7739</td>
+                <td><i data-feather="phone-call"></i> Answered</td>
+                <td>
+                  <div class="call-playable">
+                    <a href="" class="call-play">
+                      <i class="ri-play-circle-fill"></i>
+                      <i class="ri-pause-circle-line"></i>
+                    </a>
+                    <span class="time time-start">0:00</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span class="time time-end">1:12</span>
+                    <div class="dropdown dropdown-speed">
+                      <a href="" class="time speed-control" data-toggle="dropdown" data-display="static"><span>1x</span></a>
+                      <div class="dropdown-menu">
+                        <a href="" class="dropdown-item">1x</a>
+                        <a href="" class="dropdown-item">1.25x</a>
+                        <a href="" class="dropdown-item">1.5x</a>
+                        <a href="" class="dropdown-item">1.75x</a>
+                        <a href="" class="dropdown-item">2x</a>
+                      </div><!-- dropdown-menu -->
+                    </div>
+                    <a href="" class="call-trans"><span data-toggle="tooltip" data-title="Call transcription"><i class="ri-voiceprint-line"></i></span></a>
+                  </div><!-- call-playable -->
+                </td>
+                <td class="text-right">Oct 01, 2020 12:22pm</td>
+                <td></td>
+                <td>
+                  <nav class="nav nav-icon">
+                    <a href="#modalNewLead" data-toggle="modal"><span data-toggle="tooltip" data-title="Add as a new lead"><i class="ri-user-add-line"></i></span></a>
+                    <a href="#modalExtLead" data-toggle="modal"><span data-toggle="tooltip" data-title="Link to existing lead"><i class="ri-user-shared-2-line"></i></span></a>
+                    <a href=""><span data-toggle="tooltip" data-title="Archive call"><i class="ri-archive-drawer-line"></i></span></a>
+                  </nav>
+                </td>
+              </tr>
+              <tr class="trans-row">
+                <td colspan="9">
+                  <div class="card card-call-trans">
+                    <div class="card-header">
+                      <h6 class="card-title">Call Transcription</h6>
+                    </div><!-- card-header -->
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <div class="avatar bg-dark"><span>A</span></div>
+                        <div class="list-item-name">Person A</div>
+                        <div class="list-item-time">00:00:00</div>
+                        <div class="list-item-text">Your call has been forwarded to</div>
+                      </li><!-- list-group-item -->
+                      <li class="list-group-item">
+                        <div class="avatar bg-primary"><span>B</span></div>
+                        <div class="list-item-name">Person B</div>
+                        <div class="list-item-time">00:00:01</div>
+                        <div class="list-item-text">An automatic voice</div>
+                      </li><!-- list-group-item -->
+                    </ul><!-- list-group -->
+                  </div><!-- card -->
+                </td>
+              </tr>
+              <tr class="completed">
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-gray-light"><i class="ri-phone-fill"></i></div></td>
+                <td><strong>Mark-Taylor.com</strong></td>
+                <td class="text-right">(267) 986-7739</td>
+                <td><i data-feather="phone-missed"></i> Missed</td>
+                <td><i data-feather="slash"></i> None</td>
+                <td class="text-right">Sept 30, 2020 08:35pm</td>
+                <td>
+                  <nav class="nav nav-status">
+                    <a href="" class="nav-check tour-completed active">Task Completed</a>
+                  </nav>
+                </td>
+                <td>
+                  <nav class="nav nav-icon">
+                    <a href="#modalNewLead" data-toggle="modal"><span data-toggle="tooltip" data-title="Add as a new lead"><i class="ri-user-add-line"></i></span></a>
+                    <a href="#modalExtLead" data-toggle="modal"><span data-toggle="tooltip" data-title="Link to existing lead"><i class="ri-user-shared-2-line"></i></span></a>
+                    <a href=""><span data-toggle="tooltip" data-title="Archive call"><i class="ri-archive-drawer-line"></i></span></a>
+                  </nav>
+                </td>
+              </tr>
+              <tr>
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-dark"><i class="ri-phone-fill"></i></div></td>
+                <td><strong>Standalone Website</strong></td>
+                <td class="text-right">(267) 986-7739</td>
+                <td><i data-feather="phone-missed"></i> Missed</td>
+                <td><i data-feather="slash"></i> None</td>
+                <td class="text-right"><small class="text-danger mg-r-3">(2 days ago)</small> Sep 28, 2020 01:20pm</td>
+                <td></td>
+                <td>
+                  <nav class="nav nav-icon">
+                    <a href="#modalNewLead" data-toggle="modal"><span data-toggle="tooltip" data-title="Add as a new lead"><i class="ri-user-add-line"></i></span></a>
+                    <a href="#modalExtLead" data-toggle="modal"><span data-toggle="tooltip" data-title="Link to existing lead"><i class="ri-user-shared-2-line"></i></span></a>
+                    <a href=""><span data-toggle="tooltip" data-title="Archive call"><i class="ri-archive-drawer-line"></i></span></a>
+                  </nav>
+                </td>
+              </tr>
+              <tr class="completed">
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-gray-light"><i class="ri-phone-fill"></i></div></td>
+                <td><strong>Standalone Website</strong></td>
+                <td class="text-right">(267) 986-7739</td>
+                <td><i data-feather="phone-call"></i> Answered</td>
+                <td>
+                  <div class="call-playable">
+                    <a href="" class="call-play">
+                      <i class="ri-play-circle-fill"></i>
+                      <i class="ri-pause-circle-line"></i>
+                    </a>
+                    <span class="time time-start">0:00</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span class="time time-end">0:28</span>
+                    <div class="dropdown dropdown-speed">
+                      <a href="" class="time speed-control" data-toggle="dropdown" data-display="static"><span>1x</span></a>
+                      <div class="dropdown-menu">
+                        <a href="" class="dropdown-item">1x</a>
+                        <a href="" class="dropdown-item">1.25x</a>
+                        <a href="" class="dropdown-item">1.5x</a>
+                        <a href="" class="dropdown-item">1.75x</a>
+                        <a href="" class="dropdown-item">2x</a>
+                      </div><!-- dropdown-menu -->
+                    </div>
+                  </div><!-- call-playable -->
+                </td>
+                <td class="text-right">Sep 14, 2020 10:10am</td>
+                <td>
+                  <nav class="nav nav-status">
+                    <a href="" class="nav-check tour-completed active">Task Completed</a>
+                  </nav>
+                </td>
+                <td>
+                  <nav class="nav nav-icon">
+                    <a href="#modalNewLead" data-toggle="modal"><span data-toggle="tooltip" data-title="Add as a new lead"><i class="ri-user-add-line"></i></span></a>
+                    <a href="#modalExtLead" data-toggle="modal"><span data-toggle="tooltip" data-title="Link to existing lead"><i class="ri-user-shared-2-line"></i></span></a>
+                    <a href=""><span data-toggle="tooltip" data-title="Archive call"><i class="ri-archive-drawer-line"></i></span></a>
+                  </nav>
+                </td>
+              </tr>
+              <tr>
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-gray-light"><i class="ri-phone-fill"></i></div></td>
+                <td><strong>Mark-Taylor.com</strong></td>
+                <td class="text-right">(267) 986-7739</td>
+                <td><i data-feather="phone-missed"></i> Missed</td>
+                <td><i data-feather="slash"></i> None</td>
+                <td class="text-right">Aug 20, 2020 8:35pm</td>
+                <td></td>
+                <td>
+                  <nav class="nav nav-icon">
+                    <a href="#modalNewLead" data-toggle="modal"><span data-toggle="tooltip" data-title="Add as a new lead"><i class="ri-user-add-line"></i></span></a>
+                    <a href="#modalExtLead" data-toggle="modal"><span data-toggle="tooltip" data-title="Link to existing lead"><i class="ri-user-shared-2-line"></i></span></a>
+                    <a href=""><span data-toggle="tooltip" data-title="Archive call"><i class="ri-archive-drawer-line"></i></span></a>
+                  </nav>
+                </td>
+              </tr>
+              <tr>
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-dark"><i class="ri-phone-fill"></i></div></td>
+                <td><strong>Standalone Website</strong></td>
+                <td class="text-right">(267) 986-7739</td>
+                <td><i data-feather="phone-call"></i> Answered</td>
+                <td>
+                  <div class="call-playable">
+                    <a href="" class="call-play">
+                      <i class="ri-play-circle-fill"></i>
+                      <i class="ri-pause-circle-line"></i>
+                    </a>
+                    <span class="time time-start">0:09</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span class="time time-end">1:03</span>
+                    <div class="dropdown dropdown-speed">
+                      <a href="" class="time speed-control" data-toggle="dropdown" data-display="static"><span>1x</span></a>
+                      <div class="dropdown-menu">
+                        <a href="" class="dropdown-item">1x</a>
+                        <a href="" class="dropdown-item">1.25x</a>
+                        <a href="" class="dropdown-item">1.5x</a>
+                        <a href="" class="dropdown-item">1.75x</a>
+                        <a href="" class="dropdown-item">2x</a>
+                      </div><!-- dropdown-menu -->
+                    </div>
+                    <a href="#" class="call-trans"><span data-toggle="tooltip" data-title="Call transcription"><i class="ri-voiceprint-line"></i></span></a>
+                  </div><!-- call-playable -->
+                </td>
+                <td class="text-right">Aug 20, 2020 8:35pm</td>
+                <td></td>
+                <td>
+                  <nav class="nav nav-icon">
+                    <a href="#modalNewLead" data-toggle="modal"><span data-toggle="tooltip" data-title="Add as a new lead"><i class="ri-user-add-line"></i></span></a>
+                    <a href="#modalExtLead" data-toggle="modal"><span data-toggle="tooltip" data-title="Link to existing lead"><i class="ri-user-shared-2-line"></i></span></a>
+                    <a href=""><span data-toggle="tooltip" data-title="Archive call"><i class="ri-archive-drawer-line"></i></span></a>
+                  </nav>
+                </td>
+              </tr>
+              <tr class="trans-row">
+                <td colspan="9">
+                  <div class="card card-call-trans">
+                    <div class="card-header">
+                      <h6 class="card-title">Call Transcription</h6>
+                    </div><!-- card-header -->
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <div class="avatar bg-dark"><span>A</span></div>
+                        <div class="list-item-name">Person A</div>
+                        <div class="list-item-time">00:00:00</div>
+                        <div class="list-item-text">Your call has been forwarded to</div>
+                      </li><!-- list-group-item -->
+                      <li class="list-group-item">
+                        <div class="avatar bg-primary"><span>B</span></div>
+                        <div class="list-item-name">Person B</div>
+                        <div class="list-item-time">00:00:01</div>
+                        <div class="list-item-text">An automatic voice</div>
+                      </li><!-- list-group-item -->
+                    </ul><!-- list-group -->
+                  </div><!-- card -->
+                </td>
+              </tr>
+              <tr>
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-dark"><i class="ri-phone-fill"></i></div></td>
+                <td><strong>Standalone Website</strong></td>
+                <td class="text-right">(267) 986-7739</td>
+                <td><i data-feather="phone-call"></i> Answered</td>
+                <td>
+                  <div class="call-playable">
+                    <a href="" class="call-play">
+                      <i class="ri-play-circle-fill"></i>
+                      <i class="ri-pause-circle-line"></i>
+                    </a>
+                    <span class="time time-start">0:00</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span class="time time-end">0:30</span>
+                    <div class="dropdown dropdown-speed">
+                      <a href="" class="time speed-control" data-toggle="dropdown" data-display="static"><span>1x</span></a>
+                      <div class="dropdown-menu">
+                        <a href="" class="dropdown-item">1x</a>
+                        <a href="" class="dropdown-item">1.25x</a>
+                        <a href="" class="dropdown-item">1.5x</a>
+                        <a href="" class="dropdown-item">1.75x</a>
+                        <a href="" class="dropdown-item">2x</a>
+                      </div><!-- dropdown-menu -->
+                    </div>
+                  </div><!-- call-playable -->
+                </td>
+                <td class="text-right">Aug 20, 2020 8:35pm</td>
+                <td></td>
+                <td>
+                  <nav class="nav nav-icon">
+                    <a href="#modalNewLead" data-toggle="modal"><span data-toggle="tooltip" data-title="Add as a new lead"><i class="ri-user-add-line"></i></span></a>
+                    <a href="#modalExtLead" data-toggle="modal"><span data-toggle="tooltip" data-title="Link to existing lead"><i class="ri-user-shared-2-line"></i></span></a>
+                    <a href=""><span data-toggle="tooltip" data-title="Archive call"><i class="ri-archive-drawer-line"></i></span></a>
+                  </nav>
+                </td>
+              </tr>
+              <tr>
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-gray-light"><i class="ri-phone-fill"></i></div></td>
+                <td><strong>Mark-Taylor.com</strong></td>
+                <td class="text-right">(267) 986-7739</td>
+                <td><i data-feather="phone-missed"></i> Missed</td>
+                <td><i data-feather="slash"></i> None</td>
+                <td class="text-right">Aug 20, 2020 8:35pm</td>
+                <td></td>
+                <td>
+                  <nav class="nav nav-icon">
+                    <a href="#modalNewLead" data-toggle="modal"><span data-toggle="tooltip" data-title="Add as a new lead"><i class="ri-user-add-line"></i></span></a>
+                    <a href="#modalExtLead" data-toggle="modal"><span data-toggle="tooltip" data-title="Link to existing lead"><i class="ri-user-shared-2-line"></i></span></a>
+                    <a href=""><span data-toggle="tooltip" data-title="Archive call"><i class="ri-archive-drawer-line"></i></span></a>
+                  </nav>
+                </td>
+              </tr>
+              <tr>
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-dark"><i class="ri-phone-fill"></i></div></td>
+                <td><strong>Standalone Website</strong></td>
+                <td class="text-right">(267) 986-7739</td>
+                <td><i data-feather="phone-missed"></i> Missed</td>
+                <td><i data-feather="slash"></i> None</td>
+                <td class="text-right">Aug 20, 2020 8:35pm</td>
+                <td></td>
+                <td>
+                  <nav class="nav nav-icon">
+                    <a href="#modalNewLead" data-toggle="modal"><span data-toggle="tooltip" data-title="Add as a new lead"><i class="ri-user-add-line"></i></span></a>
+                    <a href="#modalExtLead" data-toggle="modal"><span data-toggle="tooltip" data-title="Link to existing lead"><i class="ri-user-shared-2-line"></i></span></a>
+                    <a href=""><span data-toggle="tooltip" data-title="Archive call"><i class="ri-archive-drawer-line"></i></span></a>
+                  </nav>
+                </td>
+              </tr>
+            </tbody>
+            <tbody class="skeleton">
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td><div class="skeleton-avatar"></div></td>
+                <td><div class="skeleton-text wd-150"></div></td>
+                <td class="text-right"><div class="skeleton-text wd-100"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td class="text-right"><div class="skeleton-text wd-100"></div></td>
+                <td></td>
+                <td><div class="wd-100"></div></td>
+              </tr>
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td><div class="skeleton-avatar"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td class="text-right"><div class="skeleton-text wd-100"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td class="text-right"><div class="skeleton-text wd-100"></div></td>
+                <td></td>
+                <td><div class="wd-100"></div></td>
+              </tr>
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td><div class="skeleton-avatar"></div></td>
+                <td><div class="skeleton-text wd-80"></div></td>
+                <td class="text-right"><div class="skeleton-text wd-100"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td class="text-right"><div class="skeleton-text wd-100"></div></td>
+                <td></td>
+                <td><div class="wd-100"></div></td>
+              </tr>
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td><div class="skeleton-avatar"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td class="text-right"><div class="skeleton-text wd-100"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td class="text-right"><div class="skeleton-text wd-100"></div></td>
+                <td></td>
+                <td><div class="wd-100"></div></td>
+              </tr>
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td><div class="skeleton-avatar"></div></td>
+                <td><div class="skeleton-text wd-150"></div></td>
+                <td class="text-right"><div class="skeleton-text wd-100"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td class="text-right"><div class="skeleton-text wd-100"></div></td>
+                <td></td>
+                <td><div class="wd-100"></div></td>
+              </tr>
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td><div class="skeleton-avatar"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td class="text-right"><div class="skeleton-text wd-100"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td class="text-right"><div class="skeleton-text wd-100"></div></td>
+                <td></td>
+                <td><div class="wd-100"></div></td>
+              </tr>
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td><div class="skeleton-avatar"></div></td>
+                <td><div class="skeleton-text wd-150"></div></td>
+                <td class="text-right"><div class="skeleton-text wd-100"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td class="text-right"><div class="skeleton-text wd-100"></div></td>
+                <td></td>
+                <td><div class="wd-100"></div></td>
+              </tr>
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td><div class="skeleton-avatar"></div></td>
+                <td><div class="skeleton-text wd-150"></div></td>
+                <td class="text-right"><div class="skeleton-text wd-100"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td class="text-right"><div class="skeleton-text wd-100"></div></td>
+                <td></td>
+                <td><div class="wd-100"></div></td>
+              </tr>
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td><div class="skeleton-avatar"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td class="text-right"><div class="skeleton-text wd-100"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td class="text-right"><div class="skeleton-text wd-100"></div></td>
+                <td></td>
+                <td><div class="wd-100"></div></td>
+              </tr>
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td><div class="skeleton-avatar"></div></td>
+                <td><div class="skeleton-text wd-80"></div></td>
+                <td class="text-right"><div class="skeleton-text wd-100"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td><div class="skeleton-text wd-100"></div></td>
+                <td class="text-right"><div class="skeleton-text wd-100"></div></td>
+                <td></td>
+                <td><div class="wd-100"></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- table-responsive -->
+
+        <div class="content-navbar align-items-center pd-10 pd-l-20">
+          <span class="mg-r-auto">Showing calls 1 to 10 of 10</span>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-lead mg-b-0">
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+            </ul>
+          </nav>
+        </div><!-- content-navbar -->
+      </div><!-- container-fluid -->
+    </div><!-- content -->
+
+    <div class="modal modal-new-lead fade" id="modalNewLead" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title">Add New Lead</h5>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="row row-sm">
+              <div class="col-6">
+                <label class="form-label">Firstname</label>
+                <input type="text" class="form-control" placeholder="Enter firstname">
+              </div><!-- col -->
+              <div class="col-6">
+                <label class="form-label">Lastname</label>
+                <input type="text" class="form-control" placeholder="Enter lastname">
+              </div><!-- col -->
+              <div class="col-12 mg-t-20">
+                <label class="form-label">Email address</label>
+                <input type="text" class="form-control" placeholder="Enter email address">
+              </div><!-- col -->
+              <div class="col-12 mg-t-20">
+                <label class="form-label">Phone number</label>
+                <input type="text" class="form-control" placeholder="Enter phone number">
+              </div><!-- col -->
+              <div class="col-7 mg-t-20">
+                <label class="form-label">Source</label>
+                <div class="form-select">
+                  <select id="selectSource">
+                    <option label="Choose source"></option>
+                    <option value="1">ApartmentList.com</option>
+                    <option value="2">Apartments.com</option>
+                    <option value="3">Direct Mailer</option>
+                    <option value="4">Drive By</option>
+                    <option value="5">Employee</option>
+                  </select>
+                </div><!-- form-select -->
+              </div><!-- col -->
+              <div class="col-5 mg-t-20">
+                <label class="form-label">Move-in Date</label>
+                <input type="text" class="form-control" placeholder="Select date">
+              </div><!-- col -->
+              <div class="col-12 mg-t-20">
+                <label class="form-label">Floor plan</label>
+                <div class="form-select">
+                  <select id="selectFloorPlan">
+                    <option label="Select floor plan"></option>
+                    <option value="1">A1</option>
+                    <option value="2">A2</option>
+                    <option value="3">B1</option>
+                    <option value="4">B2</option>
+                    <option value="5">B3</option>
+                  </select>
+                </div><!-- form-select -->
+              </div><!-- col -->
+            </div><!-- row -->
+          </div><!-- modal-body -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Add Lead</button>
+          </div>
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-ext-lead fade" id="modalExtLead" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title mg-b-5-f">Link To Existing Lead</h5>
+              <span class="modal-subtitle">Link this call to an existing lead.</span>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <label class="form-label">Lead</label>
+            <div class="form-select">
+              <select id="selectLead">
+                <option label="Select lead"></option>
+                <option value="1">ApartmentList.com</option>
+                <option value="2">Apartments.com</option>
+                <option value="3">Direct Mailer</option>
+                <option value="4">Drive By</option>
+                <option value="5">Employee</option>
+              </select>
+            </div><!-- form-select -->
+
+          </div><!-- modal-body -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Link Lead</button>
+          </div>
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/select2/js/select2.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        //$('[data-toggle="tooltip"]').tooltip();
+
+        $('.nav-item-communication .nav-link').addClass('active');
+
+        $('#selectSource').select2({
+          minimumResultsForSearch: Infinity,
+          placeholder: 'Select source',
+          width: '100%',
+          dropdownParent: $('#modalNewLead')
+        });
+
+        $('#selectFloorPlan').select2({
+          minimumResultsForSearch: Infinity,
+          placeholder: 'Select floor plan',
+          width: '100%',
+          dropdownParent: $('#modalNewLead')
+        });
+
+        $('#selectLead').select2({
+          minimumResultsForSearch: Infinity,
+          placeholder: 'Select lead',
+          width: '100%',
+          dropdownParent: $('#modalExtLead')
+        });
+
+        $('.call-play').on('click', function(e){
+          e.preventDefault();
+
+          $(this).toggleClass('active');
+          $(this).parent().addClass('active');
+
+          var sib = $(this).closest('tr').siblings();
+
+          sib.find('.call-playable').removeClass('active');
+          sib.find('.call-play').removeClass('active');
+          //sib.removeClass('active show');
+        });
+
+        $('.call-trans').on('click', function(e){
+          e.preventDefault();
+
+          var p = $(this).closest('tr');
+
+          p.next().toggleClass('show');
+          p.next().siblings().removeClass('show');
+
+          p.toggleClass('active');
+          p.siblings().removeClass('active');
+          p.siblings().find('.call-trans').removeClass('active');
+
+          $(this).toggleClass('active');
+        });
+
+        // speed control
+        $('.dropdown-speed .dropdown-item').on('click', function(e){
+          e.preventDefault();
+
+          var te = $(this).text();
+          var se = $(this).closest('.dropdown').find('.speed-control span');
+          se.text(te);
+        });
+
+        $('#ddCalls .dropdown-item').bind('click', function(e){
+          if($(this).hasClass('today')) {
+            $('.content-header').addClass('with-pager');
+            $('#showCompleted').removeClass('d-none');
+          } else {
+            $('.content-header').removeClass('with-pager');
+            $('#showCompleted').addClass('d-none');
+          }
+        });
+
+        $('#navNextTask').on('mouseenter', function(e) {
+          $(this).closest('.leadbar-pager').addClass('expand');
+        });
+
+        $('.content-header').on('mouseleave', function(e){
+          $('.leadbar-pager').removeClass('expand');
+        });
+
+        $('#cc1').on('click', function(){
+          var c = $(this).is(':checked');
+          $('#tableCalls tr.completed').toggleClass('hide', !c);
+        });
+
+        // For displaying modal directly from url
+        // For demo use only
+        $.urlParam = function(name){
+        	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        	return (results!=null)? results[1] || 0 : 0;
+        }
+
+        if($.urlParam('filter')) {
+          if($.urlParam('filter') === 'today') {
+            $('#ddCalls .today').trigger('click');
+          }
+        };
+
+      });
+    </script>
+  </body>
+</html>

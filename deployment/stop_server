@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /home/ubuntu/design/
+sudo pm2 stop -s pm2_config.config.js  || :

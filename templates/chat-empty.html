@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body>
+
+    <div class="content content-chat-report">
+      <div class="container-fluid pd-25-f">
+        <div class="content-header mg-b-30">
+          <div class="content-title-wrapper mg-r-auto">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Chat Overview</a></li>
+                <li class="breadcrumb-item active">Report</li>
+              </ol>
+            </nav>
+            <h3 class="content-title mg-b-3">Chat Report</h3>
+            <p class="mg-b-0">April 2021 Session</p>
+          </div><!-- content-title-wrapper -->
+          <a href="" class="btn btn-white btn-icon" data-toggle="tooltip" title="Export monthly session data"><i class="ri-share-forward-line"></i></a>
+        </div><!-- content-header -->
+
+        <div class="card card-under-review">
+          <div class="card-body">
+            <i class="ri-bar-chart-2-line"></i>
+            <h4>No Data to Review yet</h4>
+            <p>This monthly session is currently under review. Once the evaluation process is completed, the reports will be generated here.</p>
+          </div><!-- card-body -->
+        </div><!-- card -->
+      </div><!-- container-fluid -->
+    </div><!-- content -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/select2/js/select2.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        //$('[data-toggle="tooltip"]').tooltip();
+
+        $('.nav-item-communication .nav-link').addClass('active');
+
+        new PerfectScrollbar('.chatspanel-sidebar-body ', {
+          suppressScrollX: true
+        });
+
+        new PerfectScrollbar('.chatspanel-body-content ', {
+          suppressScrollX: true
+        });
+
+        // add class to chat item when selected
+        $('.chats-item').on('click', function(){
+          $(this).addClass('selected');
+          $(this).siblings().removeClass('selected');
+        });
+
+        $('.message-item .nav-link').on('click', function(e){
+          e.preventDefault();
+
+          var c = $(this).attr('class').split(' ');
+
+          $(this).closest('.message-item').removeClass('correct incorrect cantanswer');
+          $(this).closest('.message-item').addClass(c[1]);
+
+          $(this).addClass('active').siblings().removeClass('active');
+        });
+
+      });
+    </script>
+  </body>
+</html>

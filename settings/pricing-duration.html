@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body class="page-rules">
+
+    <div class="content">
+      <div class="container-fluid">
+        <div class="content-header align-items-center mg-b-30">
+          <div class="mg-r-auto">
+            <h4 class="content-title mg-b-0">Property Settings</h4>
+          </div>
+        </div><!-- content-header -->
+        <div class="content-body content-body-settings">
+          <div class="settings-sidebar">
+            <label class="content-label">General Settings</label>
+            <nav class="nav">
+              <a href="../templates/settings.html" class="nav-link"><i class="ri-shield-user-line"></i> Assignment Rules</a>
+              <a href="../templates/settings-email.html" class="nav-link"><i class="ri-mail-line"></i> Email templates</a>
+              <a href="../templates/settings-calendar.html" class="nav-link"><i class="ri-calendar-todo-line"></i> Email &amp; Calendar sync</a>
+              <a href="../templates/settings-business.html" class="nav-link"><i class="ri-time-line"></i> Business hours</a>
+              <a href="community-features.html" class="nav-link"><i class="ri-community-line"></i> Community features</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">Report Settings</label>
+            <nav class="nav">
+              <a href="../templates/settings-competitors.html" class="nav-link"><i class="ri-group-line"></i> Competitors</a>
+              <a href="../templates/settings-paid-sources.html" class="nav-link"><i class="ri-wallet-3-line"></i> Paid sources</a>
+              <a href="../templates/settings-budget.html" class="nav-link"><i class="ri-bank-card-2-line"></i> Paid source budgets</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">Leasing</label>
+            <nav class="nav">
+              <a href="../templates/settings-lease.html" class="nav-link"><i class="ri-community-line"></i> Lease Defaults</a>
+              <a href="../templates/settings-policies.html" class="nav-link"><i class="ri-article-line"></i> Property Policies</a>
+              <a href="../templates/settings-rentable.html" class="nav-link"><i class="ri-handbag-line"></i> Rentable Items</a>
+              <a href="../templates/settings-screening.html" class="nav-link"><i class="ri-survey-line"></i> Screening Criteria</a>
+              <a href="../templates/settings-addenda.html" class="nav-link"><i class="ri-file-list-3-line"></i> Addenda</a>
+              <a href="pricing-duration.html" class="nav-link active"><i class="ri-community-line"></i> Duration Pricing</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">Communication</label>
+            <nav class="nav">
+              <a href="../templates/settings-call-block.html" class="nav-link"><i class="ri-lock-line"></i> Call Block List</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">IVR Settings</label>
+            <nav class="nav">
+              <a href="vendors-list.html" class="nav-link"><i class="ri-contacts-line"></i> Vendors List</a>
+              <a href="default-assignees.html" class="nav-link"><i class="ri-user-star-line"></i> Default Assignees</a>
+              <a href="oncall-schedule.html" class="nav-link"><i class="ri-calendar-event-line"></i> On-Call Schedule</a>
+              <a href="leasing-prompt.html" class="nav-link"><i class="ri-user-voice-line"></i> Leasing Prompt</a>
+            </nav>
+          </div><!-- settings-sidebar -->
+          <div class="settings-body">
+            <h5 class="content-title-sm">Duration Pricing</h5>
+            <p class="content-text">Define pricing for lease durations less than or greater than 12 months.</p>
+
+            <hr class="op-0">
+
+            <h5 class="content-subtitle tx-16 mg-b-20">Duration</h5>
+
+            <div class="settings-group">
+              <div class="row align-items-center">
+                <div class="col-4">Shortest lease term (months)</div>
+                <div class="col-3">
+                  <input type="text" class="form-control" value="9">
+                </div><!-- col -->
+              </div><!-- row -->
+              <div class="row align-items-center mg-t-20">
+                <div class="col-4">Longest lease term (months)</div>
+                <div class="col-3">
+                  <input type="text" class="form-control" value="15">
+                </div><!-- col -->
+              </div><!-- row -->
+              <div class="row">
+                <div class="col-4">
+                  <p class="mg-b-0">Offer month-to-month</p>
+                  <span class="tx-12 text-muted">(after lease contract fulfilled)</span>
+                </div>
+                <div class="col-4">
+                  <div id="offerMonth2month" class="form-switcher lg inactive"></div>
+                </div><!-- col -->
+              </div><!-- row -->
+              <div id="rowMonth2Month" class="row align-items-center mg-t-20 d-none">
+                <div class="col-4">Month-to-month premium</div>
+                <div class="col">
+                  <div class="d-flex align-items-center">
+                    <span class="d-block">base rent</span>
+                    <select class="custom-select select-base-rent wd-120 mg-l-10">
+                      <option value="plus">plus</option>
+                      <option value="nopremium" selected>no premium</option>
+                      <option value="minus">minus</option>
+                    </select>
+                    <input type="text" class="form-control wd-100 mg-l-10 d-none">
+                    <select class="custom-select wd-150 mg-l-10 d-none">
+                      <option value="dollar" selected>fixed $ amount</option>
+                      <option value="percent">% of rent</option>
+                    </select>
+                    <span class="base-rent-text d-none mg-l-10">more per month</span>
+                  </div>
+                </div><!-- col -->
+              </div><!-- row -->
+            </div><!-- settings-group -->
+
+            <hr class="mg-y-30">
+
+            <h5 class="content-subtitle tx-16 mg-b-20">Pricing</h5>
+
+            <div class="settings-group">
+              <select id="pricingTerm" class="custom-select wd-200">
+                <option value="dynamic" selected>Dynamic</option>
+                <option value="manual">Manual</option>
+              </select>
+
+              <hr class="op-0">
+
+              <div id="manualTerm" class="term-premiums d-none">
+                <h6 class="tx-color-02 mg-b-10">Term Premiums</h6>
+                <div class="row align-items-center">
+                  <div class="col-3">9 months</div>
+                  <div class="col">
+                    <div class="d-flex align-items-center">
+                      <span class="d-block">base rent</span>
+                      <select class="custom-select select-base-rent wd-120 mg-l-10">
+                        <option value="plus" selected>plus</option>
+                        <option value="nopremium">no premium</option>
+                        <option value="minus">minus</option>
+                      </select>
+                      <input type="text" class="form-control wd-100 mg-l-10">
+                      <select class="custom-select wd-150 mg-l-10">
+                        <option value="dollar" selected>fixed $ amount</option>
+                        <option value="percent">% of rent</option>
+                      </select>
+                      <span class="d-block mg-l-10 base-rent-text">more per month</span>
+                    </div>
+                  </div><!-- col -->
+                </div><!-- row -->
+                <div class="row align-items-center">
+                  <div class="col-3">10 months</div>
+                  <div class="col">
+                    <div class="d-flex align-items-center">
+                      <span class="d-block">base rent</span>
+                      <select class="custom-select select-base-rent wd-120 mg-l-10">
+                        <option value="plus" selected>plus</option>
+                        <option value="nopremium">no premium</option>
+                        <option value="minus">minus</option>
+                      </select>
+                      <input type="text" class="form-control wd-100 mg-l-10">
+                      <select class="custom-select wd-150 mg-l-10">
+                        <option value="dollar" selected>fixed $ amount</option>
+                        <option value="percent">% of rent</option>
+                      </select>
+                      <span class="d-block mg-l-10 base-rent-text">more per month</span>
+                    </div>
+                  </div><!-- col -->
+                </div><!-- row -->
+                <div class="row align-items-center">
+                  <div class="col-3">11 months</div>
+                  <div class="col">
+                    <div class="d-flex align-items-center">
+                      <span class="d-block">base rent</span>
+                      <select class="custom-select select-base-rent wd-120 mg-l-10">
+                        <option value="plus" selected>plus</option>
+                        <option value="nopremium">no premium</option>
+                        <option value="minus">minus</option>
+                      </select>
+                      <input type="text" class="form-control wd-100 mg-l-10">
+                      <select class="custom-select wd-150 mg-l-10">
+                        <option value="dollar" selected>fixed $ amount</option>
+                        <option value="percent">% of rent</option>
+                      </select>
+                      <span class="d-block mg-l-10 base-rent-text">more per month</span>
+                    </div>
+                  </div><!-- col -->
+                </div><!-- row -->
+                <div class="row align-items-center">
+                  <div class="col-3">12 months</div>
+                  <div class="col">
+                    <div class="d-flex align-items-center">
+                      <span class="d-block">base rent</span>
+                      <select class="custom-select select-base-rent wd-120 mg-l-10">
+                        <option value="plus">plus</option>
+                        <option value="nopremium" selected>no premium</option>
+                        <option value="minus">minus</option>
+                      </select>
+                      <input type="text" class="form-control wd-100 mg-l-10 d-none">
+                      <select class="custom-select wd-150 mg-l-10 d-none">
+                        <option value="dollar" selected>fixed $ amount</option>
+                        <option value="percent">% of rent</option>
+                      </select>
+                      <span class="mg-l-10 base-rent-text d-none"></span>
+                    </div>
+                  </div><!-- col -->
+                </div><!-- row -->
+                <div class="row align-items-center">
+                  <div class="col-3">13 months</div>
+                  <div class="col">
+                    <div class="d-flex align-items-center">
+                      <span class="d-block">base rent</span>
+                      <select class="custom-select select-base-rent wd-120 mg-l-10">
+                        <option value="plus">plus</option>
+                        <option value="nopremium">no premium</option>
+                        <option value="minus" selected>minus</option>
+                      </select>
+                      <input type="text" class="form-control wd-100 mg-l-10">
+                      <select class="custom-select wd-150 mg-l-10">
+                        <option value="dollar" selected>fixed $ amount</option>
+                        <option value="percent">% of rent</option>
+                      </select>
+                      <span class="d-block mg-l-10 base-rent-text">less per month</span>
+                    </div>
+                  </div><!-- col -->
+                </div><!-- row -->
+                <div class="row align-items-center">
+                  <div class="col-3">14 months</div>
+                  <div class="col">
+                    <div class="d-flex align-items-center">
+                      <span class="d-block">base rent</span>
+                      <select class="custom-select select-base-rent wd-120 mg-l-10">
+                        <option value="plus">plus</option>
+                        <option value="nopremium">no premium</option>
+                        <option value="minus" selected>minus</option>
+                      </select>
+                      <input type="text" class="form-control wd-100 mg-l-10">
+                      <select class="custom-select wd-150 mg-l-10">
+                        <option value="dollar" selected>fixed $ amount</option>
+                        <option value="percent">% of rent</option>
+                      </select>
+                      <span class="d-block mg-l-10 base-rent-text">less per month</span>
+                    </div>
+                  </div><!-- col -->
+                </div><!-- row -->
+                <div class="row align-items-center">
+                  <div class="col-3">15 months</div>
+                  <div class="col">
+                    <div class="d-flex align-items-center">
+                      <span class="d-block">base rent</span>
+                      <select class="custom-select select-base-rent wd-120 mg-l-10">
+                        <option value="plus">plus</option>
+                        <option value="nopremium">no premium</option>
+                        <option value="minus" selected>minus</option>
+                      </select>
+                      <input type="text" class="form-control wd-100 mg-l-10">
+                      <select class="custom-select wd-150 mg-l-10">
+                        <option value="dollar" selected>fixed $ amount</option>
+                        <option value="percent">% of rent</option>
+                      </select>
+                      <span class="d-block mg-l-10 base-rent-text">less per month</span>
+                    </div>
+                  </div><!-- col -->
+                </div><!-- row -->
+              </div><!-- term-premiums -->
+
+              <div id="dynamicTerm">
+                <h6 class="tx-color-02 mg-b-20">Formula Inputs</h6>
+                <div class="row align-items-center">
+                  <div class="col-4">Average turnover time</div>
+                  <div class="col-3">
+                    <input id="turnoverTime" type="text" class="form-control" placeholder="days">
+                  </div><!-- col -->
+                </div><!-- row -->
+                <div class="row align-items-center mg-t-20">
+                  <div class="col-4">Average turnover costs</div>
+                  <div class="col-3">
+                    <input id="turnoverCosts" type="text" class="form-control" placeholder="$">
+                  </div><!-- col -->
+                </div><!-- row -->
+                <div class="row mg-t-20">
+                  <div class="col-4">
+                    <p class="mg-b-0">Offer discounts for longer lease terms</p>
+                    <span class="tx-12 text-muted">(lease lengths greater than 12 months)</span>
+                  </div>
+                  <div class="col-3">
+                    <div id="offerLongerLease" class="form-switcher inactive lg"></div>
+                  </div><!-- col -->
+                </div><!-- row -->
+
+                <hr class="op-0 mg-y-20">
+
+                <div id="examplePricing" class="d-none">
+                  <h6 class="tx-color-02 mg-b-15">Example Pricing</h6>
+                  <div class="wd-300">
+                    <select class="custom-select wd-100p">
+                      <option value="2a" selected>2A - $1,000 / month</option>
+                    </select>
+                  </div>
+
+                  <div class="term-premiums mg-t-20">
+                    <div class="formula-group">
+                      <div class="row">
+                        <div class="col-3">9 months</div>
+                        <div class="col-4">$1,171</div>
+                        <div class="col">17% more per month</div>
+                      </div><!-- row -->
+                      <div class="row">
+                        <div class="col-3">10 months</div>
+                        <div class="col-4">$1,113</div>
+                        <div class="col">13% more per month</div>
+                      </div><!-- row -->
+                      <div class="row">
+                        <div class="col-3">11 months</div>
+                        <div class="col-4">$1,057</div>
+                        <div class="col">5.7% more per month</div>
+                      </div><!-- row -->
+                      <div class="row">
+                        <div class="col-3">12 months</div>
+                        <div class="col-4">$1,000</div>
+                        <div class="col">no premium</div>
+                      </div><!-- row -->
+                      <div class="row">
+                        <div class="col-3">13 months</div>
+                        <div class="col-4"><span>$1,000</span><span class="d-none">$943</span></div>
+                        <div class="col"><span>no premium</span><span class="d-none">5.7% less per month</span></div>
+                      </div><!-- row -->
+                      <div class="row">
+                        <div class="col-3">14 months</div>
+                        <div class="col-4"><span>$1,000</span><span class="d-none">$943</span></div>
+                        <div class="col"><span>no premium</span><span class="d-none">5.7% less per month</span></div>
+                      </div><!-- row -->
+                      <div class="row">
+                        <div class="col-3">15 months</div>
+                        <div class="col-4"><span>$1,000</span><span class="d-none">$943</span></div>
+                        <div class="col"><span>no premium</span><span class="d-none">5.7% less per month</span></div>
+                      </div><!-- row -->
+                    </div><!-- formula-group -->
+                  </div><!-- term-premiums -->
+                </div><!-- #examplePricing -->
+              </div><!-- #formulaTerm -->
+            </div><!-- settings-group -->
+          </div><!-- settings-body -->
+        </div><!-- content-body -->
+      </div><!-- container -->
+    </div><!-- content -->
+
+
+    <div class="modal modal-pricing-details fade" id="modalPricingDetails" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+
+            <div class="d-flex align-items-center justify-content-between mg-b-20">
+              <h5 class="modal-title mg-b-0">Lease Duration Pricing Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+            </div>
+
+            <h6 class="tx-semibold tx-dark mg-b-15">Example A</h6>
+
+            <p class="mg-b-2">Advertised rent - $1,000 / month</p>
+            <p class="mg-b-2">Promotion concession - $100 (once)</p>
+            <a href="#collapseEffectiveRent" data-toggle="collapse" class="d-flex align-items-center mg-b-2">Effective rent for 12 month lease - $992 <i class="ri-arrow-down-s-line tx-14"></i></a>
+            <div id="collapseEffectiveRent" class="collapse fade mg-b-2">
+              <div class="d-flex bg-gray-200 pd-10">
+                <div>Effective Rent</div>
+                <div class="mg-x-5">=</div>
+                <div>
+                  Rent - (Concession / 12 months)<br>
+                  $1,000 - ($100 / 12)<br>
+                  $992
+                </div>
+              </div>
+            </div><!-- collapse -->
+            <p class="mg-b-2">Average days vacant - 15.2</p>
+            <p class="mg-b-0">Average turnover cost (cost to clean and update a unit) - $100</p>
+          </div><!-- modal-body -->
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/select2/js/select2.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('.select2').select2({
+          minimumResultsForSearch: Infinity,
+          width: '100%'
+        });
+
+        $('#offerMonth2month').on('click', function(e){
+          e.preventDefault();
+          var a = $(this).hasClass('inactive');
+          $('#rowMonth2Month').toggleClass('d-none', !a);
+        });
+
+        $('.select-base-rent').on('change', function(e){
+          var v = $(this).val();
+          var t = $(this).siblings('.base-rent-text');
+          var n = $(this).nextAll();
+
+          switch(v) {
+            case 'plus':
+              t.text('more per month');
+              n.removeClass('d-none');
+            break;
+
+            case 'nopremium':
+              t.text('');
+              n.addClass('d-none');
+            break;
+
+            case 'minus':
+              t.text('less per month');
+              n.removeClass('d-none');
+            break;
+          }
+        });
+
+        $('#pricingTerm').on('change', function(e){
+          var v = $(this).val();
+
+          switch(v) {
+            case 'manual':
+              $('#manualTerm').removeClass('d-none');
+              $('#dynamicTerm').addClass('d-none');
+            break;
+
+            case 'dynamic':
+              $('#manualTerm').addClass('d-none');
+              $('#dynamicTerm').removeClass('d-none');
+            break;
+          }
+        });
+
+        $('#offerLongerLease').on('click', function(e){
+          e.preventDefault();
+          var a = $(this).hasClass('inactive');
+
+          $('.formula-group span:last-child').toggleClass('d-none', !a);
+          $('.formula-group span:first-child').toggleClass('d-none', a);
+        });
+
+        $('#turnoverTime, #turnoverCosts').on('keyup focusout change', function(){
+          var t = $('#turnoverTime').val();
+          var c = $('#turnoverCosts').val();
+
+          if(t !== '' && c !== '') {
+            $('#examplePricing').removeClass('d-none');
+            $('.form-switcher').removeClass('disabled');
+          } else {
+            $('#examplePricing').addClass('d-none');
+          }
+        });
+
+      });
+    </script>
+  </body>
+</html>

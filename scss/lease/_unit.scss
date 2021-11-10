@@ -1,0 +1,325 @@
+
+.ls-form-label {
+  font-weight: 600;
+  font-size: 15px;
+  color: $color-tx-01;
+  margin-bottom: 8px;
+  display: block;
+  letter-spacing: -.5px;
+}
+
+.ls-form-control {
+  height: 38px;
+  border-width: 1.5px;
+  text-shadow: none;
+  @include transition(none);
+
+  @include media-breakpoint-up(sm) { height: 40px; }
+  @include media-breakpoint-up(lg) { height: 45px; }
+
+  &:focus {
+    box-shadow: none;
+    border-color: darken($border-color, 15%);
+  }
+
+  &::placeholder {
+    text-shadow: none;
+    font-weight: 300;
+  }
+}
+
+.table-unit {
+  font-size: 13px;
+
+  @include media-breakpoint-up(md) { font-size: 14px; }
+
+  p {
+    padding: 8px 0;
+    margin-bottom: 0;
+
+    @include media-breakpoint-up(xl) { padding: 8px 10px; }
+
+    &:first-child {
+      @include media-breakpoint-up(xl) {
+        max-width: 60px;
+        flex-basis: 60px;
+      }
+    }
+
+    &:nth-child(2) {
+      @include media-breakpoint-up(xl) {
+        max-width: 100px;
+        flex-basis: 100px;
+      }
+    }
+
+    &:nth-child(3) {
+      @include media-breakpoint-up(xl) {
+        max-width: 120px;
+        flex-basis: 120px;
+      }
+    }
+
+    &:nth-child(4) {
+      @include media-breakpoint-up(xl) { flex: 1; }
+    }
+  }
+
+  .table-header {
+    background-color: $color-bg-01;
+    font-size: 13px;
+    font-weight: 600;
+    color: $color-tx-01;
+    position: relative;
+    margin-bottom: 2px;
+    display: none;
+
+    @include media-breakpoint-up(xl) {
+      display: flex;
+      align-items: center;
+    }
+
+    p {
+      max-width: none;
+      &:last-child {
+        max-width: 260px;
+        flex-basis: 260px;
+      }
+    }
+  }
+
+  .table-body {
+    @include media-breakpoint-up(sm) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @include media-breakpoint-up(xl) {
+      display: block;
+    }
+  }
+
+  .table-row {
+    border: 1px solid $border-color;
+    position: relative;
+    padding: 10px 20px;
+    white-space: nowrap;
+
+    @include media-breakpoint-up(sm) {
+      flex-basis: calc(50% - 10px);
+      margin-bottom: 20px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      border-color: transparent;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin-bottom: 0;
+    }
+
+    &:nth-child(odd) {
+      margin-right: 20px;
+      @include media-breakpoint-up(xl) { margin-right: 0; }
+    }
+
+    + .table-row {
+      margin-top: 15px;
+      @include media-breakpoint-up(sm) { margin-top: 0; }
+    }
+
+    p:not(:last-child) {
+      border-bottom: 1px solid $color-bg-01;
+      @include media-breakpoint-up(xl) { border-bottom: 0; }
+    }
+
+    p:first-child {
+      font-weight: 600;
+      color: $color-tx-01;
+    }
+
+    p:nth-child(5) {
+      @include media-breakpoint-up(xl) {
+        max-width: 140px;
+        flex-basis: 140px;
+      }
+    }
+
+    p:not(:last-child) {
+      display: flex;
+      align-items: center;
+
+      @include media-breakpoint-up(xl) { display: block; }
+
+      span {
+        margin-right: auto;
+        @include media-breakpoint-up(xl) { display: none; }
+      }
+    }
+
+    p:last-child {
+      @include media-breakpoint-up(xl) {
+        max-width: 120px;
+        flex-basis: 120px;
+      }
+    }
+
+    &.selected {
+      border-color: $color-ui-03;
+      box-shadow: inset 0 0 0 .5px $color-ui-03;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-top: 35px solid $color-ui-03;
+        border-bottom: 35px solid transparent;
+        border-left: 35px solid transparent;
+        z-index: 10;
+      }
+
+      &::after {
+        content: '\EB7B';
+        font-family: 'remixicon';
+        font-size: 16px;
+        color: #fff;
+        position: absolute;
+        top: -2px;
+        right: 2px;
+        z-index: 10;
+      }
+
+      &::before,
+      &::after {
+        @include media-breakpoint-up(xl) { display: none; }
+      }
+    }
+  }
+
+  .btn-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 25px;
+    text-transform: uppercase;
+    position: relative;
+    border-width: 1.5px;
+    border-color: $color-ui-03;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: .5px;
+    background-color: transparent; //rgba($color-ui-01, .05);
+    color: $color-ui-03;
+    transition: none;
+
+    @include media-breakpoint-up(sm) { height: 38px; }
+    @include media-breakpoint-up(lg) { height: 40px; }
+    @include media-breakpoint-up(xl) { margin-top: 0; }
+
+    &:hover {
+      background-color: rgba($color-ui-03, .08);
+      color: $color-ui-03;
+    }
+
+    &:focus { box-shadow: none; }
+
+    &.active,
+    &:active {
+      background-color: $color-ui-03;
+      color: #fff;
+
+      @include hover-focus() {
+        background-color: $color-ui-03;
+        color: #fff;
+      }
+
+      &::before {
+        content: '\EB7B';
+        font-family: 'remixicon';
+        display: inline-block;
+        margin-right: 5px;
+      }
+    }
+
+    &:active:not(:disabled) {
+      box-shadow: none;
+    }
+  }
+}
+
+.unit-info {
+  .list-group-item {
+    border-width: 0;
+    font-size:  14px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:first-child {
+      @include border-top-radius(0);
+      padding-top: 0;
+    }
+
+    &:last-child {
+      @include border-bottom-radius(0);
+      padding-bottom: 0;
+    }
+
+    + .list-group-item {
+      border-top: 1px solid rgba($color-bg-02, .7);
+    }
+
+    span:last-child {
+      color: $color-tx-01;
+      font-weight: 600;
+    }
+  }
+}
+
+.unit-total {
+  padding: 15px 20px;
+  border: 1px solid $border-color;
+  margin-top: 20px;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 10px 0;
+
+    @include media-breakpoint-up(lg) { font-size: 15px; }
+
+    + div {
+      margin-top: -1px;
+      border-top: 1px solid $color-bg-01;
+    }
+  }
+
+  span {
+    display: block;
+    color: $color-tx-01;
+    font-size: 14px;
+  }
+
+  strong {
+    font-weight: 600;
+    color: $color-tx-01;
+  }
+
+  a {
+    font-size: 16px;
+    color: darken($color-ui-04, 10%);
+    line-height: 1;
+    align-self: center;
+
+    @include hover-focus() {
+      color: darken($color-ui-04, 15%);
+      text-decoration: none;
+    }
+  }
+}

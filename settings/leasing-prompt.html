@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body class="page-rules">
+
+    <div class="content">
+      <div class="container-fluid">
+        <div class="content-header align-items-center mg-b-30">
+          <div class="mg-r-auto">
+            <h4 class="content-title mg-b-0">Property Settings</h4>
+          </div>
+        </div><!-- content-header -->
+        <div class="content-body content-body-settings">
+          <div class="settings-sidebar">
+            <label class="content-label">General Settings</label>
+            <nav class="nav">
+              <a href="../templates/settings.html" class="nav-link"><i class="ri-shield-user-line"></i> Assignment Rules</a>
+              <a href="../templates/settings-email.html" class="nav-link"><i class="ri-mail-line"></i> Email templates</a>
+              <a href="../templates/settings-calendar.html" class="nav-link"><i class="ri-calendar-todo-line"></i> Email &amp; Calendar sync</a>
+              <a href="../templates/settings-business.html" class="nav-link"><i class="ri-time-line"></i> Business hours</a>
+              <a href="community-features.html" class="nav-link"><i class="ri-community-line"></i> Community features</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">Report Settings</label>
+            <nav class="nav">
+              <a href="../templates/settings-competitors.html" class="nav-link"><i class="ri-group-line"></i> Competitors</a>
+              <a href="../templates/settings-paid-sources.html" class="nav-link"><i class="ri-wallet-3-line"></i> Paid sources</a>
+              <a href="../templates/settings-budget.html" class="nav-link"><i class="ri-bank-card-2-line"></i> Paid source budgets</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">Leasing</label>
+            <nav class="nav">
+              <a href="../templates/settings-lease.html" class="nav-link"><i class="ri-community-line"></i> Lease Defaults</a>
+              <a href="../templates/settings-policies.html" class="nav-link"><i class="ri-article-line"></i> Property Policies</a>
+              <a href="../templates/settings-rentable.html" class="nav-link"><i class="ri-handbag-line"></i> Rentable Items</a>
+              <a href="../templates/settings-screening.html" class="nav-link"><i class="ri-survey-line"></i> Screening Criteria</a>
+              <a href="../templates/settings-addenda.html" class="nav-link"><i class="ri-file-list-3-line"></i> Addenda</a>
+              <a href="pricing-duration.html" class="nav-link"><i class="ri-community-line"></i> Duration Pricing</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">Communication</label>
+            <nav class="nav">
+              <a href="../templates/settings-call-block.html" class="nav-link"><i class="ri-lock-line"></i> Call Block List</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">IVR Settings</label>
+            <nav class="nav">
+              <a href="vendors-list.html" class="nav-link"><i class="ri-contacts-line"></i> Vendors List</a>
+              <a href="default-assignees.html" class="nav-link"><i class="ri-user-star-line"></i> Default Assignees</a>
+              <a href="oncall-schedule.html" class="nav-link"><i class="ri-calendar-event-line"></i> On-Call Schedule</a>
+              <a href="leasing-prompt.html" class="nav-link active"><i class="ri-user-voice-line"></i> Leasing Prompt</a>
+            </nav>
+          </div><!-- settings-sidebar -->
+          <div class="settings-body d-flex flex-column">
+            <h5 class="content-title-sm">Leasing Prompt</h5>
+            <p class="content-text">Provide a description of your community when a caller selects the "Leasing" IVR prompt.</p>
+
+            <hr class="op-0">
+
+            <textarea class="form-control mg-b-10" rows="10" placeholder="Describe your community to a potential resident..."></textarea>
+
+            <a href="#" class="d-flex align-items-center"><i class="ri-play-circle-fill mg-r-5 tx-16 lh-1"></i> Preview how it will sound when caller selects prompt</a>
+
+            <div class="settings-footer mg-t-30">
+              <button type="button" class="btn btn-primary">Save Changes</button>
+            </div><!-- settings-footer -->
+          </div><!-- settings-body -->
+        </div><!-- content-body -->
+      </div><!-- container -->
+    </div><!-- content -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/select2/js/select2.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('.select2').select2({
+          minimumResultsForSearch: Infinity,
+          width: '100%'
+        });
+
+        $('#assignTask').on('change', function(e){
+          var v = $(this).val();
+          if(v != 1) {
+            $('#ruleTour, #ruleEmail, #ruleCalls').removeClass('d-none');
+          } else {
+            $('#ruleTour, #ruleEmail, #ruleCalls').addClass('d-none');
+          }
+        });
+
+        // $('.select2-user').on('change', function(e){
+        //   var s = $(this).val();
+        //   var p = $(this).closest('.rule-col').prev().find('.select2-to');
+        //
+        //   if(s.length == 0) {
+        //     p.val('4').trigger('change');
+        //   }
+        //
+        //   if(s.includes('el') && s.length == 1) {
+        //     p.val('3').trigger('change');
+        //   } else {
+        //     p.val('2').trigger('change');
+        //   }
+        //
+        //   if(s.length == 3) {
+        //     p.val('1').trigger('change');
+        //   }
+        //
+        // });
+
+        $('.select2-by').on('change', function(e){
+          var v = $(this).val();
+          var t = $(e.currentTarget).closest('.rule-col');
+          t.siblings('.rule-col-to').toggleClass('d-none', (v >= 2));
+          t.siblings('.rule-col-user').toggleClass('d-none', (v >= 2));
+
+          $(e.currentTarget).closest('.rule-wrapper').next().toggleClass('d-none', (v != 2));
+        });
+
+        $('#prosBy').on('change', function(){
+          $('#dayPros').toggleClass('d-none', ($(this).val() == '1'));
+          $(this).closest('.rule-col').siblings().toggleClass('d-none', ($(this).val() != '1'));
+        });
+
+        $('.select2-to').on('change', function() {
+          var u = $(this).closest('.rule-col').next().find('.select2-user');
+          if($(this).val() == '1') {
+            u.val(['js','jc','el']).trigger('change');
+          } else if($(this).val() == '2') {
+            u.val(['js','jc']).trigger('change');
+          } else {
+            u.val(null).trigger('change');
+          }
+        });
+
+      });
+    </script>
+  </body>
+</html>

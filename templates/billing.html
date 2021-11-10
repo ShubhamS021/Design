@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body>
+
+    <div class="content">
+      <div class="container-fluid">
+        <div class="content-navbar content-navbar-billing">
+          <div class="mg-r-auto">
+            <h4 class="content-title">Billing</h4>
+            <p class="content-text mg-b-0">Time period: Aug 1, 2020 - Aug 31, 2020</p>
+          </div>
+
+          <div class="navbar-right">
+            <select id="selectDate1" class="select2">
+              <option value="7">July 2020</option>
+              <option value="8" selected>August 2020</option>
+              <option value="9">September 2020</option>
+              <option value="10">October 2020</option>
+              <option value="11">November 2020</option>
+              <option value="12">December 2020</option>
+            </select>
+            <div class="form-search mg-l-8">
+              <i data-feather="search"></i>
+              <input type="text" class="form-control" placeholder="Search by customer">
+            </div><!-- form-search -->
+          </div>
+        </div><!-- content-navbar -->
+
+        <table id="tableBilling" class="table table-alpha table-billing">
+          <thead>
+            <tr>
+              <th>Customer</th>
+              <th>Customer Since</th>
+              <th>Products</th>
+              <th class="text-right">Subtotal</th>
+              <th class="text-right">Concessions</th>
+              <th class="text-right">Amount</th>
+            </tr>
+          </thead>
+          <tbody class="skeleton">
+            <tr>
+              <td><div class="skeleton-text sm wd-100"></div></td>
+              <td><div class="skeleton-text sm wd-100"></div></td>
+              <td><div class="skeleton-text sm wd-150"></div></td>
+              <td class="text-right"><div class="skeleton-text sm wd-60"></div></td>
+              <td class="text-right"><div class="skeleton-text sm wd-60"></div></td>
+              <td class="text-right"><div class="skeleton-text sm wd-100"></div></td>
+            </tr>
+            <tr>
+              <td><div class="skeleton-text sm wd-100"></div></td>
+              <td><div class="skeleton-text sm wd-100"></div></td>
+              <td><div class="skeleton-text sm wd-150"></div></td>
+              <td class="text-right"><div class="skeleton-text sm wd-60"></div></td>
+              <td class="text-right"><div class="skeleton-text sm wd-60"></div></td>
+              <td class="text-right"><div class="skeleton-text sm wd-100"></div></td>
+            </tr>
+            <tr>
+              <td><div class="skeleton-text sm wd-100"></div></td>
+              <td><div class="skeleton-text sm wd-100"></div></td>
+              <td><div class="skeleton-text sm wd-150"></div></td>
+              <td class="text-right"><div class="skeleton-text sm wd-60"></div></td>
+              <td class="text-right"><div class="skeleton-text sm wd-60"></div></td>
+              <td class="text-right"><div class="skeleton-text sm wd-100"></div></td>
+            </tr>
+            <tr>
+              <td><div class="skeleton-text sm wd-100"></div></td>
+              <td><div class="skeleton-text sm wd-100"></div></td>
+              <td><div class="skeleton-text sm wd-150"></div></td>
+              <td class="text-right"><div class="skeleton-text sm wd-60"></div></td>
+              <td class="text-right"><div class="skeleton-text sm wd-60"></div></td>
+              <td class="text-right"><div class="skeleton-text sm wd-100"></div></td>
+            </tr>
+            <tr>
+              <td><div class="skeleton-text sm wd-100"></div></td>
+              <td><div class="skeleton-text sm wd-100"></div></td>
+              <td><div class="skeleton-text sm wd-150"></div></td>
+              <td class="text-right"><div class="skeleton-text sm wd-60"></div></td>
+              <td class="text-right"><div class="skeleton-text sm wd-60"></div></td>
+              <td class="text-right"><div class="skeleton-text sm wd-100"></div></td>
+            </tr>
+          </tbody>
+          <tbody class="skeleton-content">
+            <tr>
+              <td><strong>Mark Taylor</strong></td>
+              <td>02/15/2018</td>
+              <td>Ads, Sites, Leads, Call Tracking / Scoring</td>
+              <td class="text-right">$70,500.00</td>
+              <td class="text-right">$1,500</td>
+              <td><div class="d-flex justify-content-end"><span>$69,000.00</span><span class="text-success mg-l-5">+12.5%</span></div></td>
+            </tr>
+            <tr>
+              <td><strong>Customer #2</strong></td>
+              <td>07/01/2020</td>
+              <td>Sites, Leads</td>
+              <td class="text-right">$22,125.00</td>
+              <td class="text-right">-</td>
+              <td><div class="d-flex justify-content-end"><span>$22,125.00</span><span class="text-success mg-l-5">+5.1%</span></div></td>
+            </tr>
+            <tr>
+              <td><strong>Customer #3</strong></td>
+              <td>12/02/2020</td>
+              <td>Sites, Leads, Call Tracking / Scoring</td>
+              <td class="text-right">$50,750.00</td>
+              <td class="text-right">-</td>
+              <td><div class="d-flex justify-content-end"><span>$50,750.00</span><span class="text-danger mg-l-5">-20.0%</span></div></td>
+            </tr>
+            <tr>
+              <td><strong>Customer #4</strong></td>
+              <td>07/01/2020</td>
+              <td>Sites, Leads</td>
+              <td class="text-right">$22,125.00</td>
+              <td class="text-right">-</td>
+              <td><div class="d-flex justify-content-end"><span>$22,125.00</span><span class="text-success mg-l-5">+5.1%</span></div></td>
+            </tr>
+            <tr>
+              <td><strong>Customer #5</strong></td>
+              <td>12/02/2020</td>
+              <td>Sites, Leads, Call Tracking / Scoring</td>
+              <td class="text-right">$50,750.00</td>
+              <td class="text-right">-</td>
+              <td><div class="d-flex justify-content-end"><span>$50,750.00</span><span class="text-danger mg-l-5">-20.0%</span></div></td>
+            </tr>
+            <tr>
+              <td colspan="5" class="text-right"><strong>Total</strong></td>
+              <td><div class="d-flex justify-content-end"><span>$141,875.00</span><span class="text-success mg-l-5">+10.5%</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div><!-- container-fluid -->
+    </div><!-- content -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/select2/js/select2.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('#selectDate1').select2({
+          minimumResultsForSearch: Infinity,
+          width: 160
+        });
+
+        $('#tableBilling td').on('click', function(e){
+          window.location.href = 'billing-details.html';
+        });
+
+      });
+    </script>
+  </body>
+</html>

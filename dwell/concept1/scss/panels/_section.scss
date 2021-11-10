@@ -1,0 +1,32 @@
+
+.section {
+  .container {
+    max-width: 1440px;
+    padding: 40px 30px;
+  }
+}
+
+.section-label {
+  color: $primary;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.section-title {
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-indent: -4px;
+  color: $dark;
+}
+
+.section-subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.section-text { color: $secondary; }
+
+h1.section-title { font-size: 56px; }
+h2.section-title { font-size: 48px; }

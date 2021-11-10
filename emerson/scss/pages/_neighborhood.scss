@@ -1,0 +1,95 @@
+.page-neighborhood {
+  .nav-section {
+    display: none;
+    @include media-breakpoint-up(lg) { display: flex; }
+  }
+
+  .card-map {
+    display: none;
+    @include media-breakpoint-up(lg) { display: block; }
+  }
+}
+
+.banner-neighborhood {
+  min-height: calc(100vh - #{$ht-header});
+  background-color: $ui-secondary;
+  padding-top: 0;
+  padding-bottom: 48px;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .container {
+    max-width: 1440px;
+    padding-left: 0;
+    padding-right: 0;
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 64px;
+      padding-right: 64px;
+    }
+  }
+
+  .row {
+    align-items: center;
+  }
+
+  h1 {
+    font-family: $ff-secondary;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 48px;
+      line-height: 1;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+    line-height: 1.7;
+  }
+
+}
+
+.card-map {
+  width: 260px;
+  border-width: 0;
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  @include shadow-dreamy($tx-light);
+
+  .card-body {
+    padding: 15px;
+    text-align: left;
+  }
+
+  .card-img { margin-bottom: 10px; }
+
+  .card-title {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+  }
+
+  .card-text { color: $tx-light; }
+
+  .nav-icon {
+    justify-content: flex-end;
+
+    a {
+      font-size: 20px;
+      color: $ui-primary;
+      text-decoration: none;
+
+      + a {
+        margin-left: 15px;
+      }
+    }
+  }
+}

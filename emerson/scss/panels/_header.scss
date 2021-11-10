@@ -1,0 +1,177 @@
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $ht-header;
+  z-index: 800;
+  background-color: $ui-secondary;
+
+  &.static {
+    position: relative;
+    z-index: 800;
+  }
+
+  .container {
+    max-width: 1440px;
+    height: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-up(lg) { padding-right: 48px; }
+    @include media-breakpoint-up(xl) { padding-right: 64px; }
+  }
+
+  .btn {
+    width: 140px;
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 200px;
+    }
+  }
+}
+
+.nav-header {
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+  }
+
+  .nav-link {
+    font-size: 15px;
+    font-weight: 500;
+    color: $body-color;
+    padding: 0;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: calc(50% - 16px);
+      bottom: -5px;
+      width: 32px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: $ui-primary;
+      display: none;
+    }
+
+    + .nav-link {
+      margin-left: 24px;
+
+      @include media-breakpoint-up(xl) { margin-left: 32px; }
+      @media (min-width: 1440px) { margin-left: 48px; }
+    }
+
+    &.active {
+      color: $ui-primary;
+      &::after { display: block; }
+    }
+  }
+}
+
+.header-logo {
+  width: 145px;
+  position: relative;
+
+  @include media-breakpoint-up(xl) { width: 170px; }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.header-headline {
+  margin-bottom: 0;
+  margin-left: 60px;
+  display: none;
+
+  @include media-breakpoint-up(lg) { display: block; }
+}
+
+.header-right {
+  margin-left: auto;
+  display: none;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    align-items: center;
+  }
+
+  i {
+    font-size: 20px;
+    line-height: 1;
+    color: $ui-primary;
+    margin-right: 5px;
+  }
+
+  a {
+    color: $body-color;
+    text-decoration: none;
+  }
+}
+
+.burger-menu {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  margin-left: auto;
+  @include transition(all 0.15s);
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    height: 2.5px;
+    background-color: $body-color;
+    @include transition(all 0.15s);
+  }
+
+  &::before { width: 42px; }
+
+  &::after {
+    width: 30px;
+    margin-top: 8px;
+  }
+
+  &.active {
+    width: 32px;
+    height: 32px;
+
+    &::before,
+    &::after {
+      width: 24px;
+    }
+
+    &::before {
+      transform: rotate(45deg) translate(0, 6px);
+    }
+
+    &::after {
+      transform: rotate(-45deg) translate(0, -6px);
+      margin-top: 6px;
+    }
+  }
+}

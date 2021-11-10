@@ -1,0 +1,35 @@
+.btn-submit {
+  font-family: $ff-secondary;
+  font-size: 15px;
+  font-weight: 700;
+  color: #7BADD3;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0;
+
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    height: 2px;
+    background-color: #7BADD3;
+    border-radius: 2px;
+    display: inline-block;
+  }
+
+  &::before {
+    width: 40px;
+    margin-right: 10px;
+  }
+
+  &::after {
+    width: 12px;
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,136 @@
+.response-item-help {
+  .close {
+    font-weight: 400;
+    font-size: 20px;
+    color: $color-tx-02;
+  }
+
+  .card-response {
+    margin-left: 35px;
+    padding: 15px;
+
+    h4 {
+      font-size: 16px;
+      font-weight: 600;
+      color: $color-tx-01;
+      margin-bottom: 12px;
+    }
+  }
+
+  .pc-qlist {
+    li {
+      width: 100%;
+      text-align: center;
+      height: $height-sm;
+      border-width: 1.5px;
+      border-color: $border-color;
+      background-color: transparent;
+      color: $color-tx-02;
+      font-size: $font-size-base;
+
+      @include hover-focus() {
+        background-color: $body-bg;
+        border-color: darken($border-color, 5%);
+      }
+    }
+
+    ~ .btn {
+      justify-content: center;
+
+      i {
+        position: relative;
+        font-size: 16px;
+        line-height: 1;
+        top: 1px;
+      }
+    }
+  }
+
+  .pc-qlist2 {
+    li {
+      text-align: left;
+      height: auto;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    strong {
+      font-weight: 500;
+      font-family: $font-family-sans-serif;
+    }
+  }
+
+  .step-wrapper {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .step-group {
+    display: flex;
+    flex-wrap: nowrap;
+    @include transition(all 0.2s);
+
+    &.slide1 {
+      transform: translateX(-273px);
+      .step-item:nth-child(2) { display: block; }
+    }
+
+    &.slide2 {
+      transform: translateX(-(273px * 2));
+      .step-item:nth-child(3) { display: block; }
+    }
+  }
+
+  .step-item {
+    width: 268px;
+    flex-shrink: 0;
+    padding-bottom: 2px;
+    display: none;
+
+    &:first-child { display: block; }
+
+    + .step-item { margin-left: 5px; }
+
+    hr {
+      margin: 15px 0;
+    }
+  }
+}
+
+.response-item-link-help {
+  padding-left: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-show-help {
+  background-color: rgba($color-tx-01, .9);
+  color: #fff;
+  padding: 6px 30px;
+  font-size: 12px;
+  border-radius: 20px;
+  @include transition(all 0.2s);
+
+  @include hover-focus() {
+    color: #fff;
+    transform: scale(1.05);
+  }
+}
+
+.search-clear {
+  display: none;
+  position: absolute;
+  top: calc(50% - 9px);
+  right: 12px;
+  color: rgba($color-tx-03, .6);
+  line-height: 1;
+
+  &.show { display: block; }
+
+  i {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+  }
+}

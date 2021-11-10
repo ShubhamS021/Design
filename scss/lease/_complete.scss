@@ -1,0 +1,35 @@
+
+.list-group-payment {
+  .list-group-item {
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: rgba($border-color, .8);
+    padding: 10px 0;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $color-tx-02;
+
+    span:last-child {
+      color: $color-tx-01;
+    }
+
+    &.item-sub {
+      display: block;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 20px;
+
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+
+        + div { margin-top: 8px; }
+      }
+    }
+  }
+}

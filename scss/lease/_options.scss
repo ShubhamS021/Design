@@ -1,0 +1,143 @@
+
+.card-option {
+  border-color: rgba($border-color, .8);
+  position: relative;
+  box-shadow: 0 2px 10px rgba($color-bg-02, .5);
+
+  &.selected {
+    border-color: $color-ui-03;
+    box-shadow: inset 0 0 0 .5px $color-ui-03;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-top: 35px solid $color-ui-03;
+      border-bottom: 35px solid transparent;
+      border-left: 35px solid transparent;
+      z-index: 10;
+    }
+
+    &::after {
+      content: '\EB7B';
+      font-family: 'remixicon';
+      font-size: 16px;
+      color: #fff;
+      position: absolute;
+      top: -2px;
+      right: 2px;
+      z-index: 10;
+    }
+  }
+
+  .card-image {
+    background-color: rgba($color-bg-02, .6);
+    margin-bottom: 15px;
+    height: 160px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .card-body { padding: 15px 15px 0; }
+
+  .option-title {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: -.2px;
+    color: $color-tx-01;
+  }
+
+  .option-price {
+    margin-bottom: 0;
+    color: $color-tx-01;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: -.5px;
+
+    small {
+      font-size: 13px;
+      font-weight: 400;
+      font-family: $font-family-sans-serif;
+      color: $color-tx-03;
+      padding-right: 2px;
+    }
+
+    span {
+      font-weight: 400;
+      color: $color-tx-02;
+    }
+  }
+
+  .option-desc {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: $color-tx-02;
+  }
+
+  .card-footer {
+    background-color: transparent;
+    border-top-width: 0;
+    padding: 20px 15px 15px;
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+      padding: 0 25px;
+      text-transform: uppercase;
+      position: relative;
+      border-width: 1.5px;
+      border-color: $color-ui-03;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: .5px;
+      background-color: transparent; //rgba($color-ui-01, .05);
+      color: $color-ui-03;
+      transition: none;
+
+      @include media-breakpoint-up(sm) { height: 38px; }
+      @include media-breakpoint-up(lg) {
+        height: 40px;
+        font-size: 13px;
+      }
+
+      @include media-breakpoint-up(xl) { height: 45px; }
+
+      &:hover {
+        background-color: rgba($color-ui-03, .08);
+        color: $color-ui-03;
+      }
+
+      &:focus { box-shadow: none; }
+
+      &.active,
+      &:active {
+        background-color: $color-ui-03;
+        color: #fff;
+
+        @include hover-focus() {
+          background-color: $color-ui-03;
+          color: #fff;
+        }
+
+        &::before {
+          content: '\EB7B';
+          font-family: 'remixicon';
+          display: inline-block;
+          margin-right: 5px;
+        }
+      }
+
+      &:active:not(:disabled) {
+        box-shadow: none;
+      }
+    }
+  }
+}

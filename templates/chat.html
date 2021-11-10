@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link href="../lib/lightslider/css/lightslider.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+
+  <body class="page-chat">
+
+    <div class="content content-chat">
+      <div class="chats-sidebar">
+        <div class="chats-sidebar-header">
+          <div class="chats-search">
+            <i data-feather="search"></i>
+            <input type="text" class="form-control" placeholder="Search messages">
+          </div><!-- chats-search -->
+          <div class="chats-settings mg-l-10">
+            <a id="chatSettings" href="" class="dropdown-link"><i class="ri-list-settings-line"></i></a>
+          </div><!-- chats-settings -->
+        </div><!-- chats-sidebar-header -->
+        <div class="chats-sidebar-menu">
+          <div id="chatsMainMenu">
+            <nav class="nav">
+              <a id="chatsActiveMenu" href="" class="nav-link active">Active Prospects</a>
+              <a id="chatsMyMenu" href="" class="nav-link">My Chats</a>
+            </nav>
+            <div class="dropdown">
+              <a href="" class="dropdown-link" data-toggle="dropdown"><i data-feather="more-horizontal"></i></a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a id="chatsAllMenu" href="" class="dropdown-item">All Prospects</a>
+                <a id="chatsArchiveMenu" href="" class="dropdown-item">Archive Prospects</a>
+                <a id="chatsSmsMenu" href="" class="dropdown-item">SMS</a>
+              </div><!-- dropdown-menu -->
+            </div>
+          </div><!-- #chatsMainMenu -->
+          <div id="chatsOtherMenu" class="d-none">
+            <a id="chatsBack" href="" class="chats-back-link"><i data-feather="arrow-left"></i></a>
+            <h6 id="chatsOtherMenuTitle"></h6>
+          </div>
+        </div><!-- chats-sidebar-menu -->
+
+        <div id="chatSettingsDropdown" class="chats-sidebar-settings">
+          <label>Show Properties</label>
+          <ul class="chats-prop-group">
+            <li class="chats-prop-item">
+              <div class="avatar"><i class="ri-question-answer-fill"></i></div>
+              <div class="chats-prop-item-body">
+                <h6>San Sonoma</h6>
+                <p>3 active prospects</p>
+              </div><!-- chats-prop-item-body -->
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="propSwitch1" checked>
+                <label class="custom-control-label" for="propSwitch1"></label>
+              </div>
+            </li>
+            <li class="chats-prop-item">
+              <div class="avatar"><i class="ri-question-answer-fill"></i></div>
+              <div class="chats-prop-item-body">
+                <h6>San Portales</h6>
+                <p>1 active prospect</p>
+              </div><!-- chats-prop-item-body -->
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="propSwitch2" checked>
+                <label class="custom-control-label" for="propSwitch2"></label>
+              </div>
+            </li>
+            <li class="chats-prop-item">
+              <div class="avatar"><i class="ri-question-answer-fill"></i></div>
+              <div class="chats-prop-item-body">
+                <h6>Borrego at Spectrum</h6>
+                <p>5 active prospects</p>
+              </div><!-- chats-prop-item-body -->
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="propSwitch3" checked>
+                <label class="custom-control-label" for="propSwitch3"></label>
+              </div>
+            </li>
+          </ul>
+        </div><!-- chat-sidebar-settings -->
+
+        <div class="chats-sidebar-body">
+          <div id="chatSpinner" class="chats-spinner d-none">
+            <div class="spinner-border spinner-border-sm text-secondary" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div><!-- chats-spinner -->
+          <ul id="chatsActive" class="chats-items">
+            <li class="chats-item-label">Today, Sep 18, 2020</li>
+            <li class="chats-item selected" data-item="230">
+              <div class="avatar online"><i>230</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#230</h6><small>10:30pm</small></div>
+                <p>Sure, just a moment while I redire...</p>
+              </div><!-- chats-item-body -->
+            </li>
+            <li class="chats-item new">
+              <div class="avatar online"><i>229</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#229</h6><small>10:00pm</small></div>
+                <p>Unfortunately, there are no agents...</p>
+                <span class="badge">2</span>
+              </div><!-- chats-item-body -->
+            </li>
+            <li class="chats-item" data-item="228">
+              <div class="avatar online"><i>228</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#228</h6><small>09:30pm</small></div>
+                <p>Sure, just a moment while I redirect...</p>
+              </div><!-- chats-item-body -->
+            </li>
+            <li class="chats-item-label">Wednesday, Sep 16, 2020</li>
+            <li class="chats-item" data-item="227">
+              <div class="avatar online"><i>227</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#227</h6><small>05:15pm</small></div>
+                <p>Unfortunately, there are no agents...</p>
+              </div><!-- chats-item-body -->
+            </li>
+            <li class="chats-item" data-item="226">
+              <div class="avatar online"><i>226</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#226</h6><small>05:02pm</small></div>
+                <p>Of course! The following models have...</p>
+                <span class="badge">8</span>
+              </div><!-- chats-item-body -->
+            </li>
+            <li class="chats-item-label">Sunday, Sep 13, 2020</li>
+            <li class="chats-item" data-item="225">
+              <div class="avatar online"><i>225</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#225</h6><small>07:20pm</small></div>
+                <p>What can I help you with today?</p>
+              </div><!-- chats-item-body -->
+            </li>
+            <li class="chats-item" data-item="224">
+              <div class="avatar online"><i>224</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#224</h6><small>03:30pm</small></div>
+                <p>Of course! The following models have...</p>
+              </div><!-- chats-item-body -->
+            </li>
+          </ul>
+          <ul id="chatsMy" class="chats-items d-none">
+            <li class="chats-item-label">Today, Sep 18, 2020</li>
+            <li class="chats-item selected" data-item="223">
+              <div class="avatar online"><i>223</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#223</h6><small>05:02pm</small></div>
+                <p>Looking down into the dark gulf below, I could see a ruddy light...</p>
+              </div><!-- chats-item-body -->
+            </li>
+            <li class="chats-item-label">Sunday, Sep 13, 2020</li>
+            <li class="chats-item selected" data-item="222">
+              <div class="avatar online"><i>222</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#222</h6><small>07:20pm</small></div>
+                <p>By the same illusion which lifts the horizon of the sea to the level...</p>
+              </div><!-- chats-item-body -->
+            </li>
+            <li class="chats-item" data-item="221">
+              <div class="avatar online"><i>221</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#221</h6><small>03:30pm</small></div>
+                <p>Of course! The following models have...</p>
+                <span class="badge">5</span>
+              </div><!-- chats-item-body -->
+            </li>
+          </ul>
+          <ul id="chatsAll" class="chats-items d-none">
+            <li class="chats-item-label">Today, Sep 18, 2020</li>
+            <li class="chats-item" data-item="231">
+              <div class="avatar online"><i>231</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#230</h6><small>10:30pm</small></div>
+                <p>Sure, just a moment while I redirect blandit aliquam etiam erat velit sceleri...</p>
+              </div><!-- chats-item-body -->
+            </li>
+            <li class="chats-item" data-item="232">
+              <div class="avatar online"><i>232</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#223</h6><small>05:02pm</small></div>
+                <p>Looking down into the dark gulf below, I could see a ruddy light...</p>
+              </div><!-- chats-item-body -->
+            </li>
+            <li class="chats-item">
+              <div class="avatar online"><i>239</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#229</h6><small>10:00pm</small></div>
+                <p>Unfortunately, there are no agents available at this time. I will have some...</p>
+              </div><!-- chats-item-body -->
+            </li>
+            <li class="chats-item" data-item="228">
+              <div class="avatar online"><i>228</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#228</h6><small>09:30pm</small></div>
+                <p>Sure, just a moment while I redirect...</p>
+              </div><!-- chats-item-body -->
+            </li>
+            <li class="chats-item-label">Wednesday, Sep 16, 2020</li>
+            <li class="chats-item" data-item="227">
+              <div class="avatar online"><i>227</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#227</h6><small>05:15pm</small></div>
+                <p>Unfortunately, there are no agents...</p>
+              </div><!-- chats-item-body -->
+            </li>
+            <li class="chats-item" data-item="226">
+              <div class="avatar online"><i>226</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#226</h6><small>05:02pm</small></div>
+                <p>Of course! The following models have...</p>
+              </div><!-- chats-item-body -->
+            </li>
+            <li class="chats-item-label">Sunday, Sep 13, 2020</li>
+            <li class="chats-item" data-item="225">
+              <div class="avatar online"><i>225</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#225</h6><small>07:20pm</small></div>
+                <p>What can I help you with today?</p>
+              </div><!-- chats-item-body -->
+            </li>
+            <li class="chats-item" data-item="224">
+              <div class="avatar online"><i>224</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#224</h6><small>03:30pm</small></div>
+                <p>Of course! The following models have...</p>
+              </div><!-- chats-item-body -->
+            </li>
+            <li class="chats-item selected" data-item="222">
+              <div class="avatar online"><i>222</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#222</h6><small>07:20pm</small></div>
+                <p>By the same illusion which lifts the horizon of the sea to the level...</p>
+              </div><!-- chats-item-body -->
+            </li>
+          </ul>
+          <ul id="chatsArchive" class="chats-items d-none">
+            <li class="chats-item-label">Today, Sep 18, 2020</li>
+            <li class="chats-item" data-item="220">
+              <div class="avatar"><i>220</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#220</h6><small>05:02pm</small></div>
+                <p>Of course! The following models have...</p>
+              </div><!-- chats-item-body -->
+            </li>
+            <li class="chats-item-label">Sunday, Sep 13, 2020</li>
+            <li class="chats-item" data-item="219">
+              <div class="avatar"><i>219</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#219</h6><small>07:20pm</small></div>
+                <p>What can I help you with today?</p>
+              </div><!-- chats-item-body -->
+            </li>
+            <li class="chats-item" data-item="218">
+              <div class="avatar"><i>218</i></div>
+              <div class="chats-item-body">
+                <div><h6>Prospect#218</h6><small>03:30pm</small></div>
+                <p>Of course! The following models have...</p>
+              </div><!-- chats-item-body -->
+            </li>
+          </ul>
+          <ul id="chatsSms" class="chats-items d-none">
+            <li class="chats-item-label">Today, Sep 18, 2020</li>
+            <li class="chats-item" data-item="220">
+              <div class="avatar"><i>220</i></div>
+              <div class="chats-item-body">
+                <div><h6>Roland Paloso</h6><small>05:02pm</small></div>
+                <p>Of course! The following models have...</p>
+              </div><!-- chats-item-body -->
+            </li>
+            <li class="chats-item-label">Sunday, Sep 13, 2020</li>
+            <li class="chats-item" data-item="219">
+              <div class="avatar"><i>219</i></div>
+              <div class="chats-item-body">
+                <div><h6>Dianne Aceron</h6><small>07:20pm</small></div>
+                <p>What can I help you with today?</p>
+              </div><!-- chats-item-body -->
+            </li>
+            <li class="chats-item" data-item="218">
+              <div class="avatar"><i>218</i></div>
+              <div class="chats-item-body">
+                <div><h6>Renov Galeon</h6><small>03:30pm</small></div>
+                <p>Of course! The following models have...</p>
+              </div><!-- chats-item-body -->
+            </li>
+          </ul>
+        </div><!-- chats-sidebar-body -->
+      </div><!-- chats-sidebar -->
+      <div class="chats-body">
+        <div class="chats-body-header">
+          <h6>Active Chats <span id="activeChatCount">3</span></h6>
+          <div id="chatsActiveCount" class="chats-active-count d-none"><span>1 - 3</span> of <span>3</span></div>
+          <a href="" id="chatPrev" class="hidden"><i data-feather="arrow-left"></i></a>
+          <a href="" id="chatNext" class="hidden"><i data-feather="arrow-right"></i></a>
+        </div><!-- chats-body-header -->
+        <div class="chats-panel">
+          <div id="chatsSlider" class="chats-slider">
+            <div class="chats-slider-item">
+              <div class="chats-panel-item" data-item="230">
+                <div class="chats-panel-header">
+                  <div class="media">
+                    <div class="avatar online"><i>230</i></div>
+                    <div class="media-body">
+                      <h5 class="mg-b-5">Prospect#230</h5>
+                      <a href="#">San Sonoma</a>
+                    </div><!-- media-body -->
+                  </div><!-- media -->
+                  <div class="dropdown">
+                    <a href="" class="chats-link-icon" data-toggle="dropdown"><i class="ri-more-2-fill"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="" class="dropdown-item"><i class="ri-user-add-fill"></i> Link to New Lead</a>
+                      <a href="" class="dropdown-item"><i class="ri-user-shared-fill"></i> Link to Existing Lead</a>
+                      <a href="" class="dropdown-item"><i class="ri-notification-off-fill"></i> Mute Chat</a>
+                      <a href="" class="dropdown-item"><i class="ri-archive-drawer-fill"></i> Archive Chat</a>
+                    </div><!-- dropdown-menu -->
+                  </div><!-- dropdown -->
+                  <a href="" class="chats-link-icon chats-link-close"><i class="ri-close-fill"></i></a>
+                </div><!-- chat-panel-header -->
+                <div class="chats-panel-body">
+                  <ul class="msg-text-group">
+                    <li class="msg-text-item">
+                      <p>What can I help you with today?</p>
+                      <small>Sept 01, 03:45am</small>
+                    </li>
+                    <li class="msg-text-item reverse">
+                      <p>Check Prices / Availability</p>
+                      <small>Sept 01, 03:46am</small>
+                    </li>
+                    <li class="msg-text-item">
+                      <p>Sure, I can help get you check prices.</p>
+                      <small>Sept 01, 03:45am</small>
+                    </li>
+                    <li class="msg-text-item reverse">
+                      <p>I’d like to schedule a tour</p>
+                      <small>Sept 01, 02:30am</small>
+                    </li>
+                    <li class="msg-text-item">
+                      <p>Just a moment while I direct you to the prices page.</p>
+                      <small>Sept 01, 01:20am</small>
+                    </li>
+                    <li class="msg-text-item reverse">
+                      <p>View Photos</p>
+                      <small>Sept 01, 11:30am</small>
+                    </li>
+                  </ul>
+                </div><!-- chats-panel-body -->
+                <div class="chats-panel-footer">
+                  <input type="text" class="form-control" placeholder="Write message...">
+                  <button class="btn"><i class="ri-send-plane-fill"></i></button>
+                  <div class="dropdown dropup">
+                    <a href="" class="dropdown-link" data-toggle="dropdown" data-display="static"><i class="ri-add-circle-fill"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <div class="prospect-menu">
+                        <label>Data capture elements</label>
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-arrow-left-down-line"></i></a>
+                          <div class="media-body"><span>Guest card</span><span>3</span></div>
+                        </div><!-- media -->
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-arrow-left-down-line"></i></a>
+                          <div class="media-body"><span>Name</span><span>2</span></div>
+                        </div><!-- media -->
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-arrow-left-down-line"></i></a>
+                          <div class="media-body"><span>Email</span></div>
+                        </div><!-- media -->
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-arrow-left-down-line"></i></a>
+                          <div class="media-body"><span>Phone</span></div>
+                        </div><!-- media -->
+
+                        <hr class="mg-y-10 op-0">
+
+                        <label>Pre-written messages</label>
+
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-add-line"></i></a>
+                          <div class="media-body"><span>Welcome</span></div>
+                        </div><!-- media -->
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-add-line"></i></a>
+                          <div class="media-body"><span>I don't know</span></div>
+                        </div><!-- media -->
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-add-line"></i></a>
+                          <div class="media-body"><span>Goodbe</span></div>
+                        </div><!-- media -->
+
+                      </div><!-- prospect-menu -->
+                    </div><!-- dropdown-menu -->
+                  </div><!-- dropdown -->
+                </div><!-- chats-panel-footer -->
+              </div><!-- chats-panel-item -->
+            </div><!-- chats-slider-item -->
+            <div class="chats-slider-item">
+              <div class="chats-panel-item" data-item="223">
+                <div class="chats-panel-header">
+                  <div class="media">
+                    <div class="avatar online"><i>223</i></div>
+                    <div class="media-body">
+                      <h5 class="mg-b-5">Prospect#223</h5>
+                      <a href="#">Retreat at the Raven</a>
+                    </div><!-- media-body -->
+                  </div><!-- media -->
+                  <div class="dropdown">
+                    <a href="" class="chats-link-icon" data-toggle="dropdown"><i data-feather="more-vertical"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="" class="dropdown-item"><i class="ri-user-add-fill"></i> Link to New Lead</a>
+                      <a href="" class="dropdown-item"><i class="ri-user-shared-fill"></i> Link to Existing Lead</a>
+                      <a href="" class="dropdown-item"><i class="ri-notification-off-fill"></i> Mute Chat</a>
+                      <a href="" class="dropdown-item"><i class="ri-archive-drawer-fill"></i> Archive Chat</a>
+                    </div><!-- dropdown-menu -->
+                  </div><!-- dropdown -->
+                  <a href="" class="chats-link-icon chats-link-close"><i class="ri-close-fill"></i></a>
+                </div><!-- chat-panel-header -->
+                <div class="chats-panel-body">
+                  <ul class="msg-text-group">
+                    <li class="msg-text-item">
+                      <p>Your In-Person tour at Staging is confirmed for Wednesday, 08/26/2020 at 12:30 PM.</p>
+                      <small>Sept 01, 03:45am</small>
+                    </li>
+                    <li class="msg-text-item reverse">
+                      <p>Thank you for contacting Christopher Todd Communities at Mountain View. So we can respond, reply YES or 1 to: Be contacted at this phone number by text message, and/or by autodialer for any purpose, including marketing, by the property and anyone acting on their behalf. Consent not required to purchase or rent</p>
+                      <small>Sept 01, 03:46am</small>
+                    </li>
+                    <li class="msg-text-item">
+                      <p>Reminding you, that you have scheduled In-Person tour at Staging for Wednesday, 08/26/2020 at 12:30 PM</p>
+                      <small>Sept 01, 03:45am</small>
+                    </li>
+                    <li class="msg-text-item reverse">
+                      <p>Your In-Person tour at Staging is confirmed for Wednesday, 08/26/2020 at 12:30 PM.</p>
+                      <small>Sept 01, 02:30am</small>
+                    </li>
+                  </ul>
+                </div><!-- chats-panel-body -->
+                <div class="chats-panel-footer">
+                  <input type="text" class="form-control" placeholder="Write message...">
+                  <button class="btn"><i class="ri-send-plane-fill"></i></button>
+                  <div class="dropdown dropup">
+                    <a href="" class="dropdown-link" data-toggle="dropdown" data-display="static"><i class="ri-add-circle-fill"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <div class="prospect-menu">
+                        <label>Data capture elements</label>
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-arrow-left-down-line"></i></a>
+                          <div class="media-body"><span>Guest card</span><span>3</span></div>
+                        </div><!-- media -->
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-arrow-left-down-line"></i></a>
+                          <div class="media-body"><span>Name</span><span>2</span></div>
+                        </div><!-- media -->
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-arrow-left-down-line"></i></a>
+                          <div class="media-body"><span>Email</span></div>
+                        </div><!-- media -->
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-arrow-left-down-line"></i></a>
+                          <div class="media-body"><span>Phone</span></div>
+                        </div><!-- media -->
+
+                        <hr class="mg-y-10 op-0">
+
+                        <label>Pre-written messages</label>
+
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-add-line"></i></a>
+                          <div class="media-body"><span>Welcome</span></div>
+                        </div><!-- media -->
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-add-line"></i></a>
+                          <div class="media-body"><span>I don't know</span></div>
+                        </div><!-- media -->
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-add-line"></i></a>
+                          <div class="media-body"><span>Goodbe</span></div>
+                        </div><!-- media -->
+
+                      </div><!-- prospect-menu -->
+                    </div><!-- dropdown-menu -->
+                  </div><!-- dropdown -->
+                </div><!-- chats-panel-footer -->
+              </div><!-- chats-panel-item -->
+            </div><!-- chats-slider-item -->
+            <div class="chats-slider-item">
+              <div class="chats-panel-item" data-item="222">
+                <div class="chats-panel-header">
+                  <div class="media">
+                    <div class="avatar online"><i>222</i></div>
+                    <div class="media-body">
+                      <h5 class="mg-b-5">Prospect#222</h5>
+                      <a href="#">Waterside at Ocotillo</a>
+                    </div><!-- media-body -->
+                  </div><!-- media -->
+                  <div class="dropdown">
+                    <a href="" class="chats-link-icon" data-toggle="dropdown"><i data-feather="more-vertical"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="" class="dropdown-item"><i class="ri-user-add-fill"></i> Link to New Lead</a>
+                      <a href="" class="dropdown-item"><i class="ri-user-shared-fill"></i> Link to Existing Lead</a>
+                      <a href="" class="dropdown-item"><i class="ri-notification-off-fill"></i> Mute Chat</a>
+                      <a href="" class="dropdown-item"><i class="ri-archive-drawer-fill"></i> Archive Chat</a>
+                    </div><!-- dropdown-menu -->
+                  </div><!-- dropdown -->
+                  <a href="" class="chats-link-icon chats-link-close"><i class="ri-close-fill"></i></a>
+                </div><!-- chat-panel-header -->
+                <div class="chats-panel-body">
+                  <ul class="msg-text-group">
+                    <li class="msg-text-item">
+                      <p>What can I help you with today?</p>
+                      <small>Sept 01, 03:45am</small>
+                    </li>
+                    <li class="msg-text-item reverse">
+                      <p>Check Prices / Availability</p>
+                      <small>Sept 01, 03:46am</small>
+                    </li>
+                    <li class="msg-text-item">
+                      <p>Sure, I can help get you check prices.</p>
+                      <small>Sept 01, 03:45am</small>
+                    </li>
+                    <li class="msg-text-item reverse">
+                      <p>I’d like to schedule a tour</p>
+                      <small>Sept 01, 02:30am</small>
+                    </li>
+                    <li class="msg-text-item">
+                      <p>Just a moment while I direct you to the prices page.</p>
+                      <small>Sept 01, 01:20am</small>
+                    </li>
+                    <li class="msg-text-item reverse">
+                      <p>View Photos</p>
+                      <small>Sept 01, 11:30am</small>
+                    </li>
+                  </ul>
+                </div><!-- chats-panel-body -->
+                <div class="chats-panel-footer">
+                  <input type="text" class="form-control" placeholder="Write message...">
+                  <button class="btn"><i class="ri-send-plane-fill"></i></button>
+                  <div class="dropdown dropup">
+                    <a href="" class="dropdown-link" data-toggle="dropdown" data-display="static"><i class="ri-add-circle-fill"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <div class="prospect-menu">
+                        <label>Data capture elements</label>
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-arrow-left-down-line"></i></a>
+                          <div class="media-body"><span>Guest card</span><span>3</span></div>
+                        </div><!-- media -->
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-arrow-left-down-line"></i></a>
+                          <div class="media-body"><span>Name</span><span>2</span></div>
+                        </div><!-- media -->
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-arrow-left-down-line"></i></a>
+                          <div class="media-body"><span>Email</span></div>
+                        </div><!-- media -->
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-arrow-left-down-line"></i></a>
+                          <div class="media-body"><span>Phone</span></div>
+                        </div><!-- media -->
+
+                        <hr class="mg-y-10 op-0">
+
+                        <label>Pre-written messages</label>
+
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-add-line"></i></a>
+                          <div class="media-body"><span>Welcome</span></div>
+                        </div><!-- media -->
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-add-line"></i></a>
+                          <div class="media-body"><span>I don't know</span></div>
+                        </div><!-- media -->
+                        <div class="media">
+                          <a href="" class="btn btn-primary"><i class="ri-add-line"></i></a>
+                          <div class="media-body"><span>Goodbe</span></div>
+                        </div><!-- media -->
+                      </div><!-- prospect-menu -->
+                    </div><!-- dropdown-menu -->
+                  </div><!-- dropdown -->
+                </div><!-- chats-panel-footer -->
+              </div><!-- chats-panel-item -->
+            </div><!-- chats-slider-item -->
+          </div><!-- chats-slider -->
+        </div><!-- chats-panel -->
+      </div><!-- chats-body -->
+    </div><!-- content -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/lightslider/js/lightslider.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        const sb = new PerfectScrollbar('.chats-sidebar-body ', {
+          suppressScrollX: true
+        });
+
+        $('#chatSettings').on('click', function(e){
+          e.preventDefault();
+          $('#chatSettingsDropdown').toggleClass('show');
+        });
+
+        $(document).on('click touchstart', function(e){
+          e.stopPropagation();
+
+          // close switch property panel
+          var cpMenu = $(e.target).closest('.chats-settings').length;
+          var cpDropdown = $(e.target).closest('.chats-sidebar-settings').length;
+
+          if(!cpMenu && !cpDropdown) {
+            $('.chats-sidebar-settings').removeClass('show');
+          }
+        });
+
+        // Active Prospects Menu
+        $('#chatsActiveMenu').on('click', function(e){
+          e.preventDefault();
+
+          if(!$(this).hasClass('active')) {
+            $(this).addClass('active').siblings().removeClass('active');
+
+            $('.chats-items').addClass('d-none');
+            $('#chatSpinner').removeClass('d-none');
+            sb.update();
+
+            setTimeout(function(){
+              $('#chatSpinner').addClass('d-none');
+              $('#chatsActive').removeClass('d-none');
+              sb.update();
+            }, 800);
+          }
+        });
+
+
+        // My Chats Menu
+        $('#chatsMyMenu').on('click', function(e){
+          e.preventDefault();
+
+          if(!$(this).hasClass('active')) {
+            $(this).addClass('active').siblings().removeClass('active');
+
+            $('.chats-items').addClass('d-none');
+            $('#chatSpinner').removeClass('d-none');
+            sb.update();
+
+            setTimeout(function(){
+              $('#chatSpinner').addClass('d-none');
+              $('#chatsMy').removeClass('d-none');
+              sb.update();
+            }, 800);
+          }
+        });
+
+        // All Prospect Menu
+        $('#chatsAllMenu').on('click', function(e){
+          e.preventDefault();
+
+          var tx = $(this).text();
+          $('#chatsMainMenu').addClass('d-none');
+          $('#chatsOtherMenu').removeClass('d-none');
+          $('#chatsOtherMenuTitle').text(tx);
+
+          $('.chats-items').addClass('d-none');
+          $('#chatSpinner').removeClass('d-none');
+          sb.update();
+
+          setTimeout(function(){
+            $('#chatSpinner').addClass('d-none');
+            $('#chatsAll').removeClass('d-none');
+            sb.update();
+          }, 800);
+        });
+
+        // Archive Prospect Menu
+        $('#chatsArchiveMenu').on('click', function(e){
+          e.preventDefault();
+          sb.update();
+
+          var tx = $(this).text();
+          $('#chatsMainMenu').addClass('d-none');
+          $('#chatsOtherMenu').removeClass('d-none');
+          $('#chatsOtherMenuTitle').text(tx);
+
+          $('.chats-items').addClass('d-none');
+          $('#chatSpinner').removeClass('d-none');
+          sb.update();
+
+          setTimeout(function(){
+            $('#chatSpinner').addClass('d-none');
+            $('#chatsArchive').removeClass('d-none');
+            sb.update();
+          }, 800);
+        });
+
+        // Archive Prospect Menu
+        $('#chatsSmsMenu').on('click', function(e){
+          e.preventDefault();
+          sb.update();
+
+          var tx = $(this).text();
+          $('#chatsMainMenu').addClass('d-none');
+          $('#chatsOtherMenu').removeClass('d-none');
+          $('#chatsOtherMenuTitle').text(tx);
+
+          $('.chats-items').addClass('d-none');
+          $('#chatSpinner').removeClass('d-none');
+          sb.update();
+
+          setTimeout(function(){
+            $('#chatSpinner').addClass('d-none');
+            $('#chatsSms').removeClass('d-none');
+            sb.update();
+          }, 800);
+        })
+
+
+        // Chat Back Menu
+        $('#chatsBack').on('click', function(e){
+          e.preventDefault();
+
+          $('#chatsMainMenu').removeClass('d-none');
+          $('#chatsOtherMenu').addClass('d-none');
+
+          $('.chats-items').addClass('d-none');
+          $('#chatSpinner').removeClass('d-none');
+          sb.update();
+
+          setTimeout(function(){
+            $('#chatSpinner').addClass('d-none');
+            $('#chatsActive').removeClass('d-none');
+            sb.update();
+          }, 800);
+        });
+
+        var chatSlider = '';
+        var chatItemCount = 0;
+
+        function updateActiveChats() {
+          var chatUrl = ['chatitem', 'chatitem2', 'chatitem3'];
+          var chatNum = Math.floor(Math.random() * 3);
+
+          $.ajax({
+            url: '../' + chatUrl[chatNum] + '.html',
+            success: function(result){
+              $('#chatsSlider').prepend(result);
+
+              feather.replace();
+
+              chatItemCount = $('#chatsSlider .chats-panel-item').length;
+              $('#activeChatCount').text(chatItemCount);
+              $('#chatsActiveCount').removeClass('d-none').find('span:last-child').text(chatItemCount);
+
+              if(chatItemCount === 4) {
+                chatSlider = $("#chatsSlider").lightSlider({
+                  item: 3,
+                  slideMargin: 15,
+                  speed: 200,
+                  slideMove: 1,
+                  controls: false,
+                  enableDrag: false,
+                  useCSS: false,
+                  addClass: 'testing',
+                  onAfterSlide: function(el) {
+                    var current = el.getCurrentSlideCount();
+                    var total = el.getTotalSlideCount();
+
+                    if(current < (total - 2)) {
+                      $('#chatNext').removeClass('hidden');
+                    } else {
+                      $('#chatNext').addClass('hidden');
+                    }
+
+                    if(current > 1) {
+                      $('#chatPrev').removeClass('hidden');
+                    } else {
+                      $('#chatPrev').addClass('hidden');
+                    }
+
+                    console.log(current);
+                  }
+                });
+
+                chatSlider.refresh();
+
+                $('#chatNext').removeClass('hidden');
+              }
+
+              if(chatItemCount > 4) {
+                chatSlider.refresh();
+                chatSlider.goToSlide(0);
+
+                $('#chatNext').removeClass('hidden');
+              }
+            }
+          });
+        }
+
+        $('.chats-item').on('click touch', function(e){
+          e.preventDefault();
+
+          if(!$(this).hasClass('selected')) {
+            $(this).addClass('selected');
+            $(this).removeClass('new');
+
+            updateActiveChats();
+          }
+        });
+
+        $('#chatNext').on('click', function(e){
+          e.preventDefault();
+          chatSlider.goToNextSlide();
+        });
+
+        $('#chatPrev').on('click', function(e){
+          e.preventDefault();
+          chatSlider.goToPrevSlide();
+        });
+
+        // focus chat item
+        $('.chats-slider').on('focusin focusout', '.chats-panel-footer .form-control', function(e){
+          e.preventDefault();
+
+          var isFocus = (e.type === 'focusin')? true : false;
+          $(this).closest('.chats-panel-item').toggleClass('onfocus', isFocus);
+        })
+
+        // close chat item
+        $('.chats-slider').on('click', '.chats-link-close', function(e){
+          e.preventDefault();
+
+          $(this).closest('.chats-slider-item').remove();
+
+          chatSlider.refresh();
+        });
+
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell Lease</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/lease.min.css">
+  </head>
+  <body>
+
+    <div class="ls-content">
+      <div class="ls-body">
+        <div class="container">
+          <h6 class="tx-18 tx-semibold text-dark mg-b-30">Review &amp; Sign Apartment Deposit Agreement</h6>
+
+          <div class="d-sm-flex align-items-center justify-content-between mg-b-10">
+            <div>
+              <div class="d-flex align-items-center mg-b-5">
+                <h6 class="mg-b-0-f text-dark tx-semibold">Sign Online</h6>
+                <a href="" class="link-help mg-l-5" data-subject=""><i class="ri-question-fill"></i></a>
+              </div>
+              <p class="tx-14 mg-b-0">Please carefully read through each page and sign below.</p>
+            </div>
+            <a href="" class="btn btn-white tx-13 d-flex align-items-center mg-t-15 mg-sm-t-0"><i class="ri-download-line lh-0 mg-r-5"></i> Download Agreement</a>
+          </div>
+
+          <div class="agreement-panel"></div>
+
+          <hr class="op-0">
+
+          <div class="d-flex align-items-center mg-b-20">
+            <h6 class="mg-b-0-f text-dark tx-semibold">Digital Signature</h6>
+            <a href="" class="link-help mg-l-5" data-subject=""><i class="ri-question-fill"></i></a>
+          </div>
+
+          <p class="tx-14">By typing my name in the following box, I certify the above statements to be true and correct to the best of my knowledge.</p>
+          <p class="tx-14">By typing your name in the following box below, you are explicitly indicating that you have read and that you agree to terms and conditions of this application and the terms and conditions of the policy documents, and that you have signed them electronically. </p>
+
+          <label class="tx-14">Full Name: <strong class="tx-dark">Ethan Lacey</strong></label>
+          <input id="inputSign" type="text" class="form-control ls-form-control wd-lg-60p">
+          <div class="custom-control custom-checkbox tx-14 mg-t-10">
+            <input type="checkbox" class="custom-control-input custom-control-occupant" id="ck3">
+            <label class="custom-control-label" for="ck3">I agree to the Terms and Conditions of Electronic Document Delivery</label>
+          </div>
+
+          <hr class="mg-t-50 mg-b-30">
+
+          <div class="page-pager d-md-flex justify-content-end">
+            <a href="" class="btn btn-white mg-r-15">Save &amp; Exit</a>
+            <a id="signContinue" href="security-complete.html" class="btn btn-primary mg-md-t-0-f disabled">Sign Agreement</a>
+          </div><!-- page-pager -->
+        </div><!-- container -->
+      </div><!-- ls-body -->
+    </div><!-- ls-content -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+
+    <script src="../assets/js/lease.js"></script>
+    <script src="../assets/js/prospect-chat.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('#inputSign').on('change keyup', function(){
+          if($(this).val() !== '' && $('#ck3').is(':checked')) {
+            $('#signContinue').removeClass('disabled');
+          } else {
+            $('#signContinue').addClass('disabled');
+          }
+        });
+
+        $('#ck3').on('click', function(){
+          if($(this).is(':checked') && $('#inputSign').val() !== '') {
+            $('#signContinue').removeClass('disabled');
+          } else {
+            $('#signContinue').addClass('disabled');
+          }
+        })
+      });
+    </script>
+  </body>
+</html>

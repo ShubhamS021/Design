@@ -1,0 +1,23 @@
+
+.table-customers {
+  tbody td { white-space: nowrap; }
+
+  .customer-logo {
+    width: $height-base;
+    height: $height-base;
+    background-color: $color-bg-01;
+    border-radius: $border-radius-sm;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .customer-name {
+    font-weight: $font-weight-medium;
+    margin-bottom: 0;
+    color: $color-tx-01;
+  }
+}

@@ -1,0 +1,54 @@
+
+.btn.btn-uppercase {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.btn-ui-primary {
+  height: 48px;
+  background-color: $ui-primary;
+  color: #fff;
+  font-weight: 500;
+
+  @include media-breakpoint-up(lg) {
+    height: $ht-base;
+  }
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: darken($ui-primary, 5%);
+  }
+}
+
+.btn-ui-secondary {
+  border: 2px solid $ui-primary;
+  color: $ui-primary;
+  height: 48px;
+  font-weight: 500;
+
+  @include media-breakpoint-up(lg) {
+    height: $ht-base;
+  }
+
+  &:hover,
+  &:focus {
+    color: $ui-primary;
+  }
+}
+
+.btn-ui-white {
+  border: 1.5px solid #fff;
+  color: #fff;
+  height: 48px;
+  font-weight: 500;
+
+  @include media-breakpoint-up(lg) {
+    height: $ht-base;
+  }
+
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+}

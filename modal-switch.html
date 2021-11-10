@@ -1,0 +1,82 @@
+<div class="modal modal-switch-account fade" id="modalSwitchAccount" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h5 class="modal-title">Switch Accounts</h5>
+          <p class="modal-subtitle">
+            <span>You're currently logged in as:</span>
+            <span class="d-none">Enter account password:</span>
+          </p>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+      </div>
+      <div class="modal-body">
+        <div id="curUser" class="media active mg-b-25">
+          <div class="avatar avatar-lg"><span>M</span></div>
+          <div class="media-body">
+            <h6>Mienard Lumaad</h6>
+            <p>mienard@liftlytics.com</p>
+          </div><!-- media-body -->
+        </div><!-- media -->
+
+        <div id="acPword" class="switch-password d-none">
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="Enter account password">
+          </div>
+          <div class="d-flex">
+            <button class="btn btn-primary flex-fill justify-content-center">Switch Account</button>
+            <button id="cancelSwitch" class="btn btn-white flex-fill justify-content-center mg-l-10">Cancel</button>
+          </div>
+        </div>
+
+        <div id="acGroup">
+          <label class="content-label mg-b-15">Switch Account to:</label>
+          <a href="" class="media media-account">
+            <div class="avatar avatar-lg bg-gray-700"><span>J</span></div>
+            <div class="media-body">
+              <h6>Jakub Lemiszewski</h6>
+              <p>jakubinformatics@gmail.com</p>
+            </div><!-- media-body -->
+          </a><!-- media -->
+          <a href="" class="media media-account">
+            <div class="avatar avatar-lg bg-primary"><span>P</span></div>
+            <div class="media-body">
+              <h6>Property Manager</h6>
+              <p>waterside@mark-taylor.com</p>
+            </div><!-- media-body -->
+          </a><!-- media -->
+        </div>
+
+      </div><!-- modal-body -->
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
+<script>
+  $(function(){
+    'use strict'
+
+    $('.media-account').on('click', function(e){
+      e.preventDefault();
+      var html = $(this).html();
+
+      $('#curUser').html(html);
+      $('#acGroup').addClass('d-none');
+      $('#acPword').removeClass('d-none');
+
+      $('.modal-switch-account .modal-subtitle span:first-child').addClass('d-none');
+      $('.modal-switch-account .modal-subtitle span:last-child').removeClass('d-none');
+    });
+
+    $('#cancelSwitch').on('click', function(e){
+      e.preventDefault();
+
+      $('#curUser').html('<div class="avatar avatar-lg"><span>M</span></div><div class="media-body"><h6>Mienard Lumaad</h6><p>mienard@liftlytics.com</p></div>');
+      $('#acGroup').removeClass('d-none');
+      $('#acPword').addClass('d-none');
+
+      $('.modal-switch-account .modal-subtitle span:first-child').removeClass('d-none');
+      $('.modal-switch-account .modal-subtitle span:last-child').addClass('d-none');
+    });
+  });
+</script>

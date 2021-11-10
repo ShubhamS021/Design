@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body>
+
+    <div class="content content-compete-subpage">
+      <div class="container-fluid">
+        <div class="content-header">
+          <div class="mg-r-auto">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="compete-home.html">Dwell Compete</a></li>
+                <li class="breadcrumb-item"><a href="compete-comparison.html">Comparison</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><div class="skeleton"><div class="skeleton-text sm wd-100"></div></div><div class="skeleton-content">San Milan vs Scottsdale</div></li>
+              </ol>
+            </nav>
+            <div class="skeleton"><span class="skeleton-text wd-200"></span></div>
+            <div class="d-flex align-items-center mg-r-auto skeleton-content">
+              <h4 class="content-title mg-b-0 mg-r-5">San Milan vs Scottsdale</h4>
+              <a href="" class="compete-star">
+                <i class="ri-star-line"></i>
+                <i class="ri-star-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div class="btn-group mg-r-10">
+            <a href="compete-comparison2.html" class="btn active">Comparison</a>
+            <a href="compete-comparison3.html" class="btn">Ranking</a>
+          </div><!-- btn-group -->
+          <div class="dropdown dropdown-filter">
+            <a href="" class="dropdown-link" data-toggle="dropdown" data-display="static"><i class="ri-list-settings-line"></i></a>
+            <div id="ddSearchFilter" class="dropdown-menu dropdown-menu-right">
+              <h6 class="dropdown-title mg-b-15">Report Settings</h6>
+              <div class="row row-xs align-items-center">
+                <div class="col-5">Express rent as</div>
+                <div class="col-7">
+                  <select class="select2">
+                    <option value="1" selected>Market Rent</option>
+                    <option value="2">Effective Rent</option>
+                  </select>
+                </div><!-- col -->
+                <div class="col-5 mg-t-10">Reporting period</div>
+                <div class="col-7 mg-t-10">
+                  <select class="select2">
+                    <option value="1">Previous Month</option>
+                    <option value="2">Last 3 months</option>
+                    <option value="3">Last 6 months</option>
+                    <option value="4" selected>Last 12 months</option>
+                  </select>
+                </div>
+                <div class="col-5 mg-t-10">Reporting group</div>
+                <div class="col-7 mg-t-10">
+                  <select class="select2">
+                    <option value="1" selected>Monthly</option>
+                    <option value="2">Weekly</option>
+                  </select>
+                </div>
+              </div><!-- row -->
+              <div class="d-flex align-items-center justify-content-between mg-t-20">
+                <span>Include Subject asset in Comparison set</span>
+                <div class="form-switcher inactive"></div>
+              </div>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+        </div><!-- content-header -->
+        <div class="content-body">
+          <div class="row">
+            <div class="col-3">
+              <div class="card card-compete card-compete-sm card-criteria">
+                <div class="card-header">
+                  <h6 class="card-title">Comparison Criteria</h6>
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <div class="form-group">
+                    <label class="form-label text-muted text-sm">Subject Asset</label>
+                    <div class="compete-search">
+                      <div class="form-search">
+                        <i data-feather="search"></i>
+                        <input id="competeSearch" type="text" class="form-control" value="San Milan" placeholder="Search...">
+                      </div><!-- form-search -->
+                      <div class="search-results">
+                        <label>Submarkets</label>
+                        <nav class="nav">
+                          <a href="" class="nav-link">Submarket A</a>
+                          <a href="" class="nav-link">Submarket B</a>
+                        </nav>
+                        <label>Properties</label>
+                        <nav class="nav">
+                          <a href="" class="nav-link">Property A</a>
+                          <a href="" class="nav-link">Property B</a>
+                        </nav>
+                      </div><!-- search-results -->
+                    </div><!-- compete-search -->
+                  </div><!-- form-group -->
+
+                  <div class="form-group">
+                    <label class="form-label text-muted text-sm">Compared Against</label>
+                    <div class="compete-search">
+                      <div class="form-search">
+                        <i data-feather="search"></i>
+                        <input type="text" class="form-control" value="Scottsdale" placeholder="Search...">
+                      </div><!-- form-search -->
+                      <div class="search-results">
+                        <label>Submarkets</label>
+                        <nav class="nav">
+                          <a href="" class="nav-link">Submarket A</a>
+                          <a href="" class="nav-link">Submarket B</a>
+                        </nav>
+                        <label>Properties</label>
+                        <nav class="nav">
+                          <a href="" class="nav-link">Property A</a>
+                          <a href="" class="nav-link">Property B</a>
+                        </nav>
+                      </div><!-- search-results -->
+                    </div><!-- compete-search -->
+                  </div><!-- form-group -->
+
+                  <a href="compete-comparison2.html" class="btn btn-primary btn-block justify-content-center">Generate Report</a>
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+            <div class="col">
+              <div class="card card-comprop">
+                <div class="card-header d-flex align-items-center">
+                  <div class="mg-r-auto">
+                    <h6 class="card-title mg-b-5-f mg-r-auto">Rent Comparison</h6>
+                    <span class="card-subtitle">Reporting Period: December 1, 2019 - November 30, 2020</span>
+                  </div>
+                  <div class="dropdown dropdown-stype">
+                    <p class="dropdown-link" data-toggle="dropdown">
+                      Showing Unit Types:
+                      <a href="" class="dropdown-link"><span>1x1</span><i class="ri-arrow-down-s-line"></i></a>
+                    </p>
+                    <div class="dropdown-menu">
+                      <a href="" class="dropdown-item">All</a>
+                      <a href="" class="dropdown-item active">1x1</a>
+                      <a href="" class="dropdown-item">1x2</a>
+                      <a href="" class="dropdown-item">2x2</a>
+                      <a href="" class="dropdown-item">2x3</a>
+                    </div><!-- dropdown-menu -->
+                  </div>
+                </div><!-- card-header -->
+                <div class="card-body">
+
+                  <div class="mg-b-25 skeleton-text wd-200 skeleton"></div>
+                  <ul class="chart-legend chart-legend-one mg-b-25 skeleton-content">
+                    <li>San Milan</li>
+                    <li>Scottsdale</li>
+                  </ul>
+
+                  <div class="compete-chart mg-b-30 skeleton"><div class="skeleton-box wd-100p ht-100p"></div></div>
+                  <div class="compete-chart mg-b-30 skeleton-content"><canvas id="chartLine1"></canvas></div>
+
+                  <h6 class="card-label tx-16 mg-b-20">Breakdown</h6>
+                  <div class="card card-comproperty mg-b-10">
+                    <div class="row skeleton">
+                      <div class="col-2"><div class="skeleton-text wd-100"></div></div>
+                      <div class="col-3">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col-3">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                    </div><!-- row -->
+                    <div class="row skeleton-content">
+                      <div class="col-2">San Milan</div>
+                      <div class="col-3">
+                        <div class="breakdown-item">
+                          <div class="d-flex align-items-baseline mg-b-8">
+                            <h2 class="tx-24-f mg-b-0-f"><span>$</span>1,500</h2>
+                            <small class="tx-11-f mg-l-5 d-flex align-items-center text-success">+$300 (12.5%) <i class="ri-arrow-up-line"></i></small>
+                          </div>
+                          <label>Rent High <span>(Jun 20)</span></label>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col-3">
+                        <div class="breakdown-item">
+                          <div class="d-flex align-items-baseline mg-b-8">
+                            <h2 class="tx-24-f mg-b-0-f"><span>$</span>1,100</h2>
+                            <small class="tx-11-f mg-l-5 d-flex align-items-center text-danger">-$90 (8.5%) <i class="ri-arrow-down-line"></i></small>
+                          </div>
+                          <label>Rent Low <span>(Jul 20)</span></label>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col">
+                        <div class="breakdown-item">
+                          <div class="d-flex align-items-baseline mg-b-8">
+                            <h2 class="tx-24-f mg-b-0-f"><span>$</span>1,200.31</h2>
+                            <small class="tx-11-f mg-l-5 d-flex align-items-center text-success">+$100.21 (9.5%) <i class="ri-arrow-up-line"></i></small>
+                          </div>
+                          <label>Avg Rent <span>(Entire Period)</span></label>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                    </div><!-- row -->
+                  </div><!-- card -->
+
+                  <div class="card card-comproperty mg-b-25">
+                    <div class="row skeleton">
+                      <div class="col-2"><div class="skeleton-text wd-100"></div></div>
+                      <div class="col-3">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col-3">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                    </div><!-- row -->
+                    <div class="row skeleton-content">
+                      <div class="col-2">Scottsdale</div>
+                      <div class="col-3">
+                        <div class="breakdown-item">
+                          <h2 class="tx-24-f"><span>$</span>1,303</h2>
+                          <label>Rent High <span>(Jun 20)</span></label>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col-3">
+                        <div class="breakdown-item">
+                          <h2 class="tx-24-f"><span>$</span>965</h2>
+                          <label>Rent Low <span>(Jul 20)</span></label>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col">
+                        <div class="breakdown-item">
+                          <h2 class="tx-24-f"><span>$</span>1,004.54</h2>
+                          <label>Avg Rent <span>(Entire Period)</span></label>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                    </div><!-- row -->
+                  </div><!-- card -->
+
+                  <h6 class="card-label mg-b-0"><a href="#tableWrap1" data-toggle="collapse">Table View <i class="ri-arrow-right-s-line"></i></a></h6>
+                  <div id="tableWrap1" class="collapse mg-t-20">
+                    <table class="table table-alpha table-compete mg-b-0">
+                      <thead>
+                        <tr>
+                          <th>Asset</th>
+                          <th class="text-right">Dec 19</th>
+                          <th class="text-right">Jan 20</th>
+                          <th class="text-right">Feb 20</th>
+                          <th class="text-right">Mar 20</th>
+                          <th class="text-right">Apr 20</th>
+                          <th class="text-right">May 20</th>
+                          <th class="text-right">Jun 20</th>
+                          <th class="text-right">Jul 20</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>San Milan</td>
+                          <td class="text-right">$1,150</td>
+                          <td class="text-right">$1,200</td>
+                          <td class="text-right">$1,200</td>
+                          <td class="text-right">$1,450</td>
+                          <td class="text-right">$950</td>
+                          <td class="text-right">$1,150</td>
+                          <td class="text-right">$1,000</td>
+                          <td class="text-right">$1,200</td>
+                        </tr>
+                        <tr>
+                          <td>Scottsdale</td>
+                          <td class="text-right">$1,150</td>
+                          <td class="text-right">$1,200</td>
+                          <td class="text-right">$1,200</td>
+                          <td class="text-right">$1,450</td>
+                          <td class="text-right">$950</td>
+                          <td class="text-right">$1,150</td>
+                          <td class="text-right">$1,000</td>
+                          <td class="text-right">$1,200</td>
+                        </tr>
+                        <tr>
+                          <td>Actual Difference</td>
+                          <td class="text-right text-danger">-$50</td>
+                          <td class="text-right text-danger">-$100</td>
+                          <td class="text-right text-success">+$200</td>
+                          <td class="text-right text-success">+$200</td>
+                          <td class="text-right text-danger">-$300</td>
+                          <td class="text-right">$0</td>
+                          <td class="text-right text-danger">-$150</td>
+                          <td class="text-right text-success">+200</td>
+                        </tr>
+                        <tr>
+                          <td>% Difference</td>
+                          <td class="text-right text-danger">-2.5%</td>
+                          <td class="text-right text-danger">-4.6%</td>
+                          <td class="text-right text-success">+10.2%</td>
+                          <td class="text-right text-success">+32.1%</td>
+                          <td class="text-right text-danger">-14.0%</td>
+                          <td class="text-right">$0</td>
+                          <td class="text-right text-danger">-10.2%</td>
+                          <td class="text-right text-success">+0.7%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div><!-- collapse -->
+                </div><!-- card-body -->
+              </div><!-- card -->
+
+              <div class="card card-comprop mg-t-20">
+                <div class="card-header">
+                  <h6 class="card-title mg-b-5-f mg-r-auto">Occupancy Comparison</h6>
+                  <span class="card-subtitle">Reporting Period: December 1, 2019 - November 30, 2020</span>
+                </div><!-- card-header -->
+                <div class="card-body">
+
+                  <div class="mg-b-25 skeleton-text wd-200 skeleton"></div>
+                  <ul class="chart-legend chart-legend-one mg-b-25 skeleton-content">
+                    <li>San Milan</li>
+                    <li>Scottsdale</li>
+                  </ul>
+
+                  <div class="compete-chart mg-b-30 skeleton"><div class="skeleton-box wd-100p ht-100p"></div></div>
+                  <div class="compete-chart mg-b-30 skeleton-content"><canvas id="chartLine2"></canvas></div>
+
+                  <h6 class="card-label tx-16 mg-b-20">Breakdown</h6>
+                  <div class="card card-comproperty mg-b-10 pd-t-15-f">
+                    <div class="row row-sm skeleton">
+                      <div class="col-12 mg-b-15"><div class="skeleton-text wd-100"></div></div>
+                      <div class="col">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80 d-block"></div>
+                          <div class="skeleton-text sm wd-50"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col-2">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80 d-block"></div>
+                          <div class="skeleton-text sm wd-50"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80 d-block"></div>
+                          <div class="skeleton-text sm wd-50"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col-2">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80 d-block"></div>
+                          <div class="skeleton-text sm wd-50"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80 d-block"></div>
+                          <div class="skeleton-text sm wd-50"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                    </div><!-- row -->
+                    <div class="row row-sm skeleton-content">
+                      <div class="col-12 mg-b-15">San Milan</div>
+                      <div class="col">
+                        <div class="breakdown-item">
+                          <div class="d-flex align-items-baseline mg-b-8">
+                            <h2 class="tx-22-f mg-b-0-f">89<span>%</span></h2>
+                            <small class="tx-11-f mg-l-2 d-flex align-items-center text-success">+12.5% ($300) <i class="ri-arrow-up-line"></i></small>
+                          </div>
+                          <label>Occupancy High</label>
+                          <small>Jun 20</small>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col-2">
+                        <div class="breakdown-item">
+                          <div class="d-flex align-items-baseline mg-b-8">
+                            <h2 class="tx-22-f mg-b-0-f">80<span>%</span></h2>
+                            <small class="tx-11-f mg-l-2 d-flex align-items-center text-danger">-8.5% ($90) <i class="ri-arrow-down-line"></i></small>
+                          </div>
+                          <label>Occupancy Low</label>
+                          <small>Jul 20</small>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col">
+                        <div class="breakdown-item">
+                          <div class="d-flex align-items-baseline mg-b-8">
+                            <h2 class="tx-22-f mg-b-0-f">20.3<span>%</span></h2>
+                            <small class="tx-11-f mg-l-2 d-flex align-items-center text-success">+9.5%($10.21) <i class="ri-arrow-up-line"></i></small>
+                          </div>
+                          <label>Avg Occupancy</label>
+                          <small>Entire Period</small>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col-2">
+                        <div class="breakdown-item">
+                          <div class="d-flex align-items-baseline mg-b-8">
+                            <h2 class="tx-22-f mg-b-0-f"><span>+</span>5<span>%</span></h2>
+                            <small class="tx-11-f mg-l-5 d-flex align-items-center text-success">+9.5% (39) <i class="ri-arrow-up-line"></i></small>
+                          </div>
+                          <label>Net Absorption</label>
+                          <small>Entire Period</small>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col">
+                        <div class="breakdown-item">
+                          <div class="d-flex align-items-baseline mg-b-8">
+                            <h2 class="tx-22-f mg-b-0-f"><span>+</span>5.6<span>%</span></h2>
+                            <small class="tx-11-f mg-l-2 d-flex align-items-center text-success">+3.1 (9.5%) <i class="ri-arrow-up-line"></i></small>
+                          </div>
+                          <label>Net Absorption Change</label>
+                          <small>Entire Period</small>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                    </div><!-- row -->
+                  </div><!-- card -->
+
+                  <div class="card card-comproperty mg-b-25">
+                    <div class="row row-sm skeleton">
+                      <div class="col-12 mg-b-15"><div class="skeleton-text wd-100"></div></div>
+                      <div class="col">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80 d-block"></div>
+                          <div class="skeleton-text sm wd-50"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col-2">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80 d-block"></div>
+                          <div class="skeleton-text sm wd-50"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80 d-block"></div>
+                          <div class="skeleton-text sm wd-50"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col-2">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80 d-block"></div>
+                          <div class="skeleton-text sm wd-50"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80 d-block"></div>
+                          <div class="skeleton-text sm wd-50"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                    </div><!-- row -->
+                    <div class="row row-sm skeleton-content">
+                      <div class="col-12 mg-b-15">Scottsdale</div>
+                      <div class="col">
+                        <div class="breakdown-item">
+                          <h2 class="tx-22-f">32.5<span>%</span></h2>
+                          <label>Occupancy High</label>
+                          <small>Jun 20</small>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col-2">
+                        <div class="breakdown-item">
+                          <h2 class="tx-22-f">14<span>%</span></h2>
+                          <label>Occupancy Low</label>
+                          <small>Jul 20</small>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col">
+                        <div class="breakdown-item">
+                          <h2 class="tx-22-f">10.4<span>%</span></h2>
+                          <label>Avg Occupancy</label>
+                          <small>Entire Period</small>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col-2">
+                        <div class="breakdown-item">
+                          <h2 class="tx-22-f"><span>+</span>2.1<span>%</span></h2>
+                          <label>Net Absorption</label>
+                          <small>Entire Period</small>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col">
+                        <div class="breakdown-item">
+                          <h2 class="tx-22-f"><span>+</span>1.6<span>%</span></h2>
+                          <label>Net Absorption Change</label>
+                          <small>Entire Period</small>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                    </div><!-- row -->
+                  </div><!-- card -->
+
+                  <h6 class="card-label mg-b-0"><a href="#tableWrap2" data-toggle="collapse">Table View <i class="ri-arrow-right-s-line"></i></a></h6>
+                  <div id="tableWrap2" class="collapse mg-t-20">
+                    <table class="table table-alpha table-compete mg-b-0">
+                      <thead>
+                        <tr>
+                          <th>Asset</th>
+                          <th class="text-right">Dec 19</th>
+                          <th class="text-right">Jan 20</th>
+                          <th class="text-right">Feb 20</th>
+                          <th class="text-right">Mar 20</th>
+                          <th class="text-right">Apr 20</th>
+                          <th class="text-right">May 20</th>
+                          <th class="text-right">Jun 20</th>
+                          <th class="text-right">Jul 20</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>San Milan</td>
+                          <td class="text-right">11.50%</td>
+                          <td class="text-right">12.00%</td>
+                          <td class="text-right">12.00%</td>
+                          <td class="text-right">14.50%</td>
+                          <td class="text-right">9.50%</td>
+                          <td class="text-right">11.50%</td>
+                          <td class="text-right">10.00%</td>
+                          <td class="text-right">12.00%</td>
+                        </tr>
+                        <tr>
+                          <td>Scottsdale</td>
+                          <td class="text-right">14.50%</td>
+                          <td class="text-right">10.00%</td>
+                          <td class="text-right">22.00%</td>
+                          <td class="text-right">16.50%</td>
+                          <td class="text-right">11.50%</td>
+                          <td class="text-right">12.30%</td>
+                          <td class="text-right">15.20%</td>
+                          <td class="text-right">16.50%</td>
+                        </tr>
+                        <tr>
+                          <td>Actual Difference</td>
+                          <td class="text-right text-danger">-5%</td>
+                          <td class="text-right text-danger">-10%</td>
+                          <td class="text-right text-success">+20%</td>
+                          <td class="text-right text-success">+20%</td>
+                          <td class="text-right text-danger">-30%</td>
+                          <td class="text-right">0%</td>
+                          <td class="text-right text-danger">-15%</td>
+                          <td class="text-right text-success">+20%</td>
+                        </tr>
+                        <tr>
+                          <td>% Difference</td>
+                          <td class="text-right text-danger">-2.5%</td>
+                          <td class="text-right text-danger">-4.6%</td>
+                          <td class="text-right text-success">+10.2%</td>
+                          <td class="text-right text-success">+32.1%</td>
+                          <td class="text-right text-danger">-14.0%</td>
+                          <td class="text-right">$0</td>
+                          <td class="text-right text-danger">-10.2%</td>
+                          <td class="text-right text-success">+0.7%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div><!-- collapse -->
+                </div><!-- card-body -->
+              </div><!-- card -->
+
+              <div class="card card-comprop mg-t-20">
+                <div class="card-header d-flex align-items-center">
+                  <div class="mg-r-auto">
+                    <h6 class="card-title mg-b-5-f mg-r-auto">Concessions Comparison</h6>
+                    <span class="card-subtitle">Reporting Period: December 1, 2019 - November 30, 2020</span>
+                  </div>
+                  <div class="dropdown dropdown-stype">
+                    <p class="dropdown-link" data-toggle="dropdown">
+                      Showing concessions as:
+                      <a href="" class="dropdown-link"><span>$ amount</span><i class="ri-arrow-down-s-line"></i></a>
+                    </p>
+                    <div class="dropdown-menu">
+                      <a href="" class="dropdown-item active">$ amount</a>
+                      <a href="" class="dropdown-item">As % of Rent</a>
+                    </div><!-- dropdown-menu -->
+                  </div>
+                </div><!-- card-header -->
+                <div class="card-body">
+
+                  <div class="mg-b-25 skeleton-text wd-200 skeleton"></div>
+                  <ul class="chart-legend chart-legend-one mg-b-25 skeleton-content">
+                    <li>San Milan</li>
+                    <li>Scottsdale</li>
+                  </ul>
+
+                  <div class="compete-chart mg-b-30 skeleton"><div class="skeleton-box wd-100p ht-100p"></div></div>
+                  <div class="compete-chart mg-b-30 skeleton-content"><canvas id="chartLine3"></canvas></div>
+
+                  <h6 class="card-label tx-16 mg-b-20">Breakdown</h6>
+                  <div class="card card-comproperty mg-b-10">
+                    <div class="row skeleton">
+                      <div class="col-2"><div class="skeleton-text wd-100"></div></div>
+                      <div class="col-3">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col-3">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                    </div><!-- row -->
+                    <div class="row skeleton-content">
+                      <div class="col-2">San Milan</div>
+                      <div class="col-3">
+                        <div class="breakdown-item">
+                          <div class="d-flex align-items-baseline mg-b-8">
+                            <h2 class="tx-24-f mg-b-0-f"><span>$</span>1,500</h2>
+                            <small class="tx-11-f mg-l-5 d-flex align-items-center text-success">+$300 (12.5%) <i class="ri-arrow-up-line"></i></small>
+                          </div>
+                          <label>Concession High <span>(Jun 20)</span></label>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col-3">
+                        <div class="breakdown-item">
+                          <div class="d-flex align-items-baseline mg-b-8">
+                            <h2 class="tx-24-f mg-b-0-f"><span>$</span>1,100</h2>
+                            <small class="tx-11-f mg-l-5 d-flex align-items-center text-danger">-$90 (8.5%) <i class="ri-arrow-down-line"></i></small>
+                          </div>
+                          <label>Concession Low <span>(Jul 20)</span></label>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col">
+                        <div class="breakdown-item">
+                          <div class="d-flex align-items-baseline mg-b-8">
+                            <h2 class="tx-24-f mg-b-0-f"><span>$</span>1,200.31</h2>
+                            <small class="tx-11-f mg-l-5 d-flex align-items-center text-success">+$100.21 (9.5%) <i class="ri-arrow-up-line"></i></small>
+                          </div>
+                          <label>Avg Concession <span>(Entire Period)</span></label>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                    </div><!-- row -->
+                  </div><!-- card -->
+
+                  <div class="card card-comproperty mg-b-25">
+                    <div class="row skeleton">
+                      <div class="col-2"><div class="skeleton-text wd-100"></div></div>
+                      <div class="col-3">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col-3">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col">
+                        <div class="breakdown-item">
+                          <div class="skeleton-box wd-100 ht-30 mg-b-5"></div>
+                          <div class="skeleton-text wd-80"></div>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                    </div><!-- row -->
+                    <div class="row skeleton-content">
+                      <div class="col-2">Scottsdale</div>
+                      <div class="col-3">
+                        <div class="breakdown-item">
+                          <h2 class="tx-24-f"><span>$</span>1,303</h2>
+                          <label>Concession High <span>(Jun 20)</span></label>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col-3">
+                        <div class="breakdown-item">
+                          <h2 class="tx-24-f"><span>$</span>965</h2>
+                          <label>Concession Low <span>(Jul 20)</span></label>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                      <div class="col">
+                        <div class="breakdown-item">
+                          <h2 class="tx-24-f"><span>$</span>1,004.54</h2>
+                          <label>Avg Concession <span>(Entire Period)</span></label>
+                        </div><!-- breakdown-item -->
+                      </div><!-- col -->
+                    </div><!-- row -->
+                  </div><!-- card -->
+
+                  <h6 class="card-label mg-b-0"><a href="#tableWrap3" data-toggle="collapse">Table View <i class="ri-arrow-right-s-line"></i></a></h6>
+                  <div id="tableWrap3" class="collapse mg-t-20">
+                    <table class="table table-alpha table-compete mg-b-0">
+                      <thead>
+                        <tr>
+                          <th>Asset</th>
+                          <th class="text-right">Dec 19</th>
+                          <th class="text-right">Jan 20</th>
+                          <th class="text-right">Feb 20</th>
+                          <th class="text-right">Mar 20</th>
+                          <th class="text-right">Apr 20</th>
+                          <th class="text-right">May 20</th>
+                          <th class="text-right">Jun 20</th>
+                          <th class="text-right">Jul 20</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>San Milan</td>
+                          <td class="text-right">$1,150</td>
+                          <td class="text-right">$1,200</td>
+                          <td class="text-right">$1,200</td>
+                          <td class="text-right">$1,450</td>
+                          <td class="text-right">$950</td>
+                          <td class="text-right">$1,150</td>
+                          <td class="text-right">$1,000</td>
+                          <td class="text-right">$1,200</td>
+                        </tr>
+                        <tr>
+                          <td>Scottsdale</td>
+                          <td class="text-right">$1,150</td>
+                          <td class="text-right">$1,200</td>
+                          <td class="text-right">$1,200</td>
+                          <td class="text-right">$1,450</td>
+                          <td class="text-right">$950</td>
+                          <td class="text-right">$1,150</td>
+                          <td class="text-right">$1,000</td>
+                          <td class="text-right">$1,200</td>
+                        </tr>
+                        <tr>
+                          <td>Actual Difference</td>
+                          <td class="text-right text-danger">-$50</td>
+                          <td class="text-right text-danger">-$100</td>
+                          <td class="text-right text-success">+$200</td>
+                          <td class="text-right text-success">+$200</td>
+                          <td class="text-right text-danger">-$300</td>
+                          <td class="text-right">$0</td>
+                          <td class="text-right text-danger">-$150</td>
+                          <td class="text-right text-success">+200</td>
+                        </tr>
+                        <tr>
+                          <td>% Difference</td>
+                          <td class="text-right text-danger">-2.5%</td>
+                          <td class="text-right text-danger">-4.6%</td>
+                          <td class="text-right text-success">+10.2%</td>
+                          <td class="text-right text-success">+32.1%</td>
+                          <td class="text-right text-danger">-14.0%</td>
+                          <td class="text-right">$0</td>
+                          <td class="text-right text-danger">-10.2%</td>
+                          <td class="text-right text-success">+0.7%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div><!-- collapse -->
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+          </div><!-- row -->
+        </div><!-- content-body -->
+      </div><!-- container-fluid -->
+    </div><!-- content -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/select2/js/select2.min.js"></script>
+    <script src="../lib/chart.js/Chart.bundle.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('.select2').select2({
+          minimumResultsForSearch: Infinity,
+          width: '100%',
+          dropdownParent: $('#ddSearchFilter')
+        });
+
+        $('.card-label a').on('click', function(e){
+          $(this).toggleClass('active');
+        });
+
+        $('.dropdown-stype .dropdown-item').on('click', function(e){
+          e.preventDefault();
+
+          var v = $(this).text();
+
+          $(this).addClass('active').siblings().removeClass('active');
+          $(this).closest('.dropdown').find('.dropdown-link span').text(v);
+        })
+
+
+        $('.compete-search .form-control').bind('keydown keyup focusout', function(e){
+          $(this).closest('.compete-search').addClass('show-results');
+
+          if(e.type === 'focusout') {
+            $(this).closest('.compete-search').removeClass('show-results');
+          }
+        });
+
+        $('#ddSearchFilter').on('click', function(e){
+          e.stopPropagation();
+        });
+
+        // -------------------------------------------------------------------
+
+        var cLabel = ['Dec 19','Jan 20','Feb 20','Mar 20','Apr 20','May 20','Jun 20', 'Jul 20', 'Aug 20', 'Sep 20', 'Oct 20', 'Nov 20'];
+
+        var cData = [300, 1000, 800, 600, 600, 700, 900, 1100, 400, 600, 500, 300];
+        var cData2 = [100, 800, 600, 400, 400, 500, 700, 900, 100, 400, 300, 100];
+
+        var color1 = 'rgba(76,148,251,.05)';
+        var color2 = 'rgba(33,198,183,.08)';
+
+        var cDataSets = [{
+          data: cData,
+          backgroundColor: color1,
+          borderColor: '#2e75f9',
+          pointBackgroundColor: '#dceafe',
+          pointBorderWidth: 1.5,
+          pointRadius: 4.5,
+          borderWidth: 1.5,
+          lineTension: 0
+        },{
+          data: cData2,
+          borderColor: '#21c6b7',
+          backgroundColor: color2,
+          pointBackgroundColor: '#21c6b7',
+          pointBorderWidth: 1.5,
+          pointRadius: 4.5,
+          borderWidth: 1.5,
+          lineTension: 0
+        }];
+
+        var cOptions = {
+          maintainAspectRatio: false,
+          legend: {
+            display: false,
+            labels: {
+              display: false
+            }
+          },
+          scales: {
+            yAxes: [{
+              gridLines: {
+                color: '#ebeef3'
+              },
+              ticks: {
+                beginAtZero: true,
+                fontSize: 10,
+                fontColor: '#6b7280',
+                min: 0,
+                max: 1400,
+                sampleSize: 7,
+                callback: function(value, index, values) {
+                  return '$' + value;
+                }
+              }
+            }],
+            xAxes: [{
+              gridLines: {
+                display: false
+              },
+              ticks: {
+                fontSize: 11,
+                fontColor: '#6b7280'
+              }
+            }]
+          }
+        };
+
+
+        var ctx1 = document.getElementById('chartLine1').getContext('2d');
+
+        new Chart(ctx1, {
+          type: 'line',
+          data: {
+            labels: cLabel,
+            datasets: cDataSets
+          },
+          options: cOptions
+        });
+
+
+        var ctx2 = document.getElementById('chartLine2').getContext('2d');
+
+        new Chart(ctx2, {
+          type: 'line',
+          data: {
+            labels: cLabel,
+            datasets: [{
+              data: [30, 80, 60, 40, 40, 70, 90, 95, 40, 60, 50, 30],
+              backgroundColor: color1,
+              borderColor: '#2e75f9',
+              pointBackgroundColor: '#dceafe',
+              pointBorderWidth: 1.5,
+              pointRadius: 4.5,
+              borderWidth: 1.5,
+              lineTension: 0
+            },{
+              data: [10, 60, 40, 20, 20, 50, 70, 75, 10, 40, 30, 10],
+              borderColor: '#21c6b7',
+              backgroundColor: color2,
+              pointBackgroundColor: '#21c6b7',
+              pointBorderWidth: 1.5,
+              pointRadius: 4.5,
+              borderWidth: 1.5,
+              lineTension: 0
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+              labels: {
+                display: false
+              }
+            },
+            scales: {
+              yAxes: [{
+                gridLines: {
+                  color: '#ebeef3'
+                },
+                ticks: {
+                  beginAtZero: true,
+                  fontSize: 10,
+                  fontColor: '#6b7280',
+                  min: 0,
+                  max: 100,
+                  sampleSize: 7,
+                  callback: function(value, index, values) {
+                    return value + '%';
+                  }
+                }
+              }],
+              xAxes: [{
+                gridLines: {
+                  display: false
+                },
+                ticks: {
+                  fontSize: 11,
+                  fontColor: '#6b7280'
+                }
+              }]
+            }
+          }
+        });
+
+        var ctx3 = document.getElementById('chartLine3').getContext('2d');
+        new Chart(ctx3, {
+          type: 'line',
+          data: {
+            labels: cLabel,
+            datasets: cDataSets
+          },
+          options: cOptions
+        });
+
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,412 @@
+
+.content-body-emails {
+  margin-left: 345px;
+  padding: 30px;
+
+  .content-mail-sidebar {
+    width: 330px;
+    margin-left: -8px;
+    overflow: hidden;
+    position: fixed;
+    top: $header-height + 30px;
+    left: 30px;
+    bottom: 30px;
+  }
+
+  .mail-sidebar-header { padding-left: 8px; }
+  .nav-mail { padding: 0 8px 8px; }
+
+  .content-mail-body {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .mail-header {
+    padding: 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .mail-content {
+    flex: 1;
+    padding: 0 25px 25px;
+    display: flex;
+    flex-direction: column;
+
+    + .mail-content {
+      padding-top: 25px;
+      border-top: 1px dashed $gray-400;
+    }
+  }
+}
+
+.card-bulk,
+.card-bulk-compose {
+  border-color: $color-bg-02;
+  border-radius: 6px;
+  @include shadow-dreamy($color-bg-02);
+
+  .card-header {
+    background-color: transparent;
+    padding: 15px 20px;
+    border-bottom-color: $color-bg-02;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav-link {
+      padding: 0;
+      width: $height-xs;
+      height: $height-xs;
+      border-radius: 5px;
+      border: 1px solid $color-bg-02;
+      font-family: $font-family-secondary;
+      font-weight: 500;
+      color: $color-tx-03;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+
+      + .nav-link { margin-left: 5px; }
+
+      &.active {
+        background-color: $color-light-01;
+        border-color: $color-ui-01;
+        color: $color-ui-01;
+      }
+
+      &.done {
+        background-color: $color-ui-01;
+        border-color: transparent;
+        color: #fff;
+      }
+    }
+  }
+
+  .card-title {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: $font-weight-semibold;
+    color: $color-tx-01;
+  }
+
+  .card-body { padding: 30px; }
+
+  .card-footer {
+    padding: 14px 20px;
+    border-top-color: $color-bg-02;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .btn {
+      height: $height-md;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      &:first-child:not(:last-child) { margin-right: auto; }
+    }
+  }
+}
+
+.card-bulk {
+  .condition-wrapper {
+    margin-bottom: 15px;
+
+    .row {
+      align-items: center;
+      + .row { margin-top: 15px; }
+
+      &:first-child .link-remove { display: none; }
+    }
+  }
+
+  .form-group {
+    margin-bottom: 30px;
+
+    &:last-child { margin-bottom: 0; }
+  }
+
+  .form-label {
+    font-size: $font-size-sm;
+    color: $color-tx-02;
+    display: block;
+    margin-bottom: 12px;
+    line-height: 1;
+  }
+
+  .custom-select {
+    height: $height-md;
+    border-radius: 5px;
+    padding-left: 8px;
+
+    &:focus {
+      box-shadow: none;
+      border-color: $color-bg-03;
+    }
+  }
+
+  .form-control {
+    height: $height-md;
+    border-radius: 5px;
+
+    &:focus {
+      box-shadow: none;
+      border-color: $color-bg-03;
+      @include shadow-sharp($color-bg-02);
+    }
+  }
+
+  .btn-add-condition {
+    border-color: $input-border-color;
+    height: $height-sm;
+    padding: 0 10px;
+    font-size: $font-size-xs;
+    color: $color-tx-02;
+
+    @include hover-focus() {
+      border-color: $color-bg-03;
+      @include shadow-sharp($color-bg-02);
+    }
+
+    &:active {
+      border-color: $color-bg-03;
+      @include shadow-sharp($color-bg-03);
+    }
+
+    span {
+      margin-right: 5px;
+      font-size: 18px;
+      font-weight: 300;
+      display: block;
+      position: relative;
+      margin-bottom: 2px;
+    }
+  }
+
+  .link-remove {
+    font-size: 21px;
+    color: $color-tx-03;
+    opacity: .75;
+
+    @include hover-focus() {
+      opacity: 1;
+    }
+  }
+}
+
+.card-bulk-info {
+  border-width: 0;
+  border-radius: 6px;
+  background-color: $color-ui-01;
+  color: #fff;
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+
+  .card-text {
+    font-size: $font-size-sm;
+    font-weight: 300;
+    opacity: .75;
+    margin-bottom: 20px;
+  }
+
+  .card-number {
+    font-weight: 300;
+    font-size: 48px;
+    font-family: $font-family-numeric;
+    margin-bottom: 2px;
+    text-indent: -3px;
+    line-height: 1;
+  }
+
+  .card-label {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  small {
+    font-size: 11px;
+    color: rgba(#fff, .6);
+  }
+
+  .card-footer {
+    border-top-width: 0;
+    background-color: transparent;
+    padding: 0 20px 20px;
+
+    p {
+      font-size: $font-size-xs;
+      color: rgba(#fff, .6);
+      margin-bottom: 8px;
+    }
+
+    .btn {
+      background-color: rgba(#fff, .16);
+      border-color: rgba(#fff, .6);
+      color: rgba(#fff, .75);
+      height: $height-md;
+      justify-content: center;
+      font-size: $font-size-sm;
+
+      @include hover-focus() {
+        background-color: #fff;
+        color: $color-ui-01;
+      }
+    }
+  }
+}
+
+.card-bulk-compose {
+  .form-group {
+    margin-bottom: 10px;
+    border: 1px solid $input-border-color;
+    border-radius: 5px;
+    height: $height-lg;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+
+    strong { font-weight: $font-weight-medium; }
+  }
+
+  .form-control {
+    height: auto;
+    padding: 0;
+    border-width: 0;
+    border-radius: 0;
+    text-shadow: none;
+
+    &:focus { box-shadow: none; }
+  }
+
+  .ql-toolbar.ql-snow {
+    border-color: $input-border-color;
+    @include border-top-radius(5px);
+
+    .ql-stroke {
+      stroke: $color-tx-02;
+    }
+
+    &.ql-active .ql-stroke { stroke: $color-ui-01; }
+  }
+
+  .ql-container.ql-snow {
+    border-color: $input-border-color;
+    color: $color-tx-01;
+    min-height: 200px;
+    @include border-bottom-radius(5px);
+  }
+
+  .ql-editor {
+    padding: 20px;
+
+    &.ql-blank::before {
+      left: 20px;
+      color: $color-tx-03;
+    }
+  }
+}
+
+.modal-preview-email {
+  .modal-dialog { max-width: 600px; }
+  .modal-dialog-sending { max-width: 500px; }
+
+  .modal-header {
+    border-bottom-color: $color-bg-02;
+    padding: 18px 20px;
+    position: relative;
+  }
+
+  .modal-title {
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+
+  .modal-body {
+    padding: 30px;
+    color: $color-tx-02;
+
+    strong {
+      font-weight: $font-weight-medium;
+      color: $color-tx-01;
+    }
+
+    p:last-child { margin-bottom: 0; }
+  }
+
+  .modal-footer {
+    padding: 15px 20px;
+    border-top-color: $color-bg-02;
+
+    .btn {
+      height: $height-md;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin: 0;
+
+      + .btn { margin-left: 10px; }
+    }
+  }
+
+  .modal-body-sending {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    i {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 64px;
+      line-height: 1;
+    }
+
+    .card-title {
+      font-size: 20px;
+      color: $color-tx-01;
+      margin-bottom: 0;
+    }
+
+    .card-email-info {
+      align-self: stretch;
+      text-align: center;
+      background-color: $color-bg-01;
+      padding: 25px 30px;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+
+    .card-btn-group {
+      display: flex;
+
+      .btn {
+        height: $height-md;
+
+        + .btn { margin-left: 10px; }
+      }
+    }
+  }
+}
+
+.confirm-title {
+  color: $color-tx-01;
+  letter-spacing: -1px;
+}
+
+.confirm-text {
+  color: $color-tx-02;
+  font-size: 15px;
+}

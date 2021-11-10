@@ -1,0 +1,34 @@
+.multipage-body.to-pdf {
+  width: 430pt;
+  font-size: 8pt;
+  line-height: 1.25;
+  padding-left: 16pt;
+  word-spacing: -1pt; }
+  .multipage-body.to-pdf p {
+    margin-bottom: 12px; }
+  .multipage-body.to-pdf .page {
+    padding: 0;
+    width: auto;
+    margin: 0 0 45px;
+    height: 755px; }
+    .multipage-body.to-pdf .page.num-bottom-center::after {
+      top: auto;
+      bottom: 0;
+      font-size: 8pt;
+      position: absolute;
+      padding-top: 5px;
+      display: block; }
+    .multipage-body.to-pdf .page:first-child {
+      padding-top: 5px; }
+    .multipage-body.to-pdf .page:nth-child(2) {
+      height: 748px;
+      line-height: 1.22; }
+    .multipage-body.to-pdf .page:nth-child(3) {
+      height: 748px; }
+    .multipage-body.to-pdf .page:nth-child(4) {
+      height: 748px; }
+    .multipage-body.to-pdf .page:nth-child(5) {
+      height: 748px;
+      margin-bottom: 0; }
+  .multipage-body.to-pdf .ordered-list li + li {
+    margin-top: 8px; }

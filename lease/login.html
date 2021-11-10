@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell Lease</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/lease.min.css">
+  </head>
+  <body>
+
+    <div class="ls-content">
+      <div class="ls-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7 col-lg-8 pd-r-15-f">
+              <h6 class="ls-page-title mg-b-8">Create Account</h6>
+              <p class="ls-page-text mg-b-0">Enter your login information below</p>
+
+              <div id="createAccount">
+                <hr class="wd-lg-90p wd-xl-80p mg-y-30 mg-x-0">
+
+                <div class="loginpanel wd-lg-90p wd-xl-80p">
+                  <div class="form-group">
+                    <label class="form-label">Email Address:</label>
+                    <input type="text" class="form-control" placeholder="Enter your email address">
+                  </div><!-- form-group -->
+
+                  <div class="form-group">
+                    <label class="form-label">Password:</label>
+                    <input type="text" class="form-control" placeholder="Enter your password">
+                  </div><!-- form-group -->
+                </div><!-- loginpanel -->
+
+                <hr class="wd-lg-90p wd-xl-80p mg-t-50 mg-b-30 mg-x-0">
+
+                <div class="page-pager d-md-flex justify-content-end wd-lg-90p wd-xl-80p">
+                  <a href="" class="btn btn-white mg-r-15">Save &amp; Exit</a>
+                  <a href="" id="btnCreate" class="btn btn-primary mg-md-t-0-f">Create &amp; Continue</a>
+                </div><!-- page-pager -->
+              </div><!-- #createAccount -->
+
+              <div id="createSuccess" class="d-none">
+                <hr class="mg-t-20 op-0">
+
+                <div class="alert alert-success pd-20 wd-lg-90p wd-xl-80p">
+                  <h4 class="alert-heading">Account created successfully!</h4>
+                  <p class="mg-b-0">Confirmation email sent to <strong>george@mark-taylor.com</strong></p>
+                </div><!-- alert -->
+
+                <hr class="wd-lg-90p wd-xl-80p mg-t-50 mg-b-30 mg-x-0">
+
+                <div class="page-pager d-md-flex justify-content-end wd-lg-90p wd-xl-80p">
+                  <a href="" class="btn btn-white mg-r-15">Save &amp; Exit</a>
+                  <a href="pets.html" class="btn btn-primary mg-md-t-0-f">Continue</a>
+                </div><!-- page-pager -->
+              </div><!-- #createSuccess -->
+            </div><!-- col -->
+            <div class="d-none d-md-block col-md-5 col-lg-4">
+              <div class="ls-sidebar">
+                <div class="card card-plan-selected">
+                  <div class="card-body">
+                    <div class="card-content">
+                      <div class="d-flex justify-content-between">
+                        <h6><strong class="model">Floor Plan: 1B</strong></h6>
+                        <a href="floor-plan.html" class="link link-primary"><i class="ri-edit-2-fill"></i> <span>Edit</span></a>
+                      </div>
+                    </div><!-- card-content -->
+                  </div><!-- card-body -->
+                </div><!-- card -->
+                <div id="cardUnit" class="card card-plan-selected mg-t-2">
+                  <div class="card-body">
+                    <div class="card-content">
+                      <div class="d-flex justify-content-between mg-b-20">
+                        <h6><strong class="model">Unit: 512</strong></h6>
+                        <a href="unit.html" class="link link-primary"><i class="ri-edit-2-fill"></i> <span>Edit</span></a>
+                      </div>
+                      <ul class="list-group unit-info">
+                        <li class="list-group-item"><span>Rent</span><span>$1,550/month</span></li>
+                        <li class="list-group-item"><span>Utilities</span><span>$25.0/month</span></li>
+                        <li class="list-group-item"><span>Deposit</span><span>$700 or $275</span></li>
+                      </ul>
+                    </div><!-- card-content -->
+                  </div><!-- card-body -->
+                </div><!-- card -->
+                <div class="card card-plan-selected mg-t-2">
+                  <div class="card-body">
+                    <div class="card-content">
+                      <div class="d-flex justify-content-between">
+                        <h6><strong class="model">Lease Length:</strong> 10 months</h6>
+                        <a href="length.html" class="link link-primary"><i class="ri-edit-2-fill"></i> <span>Edit</span></a>
+                      </div>
+                    </div><!-- card-content -->
+                  </div><!-- card-body -->
+                </div><!-- card -->
+                <div id="unitOptions" class="card card-plan-selected mg-t-2">
+                  <div class="card-body">
+                    <div class="card-content">
+                      <div class="d-flex justify-content-between mg-b-20">
+                        <h6><strong class="model">Added Options</strong></h6>
+                        <a href="options.html" class="link link-primary"><i class="ri-edit-2-fill"></i> <span>Edit</span></a>
+                      </div>
+                      <ul class="list-group unit-info">
+                        <li class="list-group-item"><span>Garage</span><span>Rent: $350/month</span></li>
+                      </ul>
+                    </div><!-- card-content -->
+                  </div><!-- card-body -->
+                </div><!-- card -->
+
+                <div id="unitTotal" class="unit-total">
+                  <div class="justify-content-start">
+                    <strong class="mg-r-auto">Monthly Total</strong>
+                    <strong>$1,550</strong>
+                  </div>
+                  <div class="justify-content-start">
+                    <span class="mg-r-auto">Application Fees</span>
+                    <span>$325.00</span>
+                  </div>
+                  <div class="justify-content-start">
+                    <span class="mg-r-auto">Tax (2.3%)</span>
+                    <span>$7.48</span>
+                  </div>
+                  <div class="justify-content-start">
+                    <strong class="mg-r-auto">Due Today</strong>
+                    <strong>$332.48</strong>
+                  </div>
+                </div><!-- unit-total -->
+              </div><!-- ls-sidebar -->
+            </div><!-- col -->
+          </div><!-- row -->
+        </div><!-- container -->
+      </div><!-- ls-body -->
+    </div><!-- ls-content -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+
+    <script src="../assets/js/lease.js"></script>
+    <script src="../assets/js/prospect-chat.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('#btnCreate').on('click', function(e){
+          e.preventDefault();
+          $('#createAccount').addClass('d-none');
+          $('#createSuccess').removeClass('d-none');
+        });
+
+      });
+    </script>
+  </body>
+</html>

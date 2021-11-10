@@ -1,0 +1,362 @@
+
+.table-chats {
+  strong { font-weight: 600; }
+
+  .avatar {
+    background-color: $color-bg-03;
+
+    i { font-size: 20px; }
+  }
+
+  .badge {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-weight: 400;
+    padding: 5px 8px;
+    min-width: 100px;
+  }
+
+  .badge-pending {
+    background-color: rgba($blue, .1);
+    border-color: $blue;
+    color: darken($blue, 10%);
+  }
+
+  .badge-progress {
+    background-color: rgba($yellow, .1);
+    border-color: $yellow;
+    color: darken($yellow, 25%);
+  }
+
+  .badge-completed {
+    background-color: rgba($green, .1);
+    border-color: $green;
+    color: darken($green, 15%);
+  }
+}
+
+.chatspanel {
+  background-color: #fff;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  @include shadow-sharp($color-bg-02);
+  display: flex;
+  height: calc(100vh - 200px);
+}
+
+.chatspanel-sidebar {
+  width: 280px;
+  height: 100%;
+  border-right: 1px solid $border-color;
+}
+
+.chatspanel-sidebar-header {
+  height: 60px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $border-color;
+
+  .badge {
+    background-color: $color-bg-02;
+    font-size: 12px;
+    font-family: $font-family-sans-serif;
+    font-weight: 400;
+    padding: 8px;
+    color: $color-tx-02;
+  }
+}
+
+.chatspanel-sidebar-body {
+  position: relative;
+  height: calc(100% - 60px);
+  overflow: hidden;
+
+  .chats-items {
+    padding: 0;
+    border-radius: 0;
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+
+      &::before { display: none; }
+
+      svg {
+        stroke-width: 2.5px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .chats-item {
+    background-color: transparent;
+
+    + .chats-item {
+      margin-top: 1px;
+
+      &::before {
+        border-top-color: rgba($border-color, .6);
+        display: block;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &.selected { background-color: $body-bg; }
+
+    &.checked .avatar {
+      background-color: $green;
+    }
+  }
+
+  .chats-item-body p {
+    font-size: 12px;
+    color: $color-tx-03;
+  }
+}
+
+.chatspanel-body {
+  flex: 1;
+  position: relative;
+}
+
+.chatspanel-body-header {
+  height: 60px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $border-color;
+
+  .custom-checkbox {
+    padding-left: 0;
+    padding-right: 1.5rem;
+
+    .custom-control-label {
+      font-size: 13px;
+
+      &::before { border-radius: 3px; }
+
+      &::before,
+      &::after {
+        left: auto;
+        right: -1.5rem;
+      }
+    }
+  }
+}
+
+.chats-item-info {
+  h6 { margin-bottom: 2px; }
+  p {
+    margin-bottom: 0;
+    font-size: 12px;
+    color: $color-tx-03;
+  }
+}
+
+.chatspanel-body-content {
+  height: calc(100% - 60px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $body-bg;
+}
+
+.message-item {
+  padding: 15px;
+  display: flex;
+  width: 60%;
+
+  .avatar { margin-right: 15px; }
+
+  &.flex-row-reverse {
+    align-self: flex-end;
+
+    .avatar {
+      margin-right: 0;
+      margin-left: 15px;
+    }
+  }
+
+  &.correct {
+    .form-control,
+    .message-wrapper {
+      border-color: $green;
+      background-color: lighten($green, 50%);
+      color: darken($green, 20%);
+    }
+  }
+
+  &.incorrect {
+    .form-control,
+    .message-wrapper {
+      border-color: $red;
+      background-color: lighten($red, 34%);
+      color: darken($red, 40%);
+    }
+  }
+
+  &.cantanswer {
+    .form-control,
+    .message-wrapper {
+      border-color: $yellow;
+      background-color: lighten($yellow, 46%);
+      color: darken($yellow, 30%);
+    }
+  }
+}
+
+.message-item-body {
+  flex: 1;
+
+  .form-control {
+    border-radius: 4px;
+    border-color: $border-color;
+    padding: 8px 10px;
+    transition: none;
+
+    &:focus {
+      box-shadow: none;
+      border-color: darken($border-color, 5%);
+      @include shadow-sharp($color-bg-02);
+    }
+  }
+
+  .message-wrapper {
+    padding: 8px 10px;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 13px;
+    color: $color-tx-02;
+  }
+
+  .nav { margin-top: 10px; }
+
+  .nav-link {
+    border: 1px solid $border-color;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: $color-tx-02;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+
+    i {
+      font-size: 16px;
+      line-height: 1;
+      margin-right: 5px;
+    }
+
+    + .nav-link { margin-left: 5px; }
+
+    &.correct {
+      @include hover-focus() {
+        border-color: $green;
+        color: $green;
+      }
+
+      &.active {
+        background-color: lighten($green, 50%);
+        border-color: $green;
+        color: $green;
+      }
+    }
+
+    &.incorrect {
+      @include hover-focus() {
+        border-color: $red;
+        color: $red;
+      }
+
+      &.active {
+        background-color: lighten($red, 34%);
+        border-color: $red;
+        color: $red;
+      }
+    }
+
+    &.cantanswer {
+      @include hover-focus() {
+        border-color: $yellow;
+        color: $yellow;
+      }
+
+      &.active {
+        background-color: lighten($yellow, 46%);
+        border-color: $yellow;
+        color: $yellow;
+      }
+    }
+  }
+}
+
+.content-chat-report,
+.content-chat-evaluate {
+  .breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    margin-bottom: 3px;
+  }
+
+  .breadcrumb-item { font-size: 12px; }
+
+  .breakdown-item {
+    i {
+      line-height: 1;
+      position: relative;
+      top: 4px;
+    }
+
+    h2 span {
+      font-weight: 300;
+      font-size: 20px;
+      letter-spacing: -.5px;
+      color: $color-tx-02;
+      position: relative;
+      top: -3px;
+    }
+
+    &.correct h2 { color: $green; }
+    &.incorrect h2 { color: $red; }
+    &.cantanswer h2 { color: $yellow; }
+  }
+}
+
+.card-under-review {
+  border-width: 0;
+  background-color: $color-bg-01;
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0 50px;
+  }
+
+  i {
+    font-size: 64px;
+    color: $color-tx-03;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  h4 {
+    font-size: 24px;
+    color: $color-tx-01;
+  }
+
+  p {
+    margin-bottom: 0;
+    width: 45%;
+    text-align: center;
+    color: $color-tx-03;
+  }
+}

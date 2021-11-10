@@ -1,0 +1,199 @@
+
+.banner-contacts {
+  padding-top: 0;
+  padding-bottom: 48px;
+  height: calc(100vh - #{$ht-header});
+  background-color: $ui-secondary;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .container {
+    height: 100%;
+    max-width: 1440px;
+    padding: 0 24px;
+
+    @include media-breakpoint-up(lg) {
+      padding: 0 48px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding: 0 64px;
+    }
+  }
+
+  .media {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+    }
+  }
+
+  .media-left {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+
+    @include media-breakpoint-up(lg) {
+      width: 40%;
+      padding-right: 32px;
+      order: 1;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 35%;
+      padding-right: 48px;
+    }
+
+    @media (min-width: 1440px) { padding-right: 64px; }
+
+  }
+
+  .media-body {
+    flex: 1;
+    order: 1;
+    margin-bottom: 24px;
+    position: relative;
+    margin-left: -24px;
+    margin-right: -24px;
+
+    @include media-breakpoint-up(lg) {
+      order: 2;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  h1 {
+    font-family: $ff-secondary;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1;
+    margin-top: auto;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+
+    @include media-breakpoint-up(xl) { font-size: 48px; }
+  }
+
+  .link {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .banner-img {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.list-contacts {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+
+    + li { margin-top: 15px; }
+
+    i {
+      font-size: 18px;
+      font-weight: 400;
+      color: $ui-primary;
+      margin-right: 10px;
+      line-height: 1;
+    }
+  }
+}
+
+.list-schedule {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .list-item {
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+
+    + .list-item { border-top: 1px solid $bd-color; }
+  }
+}
+
+.section-contact-form {
+  background-color: $ui-secondary;
+  padding-bottom: 64px;
+  margin-bottom: $ht-header;
+
+  h3 {
+    font-family: $ff-secondary;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1;
+  }
+
+  .form-group { margin-bottom: 20px; }
+  .form-group-msg { margin-bottom: 32px; }
+  .form-label { color: $tx-light; }
+
+  input.form-control { height: 48px; }
+  textarea.form-control {
+    padding: 12px 15px;
+    height: 245px;
+  }
+
+  .form-control {
+    border-width: 0;
+
+    &:focus { box-shadow: none; }
+
+    &::placeholder {
+      color: $tx-light;
+      text-shadow: none;
+    }
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      width: 200px;
+    }
+  }
+}

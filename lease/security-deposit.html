@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell Lease</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/lease.min.css">
+  </head>
+  <body>
+
+    <div class="ls-content">
+      <div class="ls-body">
+        <div class="container">
+          <h6 class="tx-18 tx-semibold text-dark mg-b-5">Select Security Deposit</h6>
+          <p class="tx-15 mg-b-30">Please select a deposit type - traditional refundable or ePremium non-refundable fee.</p>
+
+          <div class="row">
+            <div class="col-lg-9">
+
+              <div class="row">
+                <div class="col-lg-5">
+                  <div class="card card-deposit">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center mg-b-20">
+                        <h6 class="mg-b-0-f">Traditional Refundable Deposit</h6>
+                        <a href="" class="link-help mg-l-5" data-subject=""><i class="ri-question-fill"></i></a>
+                      </div>
+                      <h4><span>$</span>750</h4>
+                      <button class="btn btn-select">Select</button>
+                    </div><!-- card-body -->
+                  </div><!-- card -->
+                </div><!-- col -->
+                <div class="col-lg-5 mg-t-15 mg-lg-t-0">
+                  <div class="card card-deposit">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center mg-b-20">
+                        <h6 class="mg-b-0-f">ePremium Non-Refundable Fee</h6>
+                        <a href="" class="link-help mg-l-5" data-subject=""><i class="ri-question-fill"></i></a>
+                      </div>
+                      <h4><span>$</span>225</h4>
+                      <button class="btn btn-select">Select</button>
+                    </div><!-- card-body -->
+                  </div><!-- card -->
+                </div><!-- col -->
+              </div><!-- row -->
+              <hr class="mg-t-50 mg-b-30">
+
+              <div class="page-pager d-md-flex justify-content-end mg-b-80 mg-lg-b-0">
+                <a href="" class="btn btn-white mg-r-15">Save &amp; Exit</a>
+                <a href="digital-signature.html" class="btn btn-primary mg-md-t-0-f">Save &amp; Continue</a>
+              </div><!-- page-pager -->
+            </div><!-- col -->
+          </div><!-- row -->
+        </div><!-- container -->
+      </div><!-- ls-body -->
+    </div><!-- ls-content -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+
+    <script src="../assets/js/lease.js"></script>
+    <script src="../assets/js/prospect-chat.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('.btn-select').on('click', function(e){
+          e.preventDefault();
+
+          if($(this).closest('.card').hasClass('selected')) {
+            $(this).text('Select');
+            $(this).closest('.card').removeClass('selected');
+          } else {
+            $(this).text('Selected');
+            $(this).closest('.card').addClass('selected');
+          }
+
+          $(this).closest('.col').siblings().find('.card').removeClass('selected');
+        })
+      });
+    </script>
+  </body>
+</html>

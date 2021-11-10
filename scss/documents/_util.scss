@@ -1,0 +1,78 @@
+// Borders
+.bd-2 { border: 2px solid $border-color; }
+
+// ----- Displays
+.invisible {
+  visibility: hidden;
+  opacity: 0;
+}
+
+// Paddings
+.p-10 { padding: 10px; }
+
+// ----- Margins
+.mb-0 { margin-bottom: 0; }
+
+@mixin make-margin($num) {
+  .mb-#{$num} { margin-bottom: #{$num}px; }
+}
+
+$num: 10;
+@while $num <= 50 {
+  @include make-margin($num);
+  $num: $num + 5;
+}
+
+.m-0 { margin: 0; }
+
+.mt-10 { margin-top: 10px; }
+.mt-20 { margin-top: 20px; }
+
+.mr-10 { margin-right: 10px; }
+.mr-80 { margin-right: 80px; }
+
+.ml-10 { margin-left: 10px; }
+.ml-auto { margin-left: auto; }
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// ----- Texts
+.text-uppercase { text-transform: uppercase; }
+.text-lowercase { text-transform: lowercase; }
+
+.text-italic { font-style: italic; }
+.text-bold { font-weight: 700; }
+
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }
+
+.text-13 { font-size: 13px; }
+
+// ----- Widths
+@mixin make-width($num) {
+  $p: $num + '%';
+
+  .mw-#{$num}p { min-width: #{$p}; }
+}
+
+$num: 5;
+@while $num <= 100 {
+  @include make-width($num);
+  $num: $num + 5;
+}
+
+.mw-20 { min-width: 20px; }
+.mw-30 { min-width: 30px; }
+.mw-40 { min-width: 40px; }
+.mw-55 { min-width: 55px; }
+.mw-60 { min-width: 60px; }
+.mw-75 { min-width: 75px; }
+.mw-90 { min-width: 90px; }
+.mw-100 { min-width: 100px; }
+.mw-120 { min-width: 120px; }
+.mw-150 { min-width: 150px; }
+.mw-165 { min-width: 165px; }

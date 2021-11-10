@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body>
+
+    <div class="content content-reports">
+      <div class="container-fluid">
+        <div class="content-header align-items-center mg-b-30">
+          <div class="mg-r-auto">
+            <h3 class="content-title mg-b-3">Reports Dashboard</h3>
+            <span class="content-text">Time Period: June 07 2020 - June 10, 2020</span>
+          </div>
+
+          <div class="dropdown-select">
+            <a href="#" data-toggle="dropdown" class="dropdown-link">
+              <i class="ri-calendar-line"></i> <span>This week</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="" class="dropdown-item disabled">This week</a>
+              <a href="" class="dropdown-item">Last week</a>
+              <a href="" class="dropdown-item">This month</a>
+              <a href="" class="dropdown-item">Last month</a>
+              <a href="" class="dropdown-item">This quarter</a>
+              <a href="" class="dropdown-item">Last quarter</a>
+              <a href="" class="dropdown-item">This year</a>
+              <a href="" class="dropdown-item">Last year</a>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+
+          <div class="dropdown-select">
+            <a href="#" data-toggle="dropdown" class="dropdown-link">
+              <i class="ri-arrow-left-right-line"></i> <span>Previous periods</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="" class="dropdown-item active">Previous periods</a>
+              <a href="" class="dropdown-item">Company wide averages</a>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+
+          <div class="dropdown-select">
+            <a href="#" data-toggle="dropdown" class="dropdown-link">
+              <i class="ri-bar-chart-fill"></i> <span>Sites Reports</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="" data-value="overview" class="dropdown-item">Overview Reports</a>
+              <a href="" data-value="marketing" class="dropdown-item">Marketing Reports</a>
+              <a href="" data-value="operations" class="dropdown-item disabled">Sites Reports</a>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+        </div><!-- content-header -->
+
+        <div class="content-body">
+          <div class="row row-sm">
+            <div class="col-7">
+              <div class="card card-dashboard">
+                <div class="card-header d-flex align-items-center justify-content-between">
+                  <div>
+                    <h5 class="card-title mg-b-3-f">Site Visitor Report</h5>
+                    <span class="card-text">Understand the behaviors of users that visit your site within the selected time frame.</span>
+                  </div>
+                  <div class="dropdown-select">
+                    <a href="#" data-toggle="dropdown" class="dropdown-link">
+                      <i class="ri-calendar-line"></i> <span>All Devices</span>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a href="" class="dropdown-item disabled">All Devices</a>
+                      <a href="" class="dropdown-item">Desktop</a>
+                      <a href="" class="dropdown-item">Tablet</a>
+                      <a href="" class="dropdown-item">Mobile</a>
+                    </div><!-- dropdown-menu -->
+                  </div><!-- dropdown -->
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <ul id="legendSite" class="chart-legend chart-legend-one chart-legend-site mg-b-25">
+                    <li>Visitors</li>
+                    <li class="d-none">New Visitors</li>
+                    <li class="d-none">Sessions per Visitor</li>
+                    <li class="d-none">Sessions</li>
+                    <li class="d-none">Pageviews</li>
+                    <li class="d-none">Pages / Session</li>
+                    <li class="d-none">Avg. Session Duration</li>
+                    <li class="d-none">Bounce Rate</li>
+                    <li>Prior Period Visitors</li>
+                  </ul>
+                  <div class="chart-wrapper-one"><canvas id="chartLine1"></canvas></div>
+                </div><!-- card-body -->
+                <div id="siteMetrics" class="card-footer">
+                  <div class="row row-xs">
+                    <div class="col">
+                      <div class="report-metric active" data-set="150,110,90,115,125,160,120" data-background="#2e75f9">
+                        <label class="report-label">Visitors</label>
+                        <h2 class="report-value report-value-one report-value-leads">5,210</h2>
+                        <p class="report-text d-flex"><span class="text-success">24.1% <i class="ri-arrow-up-line"></i></span> (785)</p>
+                      </div><!-- report-metric -->
+                    </div><!-- col -->
+                    <div class="col">
+                      <div class="report-metric" data-set="90,130,80,110,115,140,130" data-background="#d4893f">
+                        <label class="report-label">New Visitors</label>
+                        <h2 class="report-value report-value-one report-value-leads">4,134</h2>
+                        <p class="report-text d-flex"><span class="text-danger">12.3% <i class="ri-arrow-down-line"></i></span> (345)</p>
+                      </div><!-- report-metric -->
+                    </div><!-- col -->
+                    <div class="col-4">
+                      <div class="report-metric" data-set="30,20,30,20,15,10,25" data-background="#d5338b">
+                        <label class="report-label">Sessions per Visitor</label>
+                        <h2 class="report-value report-value-one report-value-leads">1.27</h2>
+                        <p class="report-text d-flex"><span class="text-danger">18.4% <i class="ri-arrow-down-line"></i></span> (1.37)</p>
+                      </div><!-- report-metric -->
+                    </div><!-- col -->
+                    <div class="col">
+                      <div class="report-metric" data-set="10,15,5,10,15,10,15" data-background="#9a33d5">
+                        <label class="report-label">Sessions</label>
+                        <h2 class="report-value report-value-one report-value-leads">6,278</h2>
+                        <p class="report-text d-flex"><span class="text-success">9.7% <i class="ri-arrow-up-line"></i></span> (598)</p>
+                      </div><!-- report-metric -->
+                    </div><!-- col -->
+                  </div><!-- row -->
+
+                  <div class="row row-xs mg-t-20">
+                    <div class="col">
+                      <div class="report-metric" data-set="40,45,50,60,65,50,65" data-background="#cc3333">
+                        <label class="report-label">Pageviews</label>
+                        <h2 class="report-value report-value-one report-value-leads">65,295</h2>
+                        <p class="report-text d-flex"><span class="text-success">24.1% <i class="ri-arrow-up-line"></i></span> (785)</p>
+                      </div><!-- report-metric -->
+                    </div><!-- col -->
+                    <div class="col">
+                      <div class="report-metric" data-set="15,25,10,15,25,10,15" data-background="#ce97b0">
+                        <label class="report-label">Pages / Session</label>
+                        <h2 class="report-value report-value-one report-value-leads">4.78</h2>
+                        <p class="report-text d-flex"><span class="text-danger">12.3% <i class="ri-arrow-down-line"></i></span> (4.97)</p>
+                      </div><!-- report-metric -->
+                    </div><!-- col -->
+                    <div class="col-4">
+                      <div class="report-metric" data-set="5,12,8,13,4,7,9" data-background="#a5e1ad">
+                        <label class="report-label">Avg. Session Duration</label>
+                        <h2 class="report-value report-value-one report-value-leads">00:03:10</h2>
+                        <p class="report-text d-flex"><span class="text-danger">18.4% <i class="ri-arrow-down-line"></i></span> (00:03:41)</p>
+                      </div><!-- report-metric -->
+                    </div><!-- col -->
+                    <div class="col">
+                      <div class="report-metric" data-set="25,28,32,22,18,27,19" data-background="#77acf1">
+                        <label class="report-label">Bounce Rate</label>
+                        <h2 class="report-value report-value-one report-value-leads">49.2%</h2>
+                        <p class="report-text d-flex"><span class="text-success">9.7% <i class="ri-arrow-up-line"></i></span> (54.5%)</p>
+                      </div><!-- report-metric -->
+                    </div><!-- col -->
+                  </div><!-- row -->
+                </div><!--card-footer -->
+              </div><!-- card -->
+            </div><!-- col -->
+            <div class="col-5">
+              <div class="card card-dashboard">
+                <div class="card-header d-flex align-items-center justify-content-between">
+                  <div>
+                    <h5 class="card-title mg-b-3-f">Conversion Report</h5>
+                    <span class="card-text">Understand how well your site converts visitors.</span>
+                  </div>
+                  <div class="dropdown-select">
+                    <a href="#" data-toggle="dropdown" class="dropdown-link">
+                      <i class="ri-calendar-line"></i> <span>All Devices</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="" class="dropdown-item disabled">All Devices</a>
+                      <a href="" class="dropdown-item">Desktop</a>
+                      <a href="" class="dropdown-item">Tablet</a>
+                      <a href="" class="dropdown-item">Mobile</a>
+                    </div><!-- dropdown-menu -->
+                  </div><!-- dropdown -->
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <ul id="legendConversion" class="chart-legend chart-legend-one chart-legend-conversion mg-b-25">
+                    <li>Leads</li>
+                    <li class="d-none">Conversion Rate</li>
+                    <li class="d-none">Tours</li>
+                    <li class="d-none">Leases</li>
+                    <li>Prior Period Leads</li>
+                  </ul>
+
+                  <div class="chart-wrapper-one"><canvas id="chartLine2"></canvas></div>
+                </div><!-- card-body -->
+                <div id="conversionMetrics" class="card-footer">
+                  <div class="row row-sm">
+                    <div class="col-5">
+                      <div class="report-metric active" data-set="150,110,90,115,125,160,160" data-background="#2e75f9">
+                        <label class="report-label">Leads</label>
+                        <h2 class="report-value report-value-one report-value-leads">5,210</h2>
+                        <p class="report-text d-flex"><span class="text-success">24.1% <i class="ri-arrow-up-line"></i></span> (785)</p>
+                      </div><!-- report-metric -->
+                    </div><!-- col -->
+                    <div class="col-7">
+                      <div class="report-metric" data-set="10,12,8,14,18,13,12" data-background="#77acf1">
+                        <label class="report-label">Conversion Rate</label>
+                        <h2 class="report-value report-value-one report-value-leads">4.13%</h2>
+                        <p class="report-text d-flex"><span class="text-danger">12.3% <i class="ri-arrow-down-line"></i></span> (345)</p>
+                      </div><!-- report-metric -->
+                    </div><!-- col -->
+                    <div class="col-5 mg-t-20">
+                      <div class="report-metric" data-set="20,22,18,24,28,23,12" data-background="#ce97b0">
+                        <label class="report-label">Tours</label>
+                        <h2 class="report-value report-value-one report-value-leads">1.27</h2>
+                        <p class="report-text d-flex"><span class="text-danger">18.4% <i class="ri-arrow-down-line"></i></span> (1.37)</p>
+                      </div><!-- report-metric -->
+                    </div><!-- col -->
+                    <div class="col-7 mg-t-20">
+                      <div class="report-metric" data-set="30,32,28,34,38,33,32" data-background="#9a33d5">
+                        <label class="report-label">Leases</label>
+                        <h2 class="report-value report-value-one report-value-leads">6,278</h2>
+                        <p class="report-text d-flex"><span class="text-success">9.7% <i class="ri-arrow-up-line"></i></span> (598)</p>
+                      </div><!-- report-metric -->
+                    </div><!-- col -->
+                  </div><!-- row -->
+                </div><!-- card-footer -->
+              </div><!-- card -->
+            </div><!-- col -->
+          </div><!-- row -->
+
+          <div class="card card-dashboard mg-t-20">
+            <div class="card-header d-flex align-items-center justify-content-between">
+              <div>
+                <h5 class="card-title mg-b-3-f">Source Behavior Report</h5>
+                <span class="card-text">Understand the behaviors of site visitors by source within the selected time frame.</span>
+              </div>
+              <div class="dropdown-select">
+                <a href="#" data-toggle="dropdown" class="dropdown-link">
+                  <i class="ri-calendar-line"></i> <span>All Devices</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a href="" class="dropdown-item disabled">All Devices</a>
+                  <a href="" class="dropdown-item">Desktop</a>
+                  <a href="" class="dropdown-item">Tablet</a>
+                  <a href="" class="dropdown-item">Mobile</a>
+                </div><!-- dropdown-menu -->
+              </div><!-- dropdown -->
+            </div><!-- card-header -->
+            <div class="card-body">
+
+              <div class="table-responsive">
+                <table class="table table-dashboard">
+                  <thead>
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th colspan="3">Acquisition</th>
+                      <th colspan="3">Behavior</th>
+                      <th colspan="6">Conversions</th>
+                    </tr>
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th>
+                        <label>Sessions</label>
+                        <p>70.9K</p>
+                      </th>
+                      <th>
+                        <label>Visitors</label>
+                        <p>55.9K</p>
+                      </th>
+                      <th>
+                        <label>New Visitors</label>
+                        <p>51.2K</p>
+                      </th>
+                      <th>
+                        <label>Bounce Rate</label>
+                        <p>49.2%</p>
+                      </th>
+                      <th>
+                        <label>Pages/Session</label>
+                        <p>4.8</p>
+                      </th>
+                      <th>
+                        <label>Avg. Session Duration</label>
+                        <p>03:10</p>
+                      </th>
+                      <th>
+                        <label>Leads %</label>
+                        <p>21.0%</p>
+                      </th>
+                      <th>
+                        <label>Leads #</label>
+                        <p>14.9K</p>
+                      </th>
+                      <th>
+                        <label>Tours %</label>
+                        <p>21.0%</p>
+                      </th>
+                      <th>
+                        <label>Tours #</label>
+                        <p>14.9K</p>
+                      </th>
+                      <th>
+                        <label>Leases %</label>
+                        <p>21.0%</p>
+                      </th>
+                      <th>
+                        <label>Leases #</label>
+                        <p>14.9K</p>
+                      </th>
+                    </tr>
+                    <tr>
+                      <th>Source/Medium</th>
+                      <th>Sessions</th>
+                      <th>Users</th>
+                      <th>New Users</th>
+                      <th>Bounce Rate</th>
+                      <th>Pages/Session</th>
+                      <th>Avg. Session Duration</th>
+                      <th>Leads %</th>
+                      <th>Leads #</th>
+                      <th>Tours %</th>
+                      <th>Tours #</th>
+                      <th>Leases %</th>
+                      <th>Leases #</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>(direct) (none)</td>
+                      <td class="heavy">69,179</td>
+                      <td class="heavy">54,522</td>
+                      <td class="heavy">50,113</td>
+                      <td class="medium">48.57%</td>
+                      <td class="light">4.84</td>
+                      <td class="thin">00:03:13</td>
+                      <td class="light">21.39%</td>
+                      <td class="heavy">14,800</td>
+                      <td>21.39%</td>
+                      <td>14,800</td>
+                      <td>21.39%</td>
+                      <td>14,800</td>
+                    </tr>
+                    <tr>
+                      <td>google / cpc</td>
+                      <td>769</td>
+                      <td>683</td>
+                      <td>620</td>
+                      <td class="semiheavy">73.08%</td>
+                      <td class="thin">2.54</td>
+                      <td>00:00:58</td>
+                      <td class="thin">6.24%</td>
+                      <td>48</td>
+                      <td>6.24%</td>
+                      <td>48</td>
+                      <td>6.24%</td>
+                      <td>48</td>
+                    </tr>
+                    <tr>
+                      <td>dfa / cpm</td>
+                      <td>503</td>
+                      <td>387</td>
+                      <td>384</td>
+                      <td class="heavy">92.84%</td>
+                      <td class="thin">1.58</td>
+                      <td>00:00:10</td>
+                      <td>0.2%</td>
+                      <td>1</td>
+                      <td>1.3%</td>
+                      <td>4</td>
+                      <td>0.5%</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>Partners / affiliate</td>
+                      <td>250</td>
+                      <td>163</td>
+                      <td>142</td>
+                      <td class="medium">71.2%</td>
+                      <td class="thin">2.28</td>
+                      <td>00:02:27</td>
+                      <td class="thin">6%</td>
+                      <td>15</td>
+                      <td>5.2%</td>
+                      <td>8</td>
+                      <td>7.4%</td>
+                      <td>18</td>
+                    </tr>
+                    <tr>
+                      <td>google organic</td>
+                      <td>13</td>
+                      <td>4</td>
+                      <td>2</td>
+                      <td class="light">23.08%</td>
+                      <td class="thin">14.08</td>
+                      <td>00:14:29</td>
+                      <td class="thin">46.15%</td>
+                      <td>48</td>
+                      <td>5.5%</td>
+                      <td>29</td>
+                      <td>8.2%</td>
+                      <td>30</td>
+                    </tr>
+                    <tr>
+                      <td>optimize.google...</td>
+                      <td>2</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0%</td>
+                      <td class="medium">13</td>
+                      <td class="heavy">00:44:32</td>
+                      <td class="medium">50%</td>
+                      <td>2</td>
+                      <td>38%</td>
+                      <td>1</td>
+                      <td>0%</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>analytics.google...</td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>1</td>
+                      <td class="heavy">20.10%</td>
+                      <td>0.04</td>
+                      <td>00:01:01</td>
+                      <td>1.25%</td>
+                      <td>5</td>
+                      <td>1.05%</td>
+                      <td>4</td>
+                      <td>1.01%</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>tagassistant.google...</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0.08%</td>
+                      <td class="heavy">1.5</td>
+                      <td class="light">00:00:12</td>
+                      <td class="heavy">3.24%</td>
+                      <td>1</td>
+                      <td>2.1%</td>
+                      <td>0</td>
+                      <td>1.05%</td>
+                      <td>0</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div><!-- table-responsive -->
+
+            </div><!-- card-body -->
+          </div><!-- card -->
+
+          <div class="row row-sm mg-t-20">
+            <div class="col-8">
+              <div class="card card-dashboard">
+                <div class="card-header d-flex align-items-center justify-content-between">
+                  <div>
+                    <h5 class="card-title mg-b-3-f">Demographics</h5>
+                    <span class="card-text">Understand the age and gender demographics of site visitors.</span>
+                  </div>
+                  <div class="dropdown-select">
+                    <a href="#" data-toggle="dropdown" class="dropdown-link">
+                      <i class="ri-calendar-line"></i> <span>All Devices</span>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a href="" class="dropdown-item disabled">All Devices</a>
+                      <a href="" class="dropdown-item">Desktop</a>
+                      <a href="" class="dropdown-item">Tablet</a>
+                      <a href="" class="dropdown-item">Mobile</a>
+                    </div><!-- dropdown-menu -->
+                  </div><!-- dropdown -->
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <div class="row row-sm">
+                    <div class="col-5">
+                      <div class="donut-wrapper-one"><canvas id="chartDonut1"></canvas></div>
+                      <ul class="donut-legend-group mg-t-20">
+                        <li class="legend-item male">Male: <strong>389</strong><span>(42.3%)</span></li>
+                        <li class="legend-item female">Female <strong>426</strong><span>(57.7%)</span></li>
+                      </ul>
+                    </div><!-- col -->
+                    <div class="col">
+                      <div class="bar-wrapper-four"><canvas id="chartBar4"></canvas></div>
+                    </div><!-- col -->
+                  </div><!-- row -->
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+            <div class="col-4">
+              <div class="card card-dashboard ht-100p">
+                <div class="card-header">
+                  <h5 class="card-title mg-b-3-f">Devices</h5>
+                  <span class="card-text">Understand what devices your visitors are using to access your site.</span>
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <div class="donut-wrapper-one"><canvas id="chartDonut2"></canvas></div>
+                  <ul class="donut-legend-group dlg-devices mg-t-20">
+                    <li class="legend-item desktop">Desktop</li>
+                    <li class="legend-item mobile">Mobile</li>
+                    <li class="legend-item tablet">Tablet</li>
+                  </ul>
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+            <div class="col-8 mg-t-20">
+              <div class="card card-dashboard card-seo ht-100p">
+                <div class="card-header">
+                  <h5 class="card-title mg-b-3-f">SEO Score</h5>
+                  <span class="card-text">Understand how accessible, performant and SEO optimized your site is according to Google.</span>
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <ul id="legendSeo" class="chart-legend chart-legend-one chart-legend-seo mg-b-25">
+                    <li>Performance</li>
+                    <li class="d-none">Accesibility</li>
+                    <li class="d-none">Best Practices</li>
+                    <li class="d-none">SEO</li>
+                    <li>Prior Period Performance</li>
+                  </ul>
+
+                  <div class="chart-wrapper"><canvas id="chartLine3"></canvas></div>
+                </div><!-- card-body -->
+                <div id="seoMetrics" class="card-footer">
+                  <div class="row row-sm">
+                    <div class="col">
+                      <div class="report-metric d-flex flex-column align-items-center active" data-set="150,110,90,115,125,160,120" data-background="#2e75f9">
+                        <label class="report-label">Performance</label>
+                        <div class="radial-progress progress-30 performance"><span>27<small>%</small></span></div>
+                        <p class="report-text d-flex"><span class="text-success">24.1% <i class="ri-arrow-up-line"></i></span> (22)</p>
+                      </div><!-- report-metric -->
+                    </div><!-- col -->
+                    <div class="col">
+                      <div class="report-metric d-flex flex-column align-items-center" data-set="90,130,80,110,115,140,130,100,110" data-background="#d4893f">
+                        <label class="report-label">Accesibility</label>
+                        <div class="radial-progress progress-70"><span>72<small>%</small></span></div>
+                        <p class="report-text d-flex"><span class="text-danger">12.3% <i class="ri-arrow-down-line"></i></span> (79)</p>
+                      </div><!-- report-metric -->
+                    </div><!-- col -->
+                    <div class="col">
+                      <div class="report-metric d-flex flex-column align-items-center" data-set="30,20,30,20,15,10,25,15,20" data-background="#d5338b">
+                        <label class="report-label">Best Practices</label>
+                        <div class="radial-progress progress-90 bestpractices"><span>87<small>%</small></span></div>
+                        <p class="report-text d-flex"><span class="text-danger">18.4% <i class="ri-arrow-down-line"></i></span> (98)</p>
+                      </div><!-- report-metric -->
+                    </div><!-- col -->
+                    <div class="col">
+                      <div class="report-metric d-flex flex-column align-items-center" data-set="10,15,5,10,15,10,15,20,15" data-background="#9a33d5">
+                        <label class="report-label">SEO</label>
+                        <div class="radial-progress progress-90 seo"><span>92<small>%</small></span></div>
+                        <p class="report-text d-flex"><span class="text-success">9.7% <i class="ri-arrow-up-line"></i></span> (83)</p>
+                      </div><!-- report-metric -->
+                    </div><!-- col -->
+                  </div><!-- row -->
+                </div><!-- card-footer -->
+              </div><!-- card -->
+            </div><!-- col -->
+            <div class="col-4 mg-t-20">
+              <div class="card card-dashboard ht-100p">
+                <div class="card-header">
+                  <h5 class="card-title mg-b-3-f">Acquisition Channels</h5>
+                  <span class="card-text">Understand which sources drive site traffic.</span>
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <div class="row row-xs align-items-center">
+                    <div class="col-8">
+                      <div class="donut-wrapper-two"><canvas id="chartDonut3"></canvas></div>
+                    </div><!-- col -->
+                    <div class="col-4">
+                      <ul class="donut-legend-group dlg-acquisition mg-t-20">
+                        <li class="legend-item direct">Direct</li>
+                        <li class="legend-item paidsearch">Paid Search</li>
+                        <li class="legend-item display">Display</li>
+                        <li class="legend-item affiliates">Affiliates</li>
+                        <li class="legend-item other">(Other)</li>
+                        <li class="legend-item organic">Organic Search</li>
+                        <li class="legend-item referral">Referral</li>
+                      </ul>
+                    </div><!-- col -->
+                  </div><!-- row -->
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+          </div><!-- row -->
+
+        </div><!-- content-body -->
+      </div><!-- container-fluid -->
+    </div><!-- content -->
+
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/chart.js/Chart.bundle.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+  </body>
+</html>

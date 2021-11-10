@@ -1,0 +1,61 @@
+.multipage-body.to-pdf {
+  width: 435pt;
+  font-size: 8.1pt;
+  line-height: 1.25;
+  padding-left: 16pt;
+  word-spacing: -1pt; }
+  .multipage-body.to-pdf p {
+    margin-bottom: 12px; }
+  .multipage-body.to-pdf .page {
+    padding: 0;
+    width: auto;
+    height: auto;
+    margin: 0;
+    height: 750px; }
+    .multipage-body.to-pdf .page:first-child {
+      padding-top: 10px;
+      margin-bottom: 50px; }
+    .multipage-body.to-pdf .page.num-bottom-center::after {
+      top: auto;
+      bottom: 0;
+      font-size: 8pt; }
+    .multipage-body.to-pdf .page.num-bottom-center:first-child::after {
+      bottom: -2pt; }
+  .multipage-body.to-pdf .card-body .row > div {
+    padding: 2pt 5pt; }
+  .multipage-body.to-pdf .card {
+    font-size: 8pt !important;
+    line-height: 1.2; }
+  .multipage-body.to-pdf .card-header {
+    padding: 3pt 4pt; }
+  .multipage-body.to-pdf .card-item > span {
+    padding: 1pt 2pt 2pt;
+    line-height: 1.3; }
+  .multipage-body.to-pdf .row:not(.no-gutters) {
+    margin-right: -6pt;
+    margin-left: -6pt; }
+    .multipage-body.to-pdf .row:not(.no-gutters) > div {
+      padding-left: 6pt;
+      padding-right: 6pt; }
+
+.card {
+  border: 1px solid #000; }
+  .card span[contenteditable="true"] {
+    font-weight: 700;
+    outline: none; }
+  .card .input-field {
+    border-bottom: 0; }
+
+.card-header {
+  padding: 10px;
+  background-color: #f7f8fc;
+  border-bottom: 1px solid #000;
+  font-weight: 700; }
+
+.card-body .row > div {
+  padding: 8px 10px; }
+  .card-body .row > div + div {
+    border-left: 1px solid #000; }
+
+.card-body .row + .row {
+  border-top: 1px solid #000; }

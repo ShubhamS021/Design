@@ -1,0 +1,123 @@
+
+@mixin shadow-dreamy($color) {
+  box-shadow: 0 1px 2px rgba($color, 0.07),
+              0 2px 4px rgba($color, 0.07),
+              0 4px 8px rgba($color, 0.07),
+              0 8px 16px rgba($color, 0.07),
+              0 16px 32px rgba($color, 0.07),
+              0 32px 64px rgba($color, 0.07);
+}
+
+@mixin shadow-shorter($color) {
+  box-shadow: 0 1px 1px rgba($color, 0.11),
+              0 2px 2px rgba($color, 0.11),
+              0 4px 4px rgba($color, 0.11),
+              0 6px 8px rgba($color, 0.11),
+              0 8px 16px rgba($color, 0.11);
+}
+
+@mixin shadow-longer($color) {
+  box-shadow: 0 2px 1px rgba($color, 0.09),
+              0 4px 2px rgba($color, 0.09),
+              0 8px 4px rgba($color, 0.09),
+              0 16px 8px rgba($color, 0.09),
+              0 32px 16px rgba($color, 0.09);
+}
+
+@mixin shadow-sharp($color) {
+  box-shadow: 0 1px 1px rgba($color, 0.25),
+              0 2px 2px rgba($color, 0.20),
+              0 4px 4px rgba($color, 0.15),
+              0 8px 8px rgba($color, 0.10),
+              0 16px 16px rgba($color, 0.05);
+}
+
+@mixin shadow-diffuse($color) {
+  box-shadow: 0 1px 1px rgba($color, 0.08),
+              0 2px 2px rgba($color, 0.12),
+              0 4px 4px rgba($color, 0.16),
+              0 8px 8px rgba($color, 0.20);
+}
+
+@mixin shadow-smooth($color) {
+  box-shadow: 0 2.8px 2.2px rgba($color, 0.02),
+              0 6.7px 5.3px rgba($color, 0.028),
+              0 12.5px 10px rgba($color, 0.035),
+              0 22.3px 17.9px rgba($color, 0.042),
+              0 41.8px 33.4px rgba($color, 0.05),
+              0 100px 80px rgba($color, 0.07);
+}
+
+@mixin shadow-smoother($color) {
+  box-shadow: 0 2.8px 2.2px rgba($color, 0.024),
+              0 6.7px 5.3px rgba($color, 0.038),
+              0 12.5px 10px rgba($color, 0.05),
+              0 22.3px 17.9px rgba($color, 0.062),
+              0 41.8px 33.4px rgba($color, 0.076),
+              0 100px 80px rgba($color, 0.11);
+}
+
+
+// defined value
+@mixin shadow-dropdown() {
+  box-shadow: $shadow-03,
+              0 1px 2px rgba($color-bg-02, 0.07),
+              0 2px 4px rgba($color-bg-02, 0.07),
+              0 4px 8px rgba($color-bg-02, 0.07),
+              0 8px 16px rgba($color-bg-02, 0.07),
+              0 16px 32px rgba($color-bg-02, 0.07),
+              0 32px 64px rgba($color-bg-02, 0.07);
+}
+
+
+//skeleton loader animation
+@mixin skeleton-loader() {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+      90deg,
+      rgba(#fff, 0) 0,
+      rgba(#fff, 0.2) 20%,
+      rgba(#fff, 0.45) 60%,
+      rgba(#fff, 0)
+    );
+    animation: shimmer 1.5s infinite;
+  }
+}
+
+
+// radial progress
+@mixin size($width, $height) {
+  height: $height;
+  width: $width;
+}
+
+@mixin draw-progress($progress, $color) {
+  .pie {
+    .half-circle {
+      border-color: $color;
+    }
+
+    .left-side {
+      transform: rotate($progress * 3.6deg);
+    }
+
+    @if $progress <= 50 {
+      .right-side {
+        display: none;
+      }
+    } @else {
+      clip: rect(auto, auto, auto, auto);
+
+      .right-side {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

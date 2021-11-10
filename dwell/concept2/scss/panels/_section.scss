@@ -1,0 +1,52 @@
+
+.section {
+  .container {
+    max-width: 1440px;
+    padding: 40px;
+  }
+}
+
+.section-header {
+  .container { padding-top: $height-header + 40px; }
+}
+
+.section-alt {
+  background-color: $gray-100;
+
+  .container {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+
+.section-label {
+  color: $primary;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: $ff-primary;
+  letter-spacing: 3px;
+}
+
+.section-title {
+  font-family: $ff-primary;
+  font-weight: 400;
+  letter-spacing: -1px;
+  text-indent: -4px;
+  color: $dark;
+}
+
+.section-subtitle {
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: -.5px;
+  line-height: 1.55;
+}
+
+.section-text {
+  color: $secondary;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+h1.section-title { font-size: 56px; }
+h2.section-title { font-size: 48px; }

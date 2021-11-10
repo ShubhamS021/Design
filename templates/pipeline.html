@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body>
+
+    <div class="content">
+      <div class="container-fluid">
+        <div class="content-navbar content-navbar-pipeline">
+          <nav class="nav nav-group mg-r-10">
+            <a href="pipeline-tasks.html" class="nav-link mn-wd-0-f"><i class="ri-list-check-2"></i><span class="mg-l-5">Tasks</span></a>
+          </nav>
+          <nav id="navGroupProperties" class="nav nav-group mg-r-auto">
+            <a href="" data-toggle="tab" class="nav-link active"><span>Active Leads</span> <small>62</small></a>
+            <div class="dropdown dropdown-more-filter">
+              <a id="moreFilterLink" href="" data-toggle="dropdown" data-display="static" class="dropdown-link"><span>More Filters</span> <i class="ri-code-line"></i></a>
+              <div id="dropdownMoreFilters" class="dropdown-menu">
+                <div class="row row-xs">
+                  <div class="col-4"><div class="dropdown-item"><span>All Leads <small>75</small></span> <a href="#modalEditFilter" data-toggle="modal" class="edit-filter-link"><i class="ri-pencil-line"></i></a></div></div>
+                  <div class="col-4"><div class="dropdown-item"><span>Leased <small>28</small></span> <a href="#modalEditFilter" data-toggle="modal" class="edit-filter-link"><i class="ri-pencil-line"></i></a></div></div>
+                  <div class="col-4"><div class="dropdown-item"><span>Residents <small>34</small></span> <a href="#modalEditFilter" data-toggle="modal" class="edit-filter-link"><i class="ri-pencil-line"></i></a></div></div>
+                  <div class="col-4 mg-t-10"><div class="dropdown-item"><span>My Active Leads <small>16</small></span> <a href="#modalEditFilter" data-toggle="modal" class="edit-filter-link"><i class="ri-pencil-line"></i></a></div></div>
+                  <div class="col-4 mg-t-10"><div class="dropdown-item"><span>Lost Leads <small>4</small></span> <a href="#modalEditFilter" data-toggle="modal" class="edit-filter-link"><i class="ri-pencil-line"></i></a></div></div>
+                  <div class="col-4 mg-t-10"><div class="dropdown-item"><span>Tour Completed <small>68</small></span> <a href="#modalEditFilter" data-toggle="modal" class="edit-filter-link"><i class="ri-pencil-line"></i></a></div></div>
+                  <div class="col-4 mg-t-10"><div class="dropdown-item"><span>Bedroom <small>44</small></span> <a href="#modalEditFilter" data-toggle="modal" class="edit-filter-link"><i class="ri-pencil-line"></i></a></div></div>
+                  <div class="col-4 mg-t-10"><a id="newFilterLink" href="#modalNewFilter" data-toggle="modal" class="btn btn-white btn-with-icon"><i class="ri-add-circle-line"></i> Add New Filter</a></div>
+                </div><!-- row -->
+              </div><!-- dropdown-menu -->
+            </div><!-- dropdown -->
+          </nav>
+
+          <div id="navRightOne" class="navbar-right">
+            <div class="form-search">
+              <i data-feather="search"></i>
+              <input type="text" class="form-control" placeholder="Search leads">
+            </div><!-- form-search -->
+            <a href="#modalNewLead" data-toggle="modal" class="btn btn-primary mg-l-10"><i class="ri-add-circle-fill"></i> New lead</a>
+          </div>
+          <div id="navRightTwo" class="navbar-right d-none">
+            <a id="btnMerge" href="#modalMerge" data-toggle="modal" class="btn btn-primary disabled"><i class="ri-group-fill"></i> Merge</a>
+            <a href="#modalBulkEdit" data-toggle="modal" class="btn btn-primary mg-l-5"><i class="ri-mark-pen-fill"></i> Bulk Edit</a>
+          </div>
+        </div><!-- content-navbar -->
+
+        <table class="table table-alpha table-lead">
+          <thead>
+            <tr>
+              <th><div id="checkAll" class="form-checkbox"><input type="checkbox" name="checkall"></div></th>
+              <th></th>
+              <th><span class="sort">Name</span></th>
+              <th><span class="sort">Stage</span></th>
+              <th><span class="sort">Owner</span></th>
+              <th><span class="sort">Move-in Date</span></th>
+              <th class="text-right"><span class="sort">Days to Move-in</span></th>
+              <th><span class="sort">Next Task</span></th>
+              <th><span class="sort">Create Date</span></th>
+              <th class="text-right">
+                <div class="dropdown dropdown-column">
+                  <a href="" class="dropdown-link" data-toggle="dropdown" data-display="static"><i class="ri-list-settings-line"></i></a>
+                  <div id="dropdownMenuColumn" class="dropdown-menu dropdown-menu-right">
+                    <label class="content-label">Show Columns</label>
+                    <a href="" class="dropdown-item active">Name</a>
+                    <a href="" class="dropdown-item active">Stage</a>
+                    <a href="" class="dropdown-item active">Owner</a>
+                    <a href="" class="dropdown-item active">Move-in Date</a>
+                    <a href="" class="dropdown-item active">Days to Move-in</a>
+                    <a href="" class="dropdown-item active">Next Task</a>
+                    <a href="" class="dropdown-item">Task Due</a>
+                    <a href="" class="dropdown-item">Source</a>
+                    <a href="" class="dropdown-item">Floor Plan</a>
+                    <a href="" class="dropdown-item active">Create Date</a>
+                    <a href="" class="dropdown-item">Aquisition Date</a>
+                    <a href="" class="dropdown-item">Last Activity Date</a>
+                    <a href="" class="dropdown-item">Last Followup Date</a>
+                  </div><!-- dropdown-menu -->
+                </div><!-- dropdown -->
+              </th>
+            </tr>
+          </thead>
+          <tbody class="skeleton-content">
+            <tr>
+              <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+              <td><div class="avatar bg-secondary"><span>jw</span></div></td>
+              <td><strong>Joshua Williamson</strong></td>
+              <td><span class="badge badge-completed">Tour completed</span></td>
+              <td>joshua@mark-taylor.com</td>
+              <td>Mar 02, 2020</td>
+              <td class="text-right">20</td>
+              <td><span class="task-label">First follow-up</span></td>
+              <td>Feb 28, 2020</td>
+              <td>
+                <div class="dropdown">
+                  <a href="#" class="dropdown-link" data-toggle="dropdown" data-display="static"><i class="ri-more-2-fill"></i></a>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a href="lead.html" class="dropdown-item"><i class="ri-file-list-2-line"></i> View details</a>
+                    <a href="" class="dropdown-item"><i class="ri-task-line"></i> Add task</a>
+                    <a href="" class="dropdown-item"><i class="ri-sticky-note-line"></i> Add note</a>
+                    <a href="" class="dropdown-item"><i class="ri-delete-bin-line"></i> Delete</a>
+                  </div><!-- dropdown-menu -->
+                </div><!-- dropdown -->
+              </td>
+            </tr>
+            <tr>
+              <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+              <td><div class="avatar bg-danger"><span>as</span></div></td>
+              <td><strong>Aaron Sweeney</strong></td>
+              <td><span class="badge badge-inquiry">Inquiry</span></td>
+              <td>admin@liftlytics.com</td>
+              <td>Feb 25, 2020</td>
+              <td class="text-right">10</td>
+              <td><span class="task-label">First follow-up</span></td>
+              <td>Feb 28, 2020</td>
+              <td>
+                <div class="dropdown">
+                  <a href="#" class="dropdown-link" data-toggle="dropdown" data-display="static"><i class="ri-more-2-fill"></i></a>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a href="lead.html" class="dropdown-item"><i class="ri-file-list-2-line"></i> View details</a>
+                    <a href="" class="dropdown-item"><i class="ri-task-line"></i> Add task</a>
+                    <a href="" class="dropdown-item"><i class="ri-sticky-note-line"></i> Add note</a>
+                    <a href="" class="dropdown-item"><i class="ri-delete-bin-line"></i> Delete</a>
+                  </div><!-- dropdown-menu -->
+                </div><!-- dropdown -->
+              </td>
+            </tr>
+            <tr>
+              <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+              <td><div class="avatar bg-warning"><span>tw</span></div></td>
+              <td><strong>Thomas Wheeler</strong></td>
+              <td><span class="badge badge-tourset">Tour Set</span></td>
+              <td>admin@liftlytics.com</td>
+              <td>Feb 24, 2020</td>
+              <td class="text-right">8</td>
+              <td><span class="task-label">Second follow-up</span></td>
+              <td>Feb 23, 2020</td>
+              <td>
+                <div class="dropdown">
+                  <a href="#" class="dropdown-link" data-toggle="dropdown" data-display="static"><i class="ri-more-2-fill"></i></a>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a href="lead.html" class="dropdown-item"><i class="ri-file-list-2-line"></i> View details</a>
+                    <a href="" class="dropdown-item"><i class="ri-task-line"></i> Add task</a>
+                    <a href="" class="dropdown-item"><i class="ri-sticky-note-line"></i> Add note</a>
+                    <a href="" class="dropdown-item"><i class="ri-delete-bin-line"></i> Delete</a>
+                  </div><!-- dropdown-menu -->
+                </div><!-- dropdown -->
+              </td>
+            </tr>
+            <tr>
+              <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+              <td><div class="avatar bg-success"><span>lc</span></div></td>
+              <td><strong>Larry Conley</strong></td>
+              <td><span class="badge badge-apppending">Application pending</span></td>
+              <td>admin@liftlytics.com</td>
+              <td>Feb 21, 2020</td>
+              <td class="text-right">9</td>
+              <td><span class="task-label">Second follow-up</span></td>
+              <td>Feb 20, 2020</td>
+              <td>
+                <div class="dropdown">
+                  <a href="#" class="dropdown-link" data-toggle="dropdown" data-display="static"><i class="ri-more-2-fill"></i></a>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a href="lead.html" class="dropdown-item"><i class="ri-file-list-2-line"></i> View details</a>
+                    <a href="" class="dropdown-item"><i class="ri-task-line"></i> Add task</a>
+                    <a href="" class="dropdown-item"><i class="ri-sticky-note-line"></i> Add note</a>
+                    <a href="" class="dropdown-item"><i class="ri-delete-bin-line"></i> Delete</a>
+                  </div><!-- dropdown-menu -->
+                </div><!-- dropdown -->
+              </td>
+            </tr>
+            <tr>
+              <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+              <td><div class="avatar bg-secondary"><span>ks</span></div></td>
+              <td><strong>Karen Sanders</strong></td>
+              <td><span class="badge badge-tourcompleted">Tour completed</span></td>
+              <td>admin@liftlytics.com</td>
+              <td>Feb 18, 2020</td>
+              <td class="text-right">9</td>
+              <td><span class="task-label">First follow-up</span></td>
+              <td>Feb 17, 2020</td>
+              <td>
+                <div class="dropdown">
+                  <a href="#" class="dropdown-link" data-toggle="dropdown" data-display="static"><i class="ri-more-2-fill"></i></a>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a href="lead.html" class="dropdown-item"><i class="ri-file-list-2-line"></i> View details</a>
+                    <a href="" class="dropdown-item"><i class="ri-task-line"></i> Add task</a>
+                    <a href="" class="dropdown-item"><i class="ri-sticky-note-line"></i> Add note</a>
+                    <a href="" class="dropdown-item"><i class="ri-delete-bin-line"></i> Delete</a>
+                  </div><!-- dropdown-menu -->
+                </div><!-- dropdown -->
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="skeleton">
+            <tr>
+              <td><div class="skeleton-checkbox"></div></td>
+              <td><div class="skeleton-avatar"></div></td>
+              <td><div class="skeleton-text wd-100"></div></td>
+              <td><div class="skeleton-text wd-100"></div></td>
+              <td><div class="skeleton-text wd-150"></div></td>
+              <td><div class="skeleton-text wd-100"></div></td>
+              <td class="text-right"><div class="skeleton-text wd-30"></div></td>
+              <td><div class="skeleton-text wd-80"></div></td>
+              <td><div class="skeleton-text wd-100"></div></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><div class="skeleton-checkbox"></div></td>
+              <td><div class="skeleton-avatar"></div></td>
+              <td><div class="skeleton-text wd-100"></div></td>
+              <td><div class="skeleton-text wd-100"></div></td>
+              <td><div class="skeleton-text wd-150"></div></td>
+              <td><div class="skeleton-text wd-100"></div></td>
+              <td class="text-right"><div class="skeleton-text wd-30"></div></td>
+              <td><div class="skeleton-text wd-80"></div></td>
+              <td><div class="skeleton-text wd-100"></div></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><div class="skeleton-checkbox"></div></td>
+              <td><div class="skeleton-avatar"></div></td>
+              <td><div class="skeleton-text wd-100"></div></td>
+              <td><div class="skeleton-text wd-100"></div></td>
+              <td><div class="skeleton-text wd-150"></div></td>
+              <td><div class="skeleton-text wd-100"></div></td>
+              <td class="text-right"><div class="skeleton-text wd-30"></div></td>
+              <td><div class="skeleton-text wd-80"></div></td>
+              <td><div class="skeleton-text wd-100"></div></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><div class="skeleton-checkbox"></div></td>
+              <td><div class="skeleton-avatar"></div></td>
+              <td><div class="skeleton-text wd-100"></div></td>
+              <td><div class="skeleton-text wd-100"></div></td>
+              <td><div class="skeleton-text wd-150"></div></td>
+              <td><div class="skeleton-text wd-100"></div></td>
+              <td class="text-right"><div class="skeleton-text wd-30"></div></td>
+              <td><div class="skeleton-text wd-80"></div></td>
+              <td><div class="skeleton-text wd-100"></div></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><div class="skeleton-checkbox"></div></td>
+              <td><div class="skeleton-avatar"></div></td>
+              <td><div class="skeleton-text wd-100"></div></td>
+              <td><div class="skeleton-text wd-100"></div></td>
+              <td><div class="skeleton-text wd-150"></div></td>
+              <td><div class="skeleton-text wd-100"></div></td>
+              <td class="text-right"><div class="skeleton-text wd-30"></div></td>
+              <td><div class="skeleton-text wd-80"></div></td>
+              <td><div class="skeleton-text wd-100"></div></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="content-navbar align-items-center pd-10 pd-l-20">
+          <div class="pager-num mg-r-auto">
+            Show
+            <select class="custom-select">
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="50">50</option>
+            </select>
+            items
+          </div><!-- pager-num -->
+          <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-lead mg-b-0">
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true"><i class="ri-arrow-right-s-line"></i></span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div><!-- content-navbar -->
+
+      </div><!-- container-fluid -->
+    </div><!-- content -->
+
+    <div class="modal modal-more-filter fade" id="modalMoreFilter" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title">Add New Filter</h5>
+              <p class="modal-subtitle">Fill in one or more conditions with the desired settings.</p>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="form-label">Filter Name</label>
+              <input type="text" class="form-control mx-wd-85p" placeholder="Enter name of filter">
+            </div><!-- form-group -->
+            <div class="form-group d-flex">
+              <span class="mg-r-20">Show leads that match the following conditions: </span>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" checked>
+                <label class="custom-control-label" for="customRadioInline1">All</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline2">Any</label>
+              </div>
+            </div><!-- form-group -->
+            <div id="conditionGroup">
+              <div class="row row-xs">
+                <div class="col-4">
+                  <select class="custom-select">
+                      <option value="1">Baths</option>
+                      <option value="2">Beds</option>
+                      <option value="3">Best Contact Method</option>
+                      <option value="4">Best Contact Time</option>
+                      <option value="5" selected>Created at</option>
+                      <option value="6">Days to move-in</option>
+                      <option value="7">Desired rent</option>
+                    </select>
+                </div><!-- col -->
+                <div class="col-3">
+                  <select class="custom-select">
+                      <option value="1" selected>is</option>
+                      <option value="2">is not</option>
+                      <option value="3">is one of</option>
+                      <option value="4">is not set</option>
+                    </select>
+                </div><!-- col -->
+                <div class="col">
+                  <input type="text" class="form-control wd-100p" placeholder="Filter value">
+                </div><!-- col -->
+                <div class="col-1">
+                  <a href="" class="link-remove"><i class="ri-close-circle-fill"></i></a>
+                </div>
+              </div><!-- row -->
+            </div>
+            <a id="addCondition" href="" class="add-condition"><span>&plus;</span> Add Condition</a>
+          </div><!-- modal-body -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Save &amp; Apply</button>
+          </div>
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-more-filter fade" id="modalEditFilterOld" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title">Edit Filter</h5>
+              <p class="modal-subtitle">Fill in or edit one or more conditions with the desired settings.</p>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="form-label">Filter Name</label>
+              <input type="text" class="form-control mx-wd-85p" placeholder="Enter name of filter" value="Filter A01">
+            </div><!-- form-group -->
+            <div class="form-group d-flex">
+              <span class="mg-r-20">Show leads that match the following conditions: </span>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline3" name="customRadioInline2" class="custom-control-input" checked>
+                <label class="custom-control-label" for="customRadioInline3">All</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline4" name="customRadioInline2" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline4">Any</label>
+              </div>
+            </div><!-- form-group -->
+            <div id="conditionGroup2">
+              <div class="row row-xs">
+                <div class="col-4">
+                  <select class="custom-select">
+                      <option value="1">Baths</option>
+                      <option value="2">Beds</option>
+                      <option value="3">Best Contact Method</option>
+                      <option value="4">Best Contact Time</option>
+                      <option value="5" selected>Created at</option>
+                      <option value="6">Days to move-in</option>
+                      <option value="7">Desired rent</option>
+                    </select>
+                </div><!-- col -->
+                <div class="col-3">
+                  <select class="custom-select">
+                      <option value="1" selected>is</option>
+                      <option value="2">is not</option>
+                      <option value="3">is one of</option>
+                      <option value="4">is not set</option>
+                    </select>
+                </div><!-- col -->
+                <div class="col">
+                  <input type="text" class="form-control wd-100p" placeholder="Filter value">
+                </div><!-- col -->
+                <div class="col-1">
+                  <a href="" class="link-remove"><i class="ri-close-circle-fill"></i></a>
+                </div>
+              </div><!-- row -->
+            </div>
+            <a id="addCondition2" href="" class="add-condition"><span>&plus;</span> Add Condition</a>
+          </div><!-- modal-body -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-more-filter fade" id="modalBulkEdit" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title mg-b-0-f">Bulk Edit Leads</h5>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="form-label">Lead property to update</label>
+              <select class="custom-select">
+                  <option value="1" selected>Stage</option>
+                  <option value="2">Status</option>
+                  <option value="3">Owner</option>
+                </select>
+            </div><!-- form-group -->
+            <div class="form-group">
+              <label class="form-label">Stage value</label>
+              <select class="custom-select">
+                  <option value="">Choose one</option>
+                  <option value="1">Inquiry</option>
+                  <option value="2">Contact made</option>
+                  <option value="3">Tour set</option>
+                  <option value="4">Tour completed</option>
+                  <option value="5">Application pending</option>
+                </select>
+            </div><!-- form-group -->
+          </div><!-- modal-body -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+          </div>
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-more-filter fade" id="modalMerge" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header pd-b-10-f">
+            <div>
+              <h5 class="modal-title mg-b-0-f">Merge Lead Records</h5>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <p class="mg-b-20">Select a primary lead record. All lead detail information from the records below will be merged to the primary record. Note secondary records will be deleted from Dwell.</p>
+            <div class="card card-merge">
+              <div class="card-header">
+                <h6>Jake McTesterss</h6>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                  <label class="custom-control-label" for="customRadio1">Set as Primary</label>
+                </div>
+              </div><!-- card-header -->
+              <div class="card-body">
+                <div class="row no-gutters">
+                  <div class="col-4">Lead owner:</div>
+                  <div class="col">contractor@liftlytics.com</div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-4">Lead source:</div>
+                  <div class="col">Standalone Website</div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-4">Status:</div>
+                  <div class="col">Active</div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-4">Stage:</div>
+                  <div class="col">Inquiry</div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-4">Created date:</div>
+                  <div class="col">Oct 16, 2020</div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-4">Move-in-date:</div>
+                  <div class="col">Oct 23, 2020</div>
+                </div>
+              </div><!-- card-body -->
+            </div><!-- card -->
+
+            <div class="card card-merge">
+              <div class="card-header">
+                <h6>Tory Mctesteralot</h6>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio2">Set as Primary</label>
+                </div>
+              </div><!-- card-header -->
+              <div class="card-body">
+                <div class="row no-gutters">
+                  <div class="col-4">Lead owner:</div>
+                  <div class="col">admin@liftlytics.com</div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-4">Lead source:</div>
+                  <div class="col">Standalone Website</div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-4">Status:</div>
+                  <div class="col">Active</div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-4">Stage:</div>
+                  <div class="col">Inquiry</div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-4">Created date:</div>
+                  <div class="col">Oct 16, 2020</div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-4">Move-in-date:</div>
+                  <div class="col">Oct 23, 2020</div>
+                </div>
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- modal-body -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Merge</button>
+          </div>
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-new-filter fade" id="modalNewFilter" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title">Add New Filter</h5>
+              <p class="modal-subtitle">Fill in one or more conditions with the desired settings.</p>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="form-label">Filter Name</label>
+              <input type="text" class="form-control" placeholder="Enter name of filter">
+            </div><!-- form-group -->
+
+            <div class="row row-xs">
+              <div class="col-9">
+                <div class="filtering-label mg-b-5">
+                  <div>Filtering Criteria</div>
+                  <div class="filtering-ckbox"><span class="filter-label-inc">Include</span></div>
+                  <div class="filtering-ckbox"><span class="filter-label-exc">Exclude</span></div>
+                </div><!-- row -->
+                <div class="filtering-criteria mg-b-10">
+                  <div class="filtering-item">
+                    <div class="filtering-remove"><a href=""><i class="ri-close-line"></i></a></div>
+                    <div class="filtering-type">
+                      <select class="custom-select">
+                        <option value="1">Vehicles</option>
+                        <option value="2" selected>Created at</option>
+                        <option value="3">Status</option>
+                      </select>
+                    </div>
+                    <div class="filtering-condition">
+                      <select class="custom-select">
+                        <option value="1">is between</option>
+                        <option value="2" selected>is on</option>
+                        <option value="3">is</option>
+                      </select>
+                    </div>
+                    <div class="filtering-value">
+                      <input type="text" class="form-control" placeholder="MM/DD/YYYY">
+                    </div><!-- filtering-value -->
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto"><input type="checkbox" name="checkitem"></div></div>
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto"><input type="checkbox" name="checkitem"></div></div>
+                  </div><!-- filtering-item -->
+                  <div class="filtering-item">
+                    <div class="filtering-remove"><a href=""><i class="ri-close-line"></i></a></div>
+                    <div class="filtering-type">
+                      <select class="custom-select">
+                        <option value="1">Vehicles</option>
+                        <option value="2">Created at</option>
+                        <option value="3">Status</option>
+                      </select>
+                    </div>
+                    <div class="filtering-condition">
+                      <select class="custom-select">
+                        <option value="1">is between</option>
+                        <option value="2">is on</option>
+                        <option value="3">is</option>
+                      </select>
+                    </div>
+                    <div class="filtering-value is-between">
+                      <input type="text" class="form-control" placeholder="Filter value">
+                      <span>and</span>
+                      <input type="text" class="form-control" placeholder="Filter value">
+                    </div><!-- filtering-value -->
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto checked"><input type="checkbox" name="checkitem" checked></div></div>
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto"><input type="checkbox" name="checkitem"></div></div>
+                  </div><!-- filtering-item -->
+                  <div class="filtering-item">
+                    <div class="filtering-remove"><a href=""><i class="ri-close-line"></i></a></div>
+                    <div class="filtering-type">
+                      <select class="custom-select">
+                        <option value="1">Vehicles</option>
+                        <option value="2" selected>Created at</option>
+                        <option value="3">Status</option>
+                      </select>
+                    </div>
+                    <div class="filtering-condition">
+                      <select class="custom-select">
+                        <option value="1">is between</option>
+                        <option value="2" selected>is on</option>
+                        <option value="3">is</option>
+                      </select>
+                    </div>
+                    <div class="filtering-value">
+                      <input type="text" class="form-control" placeholder="MM/DD/YYYY">
+                    </div><!-- filtering-value -->
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto checked"><input type="checkbox" name="checkitem" checked></div></div>
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto"><input type="checkbox" name="checkitem"></div></div>
+                  </div><!-- filtering-item -->
+                  <div class="filtering-item">
+                    <div class="filtering-remove"><a href=""><i class="ri-close-line"></i></a></div>
+                    <div class="filtering-type">
+                      <select class="custom-select">
+                        <option value="1">Vehicles</option>
+                        <option value="2">Created at</option>
+                        <option value="3" selected>Status</option>
+                      </select>
+                    </div>
+                    <div class="filtering-condition">
+                      <select class="custom-select">
+                        <option value="1">is between</option>
+                        <option value="2">is on</option>
+                        <option value="3" selected>is</option>
+                      </select>
+                    </div>
+                    <div class="filtering-value">
+                      <select class="custom-select">
+                        <option value="1">Active</option>
+                        <option value="2">Inactive</option>
+                      </select>
+                    </div><!-- filtering-value -->
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto checked"><input type="checkbox" name="checkitem" checked></div></div>
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto"><input type="checkbox" name="checkitem"></div></div>
+                  </div><!-- filtering-item -->
+                </div><!-- filtering-criteria -->
+                <a href="" class="filtering-add"><i class="ri-add-circle-fill"></i> <span>Add Condition</span></a>
+              </div><!-- col -->
+              <div class="col-3">
+                <div class="text-center text-sm mg-b-20">Total Estimated Leads: <strong>75</strong></div>
+                <div class="filter-chart mg-x-auto">
+                  <label>All Leads</label>
+                  <div class="chart-one">
+                    <div>Vehicles</div>
+                    <div>Created at</div>
+                    <div>Status</div>
+                  </div>
+                </div>
+              </div><!-- col -->
+            </div><!-- row -->
+          </div><!-- modal-body -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Save &amp; Apply</button>
+          </div>
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-new-filter fade" id="modalNewFilter2" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title">Add New Filter</h5>
+              <p class="modal-subtitle">Fill in one or more conditions with the desired settings.</p>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="form-label">Filter Name</label>
+              <input type="text" class="form-control" placeholder="Enter name of filter">
+            </div><!-- form-group -->
+
+            <div class="row row-xs">
+              <div class="col-9">
+                <div class="filtering-label mg-b-5">
+                  <div>Filtering Criteria</div>
+                  <div class="filtering-ckbox"><span class="filter-label-inc">Include</span></div>
+                  <div class="filtering-ckbox"><span class="filter-label-exc">Exclude</span></div>
+                </div><!-- row -->
+                <div class="filtering-criteria mg-b-10">
+                  <div class="filtering-item">
+                    <div class="filtering-remove"><a href=""><i class="ri-close-line"></i></a></div>
+                    <div class="filtering-type">
+                      <select class="custom-select">
+                        <option value="1">Vehicles</option>
+                        <option value="2" selected>Created at</option>
+                        <option value="3">Status</option>
+                      </select>
+                    </div>
+                    <div class="filtering-condition">
+                      <select class="custom-select">
+                        <option value="1">is between</option>
+                        <option value="2" selected>is on</option>
+                        <option value="3">is</option>
+                      </select>
+                    </div>
+                    <div class="filtering-value">
+                      <input type="text" class="form-control" placeholder="MM/DD/YYYY">
+                    </div><!-- filtering-value -->
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto"><input type="checkbox" name="checkitem"></div></div>
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto"><input type="checkbox" name="checkitem"></div></div>
+                  </div><!-- filtering-item -->
+                  <div class="filtering-item">
+                    <div class="filtering-remove"><a href=""><i class="ri-close-line"></i></a></div>
+                    <div class="filtering-type">
+                      <select class="custom-select">
+                        <option value="1">Vehicles</option>
+                        <option value="2">Created at</option>
+                        <option value="3">Status</option>
+                      </select>
+                    </div>
+                    <div class="filtering-condition">
+                      <select class="custom-select">
+                        <option value="1">is between</option>
+                        <option value="2">is on</option>
+                        <option value="3">is</option>
+                      </select>
+                    </div>
+                    <div class="filtering-value is-between">
+                      <input type="text" class="form-control" placeholder="Filter value">
+                      <span>and</span>
+                      <input type="text" class="form-control" placeholder="Filter value">
+                    </div><!-- filtering-value -->
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto checked"><input type="checkbox" name="checkitem" checked></div></div>
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto"><input type="checkbox" name="checkitem"></div></div>
+                  </div><!-- filtering-item -->
+                  <div class="filtering-item">
+                    <div class="filtering-remove"><a href=""><i class="ri-close-line"></i></a></div>
+                    <div class="filtering-type">
+                      <select class="custom-select">
+                        <option value="1">Vehicles</option>
+                        <option value="2" selected>Created at</option>
+                        <option value="3">Status</option>
+                      </select>
+                    </div>
+                    <div class="filtering-condition">
+                      <select class="custom-select">
+                        <option value="1">is between</option>
+                        <option value="2" selected>is on</option>
+                        <option value="3">is</option>
+                      </select>
+                    </div>
+                    <div class="filtering-value">
+                      <input type="text" class="form-control" placeholder="MM/DD/YYYY">
+                    </div><!-- filtering-value -->
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto checked"><input type="checkbox" name="checkitem" checked></div></div>
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto"><input type="checkbox" name="checkitem"></div></div>
+                  </div><!-- filtering-item -->
+                  <div class="filtering-item">
+                    <div class="filtering-remove"><a href=""><i class="ri-close-line"></i></a></div>
+                    <div class="filtering-type">
+                      <select class="custom-select">
+                        <option value="1">Vehicles</option>
+                        <option value="2">Created at</option>
+                        <option value="3" selected>Status</option>
+                      </select>
+                    </div>
+                    <div class="filtering-condition">
+                      <select class="custom-select">
+                        <option value="1">is between</option>
+                        <option value="2">is on</option>
+                        <option value="3" selected>is</option>
+                      </select>
+                    </div>
+                    <div class="filtering-value">
+                      <select class="custom-select">
+                        <option value="1">Active</option>
+                        <option value="2">Inactive</option>
+                      </select>
+                    </div><!-- filtering-value -->
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto checked"><input type="checkbox" name="checkitem" checked></div></div>
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto"><input type="checkbox" name="checkitem"></div></div>
+                  </div><!-- filtering-item -->
+                </div><!-- filtering-criteria -->
+                <a href="" class="filtering-add"><i class="ri-add-circle-fill"></i> <span>Add Condition</span></a>
+              </div><!-- col -->
+              <div class="col-3">
+                <div class="text-center text-sm mg-b-10">Total Estimated Leads: <strong>75</strong></div>
+                <div class="filter-progress mg-b-10"><div class="wd-80p"></div><span>250</span></div>
+                <div class="filter-progress mg-b-10"><div class="wd-60p"></div><span>150</span></div>
+                <div class="filter-progress mg-b-10"><div class="wd-40p"></div><span>75</span></div>
+              </div><!-- col -->
+            </div><!-- row -->
+          </div><!-- modal-body -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Save &amp; Apply</button>
+          </div>
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-new-filter fade" id="modalEditFilter" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title">Edit Filter</h5>
+              <p class="modal-subtitle">Fill in one or more conditions with the desired settings.</p>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="form-label">Filter Name</label>
+              <input type="text" class="form-control" placeholder="Enter name of filter" value="Filter B10">
+            </div><!-- form-group -->
+
+            <div class="row row-xs">
+              <div class="col-9">
+                <div class="filtering-label mg-b-5">
+                  <div>Filtering Criteria</div>
+                  <div class="filtering-ckbox"><span class="filter-label-inc">Include</span></div>
+                  <div class="filtering-ckbox"><span class="filter-label-exc">Exclude</span></div>
+                </div><!-- row -->
+                <div class="filtering-criteria mg-b-10">
+                  <div class="filtering-item">
+                    <div class="filtering-remove"><a href=""><i class="ri-close-line"></i></a></div>
+                    <div class="filtering-type">
+                      <select class="custom-select">
+                        <option value="1">Vehicles</option>
+                        <option value="2" selected>Created at</option>
+                        <option value="3">Status</option>
+                      </select>
+                    </div>
+                    <div class="filtering-condition">
+                      <select class="custom-select">
+                        <option value="1">is between</option>
+                        <option value="2" selected>is on</option>
+                        <option value="3">is</option>
+                      </select>
+                    </div>
+                    <div class="filtering-value">
+                      <input type="text" class="form-control" placeholder="MM/DD/YYYY">
+                    </div><!-- filtering-value -->
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto"><input type="checkbox" name="checkitem"></div></div>
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto"><input type="checkbox" name="checkitem"></div></div>
+                  </div><!-- filtering-item -->
+                  <div class="filtering-item">
+                    <div class="filtering-remove"><a href=""><i class="ri-close-line"></i></a></div>
+                    <div class="filtering-type">
+                      <select class="custom-select">
+                        <option value="1">Vehicles</option>
+                        <option value="2">Created at</option>
+                        <option value="3">Status</option>
+                      </select>
+                    </div>
+                    <div class="filtering-condition">
+                      <select class="custom-select">
+                        <option value="1">is between</option>
+                        <option value="2">is on</option>
+                        <option value="3">is</option>
+                      </select>
+                    </div>
+                    <div class="filtering-value is-between">
+                      <input type="text" class="form-control" placeholder="Filter value">
+                      <span>and</span>
+                      <input type="text" class="form-control" placeholder="Filter value">
+                    </div><!-- filtering-value -->
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto checked"><input type="checkbox" name="checkitem" checked></div></div>
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto"><input type="checkbox" name="checkitem"></div></div>
+                  </div><!-- filtering-item -->
+                  <div class="filtering-item">
+                    <div class="filtering-remove"><a href=""><i class="ri-close-line"></i></a></div>
+                    <div class="filtering-type">
+                      <select class="custom-select">
+                        <option value="1">Vehicles</option>
+                        <option value="2" selected>Created at</option>
+                        <option value="3">Status</option>
+                      </select>
+                    </div>
+                    <div class="filtering-condition">
+                      <select class="custom-select">
+                        <option value="1">is between</option>
+                        <option value="2" selected>is on</option>
+                        <option value="3">is</option>
+                      </select>
+                    </div>
+                    <div class="filtering-value">
+                      <input type="text" class="form-control" placeholder="MM/DD/YYYY">
+                    </div><!-- filtering-value -->
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto checked"><input type="checkbox" name="checkitem" checked></div></div>
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto"><input type="checkbox" name="checkitem"></div></div>
+                  </div><!-- filtering-item -->
+                  <div class="filtering-item">
+                    <div class="filtering-remove"><a href=""><i class="ri-close-line"></i></a></div>
+                    <div class="filtering-type">
+                      <select class="custom-select">
+                        <option value="1">Vehicles</option>
+                        <option value="2">Created at</option>
+                        <option value="3" selected>Status</option>
+                      </select>
+                    </div>
+                    <div class="filtering-condition">
+                      <select class="custom-select">
+                        <option value="1">is between</option>
+                        <option value="2">is on</option>
+                        <option value="3" selected>is</option>
+                      </select>
+                    </div>
+                    <div class="filtering-value">
+                      <select class="custom-select">
+                        <option value="1">Active</option>
+                        <option value="2">Inactive</option>
+                      </select>
+                    </div><!-- filtering-value -->
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto checked"><input type="checkbox" name="checkitem" checked></div></div>
+                    <div class="filtering-ckbox"><div class="form-checkbox mg-x-auto"><input type="checkbox" name="checkitem"></div></div>
+                  </div><!-- filtering-item -->
+                </div><!-- filtering-criteria -->
+                <a href="" class="filtering-add"><i class="ri-add-circle-fill"></i> <span>Add Condition</span></a>
+              </div><!-- col -->
+              <div class="col-3">
+                <div class="text-center text-sm">Total Estimated Leads: <strong>75</strong></div>
+              </div><!-- col -->
+            </div><!-- row -->
+          </div><!-- modal-body -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Save Changes</button>
+          </div>
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+
+    <!-- RELOGIN -->
+    <div class="modal modal-switch-account" id="modalRelogin" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title">Enter Password</h5>
+              <p class="modal-subtitle">Due to inactivity, your Dwell session has ended. Please log back in below.</p>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="media active mg-b-25">
+              <div class="avatar avatar-lg"><span>M</span></div>
+              <div class="media-body">
+                <h6>Mienard Lumaad</h6>
+                <p>mienard@liftlytics.com</p>
+              </div><!-- media-body -->
+            </div><!-- media -->
+
+            <div class="switch-password">
+              <div class="form-group mg-b-3-f">
+                <input type="password" class="form-control" placeholder="Enter account password">
+              </div>
+              <div class="form-group text-right mg-b-25-f">
+                <a href="forgot.html" class="text-sm">Forgot password?</a>
+              </div>
+              <div class="d-flex">
+                <button class="btn btn-primary flex-fill justify-content-center">Login</button>
+                <button id="switchAccount2" class="btn btn-white flex-fill justify-content-center mg-l-10">Switch Account</button>
+              </div>
+            </div>
+          </div><!-- modal-body -->
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-switch-account" id="modalSwitchReloginAccount" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title">Switch Accounts</h5>
+              <p class="modal-subtitle">
+                <span class="d-none">Enter account password:</span>
+              </p>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div id="curUser2" class="media current-user active mg-b-25">
+              <div class="avatar avatar-lg"><span>M</span></div>
+              <div class="media-body">
+                <h6>Mienard Lumaad</h6>
+                <p>mienard@liftlytics.com</p>
+                <i class="text-muted text-sm op-5">Logged out due to inactivity</i>
+              </div><!-- media-body -->
+            </div><!-- media -->
+
+            <div id="acPword2" class="switch-password account-password d-none">
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="Enter account password">
+              </div>
+              <div class="d-flex">
+                <button class="btn btn-primary flex-fill justify-content-center">Switch Account</button>
+                <button id="cancelSwitch2" class="btn btn-white flex-fill justify-content-center cancel-switch mg-l-10">Cancel</button>
+              </div>
+            </div>
+
+            <div id="acGroup2" class="account-group">
+              <label class="content-label mg-b-15">Switch Account to:</label>
+              <a href="" class="media media-account2">
+                <div class="avatar avatar-lg bg-gray-700"><span>J</span></div>
+                <div class="media-body">
+                  <h6>Jakub Lemiszewski</h6>
+                  <p>jakubinformatics@gmail.com</p>
+                </div><!-- media-body -->
+              </a><!-- media -->
+              <a href="" class="media media-account2">
+                <div class="avatar avatar-lg bg-primary"><span>P</span></div>
+                <div class="media-body">
+                  <h6>Property Manager</h6>
+                  <p>waterside@mark-taylor.com</p>
+                </div><!-- media-body -->
+              </a><!-- media -->
+            </div>
+
+          </div><!-- modal-body -->
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/select2/js/select2.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('[data-toggle="tooltip"]').tooltip({
+          container: $('.content')
+        });
+
+        $('.nav-item-pipeline .nav-link').addClass('active');
+
+        $('#dropdownMenuColumn .dropdown-item').on('click', function(e){
+          e.stopPropagation();
+          e.preventDefault();
+          $(this).toggleClass('active');
+        });
+
+        // unselect filter from more filter dropdown when clicking any of main filter
+        $('#navGroupProperties .nav-link').on('click', function(){
+          $('#dropdownMoreFilters .dropdown-item').removeClass('active');
+          $('#moreFilterLink').removeClass('active');
+          $('#moreFilterLink span').text('More Filters');
+        });
+
+        // select filter from more filter dropdown
+        $('#dropdownMoreFilters').on('click', function(e) {
+          if(!$(e.target).is('#newFilterLink')) {
+
+            var filter = $(e.target).closest('.dropdown-item');
+            var efilter = $(e.target).closest('.edit-filter-link');
+            var flabel = filter.find('span').text();
+
+            if(filter.length && !efilter.length) {
+              e.stopPropagation();
+
+              filter.addClass('active');
+              filter.siblings('.dropdown-item').removeClass('active');
+
+              $('#moreFilterLink').addClass('active');
+              $('#moreFilterLink span').text(flabel);
+
+              // unselect selected main filter
+              $('#navGroupProperties .nav-link').removeClass('active');
+
+              $(this).closest('.dropdown-menu').removeClass('show');
+              $(this).closest('.dropdown').removeClass('show');
+
+            }
+          }
+        });
+
+        // check all leads
+        $('#checkAll').bind('click', function(e){
+          var checkedLeads = $('tbody .form-checkbox input:checked');
+          $('#navRightOne').toggleClass('d-none', (checkedLeads.length > 0));
+          $('#navRightTwo').toggleClass('d-none', !(checkedLeads.length > 0));
+          $('#btnMerge').toggleClass('disabled', (checkedLeads.length < 2));
+        });
+
+        // enable/disable merge/bulk edit on page load
+        var checkedLeads = $('tbody .form-checkbox input:checked');
+        $('#navRightOne').toggleClass('d-none', (checkedLeads.length > 0));
+        $('#navRightTwo').toggleClass('d-none', !(checkedLeads.length > 0));
+        $('#btnMerge').toggleClass('disabled', (checkedLeads.length < 2));
+
+        // enable/disable merge/bulk edit
+        $('tbody .form-checkbox').bind('click', function(e){
+          var totalCheckbox = $(this).closest('tbody').find('.form-checkbox input');
+          var hasCheck = $(this).closest('tbody').find('.form-checkbox input:checked');
+
+          $('#navRightOne').toggleClass('d-none', (hasCheck.length > 0));
+          $('#navRightTwo').toggleClass('d-none', !(hasCheck.length > 0));
+
+          $('#btnMerge').toggleClass('disabled', (hasCheck.length < 2));
+
+          $('#checkAll').toggleClass('checked', (totalCheckbox.length == hasCheck.length));
+          $('#checkAll input').prop('checked', (hasCheck.length == hasCheck.length));
+        });
+
+
+        // view lead details
+        $('.table-lead td:first-child ~ td:not(:last-child)').on('click', function() {
+          window.location.href = 'pipeline-lead.html';
+        });
+
+        $('#selectSource').select2({
+          minimumResultsForSearch: Infinity,
+          placeholder: 'Select source',
+          width: '100%',
+          dropdownParent: $('#modalNewLead')
+        });
+
+        $('#selectFloorPlan').select2({
+          minimumResultsForSearch: Infinity,
+          placeholder: 'Select floor plan',
+          width: '100%',
+          dropdownParent: $('#modalNewLead')
+        });
+
+
+        // For new filter
+        $('#addCondition').on('click', function(e){
+          e.preventDefault();
+          $('#conditionGroup .row:first-child').clone().appendTo('#conditionGroup');
+        });
+
+        $('#conditionGroup').on('click', '.link-remove', function(e){
+          e.preventDefault();
+          $(this).closest('.row').remove();
+        });
+
+        // For edit filter
+        $('#addCondition2').on('click', function(e){
+          e.preventDefault();
+          $('#conditionGroup2 .row:first-child').clone().appendTo('#conditionGroup2');
+        });
+
+        $('#conditionGroup2').on('click', '.link-remove', function(e){
+          e.preventDefault();
+          $(this).closest('.row').remove();
+        });
+
+
+        //-----------
+        // New filter v2
+        $('.filtering-add').on('click', function(e){
+          e.preventDefault();
+
+          var fc = $(this).siblings('.filtering-criteria');
+          $(fc).find('.filtering-item:first-child').clone().appendTo(fc);
+        });
+
+        // Remove filter
+        $('.filtering-criteria').on('click', '.filtering-remove a', function(e){
+          e.preventDefault();
+          $(this).closest('.filtering-item').remove();
+        });
+
+        $('#switchAccount2').on('click', function(e){
+          $('#modalSwitchReloginAccount').modal('show');
+          $('#modalRelogin').modal('hide');
+        });
+
+        $('#curUser2').on('click', function(e){
+          $('#modalSwitchReloginAccount').modal('hide');
+          $('#modalRelogin').modal('show');
+        });
+
+        $('.media-account2').on('click', function(e){
+          e.preventDefault();
+          var html = $(this).html();
+
+          $('#curUser2').html(html);
+          $('#acGroup2').addClass('d-none');
+          $('#acPword2').removeClass('d-none');
+        });
+
+        $('#cancelSwitch2').on('click', function(e){
+          e.preventDefault();
+
+          $('#curUser2').html('<div class="avatar avatar-lg"><span>M</span></div><div class="media-body"><h6>Mienard Lumaad</h6><p>mienard@liftlytics.com</p><i class="text-muted text-sm op-5">Logged out due to inactivity</i></div>');
+          $('#acGroup2').removeClass('d-none');
+          $('#acPword2').addClass('d-none');
+        });
+
+        // For displaying modal directly from url
+        // For demo use only
+        $.urlParam = function(name){
+        	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        	return (results!=null)? results[1] || 0 : 0;
+        }
+
+        if($.urlParam('modal')) {
+          if($.urlParam('modal') === 'newlead') {
+            $('#modalNewLead').modal('show');
+          }
+
+          if($.urlParam('modal') === 'newfilter') {
+            $('#modalNewFilter').modal('show');
+          }
+
+          if($.urlParam('modal') === 'editfilter') {
+            $('#modalEditFilter').modal('show');
+          }
+
+          if($.urlParam('modal') === 'newfilter2') {
+            $('#modalNewFilter2').modal('show');
+          }
+
+          if($.urlParam('modal') === 'switchaccount') {
+            $('#modalSwitchAccount').modal('show');
+          }
+
+          if($.urlParam('modal') === 'myprofile') {
+            $('#modalMyProfile').modal('show');
+          }
+
+          if($.urlParam('modal') === 'relogin') {
+            $('#modalRelogin').modal('show');
+          }
+        };
+
+
+      });
+    </script>
+  </body>
+</html>

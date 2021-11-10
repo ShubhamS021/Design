@@ -1,0 +1,45 @@
+
+.bootstrap-tagsinput {
+  display: block;
+  padding: 5px;
+  box-shadow: none;
+  border-color: $input-border-color;
+  border-radius: $border-radius-sm;
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    font-size: $font-size-sm;
+    background-color: $color-bg-02;
+    color: $color-tx-02;
+    padding: 5px 15px 5px 10px;
+    border-radius: 4px;
+
+    [data-role="remove"] {
+      display: inline-block;
+      height: 16px;
+      width: 10px;
+      position: relative;
+      opacity: .2;
+
+      &::after {
+        content: '\EB96';
+        font-family: 'remixicon';
+        font-size: 16px;
+        position: absolute;
+        top: calc(50% + .5px);
+        line-height: 0;
+      }
+
+      @include hover-focus() {
+        opacity: .4;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .tt-menu {
+    margin-top: 7px;
+    margin-left: -10px;
+  }
+}

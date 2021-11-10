@@ -1,0 +1,117 @@
+.section-headline {
+  position: relative;
+  background-color: #f6f7fc;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 37%;
+    background-color: #fff;
+    transform: skewY(-7deg);
+    transform-origin: top right;
+  }
+
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   bottom: calc(37% - 20px);
+  //   right: 0;
+  //   width: 70vw;
+  //   height: 40px;
+  //   background-color: $dark; //#e1e6f5;
+  //   transform: skewY(-7deg);
+  //   transform-origin: top right;
+  //   box-shadow: 150px -45px 0 1px $blue,
+  //               280px 45px 0 1px $cyan;
+  //   opacity: .85;
+  //   display: none;
+  // }
+
+  .container {
+    padding-top: $height-header + 20px;
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.section-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.headline {
+  padding: 40px 0;
+  height: 670px;
+  margin-bottom: 30px;
+
+  &.dark {
+    .headline-title { color: #fff; }
+    .headline-text { color: rgba(#fff, .75); }
+    .headline-author {
+      color: rgba(#fff, .6);
+      strong { color: #fff; }
+    }
+  }
+}
+
+.headline-title {
+  font-size: 54px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  text-indent: -2px;
+  margin-bottom: 30px;
+  color: $dark;
+
+  @include media-breakpoint-up(xxl) { font-size: 60px; }
+}
+
+.headline-text {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 40px;
+  max-width: 90%;
+  color: $gray-700;
+
+  @media (min-width: 1440px) { max-width: 85%; }
+}
+
+.headline-author {
+  color: $gray-600;
+
+  strong {
+    font-size: 18px;
+    font-weight: 600;
+    color: $dark;
+    display: block;
+  }
+}
+
+
+.card-request {
+  border-radius: 10px;
+  border-width: 0;
+  position: relative;
+
+  .card-body {
+    padding: 35px 40px 40px;
+    position: relative;
+    z-index: 10;
+    background-color: inherit;
+    border-radius: inherit;
+    box-shadow: 0 30px 60px -12px rgba($gray-600,0.25),
+                0 18px 36px -18px rgba($gray-600,0.3);
+  }
+
+  .card-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: $dark;
+    margin-bottom: 3px;
+  }
+}

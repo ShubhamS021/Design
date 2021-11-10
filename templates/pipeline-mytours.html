@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body>
+
+    <div class="content">
+      <div class="container-fluid">
+        <div class="content-navbar content-navbar-pipeline">
+          <nav class="nav nav-group mg-r-10">
+            <a href="pipeline-tasks.html" class="nav-link active mn-wd-0-f"><i class="ri-list-check-2"></i><span class="mg-l-5">Tasks</span></a>
+          </nav>
+          <nav id="navGroupProperties" class="nav nav-group mg-r-auto">
+            <a href="pipeline.html" class="nav-link"><span>Active Leads</span> <small>62</small></a>
+            <div class="dropdown dropdown-more-filter">
+              <a id="moreFilterLink" href="" data-toggle="dropdown" data-display="static" class="dropdown-link"><span>More Filters</span> <i class="ri-code-line"></i></a>
+              <div id="dropdownMoreFilters" class="dropdown-menu">
+                <div class="row row-xs">
+                  <div class="col-4"><div class="dropdown-item"><span>All Leads <small>75</small></span> <a href="#modalEditFilter" data-toggle="modal" class="edit-filter-link"><i class="ri-pencil-line"></i></a></div></div>
+                  <div class="col-4"><div class="dropdown-item"><span>Leased <small>28</small></span> <a href="#modalEditFilter" data-toggle="modal" class="edit-filter-link"><i class="ri-pencil-line"></i></a></div></div>
+                  <div class="col-4"><div class="dropdown-item"><span>Residents <small>34</small></span> <a href="#modalEditFilter" data-toggle="modal" class="edit-filter-link"><i class="ri-pencil-line"></i></a></div></div>
+                  <div class="col-4 mg-t-10"><div class="dropdown-item"><span>My Active Leads <small>16</small></span> <a href="#modalEditFilter" data-toggle="modal" class="edit-filter-link"><i class="ri-pencil-line"></i></a></div></div>
+                  <div class="col-4 mg-t-10"><div class="dropdown-item"><span>Lost Leads <small>4</small></span> <a href="#modalEditFilter" data-toggle="modal" class="edit-filter-link"><i class="ri-pencil-line"></i></a></div></div>
+                  <div class="col-4 mg-t-10"><div class="dropdown-item"><span>Tour Completed <small>68</small></span> <a href="#modalEditFilter" data-toggle="modal" class="edit-filter-link"><i class="ri-pencil-line"></i></a></div></div>
+                  <div class="col-4 mg-t-10"><div class="dropdown-item"><span>Bedroom <small>44</small></span> <a href="#modalEditFilter" data-toggle="modal" class="edit-filter-link"><i class="ri-pencil-line"></i></a></div></div>
+                  <div class="col-4 mg-t-10"><a id="newFilterLink" href="#modalNewFilter" data-toggle="modal" class="btn btn-white btn-with-icon"><i class="ri-add-circle-line"></i> Add New Filter</a></div>
+                </div><!-- row -->
+              </div><!-- dropdown-menu -->
+            </div><!-- dropdown -->
+          </nav>
+
+          <div id="navRightOne" class="navbar-right">
+            <div class="form-search">
+              <i data-feather="search"></i>
+              <input type="text" class="form-control" placeholder="Search tasks">
+            </div><!-- form-search -->
+            <a href="#modalNewTask" data-toggle="modal" class="btn btn-primary btn-new-task mg-l-10"><i class="ri-add-circle-fill"></i> New task</a>
+            <a href="#modalBulkReassign" data-toggle="modal" class="btn btn-primary btn-bulk-reassign mg-l-10 d-none"><i class="ri-edit-2-fill mg-r-5"></i> Bulk Reassign</a>
+          </div>
+        </div><!-- content-navbar -->
+
+        <hr class="op-0">
+
+        <div class="title-bar mg-t-20 mg-b-10">
+          <h6>Today's Tours <span>(12)</span></h6>
+          <div class="custom-control custom-checkbox mg-l-10 skeleton-content">
+            <input type="checkbox" class="custom-control-input" id="cc1" checked>
+            <label class="custom-control-label" for="cc1">Show completed (<span>1</span>)</label>
+          </div>
+          <div class="dropdown dropdown-title-bar mg-l-auto">
+            <a href="" class="dropdown-link" data-toggle="dropdown">My Tours <i class="ri-arrow-down-s-line"></i></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="pipeline-mytours.html" class="dropdown-item active">My Tours <span>(3)</span></a>
+              <a href="pipeline-tasks.html" class="dropdown-item">All Agents <span>(8)</span></a>
+              <div class="dropdown-divider"></div>
+              <a href="pipeline-mytours.html" class="dropdown-item">John Smith <span>(3)</span></a>
+              <a href="pipeline-mytours.html" class="dropdown-item">Jane Doe <span>(3)</span></a>
+              <a href="pipeline-mytours.html" class="dropdown-item">Ethan Lacey <span>(2)</span></a>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+        </div><!-- title-bar -->
+        <div class="table-responsive table-responsive-tasks">
+          <table id="tableTours" class="table table-alpha table-lead table-tasks table-tasks2">
+            <thead>
+              <tr>
+                <th class="wd-20 skeleton"><div class="skeleton-checkbox"></div></th>
+                <th class="wd-20 skeleton-content"><div class="form-checkbox"><input type="checkbox" class="check-all"></div></th>
+                <th class="wd-20p"><span>Name</span></th>
+                <th><span>Tour Date</span></th>
+                <th class="text-right"><span>Tour Time</span></th>
+                <th><span>Floor Plan</span></th>
+                <th><span>Units</span></th>
+                <th><span>Owner</span></th>
+                <th><span>Status</span></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody class="skeleton">
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td>
+                  <div class="media">
+                    <div class="skeleton-avatar"></div>
+                    <h6 class="media-body mg-b-0"><span class="skeleton-text sm wd-100"></span></h6>
+                  </div>
+                </td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td class="text-right"><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-30"></div></td>
+                <td><div class="skeleton-text sm wd-50"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td>
+                  <div class="media">
+                    <div class="skeleton-avatar"></div>
+                    <h6 class="media-body mg-b-0"><span class="skeleton-text sm wd-100"></span></h6>
+                  </div>
+                </td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td class="text-right"><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-30"></div></td>
+                <td><div class="skeleton-text sm wd-50"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td>
+                  <div class="media">
+                    <div class="skeleton-avatar"></div>
+                    <h6 class="media-body mg-b-0"><span class="skeleton-text sm wd-100"></span></h6>
+                  </div>
+                </td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td class="text-right"><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-30"></div></td>
+                <td><div class="skeleton-text sm wd-50"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td>&nbsp;</td>
+              </tr>
+            </tbody>
+            <tbody class="skeleton-content">
+              <tr>
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td>
+                  <div class="media">
+                    <div class="avatar bg-danger"><span>al</span></div>
+                    <h6 class="media-body mg-b-0">Alina Loman</h6>
+                  </div>
+                </td>
+                <td>Jan 15, 2021</td>
+                <td class="text-right"><small class="text-danger">1 hour ago</small> 2:30PM</td>
+                <td>1A</td>
+                <td>2145, 1025</td>
+                <td>
+                  <div class="dropdown dropdown-owner">
+                    <a data-toggle="dropdown" class="task-email"><span>john.smith@mark-taylor.com</span> <i class="ri-arrow-down-s-fill"></i></a>
+                    <div class="dropdown-menu">
+                      <a href="#" class="dropdown-item active">john.smith@mark-taylor.com</a>
+                      <a href="#" class="dropdown-item">ethan@liftlytics.com</a>
+                      <a href="#" class="dropdown-item">janedoe@liftlytics.com</a>
+                    </div>
+                  </div><!-- dropdown -->
+                </td>
+                <td>
+                  <nav class="nav nav-status">
+                    <a href="" class="nav-check tour-completed">Tour Completed</a>
+                    <a href="" class="nav-check no-show">No Show</a>
+                  </nav>
+                </td>
+                <td>
+                  <div class="task-options">
+                    <nav class="nav nav-icon">
+                      <a href=""><span data-toggle="tooltip" data-title="Call"><i class="ri-phone-line"></i></span></a>
+                      <a href=""><span data-toggle="tooltip" data-title="Email"><i class="ri-mail-send-line"></i></span></a>
+                      <a href=""><span data-toggle="tooltip" data-title="SMS"><i class="ri-cellphone-line"></i></span></a>
+                    </nav>
+                    <div class="dropdown">
+                      <a href="" class="dropdown-link" data-toggle="dropdown"><i class="ri-more-2-fill"></i></a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="" class="dropdown-item"><i class="ri-pencil-line"></i> Edit Tour</a>
+                        <a href="" class="dropdown-item"><i class="ri-close-circle-line"></i> Cancel Tour</a>
+                      </div><!-- dropdown-menu -->
+                    </div><!-- dropdown -->
+                  </div><!-- task-options -->
+                </td>
+              </tr>
+              <tr>
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td>
+                  <div class="media">
+                    <div class="avatar bg-warning"><span>gm</span></div>
+                    <h6 class="media-body mg-b-0">Greg Muscof</h6>
+                  </div>
+                </td>
+                <td>Jan 15, 2021</td>
+                <td class="text-right"><small class="text-warning">(15 min)</small> 3:30PM</td>
+                <td>2B</td>
+                <td>1215, 1216</td>
+                <td>
+                  <div class="dropdown dropdown-owner">
+                    <a data-toggle="dropdown" class="task-email"><span>john.smith@mark-taylor.com</span> <i class="ri-arrow-down-s-fill"></i></a>
+                    <div class="dropdown-menu">
+                      <a href="#" class="dropdown-item active">john.smith@mark-taylor.com</a>
+                      <a href="#" class="dropdown-item">ethan@liftlytics.com</a>
+                      <a href="#" class="dropdown-item">janedoe@liftlytics.com</a>
+                    </div>
+                  </div><!-- dropdown -->
+                </td>
+                <td>
+                  <nav class="nav nav-status">
+                    <a href="" class="nav-check tour-completed">Tour Completed</a>
+                    <a href="" class="nav-check no-show">No Show</a>
+                  </nav>
+                </td>
+                <td>
+                  <div class="task-options">
+                    <nav class="nav nav-icon">
+                      <a href=""><span data-toggle="tooltip" data-title="Call"><i class="ri-phone-line"></i></span></a>
+                      <a href=""><span data-toggle="tooltip" data-title="Email"><i class="ri-mail-send-line"></i></span></a>
+                      <a href=""><span data-toggle="tooltip" data-title="SMS"><i class="ri-cellphone-line"></i></span></a>
+                    </nav>
+                    <div class="dropdown">
+                      <a href="" class="dropdown-link" data-toggle="dropdown"><i class="ri-more-2-fill"></i></a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="" class="dropdown-item"><i class="ri-pencil-line"></i> Edit Tour</a>
+                        <a href="" class="dropdown-item"><i class="ri-close-circle-line"></i> Cancel Tour</a>
+                      </div><!-- dropdown-menu -->
+                    </div><!-- dropdown -->
+                  </div><!-- task-options -->
+                </td>
+              </tr>
+              <tr class="tour-completed">
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td>
+                  <div class="media">
+                    <div class="avatar bg-success"><span>ta</span></div>
+                    <h6 class="media-body mg-b-0">Tina Adams</h6>
+                  </div>
+                </td>
+                <td>Jan 15, 2021</td>
+                <td class="text-right">11:00AM</td>
+                <td>1F</td>
+                <td>3120</td>
+                <td>
+                  <div class="dropdown dropdown-owner">
+                    <a data-toggle="dropdown" class="task-email"><span>john.smith@mark-taylor.com</span> <i class="ri-arrow-down-s-fill"></i></a>
+                    <div class="dropdown-menu">
+                      <a href="#" class="dropdown-item active">john.smith@mark-taylor.com</a>
+                      <a href="#" class="dropdown-item">ethan@liftlytics.com</a>
+                      <a href="#" class="dropdown-item">janedoe@liftlytics.com</a>
+                    </div>
+                  </div><!-- dropdown -->
+                </td>
+                <td>
+                  <nav class="nav nav-status">
+                    <a href="" class="nav-check tour-completed active">Tour Completed</a>
+                    <a href="" class="nav-check no-show">No Show</a>
+                  </nav>
+                </td>
+                <td>
+                  <div class="task-options">
+                    <nav class="nav nav-icon">
+                      <a href=""><span data-toggle="tooltip" data-title="Call"><i class="ri-phone-line"></i></span></a>
+                      <a href=""><span data-toggle="tooltip" data-title="Email"><i class="ri-mail-send-line"></i></span></a>
+                      <a href=""><span data-toggle="tooltip" data-title="SMS"><i class="ri-cellphone-line"></i></span></a>
+                    </nav>
+                    <div class="dropdown">
+                      <a href="" class="dropdown-link" data-toggle="dropdown"><i class="ri-more-2-fill"></i></a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="" class="dropdown-item"><i class="ri-pencil-line"></i> Edit Tour</a>
+                        <a href="" class="dropdown-item"><i class="ri-close-circle-line"></i> Cancel Tour</a>
+                      </div><!-- dropdown-menu -->
+                    </div><!-- dropdown -->
+                  </div><!-- task-options -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- table-responsive -->
+
+        <hr class="op-0">
+
+        <div class="title-bar mg-y-10">
+          <h6>Prospect Tasks <span>(3)</span></h6>
+          <div class="custom-control custom-checkbox mg-l-10 skeleton-content">
+            <input type="checkbox" class="custom-control-input" id="cc4" checked>
+            <label class="custom-control-label" for="cc4">Show completed (<span>1</span>)</label>
+          </div>
+          <div class="dropdown dropdown-title-bar mg-l-auto">
+            <a href="" class="dropdown-link" data-toggle="dropdown">My Prospect Tasks <i class="ri-arrow-down-s-line"></i></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="pipeline-mytours.html" class="dropdown-item active">My Prospect Tasks <span>(3)</span></a>
+              <a href="pipeline-tasks.html" class="dropdown-item">All Agents <span>(8)</span></a>
+              <div class="dropdown-divider"></div>
+              <a href="pipeline-mytours.html" class="dropdown-item">John Smith <span>(3)</span></a>
+              <a href="pipeline-mytours.html" class="dropdown-item">Jane Doe <span>(3)</span></a>
+              <a href="pipeline-mytours.html" class="dropdown-item">Ethan Lacey <span>(2)</span></a>
+              <div class="dropdown-divider"></div>
+              <button class="btn btn-sm btn-primary">All Prospect Tasks <span class="mg-l-3">(250)</span></button>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+        </div><!-- title-bar -->
+        <div class="table-responsive table-responsive-tasks">
+          <table id="tableTasks" class="table table-alpha table-lead table-tasks table-tasks2">
+            <thead>
+              <tr>
+                <th class="wd-20 skeleton"><div class="skeleton-checkbox"></div></th>
+                <th class="wd-20 skeleton-content"><div class="form-checkbox"><input type="checkbox" class="check-all"></div></th>
+                <th class="wd-20">
+                  <div class="dropdown dropdown-all">
+                    <a href="" class="dropdown-link" data-toggle="dropdown">All</a>
+                    <div class="dropdown-menu">
+                      <a href="" class="dropdown-item active"><small class="bg-secondary"></small>All</a>
+                      <a href="" class="dropdown-item"><small class="bg-danger"></small>Overdue</a>
+                      <a href="" class="dropdown-item"><small class="bg-warning"></small>Due Today</a>
+                      <a href="" class="dropdown-item"><small class="bg-success"></small>Complete</a>
+                      <a href="" class="dropdown-item"><small class="bg-secondary"></small>Upcoming</a>
+                    </div><!-- dropdown-menu -->
+                  </div><!-- dropdown -->
+                </th>
+                <th><span>Type</span></th>
+                <th><span>Description</span></th>
+                <th><span>Name</span></th>
+                <th><span>Owner</span></th>
+                <th><span>Due</span></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody class="skeleton">
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td><div class="skeleton-avatar"></div></td>
+                <td><span class="skeleton-text sm wd-100"></span></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-30"></div></td>
+                <td><div class="skeleton-text sm wd-50"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td><div class="skeleton-avatar"></div></td>
+                <td><span class="skeleton-text sm wd-100"></span></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-30"></div></td>
+                <td><div class="skeleton-text sm wd-50"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td><div class="skeleton-avatar"></div></td>
+                <td><span class="skeleton-text sm wd-100"></span></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-30"></div></td>
+                <td><div class="skeleton-text sm wd-50"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td>&nbsp;</td>
+              </tr>
+            </tbody>
+            <tbody class="skeleton-content">
+              <tr>
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-danger"><span>al</span></div></td>
+                <td>2nd Follow-up</td>
+                <td>Call about 2 bed</td>
+                <td>Courney Osborne</td>
+                <td>
+                  <div class="dropdown dropdown-owner">
+                    <a data-toggle="dropdown" class="task-email"><span>john.smith@mark-taylor.com</span> <i class="ri-arrow-down-s-fill"></i></a>
+                    <div class="dropdown-menu">
+                      <a href="#" class="dropdown-item active">john.smith@mark-taylor.com</a>
+                      <a href="#" class="dropdown-item">ethan@liftlytics.com</a>
+                      <a href="#" class="dropdown-item">janedoe@liftlytics.com</a>
+                    </div>
+                  </div><!-- dropdown -->
+                </td>
+                <td><small class="text-danger">(2 days ago)</small> Jan 13, 2021</td>
+                <td>
+                  <nav class="nav nav-status">
+                    <a href="" class="nav-check tour-completed">Task Completed</a>
+                  </nav>
+                </td>
+                <td>
+                  <div class="task-options">
+                    <nav class="nav nav-icon">
+                      <a href=""><span data-toggle="tooltip" data-title="Call"><i class="ri-phone-line"></i></span></a>
+                      <a href=""><span data-toggle="tooltip" data-title="Email"><i class="ri-mail-send-line"></i></span></a>
+                      <a href=""><span data-toggle="tooltip" data-title="SMS"><i class="ri-cellphone-line"></i></span></a>
+                    </nav>
+                    <div class="dropdown">
+                      <a href="" class="dropdown-link" data-toggle="dropdown"><i class="ri-more-2-fill"></i></a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="" class="dropdown-item"><i class="ri-pencil-line"></i> Edit Task</a>
+                        <a href="" class="dropdown-item"><i class="ri-delete-bin-line"></i> Delete Task</a>
+                      </div><!-- dropdown-menu -->
+                    </div><!-- dropdown -->
+                  </div><!-- task-options -->
+                </td>
+              </tr>
+              <tr>
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-success"><span>cm</span></div></td>
+                <td>1st Follow-up</td>
+                <td>Apartmentlist.com lead</td>
+                <td>Clark Marquee</td>
+                <td>
+                  <div class="dropdown dropdown-owner">
+                    <a data-toggle="dropdown" class="task-email"><span>john.smith@mark-taylor.com</span> <i class="ri-arrow-down-s-fill"></i></a>
+                    <div class="dropdown-menu">
+                      <a href="#" class="dropdown-item active">john.smith@mark-taylor.com</a>
+                      <a href="#" class="dropdown-item">ethan@liftlytics.com</a>
+                      <a href="#" class="dropdown-item">janedoe@liftlytics.com</a>
+                    </div>
+                  </div><!-- dropdown -->
+                </td>
+                <td>Jan 15, 2021</td>
+                <td>
+                  <nav class="nav nav-status">
+                    <a href="" class="nav-check tour-completed">Task Completed</a>
+                  </nav>
+                </td>
+                <td>
+                  <div class="task-options">
+                    <nav class="nav nav-icon">
+                      <a href=""><span data-toggle="tooltip" data-title="Call"><i class="ri-phone-line"></i></span></a>
+                      <a href=""><span data-toggle="tooltip" data-title="Email"><i class="ri-mail-send-line"></i></span></a>
+                      <a href=""><span data-toggle="tooltip" data-title="SMS"><i class="ri-cellphone-line"></i></span></a>
+                    </nav>
+                    <div class="dropdown">
+                      <a href="" class="dropdown-link" data-toggle="dropdown"><i class="ri-more-2-fill"></i></a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="" class="dropdown-item"><i class="ri-pencil-line"></i> Edit Task</a>
+                        <a href="" class="dropdown-item"><i class="ri-delete-bin-line"></i> Delete Task</a>
+                      </div><!-- dropdown-menu -->
+                    </div><!-- dropdown -->
+                  </div><!-- task-options -->
+                </td>
+              </tr>
+              <tr class="tour-completed">
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-success"><span>ta</span></div></td>
+                <td>1st Tour Follow-up</td>
+                <td>Walked in, wanted to 1 bed apt</td>
+                <td>Tina Adams</td>
+                <td>
+                  <div class="dropdown dropdown-owner">
+                    <a data-toggle="dropdown" class="task-email"><span>john.smith@mark-taylor.com</span> <i class="ri-arrow-down-s-fill"></i></a>
+                    <div class="dropdown-menu">
+                      <a href="#" class="dropdown-item active">john.smith@mark-taylor.com</a>
+                      <a href="#" class="dropdown-item">ethan@liftlytics.com</a>
+                      <a href="#" class="dropdown-item">janedoe@liftlytics.com</a>
+                    </div>
+                  </div><!-- dropdown -->
+                </td>
+                <td>Jan 15, 2021</td>
+                <td>
+                  <nav class="nav nav-status">
+                    <a href="" class="nav-check tour-completed active">Task Completed</a>
+                  </nav>
+                </td>
+                <td>
+                  <div class="task-options">
+                    <nav class="nav nav-icon">
+                      <a href=""><span data-toggle="tooltip" data-title="Call"><i class="ri-phone-line"></i></span></a>
+                      <a href=""><span data-toggle="tooltip" data-title="Email"><i class="ri-mail-send-line"></i></span></a>
+                      <a href=""><span data-toggle="tooltip" data-title="SMS"><i class="ri-cellphone-line"></i></span></a>
+                    </nav>
+                    <div class="dropdown">
+                      <a href="" class="dropdown-link" data-toggle="dropdown"><i class="ri-more-2-fill"></i></a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="" class="dropdown-item"><i class="ri-pencil-line"></i> Edit Task</a>
+                        <a href="" class="dropdown-item"><i class="ri-delete-bin-line"></i> Delete Task</a>
+                      </div><!-- dropdown-menu -->
+                    </div><!-- dropdown -->
+                  </div><!-- task-options -->
+                </td>
+              </tr>
+              <tr>
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-secondary"><span>gm</span></div></td>
+                <td>Send New Price/Availability</td>
+                <td>Looking for sub $1500 2 bed</td>
+                <td>Gerald Mendez</td>
+                <td>
+                  <div class="dropdown dropdown-owner">
+                    <a data-toggle="dropdown" class="task-email"><span>john.smith@mark-taylor.com</span> <i class="ri-arrow-down-s-fill"></i></a>
+                    <div class="dropdown-menu">
+                      <a href="#" class="dropdown-item active">john.smith@mark-taylor.com</a>
+                      <a href="#" class="dropdown-item">ethan@liftlytics.com</a>
+                      <a href="#" class="dropdown-item">janedoe@liftlytics.com</a>
+                    </div>
+                  </div><!-- dropdown -->
+                </td>
+                <td>Jan 15, 2021</td>
+                <td>
+                  <nav class="nav nav-status">
+                    <a href="" class="nav-check tour-completed">Task Completed</a>
+                  </nav>
+                </td>
+                <td>
+                  <div class="task-options">
+                    <nav class="nav nav-icon">
+                      <a href=""><span data-toggle="tooltip" data-title="Call"><i class="ri-phone-line"></i></span></a>
+                      <a href=""><span data-toggle="tooltip" data-title="Email"><i class="ri-mail-send-line"></i></span></a>
+                      <a href=""><span data-toggle="tooltip" data-title="SMS"><i class="ri-cellphone-line"></i></span></a>
+                    </nav>
+                    <div class="dropdown">
+                      <a href="" class="dropdown-link" data-toggle="dropdown"><i class="ri-more-2-fill"></i></a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="" class="dropdown-item"><i class="ri-pencil-line"></i> Edit Task</a>
+                        <a href="" class="dropdown-item"><i class="ri-delete-bin-line"></i> Delete Task</a>
+                      </div><!-- dropdown-menu -->
+                    </div><!-- dropdown -->
+                  </div><!-- task-options -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- table-responsive -->
+
+
+        <hr class="op-0">
+
+        <div class="title-bar mg-y-10">
+          <h6>Calls <span>(3)</span></h6>
+
+          <div class="dropdown dropdown-title-bar mg-l-auto">
+            <a href="" class="dropdown-link" data-toggle="dropdown">My Calls <i class="ri-arrow-down-s-line"></i></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="pipeline-mytours.html" class="dropdown-item active">My Calls <span>(3)</span></a>
+              <a href="pipeline-tasks.html" class="dropdown-item">All Agents <span>(8)</span></a>
+              <div class="dropdown-divider"></div>
+              <a href="pipeline-mytours.html" class="dropdown-item">John Smith <span>(3)</span></a>
+              <a href="pipeline-mytours.html" class="dropdown-item">Jane Doe <span>(3)</span></a>
+              <a href="pipeline-mytours.html" class="dropdown-item">Ethan Lacey <span>(2)</span></a>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+        </div><!-- title-bar -->
+        <div class="table-responsive table-responsive-tasks">
+          <table class="table table-alpha table-lead table-tasks table-tasks2 table-calls">
+            <thead>
+              <tr>
+                <th class="wd-20 skeleton"><div class="skeleton-checkbox"></div></th>
+                <th class="wd-20 skeleton-content"><div class="form-checkbox"><input type="checkbox" class="check-all"></div></th>
+                <th class="wd-20">
+                  <div class="dropdown dropdown-all">
+                    <a href="" class="dropdown-link" data-toggle="dropdown">All</a>
+                    <div class="dropdown-menu">
+                      <a href="" class="dropdown-item active"><small class="bg-secondary"></small>All</a>
+                      <a href="" class="dropdown-item"><small class="bg-danger"></small>Overdue</a>
+                      <a href="" class="dropdown-item"><small class="bg-warning"></small>Due Today</a>
+                      <a href="" class="dropdown-item"><small class="bg-success"></small>Complete</a>
+                      <a href="" class="dropdown-item"><small class="bg-secondary"></small>Upcoming</a>
+                    </div><!-- dropdown-menu -->
+                  </div><!-- dropdown -->
+                </th>
+                <th><span>Call Score</span></th>
+                <th><span>Phone Number</span></th>
+                <th><span>Audio</span></th>
+                <th><span>Owner</span></th>
+                <th><span>Call Date</span></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody class="skeleton">
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td><div class="skeleton-avatar"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-60"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-80"></div></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td><div class="skeleton-avatar"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-60"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-80"></div></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td><div class="skeleton-avatar"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-60"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-80"></div></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+            </tbody>
+            <tbody class="skeleton-content">
+              <tr>
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-danger"><span>al</span></div></td>
+                <td>Bing.com</td>
+                <td>(517) 420-3297</td>
+                <td>
+                  <div class="call-playable">
+                    <a href="" class="call-play">
+                      <i class="ri-play-circle-fill"></i>
+                      <i class="ri-pause-circle-line"></i>
+                    </a>
+                    <div class="time time-start">0:09</div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="time time-end">0:48</div>
+                    <div class="dropdown dropdown-speed">
+                      <a href="" class="time speed-control" data-toggle="dropdown" data-display="static"><span>1x</span></a>
+                      <div class="dropdown-menu">
+                        <a href="" class="dropdown-item">1x</a>
+                        <a href="" class="dropdown-item">1.25x</a>
+                        <a href="" class="dropdown-item">1.5x</a>
+                        <a href="" class="dropdown-item">1.75x</a>
+                        <a href="" class="dropdown-item">2x</a>
+                      </div><!-- dropdown-menu -->
+                    </div>
+                    <a href="" class="call-trans"><span data-toggle="tooltip" data-title="Call transcription"><i class="ri-voiceprint-line"></i></span></a>
+                  </div><!-- call-playable -->
+                </td>
+                <td>
+                  <div class="dropdown dropdown-owner">
+                    <a data-toggle="dropdown" class="task-email"><span>john.smith@mark-taylor.com</span> <i class="ri-arrow-down-s-fill"></i></a>
+                    <div class="dropdown-menu">
+                      <a href="#" class="dropdown-item active">john.smith@mark-taylor.com</a>
+                      <a href="#" class="dropdown-item">ethan@liftlytics.com</a>
+                      <a href="#" class="dropdown-item">janedoe@liftlytics.com</a>
+                    </div>
+                  </div><!-- dropdown -->
+                </td>
+                <td><small class="text-danger">(2 days ago)</small> Jan 13, 2021</td>
+                <td>&nbsp;</td>
+                <td>
+                  <div class="task-options">
+                    <nav class="nav nav-icon">
+                      <a href=""><span data-toggle="tooltip" data-title="Add as New Lead"><i class="ri-user-add-line"></i></span></a>
+                      <a href=""><span data-toggle="tooltip" data-title="Link"><i class="ri-links-line"></i></span></a>
+                    </nav>
+                    <div class="dropdown dropdown-archive mg-l-5">
+                      <a href="" class="dropdown-link" data-toggle="dropdown"><span data-toggle="tooltip" data-title="Archive"><i class="ri-inbox-archive-line"></i></span></a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <label class="dropdown-menu-title">Archive Reason</label>
+                        <span class="dropdown-menu-text">Only archive non-prospect emails</span>
+                        <a href="" class="dropdown-item selected">Resident Related</a>
+                        <a href="" class="dropdown-item">Vendor Related</a>
+                        <a href="" class="dropdown-item">Spam</a>
+                        <a href="" class="dropdown-item">Not Relevant</a>
+                        <a href="" class="dropdown-item">Other</a>
+                      </div><!-- dropdown-menu -->
+                    </div><!-- dropdown -->
+                  </div><!-- task-options -->
+                </td>
+              </tr>
+              <tr>
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-warning"><span>cm</span></div></td>
+                <td>Standalone PPC</td>
+                <td>(480) 937-2754</td>
+                <td>
+                  <div class="call-playable">
+                    <a href="" class="call-play">
+                      <i class="ri-play-circle-fill"></i>
+                      <i class="ri-pause-circle-line"></i>
+                    </a>
+                    <div class="time time-start">0:09</div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="time time-end">0:48</div>
+                    <div class="dropdown dropdown-speed">
+                      <a href="" class="time speed-control" data-toggle="dropdown" data-display="static"><span>1x</span></a>
+                      <div class="dropdown-menu">
+                        <a href="" class="dropdown-item">1x</a>
+                        <a href="" class="dropdown-item">1.25x</a>
+                        <a href="" class="dropdown-item">1.5x</a>
+                        <a href="" class="dropdown-item">1.75x</a>
+                        <a href="" class="dropdown-item">2x</a>
+                      </div><!-- dropdown-menu -->
+                    </div>
+                    <a href="" class="call-trans"><span data-toggle="tooltip" data-title="Call transcription"><i class="ri-voiceprint-line"></i></span></a>
+                  </div><!-- call-playable -->
+                </td>
+                <td>
+                  <div class="dropdown dropdown-owner">
+                    <a data-toggle="dropdown" class="task-email"><span>john.smith@mark-taylor.com</span> <i class="ri-arrow-down-s-fill"></i></a>
+                    <div class="dropdown-menu">
+                      <a href="#" class="dropdown-item active">john.smith@mark-taylor.com</a>
+                      <a href="#" class="dropdown-item">ethan@liftlytics.com</a>
+                      <a href="#" class="dropdown-item">janedoe@liftlytics.com</a>
+                    </div>
+                  </div><!-- dropdown -->
+                </td>
+                <td>Jan 15, 2021</td>
+                <td>&nbsp;</td>
+                <td>
+                  <div class="task-options">
+                    <nav class="nav nav-icon">
+                      <a href=""><span data-toggle="tooltip" data-title="Add as New Lead"><i class="ri-user-add-line"></i></span></a>
+                      <a href=""><span data-toggle="tooltip" data-title="Link"><i class="ri-links-line"></i></span></a>
+                    </nav>
+                    <div class="dropdown dropdown-archive mg-l-5">
+                      <a href="" class="dropdown-link" data-toggle="dropdown"><span data-toggle="tooltip" data-title="Archive"><i class="ri-inbox-archive-line"></i></span></a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <label class="dropdown-menu-title">Archive Reason</label>
+                        <span class="dropdown-menu-text">Only archive non-prospect emails</span>
+                        <a href="" class="dropdown-item selected">Resident Related</a>
+                        <a href="" class="dropdown-item">Vendor Related</a>
+                        <a href="" class="dropdown-item">Spam</a>
+                        <a href="" class="dropdown-item">Not Relevant</a>
+                        <a href="" class="dropdown-item">Other</a>
+                      </div><!-- dropdown-menu -->
+                    </div><!-- dropdown -->
+                  </div><!-- task-options -->
+                </td>
+              </tr>
+              <tr>
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-success"><span>ta</span></div></td>
+                <td>Mark-Taylor.com</td>
+                <td>(480) 207-1040</td>
+                <td>
+                  <div class="call-playable">
+                    <a href="" class="call-play">
+                      <i class="ri-play-circle-fill"></i>
+                      <i class="ri-pause-circle-line"></i>
+                    </a>
+                    <div class="time time-start">0:09</div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="time time-end">0:48</div>
+                    <div class="dropdown dropdown-speed">
+                      <a href="" class="time speed-control" data-toggle="dropdown" data-display="static"><span>1x</span></a>
+                      <div class="dropdown-menu">
+                        <a href="" class="dropdown-item">1x</a>
+                        <a href="" class="dropdown-item">1.25x</a>
+                        <a href="" class="dropdown-item">1.5x</a>
+                        <a href="" class="dropdown-item">1.75x</a>
+                        <a href="" class="dropdown-item">2x</a>
+                      </div><!-- dropdown-menu -->
+                    </div>
+                    <a href="" class="call-trans"><span data-toggle="tooltip" data-title="Call transcription"><i class="ri-voiceprint-line"></i></span></a>
+                  </div><!-- call-playable -->
+                </td>
+                <td>
+                  <div class="dropdown dropdown-owner">
+                    <a data-toggle="dropdown" class="task-email"><span>john.smith@mark-taylor.com</span> <i class="ri-arrow-down-s-fill"></i></a>
+                    <div class="dropdown-menu">
+                      <a href="#" class="dropdown-item active">john.smith@mark-taylor.com</a>
+                      <a href="#" class="dropdown-item">ethan@liftlytics.com</a>
+                      <a href="#" class="dropdown-item">janedoe@liftlytics.com</a>
+                    </div>
+                  </div><!-- dropdown -->
+                </td>
+                <td>Jan 15, 2021</td>
+                <td>&nbsp;</td>
+                <td>
+                  <div class="task-options">
+                    <nav class="nav nav-icon">
+                      <a href=""><span data-toggle="tooltip" data-title="Add as New Lead"><i class="ri-user-add-line"></i></span></a>
+                      <a href=""><span data-toggle="tooltip" data-title="Link"><i class="ri-links-line"></i></span></a>
+                    </nav>
+                    <div class="dropdown dropdown-archive mg-l-5">
+                      <a href="" class="dropdown-link" data-toggle="dropdown"><span data-toggle="tooltip" data-title="Archive"><i class="ri-inbox-archive-line"></i></span></a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <label class="dropdown-menu-title">Archive Reason</label>
+                        <span class="dropdown-menu-text">Only archive non-prospect emails</span>
+                        <a href="" class="dropdown-item selected">Resident Related</a>
+                        <a href="" class="dropdown-item">Vendor Related</a>
+                        <a href="" class="dropdown-item">Spam</a>
+                        <a href="" class="dropdown-item">Not Relevant</a>
+                        <a href="" class="dropdown-item">Other</a>
+                      </div><!-- dropdown-menu -->
+                    </div><!-- dropdown -->
+                  </div><!-- task-options -->
+                </td>
+              </tr>
+              <tr>
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-danger"><span>ta</span></div></td>
+                <td>Google.com</td>
+                <td>(623) 223-5381</td>
+                <td>
+                  <div class="call-playable">
+                    <a href="" class="call-play">
+                      <i class="ri-play-circle-fill"></i>
+                      <i class="ri-pause-circle-line"></i>
+                    </a>
+                    <div class="time time-start">0:09</div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="time time-end">0:48</div>
+                    <div class="dropdown dropdown-speed">
+                      <a href="" class="time speed-control" data-toggle="dropdown" data-display="static"><span>1x</span></a>
+                      <div class="dropdown-menu">
+                        <a href="" class="dropdown-item">1x</a>
+                        <a href="" class="dropdown-item">1.25x</a>
+                        <a href="" class="dropdown-item">1.5x</a>
+                        <a href="" class="dropdown-item">1.75x</a>
+                        <a href="" class="dropdown-item">2x</a>
+                      </div><!-- dropdown-menu -->
+                    </div>
+                    <a href="" class="call-trans"><span data-toggle="tooltip" data-title="Call transcription"><i class="ri-voiceprint-line"></i></span></a>
+                  </div><!-- call-playable -->
+                </td>
+                <td>
+                  <div class="dropdown dropdown-owner">
+                    <a data-toggle="dropdown" class="task-email"><span>john.smith@mark-taylor.com</span> <i class="ri-arrow-down-s-fill"></i></a>
+                    <div class="dropdown-menu">
+                      <a href="#" class="dropdown-item active">john.smith@mark-taylor.com</a>
+                      <a href="#" class="dropdown-item">ethan@liftlytics.com</a>
+                      <a href="#" class="dropdown-item">janedoe@liftlytics.com</a>
+                    </div>
+                  </div><!-- dropdown -->
+                </td>
+                <td>Jan 18, 2021</td>
+                <td>&nbsp;</td>
+                <td>
+                  <div class="task-options">
+                    <nav class="nav nav-icon">
+                      <a href=""><span data-toggle="tooltip" data-title="Add as New Lead"><i class="ri-user-add-line"></i></span></a>
+                      <a href=""><span data-toggle="tooltip" data-title="Link"><i class="ri-links-line"></i></span></a>
+                    </nav>
+                    <div class="dropdown dropdown-archive mg-l-5">
+                      <a href="" class="dropdown-link" data-toggle="dropdown"><span data-toggle="tooltip" data-title="Archive"><i class="ri-inbox-archive-line"></i></span></a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <label class="dropdown-menu-title">Archive Reason</label>
+                        <span class="dropdown-menu-text">Only archive non-prospect emails</span>
+                        <a href="" class="dropdown-item selected">Resident Related</a>
+                        <a href="" class="dropdown-item">Vendor Related</a>
+                        <a href="" class="dropdown-item">Spam</a>
+                        <a href="" class="dropdown-item">Not Relevant</a>
+                        <a href="" class="dropdown-item">Other</a>
+                      </div><!-- dropdown-menu -->
+                    </div><!-- dropdown -->
+                  </div><!-- task-options -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- table-responsive -->
+
+
+        <hr class="op-0">
+
+        <div class="title-bar mg-y-10">
+          <h6>Followups <span>(2)</span></h6>
+
+          <div class="dropdown dropdown-title-bar mg-l-auto">
+            <a href="" class="dropdown-link" data-toggle="dropdown">My Followups <i class="ri-arrow-down-s-line"></i></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="pipeline-mytours.html" class="dropdown-item active">My Followups <span>(3)</span></a>
+              <a href="pipeline-tasks.html" class="dropdown-item">All Agents <span>(8)</span></a>
+              <div class="dropdown-divider"></div>
+              <a href="pipeline-mytours.html" class="dropdown-item">John Smith <span>(3)</span></a>
+              <a href="pipeline-mytours.html" class="dropdown-item">Jane Doe <span>(3)</span></a>
+              <a href="pipeline-mytours.html" class="dropdown-item">Ethan Lacey <span>(2)</span></a>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+        </div><!-- title-bar -->
+        <div class="table-responsive table-responsive-tasks">
+          <table class="table table-alpha table-lead table-tasks table-tasks2 table-followups">
+            <thead>
+              <tr>
+                <th class="wd-20 skeleton"><div class="skeleton-checkbox"></div></th>
+                <th class="wd-20 skeleton-content"><div class="form-checkbox"><input type="checkbox" class="check-all"></div></th>
+                <th class="wd-20">
+                  <div class="dropdown dropdown-all">
+                    <a href="" class="dropdown-link" data-toggle="dropdown">All</a>
+                    <div class="dropdown-menu">
+                      <a href="" class="dropdown-item active"><small class="bg-secondary"></small>All</a>
+                      <a href="" class="dropdown-item"><small class="bg-danger"></small>Overdue</a>
+                      <a href="" class="dropdown-item"><small class="bg-warning"></small>Due Today</a>
+                      <a href="" class="dropdown-item"><small class="bg-success"></small>Complete</a>
+                      <a href="" class="dropdown-item"><small class="bg-secondary"></small>Upcoming</a>
+                    </div><!-- dropdown-menu -->
+                  </div><!-- dropdown -->
+                </th>
+                <th>From</th>
+                <th>Subject</th>
+                <th>Body</th>
+                <th>Owner</th>
+                <th>Send Date</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody class="skeleton">
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td><div class="skeleton-avatar"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-150"></div></td>
+                <td><div class="skeleton-text sm wd-150"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-80"></div></td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td><div class="skeleton-avatar"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-150"></div></td>
+                <td><div class="skeleton-text sm wd-150"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-80"></div></td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td><div class="skeleton-checkbox"></div></td>
+                <td><div class="skeleton-avatar"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-150"></div></td>
+                <td><div class="skeleton-text sm wd-150"></div></td>
+                <td><div class="skeleton-text sm wd-100"></div></td>
+                <td><div class="skeleton-text sm wd-80"></div></td>
+                <td>&nbsp;</td>
+              </tr>
+            </tbody>
+            <tbody class="skeleton-content">
+              <tr>
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-danger"><span>gm</span></div></td>
+                <td>Greg Moskuor</td>
+                <td><div class="followup-subject">A new post has been added to the wall</div></td>
+                <td><div class="followup-body">Hi post office, a new post has been added to the wall by Canila Zacharo</div></td>
+                <td>
+                  <div class="dropdown dropdown-owner">
+                    <a data-toggle="dropdown" class="task-email"><span>john.smith@mark-taylor.com</span> <i class="ri-arrow-down-s-fill"></i></a>
+                    <div class="dropdown-menu">
+                      <a href="#" class="dropdown-item active">john.smith@mark-taylor.com</a>
+                      <a href="#" class="dropdown-item">ethan@liftlytics.com</a>
+                      <a href="#" class="dropdown-item">janedoe@liftlytics.com</a>
+                    </div>
+                  </div><!-- dropdown -->
+                </td>
+                <td><small class="text-danger">(2 days ago)</small> Jan 13, 2021</td>
+                <td>
+                  <div class="dropdown dropdown-archive">
+                    <a href="" class="dropdown-link" data-toggle="dropdown"><span data-toggle="tooltip" data-title="Archive"><i class="ri-inbox-archive-line"></i></span></a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <label class="dropdown-menu-title">Archive Reason</label>
+                      <span class="dropdown-menu-text">Only archive non-prospect emails</span>
+                      <a href="" class="dropdown-item selected">Resident Related</a>
+                      <a href="" class="dropdown-item">Vendor Related</a>
+                      <a href="" class="dropdown-item">Spam</a>
+                      <a href="" class="dropdown-item">Not Relevant</a>
+                      <a href="" class="dropdown-item">Other</a>
+                    </div><!-- dropdown-menu -->
+                  </div><!-- dropdown -->
+                </td>
+              </tr>
+              <tr>
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-secondary"><span>al</span></div></td>
+                <td>Alina Loman</td>
+                <td><div class="followup-subject">Walkthrough</div></td>
+                <td><div class="followup-body">Hey guys, did you ever get the computer issue worked out? Can I schedule...</div></td>
+                <td>
+                  <div class="dropdown dropdown-owner">
+                    <a data-toggle="dropdown" class="task-email"><span>john.smith@mark-taylor.com</span> <i class="ri-arrow-down-s-fill"></i></a>
+                    <div class="dropdown-menu">
+                      <a href="#" class="dropdown-item active">john.smith@mark-taylor.com</a>
+                      <a href="#" class="dropdown-item">ethan@liftlytics.com</a>
+                      <a href="#" class="dropdown-item">janedoe@liftlytics.com</a>
+                    </div>
+                  </div><!-- dropdown -->
+                </td>
+                <td>Jan 15, 2021</td>
+                <td>
+                  <div class="dropdown dropdown-archive">
+                    <a href="" class="dropdown-link" data-toggle="dropdown"><span data-toggle="tooltip" data-title="Archive"><i class="ri-inbox-archive-line"></i></span></a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <label class="dropdown-menu-title">Archive Reason</label>
+                      <span class="dropdown-menu-text">Only archive non-prospect emails</span>
+                      <a href="" class="dropdown-item selected">Resident Related</a>
+                      <a href="" class="dropdown-item">Vendor Related</a>
+                      <a href="" class="dropdown-item">Spam</a>
+                      <a href="" class="dropdown-item">Not Relevant</a>
+                      <a href="" class="dropdown-item">Other</a>
+                    </div><!-- dropdown-menu -->
+                  </div><!-- dropdown -->
+                </td>
+              </tr>
+              <tr>
+                <td><div class="form-checkbox"><input type="checkbox" name="checkitem"></div></td>
+                <td><div class="avatar bg-success"><span>ta</span></div></td>
+                <td>Tina Adams</td>
+                <td><div class="followup-subject">Re: Cockroaches in drain (Apt 2162)</div></td>
+                <td><div class="followup-body">Thank you, I would like to see if any others show up. If so, then I would...</div></td>
+                <td>
+                  <div class="dropdown dropdown-owner">
+                    <a data-toggle="dropdown" class="task-email"><span>john.smith@mark-taylor.com</span> <i class="ri-arrow-down-s-fill"></i></a>
+                    <div class="dropdown-menu">
+                      <a href="#" class="dropdown-item active">john.smith@mark-taylor.com</a>
+                      <a href="#" class="dropdown-item">ethan@liftlytics.com</a>
+                      <a href="#" class="dropdown-item">janedoe@liftlytics.com</a>
+                    </div>
+                  </div><!-- dropdown -->
+                </td>
+                <td>Jan 18, 2021</td>
+                <td>
+                  <div class="dropdown dropdown-archive">
+                    <a href="" class="dropdown-link" data-toggle="dropdown"><span data-toggle="tooltip" data-title="Archive"><i class="ri-inbox-archive-line"></i></span></a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <label class="dropdown-menu-title">Archive Reason</label>
+                      <span class="dropdown-menu-text">Only archive non-prospect emails</span>
+                      <a href="" class="dropdown-item selected">Resident Related</a>
+                      <a href="" class="dropdown-item">Vendor Related</a>
+                      <a href="" class="dropdown-item">Spam</a>
+                      <a href="" class="dropdown-item">Not Relevant</a>
+                      <a href="" class="dropdown-item">Other</a>
+                    </div><!-- dropdown-menu -->
+                  </div><!-- dropdown -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- table-responsive -->
+
+      </div><!-- container-fluid -->
+    </div><!-- content -->
+
+    <div class="modal modal-bulk-reassign fade" id="modalBulkReassign2" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Bulk Reassign</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="row align-items-center">
+              <div class="col-5">
+                <div class="d-flex align-items-center">
+                  <div class="wd-150 mg-r-10">Current Owner:</div>
+                  <select class="custom-select">
+                    <option value="1" selected>Testo Cresto (2)</option>
+                    <option value="2">Katrina Harrison (4)</option>
+                    <option value="2">Jane Doe (1)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-7">New Owner(s):</div>
+              <div class="col-5 mg-t-15">
+                <div class="form-search">
+                  <i data-feather="search"></i>
+                  <input type="text" class="form-control" placeholder="Search tasks">
+                </div><!-- form-search -->
+              </div><!-- col -->
+              <div class="col-7 mg-t-15">
+                <div class="media align-items-center">
+                  <div class="media-body row">
+                    <div class="col-3 media media-owner">
+                      <div class="avatar"><span>kh</span></div>
+                      <h6 class="media-body owner-name">Katrina Harrison</h6>
+                    </div>
+                    <div class="col-3 media media-owner">
+                      <div class="avatar"><span>jc</span></div>
+                      <h6 class="media-body owner-name">Jillian Cordova</h6>
+                    </div>
+                    <div class="col-3 media media-owner">
+                      <div class="avatar"><span>dt</span></div>
+                      <h6 class="media-body owner-name">Dominique Taylor</h6>
+                    </div>
+                    <div class="col-3 media media-owner">
+                      <div class="avatar"><span>df</span></div>
+                      <h6 class="media-body owner-name">Dustin Fryegas</h6>
+                    </div>
+                  </div><!-- row -->
+                  <nav class="nav nav-pager">
+                    <a href="" class="nav-link disabled"><i class="ri-arrow-left-s-line"></i></a>
+                    <a href="" class="nav-link"><i class="ri-arrow-right-s-line"></i></a>
+                  </nav>
+                </div><!-- media -->
+              </div><!-- col-7 -->
+            </div><!-- row -->
+            <hr class="mg-y-5 op-0">
+            <div class="bulk-task-group show">
+              <div class="bulk-task-header row">
+                <div class="col-5"><h6 class="bulk-task-title">Tours <span>(3)</span></h6></div>
+                <div class="col-7">
+                  <div class="bulk-radio-group">
+                    <div class="row">
+                      <div class="col"><div class="form-radio"><input type="checkbox" name="radio0" value="1"><label></label></div></div>
+                      <div class="col"><div class="form-radio"><input type="checkbox" name="radio0" value="2"><label></label></div></div>
+                      <div class="col"><div class="form-radio"><input type="checkbox" name="radio0" value="3"><label></label></div></div>
+                      <div class="col"><div class="form-radio"><input type="checkbox" name="radio0" value="4"><label></label></div></div>
+                    </div><!-- row -->
+                  </div><!-- bulk-radio -->
+                </div><!-- col -->
+              </div><!-- bulk-task-header -->
+              <div class="bulk-task-body">
+                <div class="bulk-task-item row">
+                  <div class="col-5 d-flex align-items-center">
+                    <div class="form-checkbox checked"><input type="checkbox" checked></div>
+                    <span class="bulk-task-name mg-l-10">Alina Loman - 11:00 AM</span>
+                  </div>
+                  <div class="col-7">
+                    <div class="bulk-radio-group">
+                      <div class="row">
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio1" value="1"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio1" value="2" checked><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio1" value="3"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio1" value="4"><label></label></div></div>
+                      </div><!-- row -->
+                    </div><!-- bulk-radio -->
+                  </div><!-- col -->
+                </div><!-- bulk-task-item -->
+                <div class="bulk-task-item row">
+                  <div class="col-5 d-flex align-items-center">
+                    <div class="form-checkbox checked"><input type="checkbox" checked></div>
+                    <span class="bulk-task-name mg-l-10">Greg Moscobg - 02:30 PM</span>
+                  </div>
+                  <div class="col-7">
+                    <div class="bulk-radio-group">
+                      <div class="row">
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio2" value="1"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio2" value="2"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio2" value="3" checked><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio2" value="4"><label></label></div></div>
+                      </div><!-- row -->
+                    </div><!-- bulk-radio -->
+                  </div><!-- col -->
+                </div><!-- bulk-task-item -->
+                <div class="bulk-task-item row">
+                  <div class="col-5 d-flex align-items-center">
+                    <div class="form-checkbox checked"><input type="checkbox" checked></div>
+                    <span class="bulk-task-name mg-l-10">Tina Adams - 03:30 PM</span>
+                  </div>
+                  <div class="col-7">
+                    <div class="bulk-radio-group">
+                      <div class="row">
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio3" value="1"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio3" value="2"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio3" value="3" checked><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio3" value="4"><label></label></div></div>
+                      </div><!-- row -->
+                    </div><!-- bulk-radio -->
+                  </div><!-- col -->
+                </div><!-- bulk-task-item -->
+                <div class="bulk-task-item row disabled">
+                  <div class="col-5 d-flex align-items-center">
+                    <div class="form-checkbox"><input type="checkbox"></div>
+                    <span class="bulk-task-name mg-l-10">Jeff Rogers - 03:30 PM</span>
+                  </div>
+                  <div class="col-7">
+                    <div class="bulk-radio-group">
+                      <div class="row">
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio4" value="1" disabled><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio4" value="2" disabled><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio4" value="3" disabled><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio4" value="4" disabled><label></label></div></div>
+                      </div><!-- row -->
+                    </div><!-- bulk-radio -->
+                  </div><!-- col -->
+                </div><!-- bulk-task-item -->
+              </div><!-- bulk-task-body -->
+            </div><!-- bulk-task-group -->
+            <div class="bulk-task-group show">
+              <div class="bulk-task-header row">
+                <div class="col-5"><h6 class="bulk-task-title">Prospect Tasks <span>(2)</span></h6></div>
+                <div class="col-7">
+                  <div class="bulk-radio-group">
+                    <div class="row">
+                      <div class="col"><div class="form-radio"><input type="checkbox" name="radio0a" value="1"><label></label></div></div>
+                      <div class="col"><div class="form-radio"><input type="checkbox" name="radio0a" value="2"><label></label></div></div>
+                      <div class="col"><div class="form-radio"><input type="checkbox" name="radio0a" value="3"><label></label></div></div>
+                      <div class="col"><div class="form-radio"><input type="checkbox" name="radio0a" value="4" checked><label></label></div></div>
+                    </div><!-- row -->
+                  </div><!-- bulk-radio -->
+                </div><!-- col -->
+              </div><!-- bulk-task-header -->
+              <div class="bulk-task-body">
+                <div class="bulk-task-item row">
+                  <div class="col-5 d-flex align-items-center">
+                    <div class="form-checkbox checked"><input type="checkbox" checked></div>
+                    <span class="bulk-task-name mg-l-10">2nd Follow-Up - Courtney Osborne</span>
+                  </div>
+                  <div class="col-7">
+                    <div class="bulk-radio-group">
+                      <div class="row">
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio1a" value="1"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio1a" value="2"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio1a" value="3"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio1a" value="4" checked><label></label></div></div>
+                      </div><!-- row -->
+                    </div><!-- bulk-radio -->
+                  </div><!-- col -->
+                </div><!-- bulk-task-item -->
+                <div class="bulk-task-item row">
+                  <div class="col-5 d-flex align-items-center">
+                    <div class="form-checkbox checked"><input type="checkbox" checked></div>
+                    <span class="bulk-task-name mg-l-10">1st Tour Follow-Up - Jeff Daniels</span>
+                  </div>
+                  <div class="col-7">
+                    <div class="bulk-radio-group">
+                      <div class="row">
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio2a" value="1"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio2a" value="2"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio2a" value="3"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio2a" value="4" checked><label></label></div></div>
+                      </div><!-- row -->
+                    </div><!-- bulk-radio -->
+                  </div><!-- col -->
+                </div><!-- bulk-task-item -->
+                <div class="bulk-task-item row">
+                  <div class="col-5 d-flex align-items-center">
+                    <div class="form-checkbox checked"><input type="checkbox" checked></div>
+                    <span class="bulk-task-name mg-l-10">Email Follow-Up - Todd Gregor</span>
+                  </div>
+                  <div class="col-7">
+                    <div class="bulk-radio-group">
+                      <div class="row">
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio3a" value="1"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio3a" value="2"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio3a" value="3"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio3a" value="4" checked><label></label></div></div>
+                      </div><!-- row -->
+                    </div><!-- bulk-radio -->
+                  </div><!-- col -->
+                </div><!-- bulk-task-item -->
+              </div><!-- bulk-task-body -->
+            </div><!-- bulk-task-group -->
+            <div class="bulk-task-group show">
+              <div class="bulk-task-header row">
+                <div class="col-5"><h6 class="bulk-task-title">Calls <span>(4)</span></h6></div>
+                <div class="col-7">
+                  <div class="bulk-radio-group">
+                    <div class="row">
+                      <div class="col"><div class="form-radio"><input type="checkbox" name="radio0b" value="1"><label></label></div></div>
+                      <div class="col"><div class="form-radio"><input type="checkbox" name="radio0b" value="2"><label></label></div></div>
+                      <div class="col"><div class="form-radio"><input type="checkbox" name="radio0b" value="3"><label></label></div></div>
+                      <div class="col"><div class="form-radio"><input type="checkbox" name="radio0b" value="4"><label></label></div></div>
+                    </div><!-- row -->
+                  </div><!-- bulk-radio -->
+                </div><!-- col -->
+              </div><!-- bulk-task-header -->
+              <div class="bulk-task-body">
+                <div class="bulk-task-item row">
+                  <div class="col-5 d-flex align-items-center">
+                    <div class="form-checkbox checked"><input type="checkbox" checked></div>
+                    <span class="bulk-task-name mg-l-10">Courtney Osborne</span>
+                  </div>
+                  <div class="col-7">
+                    <div class="bulk-radio-group">
+                      <div class="row">
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio1b" value="1"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio1b" value="2"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio1b" value="3"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio1b" value="4"><label></label></div></div>
+                      </div><!-- row -->
+                    </div><!-- bulk-radio -->
+                  </div><!-- col -->
+                </div><!-- bulk-task-item -->
+                <div class="bulk-task-item row">
+                  <div class="col-5 d-flex align-items-center">
+                    <div class="form-checkbox checked"><input type="checkbox" checked></div>
+                    <span class="bulk-task-name mg-l-10">Jeff Daniels</span>
+                  </div>
+                  <div class="col-7">
+                    <div class="bulk-radio-group">
+                      <div class="row">
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio2b" value="1"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio2b" value="2"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio2b" value="3"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio2b" value="4"><label></label></div></div>
+                      </div><!-- row -->
+                    </div><!-- bulk-radio -->
+                  </div><!-- col -->
+                </div><!-- bulk-task-item -->
+              </div><!-- bulk-task-body -->
+            </div><!-- bulk-task-group -->
+            <div class="bulk-task-group show">
+              <div class="bulk-task-header row">
+                <div class="col-5"><h6 class="bulk-task-title">Followups <span>(3)</span></h6></div>
+                <div class="col-7">
+                  <div class="bulk-radio-group">
+                    <div class="row">
+                      <div class="col"><div class="form-radio"><input type="checkbox" name="radio0c" value="1"><label></label></div></div>
+                      <div class="col"><div class="form-radio"><input type="checkbox" name="radio0c" value="2"><label></label></div></div>
+                      <div class="col"><div class="form-radio"><input type="checkbox" name="radio0c" value="3"><label></label></div></div>
+                      <div class="col"><div class="form-radio"><input type="checkbox" name="radio0c" value="4"><label></label></div></div>
+                    </div><!-- row -->
+                  </div><!-- bulk-radio -->
+                </div><!-- col -->
+              </div><!-- bulk-task-header -->
+              <div class="bulk-task-body">
+                <div class="bulk-task-item row">
+                  <div class="col-5 d-flex align-items-center">
+                    <div class="form-checkbox checked"><input type="checkbox" checked></div>
+                    <span class="bulk-task-name mg-l-10">Courtney Osborne</span>
+                  </div>
+                  <div class="col-7">
+                    <div class="bulk-radio-group">
+                      <div class="row">
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio1c" value="1"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio1c" value="2"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio1c" value="3"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio1c" value="4"><label></label></div></div>
+                      </div><!-- row -->
+                    </div><!-- bulk-radio -->
+                  </div><!-- col -->
+                </div><!-- bulk-task-item -->
+                <div class="bulk-task-item row">
+                  <div class="col-5 d-flex align-items-center">
+                    <div class="form-checkbox checked"><input type="checkbox" checked></div>
+                    <span class="bulk-task-name mg-l-10">Jeff Daniels</span>
+                  </div>
+                  <div class="col-7">
+                    <div class="bulk-radio-group">
+                      <div class="row">
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio2c" value="1"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio2c" value="2"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio2c" value="3"><label></label></div></div>
+                        <div class="col"><div class="form-radio"><input type="checkbox" name="radio2c" value="4"><label></label></div></div>
+                      </div><!-- row -->
+                    </div><!-- bulk-radio -->
+                  </div><!-- col -->
+                </div><!-- bulk-task-item -->
+              </div><!-- bulk-task-body -->
+            </div><!-- bulk-task-group -->
+          </div><!-- modal-body -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Save Changes</button>
+          </div>
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-bulkreassign fade" id="modalBulkReassign" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Bulk Reassign</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="form-label">3 Tours - reassign to:</label>
+              <select class="select2-reassign" multiple>
+                <option value="jd" selected>Jane Doe</option>
+                <option value="js" selected>John Smith</option>
+                <option value="jv">John Vanderhyde</option>
+              </select>
+            </div><!-- form-group -->
+            <div class="form-group">
+              <label class="form-label">2 Prospect Tasks - reassign to:</label>
+              <select class="select2-reassign" multiple>
+                <option value="jd" selected>Jane Doe</option>
+                <option value="js" selected>John Smith</option>
+                <option value="jv" selected>John Vanderhyde</option>
+              </select>
+            </div><!-- form-group -->
+            <div class="form-group">
+              <label class="form-label">4 Calls - reassign to:</label>
+              <select class="select2-reassign" multiple>
+                <option value="jd" selected>Jane Doe</option>
+                <option value="js" selected>John Smith</option>
+                <option value="jv">John Vanderhyde</option>
+              </select>
+            </div><!-- form-group -->
+            <div class="form-group mg-b-0-f">
+              <label class="form-label">2 Followups - reassign to:</label>
+              <select class="select2-reassign" multiple>
+                <option value="jd" selected>Jane Doe</option>
+                <option value="js" selected>John Smith</option>
+                <option value="jv">John Vanderhyde</option>
+              </select>
+            </div><!-- form-group -->
+          </div><!-- modal-body -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Save</button>
+          </div>
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/select2/js/select2.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('[data-toggle="tooltip"]').tooltip({
+          container: $('.content')
+        });
+
+        $('.nav-header .nav-item-pipeline .nav-link').addClass('active');
+
+        $('.nav-check').on('click', function(e){
+          e.preventDefault();
+          $(this).toggleClass('active').siblings().removeClass('active');
+
+          if($(this).hasClass('tour-completed')) {
+            $(this).closest('tr').toggleClass('tour-completed').removeClass('no-show');
+          }
+
+          if($(this).hasClass('no-show')) {
+            $(this).closest('tr').toggleClass('no-show').removeClass('tour-completed');
+          }
+
+          var hc = $(this).closest('tbody').find('tr.tour-completed').length;
+          var dp = ($(this).closest('#tableTours').length)? 'cc1' : 'cc4';;
+
+          $('#'+dp).parent().toggleClass('d-none', !hc);
+          $('#'+dp).parent().find('.custom-control-label span').text(hc);
+        });
+
+        $('#cc1').on('click', function(e){
+          var c = $(this).is(':checked');
+          $('#tableTours tr.tour-completed').toggleClass('d-none', !c);
+        });
+
+        $('#cc4').on('click', function(e){
+          var c = $(this).is(':checked');
+          $('#tableTasks tr.tour-completed').toggleClass('d-none', !c);
+        });
+
+        // bulk reassign by group
+        $('.table-header-group .form-checkbox').on('click', function(e){
+          var id = $(this).closest('tr').attr('id');
+          var isChecked = $(this).find('input').prop('checked');
+          var siblings = $(this).closest('tr').siblings('[data-parent="'+id+'"]');
+
+          siblings.each(function(){
+            $(this).toggleClass('selected', isChecked && !$(this).hasClass('tour-completed'));
+            $(this).find('.form-checkbox').toggleClass('checked', isChecked);
+            $(this).find('.form-checkbox input').prop('checked', isChecked);
+          });
+
+          if(isChecked) {
+            $('.btn-bulk-reassign').removeClass('d-none');
+            $('.btn-new-task').addClass('d-none');
+            $('#navRightOne .form-search').addClass('d-none');
+          } else {
+            if($(this).closest('tr').siblings().find('.form-checkbox.checked').length === 0) {
+              $('.btn-bulk-reassign').addClass('d-none');
+              $('.btn-new-task').removeClass('d-none');
+              $('#navRightOne .form-search').removeClass('d-none');
+            }
+          }
+        });
+
+        // Bulk reassign if check more than 1
+        $('#tableTours .form-checkbox').on('click', function(e){
+          var siblings = $(this).closest('tr').siblings();
+
+          if($('#tableTours .form-checkbox.checked').length > 1) {
+            $('.btn-bulk-reassign').removeClass('d-none');
+            $('.btn-new-task').addClass('d-none');
+            $('#navRightOne .form-search').addClass('d-none');
+          } else {
+            $('.btn-bulk-reassign').addClass('d-none');
+            $('.btn-new-task').removeClass('d-none');
+            $('#navRightOne .form-search').removeClass('d-none');
+          }
+
+          var dp = $(this).closest('tr').attr('data-parent');
+          var it = $('#tableTours tr[data-parent="'+dp+'"].selected').length;
+          if(it) {
+            $('#'+dp).addClass('has-checked');
+          } else {
+            $('#'+dp).removeClass('has-checked');
+          }
+        });
+
+        $('.dropdown-archive .dropdown-menu').on('click', function(e){
+          e.stopPropagation();
+        })
+
+        $('.dropdown-archive .dropdown-item').on('click', function(e){
+          e.preventDefault();
+          $(this).addClass('selected').siblings().removeClass('selected');
+        });
+
+        $('.bulk-task-title').on('click', function(e){
+          $(this).closest('.bulk-task-group').toggleClass('show');
+        });
+
+        $('.bulk-task-item .form-checkbox').on('click', function(e){
+          var i = $(this).find('input');
+          var f = $(this).closest('.bulk-task-item').find('.form-radio input');
+
+          if(i.prop('checked')) {
+            i.prop('checked', false);
+            $(this).removeClass('checked');
+            $(this).closest('.bulk-task-item').addClass('disabled');
+            f.prop('disabled', true);
+            f.prop('checked', false);
+          } else {
+            i.prop('checked', true);
+            $(this).addClass('checked');
+            $(this).closest('.bulk-task-item').removeClass('disabled');
+            f.prop('disabled', false);
+          }
+
+          var hc = $(this).closest('.bulk-task-body').find('.form-checkbox.checked').length;
+          if(!hc) $(this).closest('.bulk-task-body').prev().find('input').prop('checked', false);
+        });
+
+        $('.bulk-task-header input').on('click', function(){
+          var v = $(this).val();
+          var b = $(this).closest('.bulk-task-header').next();
+          var c = $(this).prop('checked');
+
+          $(this).closest('.col').siblings().find('input').prop('checked', false);
+
+          b.find('.bulk-task-item').toggleClass('disabled', !c);
+          b.find('.bulk-task-item .form-checkbox').toggleClass('checked', c);
+          b.find('.bulk-task-item .form-checkbox input').prop('checked', c);
+          b.find('.bulk-radio-group input').each(function(){
+            $(this).prop('disabled', !c);
+          });
+
+          b.find('.bulk-radio-group input').each(function(){
+            if($(this).val() === v) {
+              $(this).prop('checked', c);
+            } else {
+              $(this).prop('checked', false);
+            }
+          });
+        });
+
+        $('.bulk-radio-group input').on('click', function(){
+          var c = $(this).prop('checked');
+          var v = $(this).val();
+          var h = $('.bulk-task-header input:checked').val();
+
+          if(c) $(this).closest('.col').siblings().find('input').prop('checked', false);
+
+          if(v != h) $('.bulk-task-header input:checked').prop('checked', false);
+
+        });
+
+        $('.dropdown-owner .dropdown-item').on('click', function(e){
+          e.preventDefault();
+          var t = $(this).text();
+          var a = $(this).closest('.dropdown-owner').find('.task-email span');
+
+          a.text(t);
+          $(this).addClass('active').siblings().removeClass('active');
+
+        });
+
+        $('.table-calls td').on('click', function(e) {
+          window.location.href = 'calls.html?filter=today';
+        });
+
+        $('.table-followups td').on('click', function(e) {
+          if(!$(e.target).closest('.nav').length && !$(e.target).closest('.dropdown').length) {
+            window.location.href = 'email-followups.html?filter=today';
+          }
+        });
+
+        $('#tableTours tr:not(.table-header-group)').on('click', function(e) {
+          if(!$(e.target).closest('.nav').length && !$(e.target).closest('.dropdown').length) {
+            if(!$(e.target).hasClass('form-checkbox')) {
+              window.location.href = 'pipeline-lead.html';
+            }
+          }
+        });
+
+        $('.select2-reassign').select2({
+          minimumResultsForSearch: Infinity,
+          width: '100%',
+          dropdownParent: $('#modalBulkReassign')
+        });
+
+        //$('#modalBulkReassign').modal('show');
+      });
+    </script>
+  </body>
+</html>

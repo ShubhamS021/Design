@@ -1,0 +1,2446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body>
+
+    <div class="content content-reports">
+      <div class="container-fluid">
+        <div class="content-header align-items-center mg-b-30">
+          <div class="mg-r-auto">
+            <h3 class="content-title mg-b-3">Reports</h3>
+            <span class="content-text">Time Period: Aug 01 - Aug 22, 2020</span>
+          </div>
+
+          <div class="dropdown-select">
+            <a href="#" data-toggle="dropdown" class="dropdown-link">
+              <i class="ri-calendar-line"></i> <span>This week</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="" class="dropdown-item">Today</a>
+              <a href="" class="dropdown-item disabled">This week</a>
+              <a href="" class="dropdown-item">Last week</a>
+              <a href="" class="dropdown-item">This month</a>
+              <a href="" class="dropdown-item">Last month</a>
+              <a href="" class="dropdown-item">This quarter</a>
+              <a href="" class="dropdown-item">Last quarter</a>
+              <a href="" class="dropdown-item">This year</a>
+              <a href="" class="dropdown-item">Last year</a>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+
+          <div class="dropdown-select">
+            <a href="#" data-toggle="dropdown" class="dropdown-link">
+              <i class="ri-pie-chart-line"></i> <span>Overall</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="" class="dropdown-item disabled">Overall</a>
+              <a href="" class="dropdown-item">Performance</a>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+
+          <div class="dropdown-select">
+            <a href="#" data-toggle="dropdown" class="dropdown-link">
+              <i class="ri-arrow-left-right-line"></i> <span>Compare to</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="" class="dropdown-item">Previous periods</a>
+              <a href="" class="dropdown-item">Company wide averages</a>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+
+          <div class="dropdown-select">
+            <a href="#" data-toggle="dropdown" class="dropdown-link">
+              <i class="ri-bar-chart-fill"></i> <span>Overview Reports</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="" data-value="overview" class="dropdown-item disabled">Overview Reports</a>
+              <a href="" data-value="marketing" class="dropdown-item">Marketing Reports</a>
+              <a href="" data-value="operations" class="dropdown-item d-none">Operations Reports</a>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+        </div><!-- content-header -->
+
+        <div class="content-body skeleton-content">
+          <div id="reportOverview" class="row">
+            <div class="col">
+              <div class="card card-report">
+                <div class="card-header">
+                  <h6 class="card-title">Lead-to-lease Report</h6>
+                  <span class="card-text">Understanding how your team's lead-to-lease pipeline is progressing in the selected time range.</span>
+                  <a href="#modalDrillDown1" data-toggle="modal" class="report-drilldown-link"><span data-toggle="tooltip" data-title="Lead Source Drilldown"><i class="ri-fullscreen-line"></i></span></a>
+                </div><!-- card-header -->
+                <div class="card-header skeleton">
+                  <div class="skeleton-text md wd-200 d-block mg-b-15"></div>
+                  <div class="skeleton-text sm wd-50p d-block"></div>
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <div class="row row-sm">
+                    <div class="col-4">
+                      <h2 class="report-value report-value-one report-value-leads">156 <i class="ri-bar-chart-fill"></i></h2>
+                      <a href="#modalDataLead" class="report-label report-label-link" data-toggle="modal">Total Leads</a>
+                      <p class="report-text d-flex"><span class="text-success">1.2% <i class="ri-arrow-up-line"></i></span> (+14)</p>
+                    </div><!-- col -->
+                    <div class="col-4">
+                      <h2 class="report-value report-value-one report-value-tours">28 <i class="ri-bar-chart-fill"></i></h2>
+                      <a href="#modalDataTours" class="report-label report-label-link" data-toggle="modal">Total Tours</a>
+                      <p class="report-text d-flex"><span class="text-danger">0.1% <i class="ri-arrow-down-line"></i></span> (-6)</p>
+                    </div><!-- col -->
+                    <div class="col-4">
+                      <h2 class="report-value report-value-one report-value-leases">16 <i class="ri-bar-chart-fill"></i></h2>
+                      <a href="#modalDataLeases" class="report-label report-label-link" data-toggle="modal">Total Leases</a>
+                      <p class="report-text d-flex"><span class="text-success">0.8% <i class="ri-arrow-up-line"></i></span> (+3)</p>
+                    </div><!-- col -->
+                  </div><!-- row -->
+                  <div class="chart-wrapper-one"><canvas id="chartBar1"></canvas></div>
+                </div><!-- card-body -->
+              </div><!-- card -->
+
+              <div class="card card-report mg-t-25">
+                <div class="card-header skeleton-content">
+                  <h6 class="card-title">Tours Report</h6>
+                  <span class="card-text">Understanding which tour types are requested the most by prospects and how the different tour types convert to leases for a selected time period.</span>
+                  <a href="#modalDrillDown3" data-toggle="modal" class="report-drilldown-link"><span data-toggle="tooltip" data-title="Tours Drilldown"><i class="ri-fullscreen-line"></i></span></a>
+                </div><!-- card-header -->
+                <div class="card-header skeleton">
+                  <div class="skeleton-text wd-200"></div>
+                  <span class="card-text">Understanding which tour types are requested the most by prospects and how the different tour types convert to leases for a selected time period.</span>
+                  <a href="#modalDrillDown3" data-toggle="modal" class="report-drilldown-link"><span data-toggle="tooltip" data-title="Tours Drilldown"><i class="ri-fullscreen-line"></i></span></a>
+                </div><!-- card-header -->
+                <div class="card-body row">
+                  <div class="col-6">
+                    <div class="d-flex align-items-end mg-b-5">
+                      <h2 class="report-value lh--9 mg-b-0">86</h2>
+                      <small class="report-comparison text-success"><i class="ri-arrow-up-line"></i>81.7%</small>
+                    </div>
+                    <label class="report-label">Total Tours</label>
+                    <h6 class="mg-t-25 mg-b-15">Tours By Type</h6>
+                    <div class="chart-wrapper-three"><canvas id="chartBar5"></canvas></div>
+                  </div><!-- col -->
+                  <div class="col-6">
+                    <div class="d-flex align-items-end mg-b-5">
+                      <h2 class="report-value lh--9 mg-b-0">49</h2>
+                      <small class="report-comparison text-success"><i class="ri-arrow-up-line"></i>20.3%</small>
+                    </div>
+                    <label class="report-label">Total Leases</label>
+                    <h6 class="mg-t-25 mg-b-15">Leases By Tour Type</h6>
+                    <div class="chart-wrapper-three"><canvas id="chartBar6"></canvas></div>
+                  </div><!-- col -->
+                </div><!-- card-body -->
+              </div><!-- card -->
+
+              <div class="card card-report card-report-activity mg-t-25">
+                <div class="card-header">
+                  <h6 class="card-title">Activity Report</h6>
+                  <span class="card-text">Understanding how productive your team is with their lead activities in the selected time period.</span>
+                  <a href="#modalDrillDown2" data-toggle="modal" class="report-drilldown-link"><span data-toggle="tooltip" data-title="Activity Drilldown"><i class="ri-fullscreen-line"></i></span></a>
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <div>
+                    <div class="d-flex align-items-end mg-b-5">
+                      <h2 class="report-value lh--9 mg-b-0">18</h2>
+                      <small class="report-comparison text-success"><i class="ri-arrow-up-line"></i>100%</small>
+                    </div>
+                    <label class="report-label">Total Activity</label>
+                  </div>
+                  <div class="chart-wrapper"><canvas id="chartBar2"></canvas></div>
+                </div><!-- card-body -->
+              </div><!-- card -->
+
+              <div class="card card-report mg-t-25">
+                <div class="card-header">
+                  <h6 class="card-title">Calls Report</h6>
+                  <span class="card-text">Understanding how your team is managing phone call leads in the selected time range.</span>
+                  <a href="#modalDrillDown4" data-toggle="modal" class="report-drilldown-link"><span data-toggle="tooltip" data-title="Calls Drilldown"><i class="ri-fullscreen-line"></i></span></a>
+                </div><!-- card-header -->
+                <div class="card-body row">
+                  <div class="col-6">
+                    <div class="d-flex align-items-end mg-b-10">
+                      <h2 class="report-value report-value-one report-value-calls lh--8"><i data-feather="phone"></i> 32</h2>
+                      <small class="report-comparison text-danger"><i class="ri-arrow-down-line"></i>13.5%</small>
+                    </div>
+                    <label class="report-label">Total Prospect Calls</label>
+                    <hr class="op-0">
+                    <div class="chart-wrapper-three"><canvas id="chartBar3"></canvas></div>
+                  </div><!-- col -->
+                  <div class="col-6">
+                    <div class="d-flex align-items-end mg-b-10">
+                      <h2 class="report-value report-value-one report-value-time lh--8"><i data-feather="clock"></i> 1.15 <small>min</small></h2>
+                      <small class="report-comparison text-success"><i class="ri-arrow-up-line"></i>28.2%</small>
+                    </div>
+                    <label class="report-label">Avg. call time (min)</label>
+                    <hr class="op-0">
+                    <div class="chart-wrapper-three"><canvas id="chartBar4"></canvas></div>
+                  </div><!-- col -->
+                  <div class="col-6 mg-t-50">
+                    <label class="report-label mg-b-15">Call Results</label>
+                    <div class="donut-wrapper-one mg-b-15"><canvas id="chartDonut2"></canvas></div>
+                    <ul class="donut-legend-group">
+                      <li class="legend-item busy">Calls Busy</li>
+                      <li class="legend-item answered">Calls Answered</li>
+                      <li class="legend-item missed">Calls Missed</li>
+                    </ul>
+                  </div><!-- col -->
+                  <div class="col-6 mg-t-50">
+                    <label class="report-label mg-b-15">Calls By Source</label>
+                    <div class="donut-wrapper-one mg-b-15"><canvas id="chartDonut3"></canvas></div>
+                    <ul class="donut-legend-group">
+                      <li class="legend-item web1">Stand Alone Website</li>
+                      <li class="legend-item web2">MarkTaylor.com</li>
+                    </ul>
+                  </div><!-- col -->
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+            <div class="col-4">
+              <div class="card card-report">
+                <div class="card-header">
+                  <h6 class="card-title">Engagement Report</h6>
+                  <span class="card-text">See how fast your team is following up with leads and signing leases.</span>
+                  <a href="#modalDrillDown5" data-toggle="modal" class="report-drilldown-link"><span data-toggle="tooltip" data-title="Engagement Drilldown"><i class="ri-fullscreen-line"></i></span></a>
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <div class="d-flex align-items-end mg-b-10">
+                    <h2 class="report-value lh--9 mg-b-0">2.8<small>hrs</small></h2>
+                    <small class="report-comparison text-success"><i class="ri-arrow-up-line"></i>100%</small>
+                  </div>
+                  <label class="report-label">Avg. Lead Response Time (hrs)</label>
+                  <div class="card-sublabel">
+                    <span>Showing times:</span>
+                    <div class="dropdown">
+                      <a href="" class="dropdown-link" data-toggle="dropdown" data-display="static">During business hours</a>
+                      <div class="dropdown-menu">
+                        <a href="" class="dropdown-item">During business hours</a>
+                        <a href="" class="dropdown-item">During non-business hours</a>
+                      </div><!-- dropdown-menu -->
+                    </div><!-- dropdown -->
+                  </div><!-- d-flex -->
+                  <div class="chart-wrapper-two"><canvas id="chartLine1"></canvas></div>
+
+                  <hr class="mg-y-50">
+
+                  <div class="d-flex align-items-end mg-b-10">
+                    <h2 class="report-value lh--9 mg-b-0">0.6 <small>days</small></h2>
+                    <small class="report-comparison text-danger"><i class="ri-arrow-down-line"></i>0.9%</small>
+                  </div>
+                  <label class="report-label">Avg. time to sign lease (days)</label>
+                  <div class="chart-wrapper-two"><canvas id="chartLine2"></canvas></div>
+
+                  <hr class="mg-y-50">
+                  <div class="d-flex align-items-end mg-b-10">
+                    <h2 class="report-value lh--9 mg-b-0">24</h2>
+                    <small class="report-comparison text-success"><i class="ri-arrow-up-line"></i>1.52%</small>
+                  </div>
+                  <label class="report-label">Avg. number of followups to sign lease</label>
+                  <div class="chart-wrapper-two"><canvas id="chartLine3"></canvas></div>
+
+                  <hr class="mg-y-50">
+
+                  <label class="report-label">Lead response time range</label>
+                  <ul class="list-group list-group-lead-range">
+                    <li class="list-group-item"><span>Followup within 2 hrs</span><span>45%</span></li>
+                    <li class="list-group-item"><span>Followup within 24 hrs</span><span>25%</span></li>
+                    <li class="list-group-item"><span>Followup within 48 hrs</span><span>10%</span></li>
+                    <li class="list-group-item"><span>Followup more than 48 hrs</span><span>20%</span></li>
+                  </ul>
+                  <div class="chart-wrapper-donut mg-t-30"><canvas id="chartDonut"></canvas></div>
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+            <div class="col-12 mg-t-25">
+              <div class="card card-report">
+                <div class="card-header">
+                  <h6 class="card-title">Call Scoring</h6>
+                  <span class="card-text">Understanding how productive your team is with their lead activities in the selected time period.</span>
+                  <a href="#modalDrillDown8" data-toggle="modal" class="report-drilldown-link"><span data-toggle="tooltip" data-title="Activity Drilldown"><i class="ri-fullscreen-line"></i></span></a>
+                </div><!-- card-header -->
+                <div class="card-body d-block">
+                  <div class="row row-sm">
+                    <div class="col-5">
+                      <div class="d-flex align-items-end mg-b-3">
+                        <h2 class="report-value report-value-one report-value-time lh--8">60<small>%</small></h2>
+                        <small class="report-comparison text-success"><i class="ri-arrow-up-line"></i>28.2%</small>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <a href="#modalScoredCalls" data-toggle="modal" class="d-flex align-items-center tx-uppercase tx-semibold tx-12"><i class="ri-download-2-fill text-xs lh-9 mg-r-5"></i> Avg. call score</a>
+                      </div>
+                      <div class="chart-wrapper-two ht-200 mg-t-20 mg-r-30"><canvas id="chartLine4"></canvas></div>
+                    </div><!--col -->
+                    <div class="col">
+                      <label class="report-label mg-b-15">Avg. Call Category Source</label>
+                      <table class="table table-bordered table-scoring">
+                        <thead>
+                          <tr>
+                            <th>Categories</th>
+                            <th>Score</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>General Percentage Score</td>
+                            <td>75% <small class="report-comparison d-inline text-success"><i class="ri-arrow-up-line"></i>10%</small></td>
+                          </tr>
+                          <tr>
+                            <td>Introduction and Lead Information</td>
+                            <td>50% <small class="report-comparison d-inline text-success"><i class="ri-arrow-up-line"></i>5%</small></td>
+                          </tr>
+                          <tr>
+                            <td>Qualifying Questions</td>
+                            <td>66% <small class="report-comparison d-inline text-danger"><i class="ri-arrow-down-line"></i>12%</small></td>
+                          </tr>
+                          <tr>
+                            <td>Amenities and Benefits</td>
+                            <td>90% <small class="report-comparison d-inline text-success"><i class="ri-arrow-up-line"></i>15%</small></td>
+                          </tr>
+                          <tr>
+                            <td>Closing</td>
+                            <td>100% <small class="report-comparison d-inline text-success"><i class="ri-arrow-up-line"></i>5%</small></td>
+                          </tr>
+                          <tr>
+                            <td>Overall Impression</td>
+                            <td>70% <small class="report-comparison d-inline text-danger"><i class="ri-arrow-down-line"></i>5%</small></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div><!-- col -->
+                    <div class="col">
+                      <label class="report-label mg-b-15">Avg. Call Score By Property Agent (All-Time)</label>
+                      <table class="table table-bordered table-scoring">
+                        <thead>
+                          <tr>
+                            <th>Property Agents</th>
+                            <th>Score</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>George Washington</td>
+                            <td>75%</td>
+                          </tr>
+                          <tr>
+                            <td>Alexander Great</td>
+                            <td>50%</td>
+                          </tr>
+                          <tr>
+                            <td>Socrates Itumay</td>
+                            <td>66%</td>
+                          </tr>
+                          <tr>
+                            <td>Thomas Jefferson</td>
+                            <td>90%</td>
+                          </tr>
+                          <tr>
+                            <td>Ben Franklin</td>
+                            <td>100%</td>
+                          </tr>
+                          <tr>
+                            <td>Dwayne Wade</td>
+                            <td>70%</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div><!-- col -->
+                  </div><!-- row -->
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+            <div class="col-12 mg-t-25">
+              <div class="card card-report">
+                <div class="card-header">
+                  <h6 class="card-title">Task Report</h6>
+                  <span class="card-text">Understanding how efficient your team is with their prospect tasks in the selected time period.</span>
+                  <!-- <a href="#modalDrillDown8" data-toggle="modal" class="report-drilldown-link"><span data-toggle="tooltip" data-title="Activity Drilldown"><i class="ri-fullscreen-line"></i></span></a> -->
+                </div><!-- card-header -->
+                <div class="card-body d-block">
+                  <div class="row row-sm">
+                    <div class="col-5">
+                      <div class="d-flex align-items-end mg-b-3">
+                        <h2 class="report-value report-value-one report-value-time lh--8">76.1<small>%</small></h2>
+                        <small class="report-comparison text-success"><i class="ri-arrow-up-line"></i>2.5%</small>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <a href="#modalTaskCompletion" data-toggle="modal" class="d-flex align-items-center tx-uppercase tx-semibold tx-12"><i class="ri-download-2-fill text-xs lh-9 mg-r-5"></i> Avg. Task Completion Rate</a>
+                      </div>
+                      <div class="chart-wrapper-two ht-200 mg-t-20 mg-r-30"><canvas id="chartLine4a"></canvas></div>
+                    </div><!--col -->
+                    <div class="col">
+                      <label class="report-label mg-b-15">Avg. Task Type Completion %</label>
+                      <table class="table table-bordered table-scoring">
+                        <thead>
+                          <tr>
+                            <th>Task Type</th>
+                            <th>Completion %</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Tours</td>
+                            <td>75% <small class="report-comparison d-inline text-success"><i class="ri-arrow-up-line"></i>10%</small></td>
+                          </tr>
+                          <tr>
+                            <td>Prospect Tasks</td>
+                            <td>50% <small class="report-comparison d-inline text-success"><i class="ri-arrow-up-line"></i>5%</small></td>
+                          </tr>
+                          <tr>
+                            <td>Calls</td>
+                            <td>66% <small class="report-comparison d-inline text-danger"><i class="ri-arrow-down-line"></i>12%</small></td>
+                          </tr>
+                          <tr>
+                            <td>Followups</td>
+                            <td>90% <small class="report-comparison d-inline text-success"><i class="ri-arrow-up-line"></i>15%</small></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div><!-- col -->
+                    <div class="col">
+                      <label class="report-label mg-b-15">Avg. Task Completion % By Property Agent</label>
+                      <table class="table table-bordered table-scoring">
+                        <thead>
+                          <tr>
+                            <th>Property Agents</th>
+                            <th>Completion %</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>George Washington</td>
+                            <td>75%</td>
+                          </tr>
+                          <tr>
+                            <td>Alexander Great</td>
+                            <td>50%</td>
+                          </tr>
+                          <tr>
+                            <td>Socrates Itumay</td>
+                            <td>66%</td>
+                          </tr>
+                          <tr>
+                            <td>Thomas Jefferson</td>
+                            <td>90%</td>
+                          </tr>
+                          <tr>
+                            <td>Ben Franklin</td>
+                            <td>100%</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div><!-- col -->
+                  </div><!-- row -->
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+          </div><!-- row -->
+          <div id="reportMarketing" class="row d-none">
+            <div class="col-12">
+              <div class="card card-report">
+                <div class="card-header">
+                  <h6 class="card-title">Lead Source Report</h6>
+                  <span class="card-text">Get a sense of how each lead source is performing for your team and generating key business outcomes.</span>
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-report">
+                      <thead>
+                        <tr>
+                          <th>Source</th>
+                          <th>Type</th>
+                          <th>Leads</th>
+                          <th>Tours</th>
+                          <th>Leases</th>
+                          <th>Calls</th>
+                          <th>Leased Rate (%)</th>
+                          <th>Tour Completed Rate (%)</th>
+                          <th>Spend</th>
+                          <th>Cost Per Lead</th>
+                          <th>Cost Per Tour</th>
+                          <th>Cost Per Lease</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><small>Apartments.com</small></td>
+                          <td><small>Non-paid</small></td>
+                          <td><span>120</span></td>
+                          <td><span>75</span></td>
+                          <td><span>48</span></td>
+                          <td><span>86</span></td>
+                          <td><span>5.3<i>%</i></span></td>
+                          <td><span>18.6<i>%</i></span></td>
+                          <td><span><i>$</i>58.00</span></td>
+                          <td><span><i>$</i>10.50</span></td>
+                          <td><span><i>$</i>0.00</span></td>
+                          <td><span><i>$</i>93.00</span></td>
+                        </tr>
+                        <tr>
+                          <td><small>ApartmentFinder.com</small></td>
+                          <td><small>Non-paid</small></td>
+                          <td><span>0</span></td>
+                          <td><span>0</span></td>
+                          <td><span>0</span></td>
+                          <td><span>0</span></td>
+                          <td><span>0<i>%</i></span></td>
+                          <td><span>0<i>%</i></span></td>
+                          <td><span>0</span></td>
+                          <td><span>0</span></td>
+                          <td><span>0</span></td>
+                          <td><span>0</span></td>
+                        </tr>
+                        <tr>
+                          <td><small>ApartmentList.com</small></td>
+                          <td><small>Non-paid</small></td>
+                          <td><span>0</span></td>
+                          <td><span>0</span></td>
+                          <td><span>0</span></td>
+                          <td><span>0</span></td>
+                          <td><span>0<i>%</i></span></td>
+                          <td><span>0<i>%</i></span></td>
+                          <td><span>0</span></td>
+                          <td><span>0</span></td>
+                          <td><span>0</span></td>
+                          <td><span>0</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div><!-- table-responsive -->
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+            <div class="col-12 mg-t-30">
+              <div class="card card-report">
+                <div class="card-header">
+                  <h6 class="card-title">Lead Lost Report</h6>
+                  <span class="card-text">Use this report to better understand why leads are not leasing units at your property.</span>
+                  <a href="#modalDrillDown6" data-toggle="modal" class="report-drilldown-link"><span data-toggle="tooltip" data-title="Lead-Lost Drilldown"><i class="ri-fullscreen-line"></i></span></a>
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <div class="mg-b-20">
+                    <div class="d-flex align-items-end mg-b-10">
+                      <h2 class="report-value lh--9 mg-b-0">11</h2>
+                      <small class="report-comparison text-success"><i class="ri-arrow-up-line"></i>1.52%</small>
+                    </div>
+                    <label class="report-label">Total Leads Lost</label>
+                  </div>
+                  <div class="ht-300"><canvas id="chartBar8"></canvas></div>
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+          </div><!-- row -->
+          <div id="reportOperations" class="row d-none">
+            <div class="col-12">
+              <div class="card card-report card-report-market">
+                <div class="card-body">
+                  <div class="media">
+                    <div class="media-left">
+                      <h6 class="card-title">Market Comp Report</h6>
+                      <span class="card-text mg-b-8">Get an understanding on how your property rent compares to direct competitions in the market.</span>
+                      <a href="#modalDrillDown7" data-toggle="modal" class="report-drilldown-link"><span data-toggle="tooltip" data-title="Market Comp Drilldown"><i class="ri-fullscreen-line"></i></span></a>
+                      <div class="card-sublabel">
+                        <span>Showing unit class:</span>
+                        <div class="dropdown">
+                          <a href="" class="dropdown-link" data-toggle="dropdown" data-display="static">Studio</a>
+                          <div class="dropdown-menu">
+                            <a href="" class="dropdown-item">Studio</a>
+                            <a href="" class="dropdown-item">One Bed</a>
+                            <a href="" class="dropdown-item">Two Beds</a>
+                            <a href="" class="dropdown-item">Three Beds</a>
+                            <a href="" class="dropdown-item">Penthouse</a>
+                          </div><!-- dropdown-menu -->
+                        </div><!-- dropdown -->
+                      </div><!-- d-flex -->
+
+                      <hr class="mg-y-10 op-0">
+
+                      <div class="card-box">
+                        <h2 class="report-value report-value-one report-value-leads"><small class="pd-r-3">$</small> 870<small>.00</small></h2>
+                        <label class="report-label">Average Market Rent</label>
+                        <p class="report-text d-flex"><span class="text-success">1.2% <i class="ri-arrow-up-line"></i></span> than last week</p>
+                      </div><!-- card-box -->
+
+                      <div class="card-box mg-t-20">
+                        <h2 class="report-value report-value-one report-value-leads"><small class="pd-r-3">$</small> 560<small>.00</small></h2>
+                        <label class="report-label">Average Effective Rent</label>
+                        <p class="report-text d-flex"><span class="text-danger">0.8% <i class="ri-arrow-down-line"></i></span> than last week</p>
+                      </div><!-- card-box -->
+                    </div><!-- media-left -->
+                    <div  class="media-body">
+                      <div class="chart-wrapper"><canvas id="chartBar7"></canvas></div>
+                    </div><!-- media-body -->
+                  </div><!-- media -->
+                  <div class="table-responsive">
+                    <table class="table table-report mg-b-0">
+                      <thead>
+                        <tr>
+                          <th>Property</th>
+                          <th>Unit Class</th>
+                          <th>Market<br>Rent Low</th>
+                          <th>Market<br>Rent High</th>
+                          <th>Market<br>Rent</th>
+                          <th>Effective<br>Rent Low</th>
+                          <th>Effective<br>Rent High</th>
+                          <th>Effective<br>Rent</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><small>C2</small></td>
+                          <td><small>Studio</small></td>
+                          <td><span><i>$</i>0.00</span></td>
+                          <td><span><i>$</i>0.00</span></td>
+                          <td><span><i>$</i>0.00</span></td>
+                          <td><span><i>$</i>0.00</span></td>
+                          <td><span><i>$</i>0.00</span></td>
+                          <td><span><i>$</i>0.00</span></td>
+                        </tr>
+                        <tr>
+                          <td><small>C2</small></td>
+                          <td><small>Studio</small></td>
+                          <td><span><i>$</i>0.00</span></td>
+                          <td><span><i>$</i>0.00</span></td>
+                          <td><span><i>$</i>0.00</span></td>
+                          <td><span><i>$</i>0.00</span></td>
+                          <td><span><i>$</i>0.00</span></td>
+                          <td><span><i>$</i>0.00</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div><!-- table-responsive -->
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+          </div><!-- row -->
+        </div><!-- content-body -->
+
+        <div class="content-body skeleton">
+          <div class="row">
+            <div class="col">
+              <div class="card card-report">
+                <div class="card-header">
+                  <div class="skeleton-text md wd-200 d-block mg-b-15"></div>
+                  <div class="skeleton-text sm wd-50p d-block"></div>
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <div class="row row-sm mg-b-30">
+                    <div class="col-4">
+                      <div class="skeleton-box wd-80 mg-b-15"></div>
+                      <div class="skeleton-text sm wd-100 d-block mg-b-10"></div>
+                      <div class="skeleton-text xs wd-80 d-block"></div>
+                    </div><!-- col -->
+                    <div class="col-4">
+                      <div class="skeleton-box wd-80 mg-b-15"></div>
+                      <div class="skeleton-text sm wd-100 d-block mg-b-10"></div>
+                      <div class="skeleton-text xs wd-80 d-block"></div>
+                    </div><!-- col -->
+                    <div class="col-4">
+                      <div class="skeleton-box wd-80 mg-b-15"></div>
+                      <div class="skeleton-text sm wd-100 d-block mg-b-10"></div>
+                      <div class="skeleton-text xs wd-80 d-block"></div>
+                    </div><!-- col -->
+                  </div><!-- row -->
+                  <div class="chart-wrapper-one"><div class="skeleton-box wd-100p ht-100p"></div></div>
+                </div><!-- card-body -->
+              </div><!-- card -->
+
+              <div class="card card-report mg-t-25">
+                <div class="card-header">
+                  <div class="skeleton-text md wd-200 d-block mg-b-15"></div>
+                  <div class="skeleton-text sm wd-50p d-block"></div>
+                </div><!-- card-header -->
+                <div class="card-body row">
+                  <div class="col-6">
+                    <div class="skeleton-box wd-80 mg-b-15"></div>
+                    <div class="skeleton-text sm wd-100 d-block mg-b-30"></div>
+                    <div class="skeleton-text wd-150 d-block mg-b-20"></div>
+                    <div class="chart-wrapper-three"><div class="skeleton-box wd-100p ht-100p"></div></div>
+                  </div><!-- col -->
+                  <div class="col-6">
+                    <div class="skeleton-box wd-80 mg-b-15"></div>
+                    <div class="skeleton-text sm wd-100 d-block mg-b-30"></div>
+                    <div class="skeleton-text wd-150 d-block mg-b-20"></div>
+                    <div class="chart-wrapper-three"><div class="skeleton-box wd-100p ht-100p"></div></div>
+                  </div><!-- col -->
+                </div><!-- card-body -->
+              </div><!-- card -->
+
+              <div class="card card-report card-report-activity mg-t-25">
+                <div class="card-header">
+                  <div class="skeleton-text md wd-200 d-block mg-b-15"></div>
+                  <div class="skeleton-text sm wd-70p d-block"></div>
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <div>
+                    <div class="skeleton-box wd-80 mg-b-15"></div>
+                    <div class="skeleton-text sm wd-100 d-block mg-b-30"></div>
+                  </div>
+                  <div class="chart-wrapper"><div class="skeleton-box wd-100p ht-100p"></div></div>
+                </div><!-- card-body -->
+              </div><!-- card -->
+
+              <div class="card card-report mg-t-25">
+                <div class="card-header">
+                  <div class="skeleton-text md wd-200 d-block mg-b-15"></div>
+                  <div class="skeleton-text sm wd-50p d-block"></div>
+                </div><!-- card-header -->
+                <div class="card-body row">
+                  <div class="col-6">
+                    <div class="skeleton-box wd-80 mg-b-15"></div>
+                    <div class="skeleton-text sm wd-100 d-block mg-b-30"></div>
+                    <div class="skeleton-text wd-150 d-block mg-b-20"></div>
+                    <div class="chart-wrapper-three"><div class="skeleton-box wd-100p ht-100p"></div></div>
+                  </div><!-- col -->
+                  <div class="col-6">
+                    <div class="skeleton-box wd-80 mg-b-15"></div>
+                    <div class="skeleton-text sm wd-100 d-block mg-b-30"></div>
+                    <div class="skeleton-text wd-150 d-block mg-b-20"></div>
+                    <div class="chart-wrapper-three"><div class="skeleton-box wd-100p ht-100p"></div></div>
+                  </div><!-- col -->
+                  <div class="col-6 mg-t-50">
+                    <div class="skeleton-text wd-150 d-block mg-b-20"></div>
+                    <div class="donut-wrapper-one"><div class="skeleton-box wd-100p ht-100p"></div></div>
+                  </div><!-- col -->
+                  <div class="col-6 mg-t-50">
+                    <div class="skeleton-text wd-150 d-block mg-b-20"></div>
+                    <div class="donut-wrapper-one"><div class="skeleton-box wd-100p ht-100p"></div></div>
+                  </div><!-- col -->
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+            <div class="col-4">
+              <div class="card card-report">
+                <div class="card-header">
+                  <div class="skeleton-text md wd-200 d-block mg-b-15"></div>
+                  <div class="skeleton-text sm d-block"></div>
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <div class="skeleton-box wd-80 mg-b-15"></div>
+                  <div class="skeleton-text sm wd-100 d-block mg-b-10"></div>
+                  <div class="skeleton-text xs wd-80 d-block mg-b-20"></div>
+                  <div class="chart-wrapper-two"><div class="skeleton-box wd-100p ht-100p"></div></div>
+
+                  <hr class="mg-y-50">
+
+                  <div class="skeleton-box wd-80 mg-b-15"></div>
+                  <div class="skeleton-text sm wd-100 d-block mg-b-20"></div>
+                  <div class="chart-wrapper-two"><div class="skeleton-box wd-100p ht-100p"></div></div>
+
+                  <hr class="mg-y-50">
+
+                  <div class="skeleton-box wd-80 mg-b-15"></div>
+                  <div class="skeleton-text sm wd-100 d-block mg-b-20"></div>
+                  <div class="chart-wrapper-two"><div class="skeleton-box wd-100p ht-100p"></div></div>
+
+                  <hr class="mg-y-50">
+
+                  <div class="skeleton-text sm wd-100 d-block mg-b-25"></div>
+
+                  <div class="d-flex justify-content-between"><div class="skeleton-text sm wd-45p"></div> <div class="skeleton-text sm wd-30"></div></div>
+                  <div class="d-flex justify-content-between mg-t-15"><div class="skeleton-text sm wd-50p"></div> <div class="skeleton-text sm wd-30"></div></div>
+                  <div class="d-flex justify-content-between mg-t-15"><div class="skeleton-text sm wd-150"></div> <div class="skeleton-text sm wd-30"></div></div>
+                  <div class="d-flex justify-content-between mg-t-15"><div class="skeleton-text sm wd-100"></div> <div class="skeleton-text sm wd-30"></div></div>
+
+                  <div class="chart-wrapper-donut"><div class="skeleton-box wd-100p ht-100p"></div></div>
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+            <div class="col-12 mg-t-25">
+              <div class="card card-report">
+                <div class="card-header">
+                  <div class="skeleton-text md wd-200 d-block mg-b-15"></div>
+                  <div class="skeleton-text sm wd-70p d-block"></div>
+                </div><!-- card-header -->
+                <div class="card-body d-block">
+                  <div class="row row-sm">
+                    <div class="col-5">
+                      <div class="skeleton-box wd-80 mg-b-15"></div>
+                      <div class="skeleton-text xs wd-80 d-block mg-b-20"></div>
+                      <div class="chart-wrapper-two mg-0 pd-r-20"><div class="skeleton-box wd-100p ht-100p"></div></div>
+                    </div><!--col -->
+                    <div class="col">
+                      <div class="skeleton-text xs wd-75p d-block mg-b-20"></div>
+                      <table class="table table-bordered table-scoring">
+                        <thead>
+                          <tr>
+                            <th class="wd-75p"><div class="skeleton-text xs d-block mg-y-5 wd-60p"></div></th>
+                            <th class="wd-25p"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-60p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-80p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-65p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-50p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-40p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-55p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div><!-- col -->
+                    <div class="col">
+                      <div class="skeleton-text xs wd-90p d-block mg-b-20"></div>
+                      <table class="table table-bordered table-scoring">
+                        <thead>
+                          <tr>
+                            <th class="wd-75p"><div class="skeleton-text xs d-block mg-y-5 wd-60p"></div></th>
+                            <th class="wd-25p"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-60p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-70p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-60p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-55p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-50p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-55p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div><!-- col -->
+                  </div><!-- row -->
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+            <div class="col-12 mg-t-25">
+              <div class="card card-report">
+                <div class="card-header">
+                  <div class="skeleton-text md wd-200 d-block mg-b-15"></div>
+                  <div class="skeleton-text sm wd-70p d-block"></div>
+                </div><!-- card-header -->
+                <div class="card-body d-block">
+                  <div class="row row-sm">
+                    <div class="col-5">
+                      <div class="skeleton-box wd-80 mg-b-15"></div>
+                      <div class="skeleton-text xs wd-80 d-block mg-b-20"></div>
+                      <div class="chart-wrapper-two mg-0 pd-r-20"><div class="skeleton-box wd-100p ht-100p"></div></div>
+                    </div><!--col -->
+                    <div class="col">
+                      <div class="skeleton-text xs wd-75p d-block mg-b-20"></div>
+                      <table class="table table-bordered table-scoring">
+                        <thead>
+                          <tr>
+                            <th class="wd-75p"><div class="skeleton-text xs d-block mg-y-5 wd-60p"></div></th>
+                            <th class="wd-25p"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-60p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-80p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-65p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-50p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div><!-- col -->
+                    <div class="col">
+                      <div class="skeleton-text xs wd-90p d-block mg-b-20"></div>
+                      <table class="table table-bordered table-scoring">
+                        <thead>
+                          <tr>
+                            <th class="wd-75p"><div class="skeleton-text xs d-block mg-y-5 wd-60p"></div></th>
+                            <th class="wd-25p"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-60p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-70p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-60p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-55p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                          <tr>
+                            <td><div class="skeleton-text xs d-block mg-y-5 wd-50p"></div></td>
+                            <td class="text-right"><div class="skeleton-text xs d-inline-block mg-y-5 wd-50"></div></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div><!-- col -->
+                  </div><!-- row -->
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+          </div><!-- row -->
+        </div><!-- content-body -->
+      </div><!-- container-fluid -->
+    </div><!-- content -->
+
+    <div class="modal modal-data-table fade" id="modalDataLead" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-lead modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Total Leads</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-alpha mg-b-0">
+              <thead>
+                <tr>
+                  <th class="wd-5p"></th>
+                  <th><span class="sort">Name</span></th>
+                  <th><span class="sort">Email</span></th>
+                  <th><span class="sort">Source</span></th>
+                  <th><span class="sort">Created</span></th>
+                  <th><span class="sort">Acquisition Date</span></th>
+                  <th><span class="sort">Engagement Date</span></th>
+                  <th><span class="sort">Property Team Owner</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><div class="avatar bg-secondary"><span>jw</span></div></td>
+                  <td><strong>Joshua Williamson</strong></td>
+                  <td>joshua@mark-taylor.com</td>
+                  <td></td>
+                  <td>Mar 02, 2020</td>
+                  <td>Mar 04, 2020</td>
+                  <td>Feb 28, 2020</td>
+                  <td>Support Dwell</td>
+                </tr>
+                <tr>
+                  <td><div class="avatar bg-success"><span>da</span></div></td>
+                  <td><strong>Dyanne Aceron</strong></td>
+                  <td>dyanne@mark-taylor.com</td>
+                  <td></td>
+                  <td>Mar 02, 2020</td>
+                  <td>Mar 04, 2020</td>
+                  <td>Feb 28, 2020</td>
+                  <td>Support Dwell</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- modal-body -->
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-data-table fade" id="modalDataTours" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-tours modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Total Tours</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-alpha mg-b-0">
+              <thead>
+                <tr>
+                  <th class="wd-5p"></th>
+                  <th><span class="sort">Name</span></th>
+                  <th><span class="sort">Email</span></th>
+                  <th><span class="sort">Source</span></th>
+                  <th><span class="sort">Tour Date</span></th>
+                  <th><span class="sort">Property Team Owner</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><div class="avatar bg-primary"><span>jw</span></div></td>
+                  <td><strong>Joshua Williamson</strong></td>
+                  <td>joshua@mark-taylor.com</td>
+                  <td></td>
+                  <td>Mar 02, 2020</td>
+                  <td>Support Dwell</td>
+                </tr>
+                <tr>
+                  <td><div class="avatar bg-success"><span>da</span></div></td>
+                  <td><strong>Dyanne Aceron</strong></td>
+                  <td>dyanne@mark-taylor.com</td>
+                  <td></td>
+                  <td>Mar 02, 2020</td>
+                  <td>Support Dwell</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- modal-body -->
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-data-table fade" id="modalDataLeases" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-tours modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Total Leases</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-alpha mg-b-0">
+              <thead>
+                <tr>
+                  <th class="wd-5p"></th>
+                  <th><span class="sort">Name</span></th>
+                  <th><span class="sort">Email</span></th>
+                  <th><span class="sort">Source</span></th>
+                  <th><span class="sort">Tour Date</span></th>
+                  <th><span class="sort">Property Team Owner</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><div class="avatar bg-secondary"><span>jw</span></div></td>
+                  <td><strong>Joshua Williamson</strong></td>
+                  <td>joshua@mark-taylor.com</td>
+                  <td></td>
+                  <td>Mar 02, 2020</td>
+                  <td>Support Dwell</td>
+                </tr>
+                <tr>
+                  <td><div class="avatar bg-success"><span>da</span></div></td>
+                  <td><strong>Dyanne Aceron</strong></td>
+                  <td>dyanne@mark-taylor.com</td>
+                  <td></td>
+                  <td>Mar 02, 2020</td>
+                  <td>Support Dwell</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- modal-body -->
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-data-table fade" id="modalDrillDown1" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-lead modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Lead-to-lease Drilldown</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-alpha table-drill1 mg-b-0">
+              <thead>
+                <tr>
+                  <th><span class="sort">Property</span></th>
+                  <th><span class="sort">Leads</span></th>
+                  <th><span class="sort">Tours</span></th>
+                  <th><span class="sort">Leases</span></th>
+                  <th><span class="sort">Lead-to-Tour Rate</span></th>
+                  <th><span class="sort">Tour-to-Lease Rate</span></th>
+                  <th><span class="sort">Leased Rate</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Waterside at Ocotillo</strong></td>
+                  <td>24</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>8.3%</td>
+                  <td>95%</td>
+                  <td>12.5%</td>
+                </tr>
+                <tr>
+                  <td><strong>San Milan</strong></td>
+                  <td>15</td>
+                  <td>4</td>
+                  <td>0</td>
+                  <td>26.7%</td>
+                  <td>0%</td>
+                  <td>0%</td>
+                </tr>
+                <tr>
+                  <td><strong>San Hacienda</strong></td>
+                  <td>2</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0%</td>
+                  <td>0%</td>
+                  <td>0%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- modal-body -->
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-data-table fade" id="modalDrillDown2" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-tours modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Activity Drilldown</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-alpha table-drill1 mg-b-0">
+              <thead>
+                <tr>
+                  <th><span class="sort">Property</span></th>
+                  <th><span class="sort">Total Activity</span></th>
+                  <th><span class="sort">Emails</span></th>
+                  <th><span class="sort">Phone Calls</span></th>
+                  <th><span class="sort">Tasks</span></th>
+                  <th><span class="sort">Notes</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Waterside at Ocotillo</strong></td>
+                  <td>282</td>
+                  <td>272</td>
+                  <td>0</td>
+                  <td>2</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td><strong>The Reserve at Gilbert Towne Center</strong></td>
+                  <td>37</td>
+                  <td>37</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td><strong>The Astor at Osborn</strong></td>
+                  <td>8</td>
+                  <td>6</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td><strong>The Regents at Scottsdale</strong></td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- modal-body -->
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-data-table fade" id="modalDrillDown3" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-tours modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Tours Drilldown</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-alpha table-drill1 mg-b-0">
+              <thead>
+                <tr>
+                  <th><span class="sort">Property</span></th>
+                  <th><span class="sort">Total Tours</span></th>
+                  <th><span class="sort">Total Leases</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>San Milan</strong></td><td>4</td><td>0</td></tr>
+                <tr><td><strong>The Astor at Osborn</strong></td><td>1</td><td>0</td></tr>
+                <tr><td><strong>Allegro At La Entrada</strong></td><td>0</td><td>0</td></tr>
+                <tr><td><strong>The Regents at Scottsdale</strong></td><td>0</td><td>0</td></tr>
+              </tbody>
+            </table>
+          </div><!-- modal-body -->
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-data-table fade" id="modalDrillDown4" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-tours modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Calls Drilldown</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-alpha table-drill1 mg-b-0">
+              <thead>
+                <tr>
+                  <th><span class="sort">Property</span></th>
+                  <th><span class="sort">Total Prospect Calls</span></th>
+                  <th><span class="sort">Avg. Call Time (min)</span></th>
+                  <th><span class="sort">Call Answered</span></th>
+                  <th><span class="sort">Call Missed</span></th>
+                  <th><span class="sort">Call Busy</span></th>
+                  <th><span class="sort">Call Failed</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>San Milan</strong></td><td>31</td><td>1.5</td><td>6.5%</td><td>9.7%</td><td>0%</td><td>0%</td></tr>
+                <tr><td><strong>Allegro At La Entrada</strong></td><td>0</td><td>0</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td></tr>
+                <tr><td><strong>The Regents at Scottsdale</strong></td><td>0</td><td>0</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td></tr>
+                <tr><td><strong>Stone Oaks</strong></td><td>0</td><td>0</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td></tr>
+                <tr><td><strong>Shadow Hills at Lone Mountain</strong></td><td>0</td><td>0</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td></tr>
+              </tbody>
+            </table>
+          </div><!-- modal-body -->
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-data-table fade" id="modalDrillDown5" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-tours modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Engagement Drilldown</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-alpha table-drill2 mg-b-0">
+              <thead>
+                <tr>
+                  <th><span class="sort">Property</span></th>
+                  <th><span class="sort">Avg. Lead Response time (hrs)</span></th>
+                  <th><span class="sort">Avg. Lead Response time (hrs)</span></th>
+                  <th><span class="sort">Avg. Number of Followups Sign Lease</span></th>
+                  <th><span class="sort">Followup within 2 hrs</span></th>
+                  <th><span class="sort">Followup within 24 hrs</span></th>
+                  <th><span class="sort">Followup within 48 hrs</span></th>
+                  <th><span class="sort">Followup more than 48 hrs</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>San Milan</strong></td><td>493.1</td><td>0</td><td>0</td><td>0%</td><td>0%</td><td>0%</td><td>100%</td></tr>
+                <tr><td><strong>The Reserve at Gilbert Towne Center</strong></td><td>48.5</td><td>0</td><td>0</td><td>0%</td><td>0%</td><td>0%</td><td>100%</td></tr>
+                <tr><td><strong>Waterside at Ocotillo</strong></td><td>244.6</td><td>0</td><td>0</td><td>25%</td><td>0%</td><td>0%</td><td>75%</td></tr>
+                <tr><td><strong>Allegro At La Entrada</strong></td><td>0</td><td>0</td><td>0</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td></tr>
+                <tr><td><strong>The Regents at Scottsdale</strong></td><td>0</td><td>0</td><td>0</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td></tr>
+                <tr><td><strong>Stone Oaks</strong></td><td>0</td><td>0</td><td>0</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td></tr>
+              </tbody>
+            </table>
+          </div><!-- modal-body -->
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-data-table fade" id="modalDrillDown6" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-lead modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Lead-Lost Drilldown</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-alpha table-drill1 mg-b-0">
+              <thead>
+                <tr>
+                  <th><span class="sort">Property</span></th>
+                  <th><span class="sort">Total Leads Lost</span></th>
+                  <th><span class="sort">Oversized/unallowable pet</span></th>
+                  <th><span class="sort">Bought/rented house instead</span></th>
+                  <th><span class="sort">Changed their mind</span></th>
+                  <th><span class="sort">Test</span></th>
+                  <th><span class="sort">Duplicate</span></th>
+                  <th><span class="sort">Bedroom size</span></th>
+                  <th><span class="sort">Road construction</span></th>
+                  <th><span class="sort">Inactive</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Tempe Metro</strong></td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td><strong>San Sonoma</strong></td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td><strong>Retreat at the Raven</strong></td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td><strong>Level at Sixteenth</strong></td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td><strong>San Posada</strong></td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- modal-body -->
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-data-table fade" id="modalDrillDown7" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-lead modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Market Comp Drilldown</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-alpha table-drill1 mg-b-0">
+              <thead>
+                <tr>
+                  <th><span class="sort">Property</span></th>
+                  <th><span class="sort">Unit class</span></th>
+                  <th><span class="sort">Market rent low</span></th>
+                  <th><span class="sort">Market rent high</span></th>
+                  <th><span class="sort">Market rent</span></th>
+                  <th><span class="sort">Effective rent low</span></th>
+                  <th><span class="sort">Effective rent high</span></th>
+                  <th><span class="sort">Effective rent</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>The Astor at Osborn</strong></td><td>Studio</td><td>$0.00</td><td>$0.00</td><td>$0.00</td><td>$0.00</td><td>$0.00</td><td>$0.00</td></tr>
+                <tr><td><strong>San Hacienda</strong></td><td>Studio</td><td>$0.00</td><td>$0.00</td><td>$0.00</td><td>$0.00</td><td>$0.00</td><td>$0.00</td></tr>
+                <tr><td><strong>Waterside at Ocotillo</strong></td><td>Studio</td><td>$0.00</td><td>$0.00</td><td>$0.00</td><td>$0.00</td><td>$0.00</td><td>$0.00</td></tr>
+                <tr><td><strong>Aviva</strong></td><td>Studio</td><td>$0.00</td><td>$0.00</td><td>$0.00</td><td>$0.00</td><td>$0.00</td><td>$0.00</td></tr>
+              </tbody>
+            </table>
+          </div><!-- modal-body -->
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-data-table fade" id="modalScoredCalls" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-lead modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Scored Calls</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-alpha table-call-score mg-b-0">
+              <thead>
+                <tr>
+                  <th class="wd-5p"></th>
+                  <th><span class="sort">Name</span></th>
+                  <th><span class="sort">Call Source</span></th>
+                  <th><span class="sort">Phone Number</span></th>
+                  <th><span class="sort">Agent Name</span></th>
+                  <th><span class="sort">Call Record</span></th>
+                  <th><span class="sort">Date</span></th>
+                  <th><span class="sort">Score</span></th>
+                  <th class="wd-10p"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><div class="avatar bg-secondary"><span>jb</span></div></td>
+                  <td><strong>Julian Berger</strong></td>
+                  <td>ApartmentList.com</td>
+                  <td>(602) 445-2136</td>
+                  <td>Dustin Frye</td>
+                  <td>
+                    <div class="call-playable">
+                      <a href="" class="call-play">
+                        <i class="ri-play-circle-fill"></i>
+                        <i class="ri-pause-circle-line"></i>
+                      </a>
+                      <span class="time time-end">3:59</span>
+                    </div>
+                  </td>
+                  <td>Jan 03, 2021 1:43PM</td>
+                  <td><a href="" class="link-score">96.7%</a></td>
+                  <td><a href="" class="btn btn-primary">Rescore</a></td>
+                </tr>
+                <tr class="row-score">
+                  <td colspan="9">
+                    <div class="row no-gutters">
+                      <div class="col"><span>Q1:</span><i class="ri-checkbox-circle-fill text-success"></i><span>5pts</span></div>
+                      <div class="col"><span>Q2:</span><i class="ri-checkbox-circle-fill text-success"></i><span>5pts</span></div>
+                      <div class="col"><span>Q3:</span><i class="ri-checkbox-circle-fill text-success"></i><span>5pts</span></div>
+                      <div class="col"><span>Q4:</span><i class="ri-checkbox-circle-fill text-success"></i><span>10pts</span></div>
+                      <div class="col"><span>Q5:</span><i class="ri-checkbox-circle-fill text-success"></i><span>5pts</span></div>
+                      <div class="col"><span>Q6:</span><i class="ri-checkbox-circle-fill text-success"></i><span>8pts</span></div>
+                      <div class="col"><span>Q7:</span><i class="ri-close-circle-fill text-danger"></i><span>0pts</span></div>
+                      <div class="col"><span>Q8:</span><i class="ri-checkbox-circle-fill text-success"></i><span>10pts</span></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div class="avatar bg-pink"><span>sa</span></div></td>
+                  <td><strong>Samantha Audrey</strong></td>
+                  <td>ApartmentList.com</td>
+                  <td>(602) 445-2136</td>
+                  <td>Dustin Frye</td>
+                  <td>
+                    <div class="call-playable">
+                      <a href="" class="call-play">
+                        <i class="ri-play-circle-fill"></i>
+                        <i class="ri-pause-circle-line"></i>
+                      </a>
+                      <span class="time time-end">3:59</span>
+                    </div>
+                  </td>
+                  <td>Jan 03, 2021 1:43PM</td>
+                  <td><a href="" class="link-score">96.7%</a></td>
+                  <td><a href="" class="btn btn-primary">Rescore</a></td>
+                </tr>
+                <tr class="row-score">
+                  <td colspan="9">
+                    <div class="row no-gutters">
+                      <div class="col"><span>Q1:</span><i class="ri-checkbox-circle-fill text-success"></i><span>5pts</span></div>
+                      <div class="col"><span>Q2:</span><i class="ri-checkbox-circle-fill text-success"></i><span>5pts</span></div>
+                      <div class="col"><span>Q3:</span><i class="ri-checkbox-circle-fill text-success"></i><span>5pts</span></div>
+                      <div class="col"><span>Q4:</span><i class="ri-checkbox-circle-fill text-success"></i><span>10pts</span></div>
+                      <div class="col"><span>Q5:</span><i class="ri-checkbox-circle-fill text-success"></i><span>5pts</span></div>
+                      <div class="col"><span>Q6:</span><i class="ri-checkbox-circle-fill text-success"></i><span>8pts</span></div>
+                      <div class="col"><span>Q7:</span><i class="ri-close-circle-fill text-danger"></i><span>0pts</span></div>
+                      <div class="col"><span>Q8:</span><i class="ri-checkbox-circle-fill text-success"></i><span>10pts</span></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div class="avatar bg-primary"><span>bk</span></div></td>
+                  <td><strong>Billie Ko</strong></td>
+                  <td>ApartmentList.com</td>
+                  <td>(602) 445-2136</td>
+                  <td>Dustin Frye</td>
+                  <td>
+                    <div class="call-playable">
+                      <a href="" class="call-play">
+                        <i class="ri-play-circle-fill"></i>
+                        <i class="ri-pause-circle-line"></i>
+                      </a>
+                      <span class="time time-end">3:59</span>
+                    </div>
+                  </td>
+                  <td>Jan 03, 2021 1:43PM</td>
+                  <td><a href="" class="link-score">96.7%</a></td>
+                  <td><a href="" class="btn btn-primary">Rescore</a></td>
+                </tr>
+                <tr class="row-score">
+                  <td colspan="9">
+                    <div class="row no-gutters">
+                      <div class="col"><span>Q1:</span><i class="ri-checkbox-circle-fill text-success"></i><span>5pts</span></div>
+                      <div class="col"><span>Q2:</span><i class="ri-checkbox-circle-fill text-success"></i><span>5pts</span></div>
+                      <div class="col"><span>Q3:</span><i class="ri-checkbox-circle-fill text-success"></i><span>5pts</span></div>
+                      <div class="col"><span>Q4:</span><i class="ri-checkbox-circle-fill text-success"></i><span>10pts</span></div>
+                      <div class="col"><span>Q5:</span><i class="ri-checkbox-circle-fill text-success"></i><span>5pts</span></div>
+                      <div class="col"><span>Q6:</span><i class="ri-checkbox-circle-fill text-success"></i><span>8pts</span></div>
+                      <div class="col"><span>Q7:</span><i class="ri-close-circle-fill text-danger"></i><span>0pts</span></div>
+                      <div class="col"><span>Q8:</span><i class="ri-checkbox-circle-fill text-success"></i><span>10pts</span></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div class="avatar bg-success"><span>hb</span></div></td>
+                  <td><strong>Helder Bongcaras</strong></td>
+                  <td>ApartmentList.com</td>
+                  <td>(602) 445-2136</td>
+                  <td>Dustin Frye</td>
+                  <td>
+                    <div class="call-playable">
+                      <a href="" class="call-play">
+                        <i class="ri-play-circle-fill"></i>
+                        <i class="ri-pause-circle-line"></i>
+                      </a>
+                      <span class="time time-end">3:59</span>
+                    </div>
+                  </td>
+                  <td>Jan 03, 2021 1:43PM</td>
+                  <td><a href="" class="link-score">96.7%</a></td>
+                  <td><a href="" class="btn btn-primary">Rescore</a></td>
+                </tr>
+                <tr class="row-score">
+                  <td colspan="9">
+                    <div class="row no-gutters">
+                      <div class="col"><span>Q1:</span><i class="ri-checkbox-circle-fill text-success"></i><span>5pts</span></div>
+                      <div class="col"><span>Q2:</span><i class="ri-checkbox-circle-fill text-success"></i><span>5pts</span></div>
+                      <div class="col"><span>Q3:</span><i class="ri-checkbox-circle-fill text-success"></i><span>5pts</span></div>
+                      <div class="col"><span>Q4:</span><i class="ri-checkbox-circle-fill text-success"></i><span>10pts</span></div>
+                      <div class="col"><span>Q5:</span><i class="ri-checkbox-circle-fill text-success"></i><span>5pts</span></div>
+                      <div class="col"><span>Q6:</span><i class="ri-checkbox-circle-fill text-success"></i><span>8pts</span></div>
+                      <div class="col"><span>Q7:</span><i class="ri-close-circle-fill text-danger"></i><span>0pts</span></div>
+                      <div class="col"><span>Q8:</span><i class="ri-checkbox-circle-fill text-success"></i><span>10pts</span></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div class="avatar bg-purple"><span>ka</span></div></td>
+                  <td><strong>Kirby Avendula</strong></td>
+                  <td>ApartmentList.com</td>
+                  <td>(602) 445-2136</td>
+                  <td>Dustin Frye</td>
+                  <td>
+                    <div class="call-playable">
+                      <a href="" class="call-play">
+                        <i class="ri-play-circle-fill"></i>
+                        <i class="ri-pause-circle-line"></i>
+                      </a>
+                      <span class="time time-end">3:59</span>
+                    </div>
+                  </td>
+                  <td>Jan 03, 2021 1:43PM</td>
+                  <td><a href="" class="link-score">96.7%</a></td>
+                  <td><a href="" class="btn btn-primary">Rescore</a></td>
+                </tr>
+                <tr class="row-score">
+                  <td colspan="9">
+                    <div class="row no-gutters">
+                      <div class="col"><span>Q1:</span><i class="ri-checkbox-circle-fill text-success"></i><span>5pts</span></div>
+                      <div class="col"><span>Q2:</span><i class="ri-checkbox-circle-fill text-success"></i><span>5pts</span></div>
+                      <div class="col"><span>Q3:</span><i class="ri-checkbox-circle-fill text-success"></i><span>5pts</span></div>
+                      <div class="col"><span>Q4:</span><i class="ri-checkbox-circle-fill text-success"></i><span>10pts</span></div>
+                      <div class="col"><span>Q5:</span><i class="ri-checkbox-circle-fill text-success"></i><span>5pts</span></div>
+                      <div class="col"><span>Q6:</span><i class="ri-checkbox-circle-fill text-success"></i><span>8pts</span></div>
+                      <div class="col"><span>Q7:</span><i class="ri-close-circle-fill text-danger"></i><span>0pts</span></div>
+                      <div class="col"><span>Q8:</span><i class="ri-checkbox-circle-fill text-success"></i><span>10pts</span></div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- modal-body -->
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-data-table fade" id="modalTaskCompletion" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-lead modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Task Completion</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-alpha table-call-score mg-b-0">
+              <thead>
+                <tr>
+                  <th class="wd-10p"><span class="sort">Date</span></th>
+                  <th class="wd-15p"><span class="sort">Agent Name</span></th>
+                  <th class="text-right"><span class="sort">Completion %</span></th>
+                  <th class="text-right"><span class="sort">Tours Completed</span></th>
+                  <th class="text-right"><span class="sort">Tours Incomplete</span></th>
+                  <th class="text-right"><span class="sort">Prospect Task Completed</span></th>
+                  <th class="text-right"><span class="sort">Prospect Task Incomplete</span></th>
+                  <th class="text-right"><span class="sort">Calls Completed</span></th>
+                  <th class="text-right"><span class="sort">Calls Incomplete</span></th>
+                  <th class="text-right"><span class="sort">Followups Completed</span></th>
+                  <th class="text-right"><span class="sort">Followups Incomplete</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jan 03, 2021</td>
+                  <td><strong>Dustin Frye</strong></td>
+                  <td class="text-right">96.7%</td>
+                  <td class="text-right">2</td>
+                  <td class="text-right">-</td>
+                  <td class="text-right">12</td>
+                  <td class="text-right">2</td>
+                  <td class="text-right">7</td>
+                  <td class="text-right">1</td>
+                  <td class="text-right">11</td>
+                  <td class="text-right">-</td>
+                </tr>
+                <tr>
+                  <td>Jan 03, 2021</td>
+                  <td><strong>Jillian Cordoba</strong></td>
+                  <td class="text-right">98.2%</td>
+                  <td class="text-right">1</td>
+                  <td class="text-right">-</td>
+                  <td class="text-right">11</td>
+                  <td class="text-right">1</td>
+                  <td class="text-right">9</td>
+                  <td class="text-right">-</td>
+                  <td class="text-right">12</td>
+                  <td class="text-right">-</td>
+                </tr>
+                <tr>
+                  <td>Jan 03, 2021</td>
+                  <td><strong>Ethan Lacey</strong></td>
+                  <td class="text-right">87.5%</td>
+                  <td class="text-right">-</td>
+                  <td class="text-right">1</td>
+                  <td class="text-right">13</td>
+                  <td class="text-right">-</td>
+                  <td class="text-right">8</td>
+                  <td class="text-right">-</td>
+                  <td class="text-right">10</td>
+                  <td class="text-right">1</td>
+                </tr>
+                <tr>
+                  <td>Jan 03, 2021</td>
+                  <td><strong>Chao Yun</strong></td>
+                  <td class="text-right">88.7%</td>
+                  <td class="text-right">3</td>
+                  <td class="text-right">-</td>
+                  <td class="text-right">12</td>
+                  <td class="text-right">2</td>
+                  <td class="text-right">7</td>
+                  <td class="text-right">1</td>
+                  <td class="text-right">11</td>
+                  <td class="text-right">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- modal-body -->
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/chart.js/Chart.bundle.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('.nav-item-reports .nav-link').addClass('active');
+
+        ///------ CHARTS ------ ////
+
+        var ctx1 = document.getElementById('chartBar1').getContext('2d');
+        new Chart(ctx1, {
+          type: 'bar',
+          data: {
+            labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+            datasets: [{
+              data: [150,110,90,115,125,160,160],
+              backgroundColor: 'rgba(0,87,146, .9)'
+            },{
+              data: [180,140,120,135,155,170,180],
+              backgroundColor: 'rgba(0,187,240, .9)'
+            },{
+              data: [120,100,110,100,90,100,130],
+              backgroundColor: 'rgba(17,203,215, .9)'
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+              labels: {
+                display: false
+              }
+            },
+            scales: {
+              xAxes: [{
+                display: false,
+                barPercentage: .95
+              }],
+              yAxes: [{
+                gridLines: {
+                  color: '#ebeef3'
+                },
+                ticks: {
+                  fontColor: '#8392a5',
+                  fontSize: 10,
+                  min: 80,
+                  max: 200
+                }
+              }]
+            }
+          }
+        });
+
+
+        var ctx2 = document.getElementById('chartLine1').getContext('2d');
+        var gradient1 = ctx2.createLinearGradient(0, 0, 0, 150);
+        gradient1.addColorStop(0, 'rgba(76,148,251,.3)');
+        gradient1.addColorStop(1, 'rgba(255,255,255,.0)');
+        new Chart(ctx2, {
+          type: 'line',
+          data: {
+            labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+            datasets: [{
+              data: [20, 60, 50, 45, 50, 60, 70],
+              borderColor: '#2e75f9',
+              pointBackgroundColor: '#2e75f9',
+              borderWidth: 1,
+              backgroundColor: gradient1,
+              lineTension: 0
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+              labels: {
+                display: false
+              }
+            },
+            scales: {
+              yAxes: [{
+                gridLines: {
+                  color: '#ebeef3'
+                },
+                ticks: {
+                  beginAtZero: true,
+                  fontSize: 10,
+                  fontColor: '#6b7280',
+                  stepSize: 20
+                }
+              }],
+              xAxes: [{
+                gridLines: {
+                  display: false
+                },
+                ticks: {
+                  fontSize: 11,
+                  fontColor: '#6b7280'
+                }
+              }]
+            }
+          }
+        });
+
+
+        var ctx3 = document.getElementById('chartLine2').getContext('2d');
+        var gradient2 = ctx3.createLinearGradient(0, 0, 0, 150);
+        gradient2.addColorStop(0, 'rgba(86,204,138,.3)');
+        gradient2.addColorStop(1, 'rgba(255,255,255,.0)');
+        new Chart(ctx3, {
+          type: 'line',
+          data: {
+            labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+            datasets: [{
+              data: [10, 40, 30, 40, 60, 55, 45],
+              borderColor: '#36b96a',
+              pointBackgroundColor: '#36b96a',
+              backgroundColor: gradient2,
+              borderWidth: 1,
+              lineTension: 0
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+              labels: {
+                display: false
+              }
+            },
+            scales: {
+              yAxes: [{
+                gridLines: {
+                  color: '#ebeef3'
+                },
+                ticks: {
+                  beginAtZero: true,
+                  fontSize: 10,
+                  fontColor: '#6b7280',
+                  stepSize: 20,
+                  max: 80
+                }
+              }],
+              xAxes: [{
+                gridLines: {
+                  display: false
+                },
+                ticks: {
+                  fontSize: 11
+                }
+              }]
+            }
+          }
+        });
+
+
+        var ctx4 = document.getElementById('chartLine3').getContext('2d');
+        var gradient3 = ctx4.createLinearGradient(0, 0, 0, 150);
+        gradient3.addColorStop(0, 'rgba(253,126,20,.3)');
+        gradient3.addColorStop(1, 'rgba(255,255,255,.0)');
+        new Chart(ctx4, {
+          type: 'line',
+          data: {
+            labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+            datasets: [{
+              data: [60, 55, 45, 10, 40, 30, 40],
+              borderColor: '#fc5e07',
+              pointBackgroundColor: '#fc5e07',
+              backgroundColor: gradient3,
+              borderWidth: 1,
+              lineTension: 0
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+              labels: {
+                display: false
+              }
+            },
+            scales: {
+              yAxes: [{
+                gridLines: {
+                  color: '#e5e9f2'
+                },
+                ticks: {
+                  beginAtZero: true,
+                  fontSize: 10,
+                  fontColor: '#6b7280',
+                  stepSize: 20,
+                  max: 80
+                }
+              }],
+              xAxes: [{
+                gridLines: {
+                  display: false
+                },
+                ticks: {
+                  fontSize: 11
+                }
+              }]
+            }
+          }
+        });
+
+
+        var ctx5 = document.getElementById('chartDonut');
+        var myDonutChart = new Chart(ctx5, {
+          type: 'doughnut',
+          data: {
+            labels: ['2', '24', '48', '48+'],
+            datasets: [{
+              data: [45,25,10,20],
+              backgroundColor: ['#0053cc', '#0cb67a','#fc5e07','#df236d']
+            }]
+          },
+          options: {
+            cutoutPercentage: 60,
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+              display: false,
+            },
+            animation: {
+              animateScale: true,
+              animateRotate: true
+            }
+          }
+        });
+
+
+        var ctx6 = document.getElementById('chartBar2').getContext('2d');
+        new Chart(ctx6, {
+          type: 'horizontalBar',
+          data: {
+            labels: ['Emails', 'Phone calls', 'Tasks', 'Notes'],
+            datasets: [{
+              data: [50, 25, 10, 15],
+              backgroundColor: '#2e75f9'
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+              display: false,
+              labels: {
+                display: false
+              }
+            },
+            scales: {
+              yAxes: [{
+                gridLines: {
+                  display: false
+                },
+                barPercentage: 0.6,
+                ticks: {
+                  beginAtZero:true,
+                  fontSize: 13,
+                  fontColor: '#414d5e'
+                }
+              }],
+              xAxes: [{
+                gridLines: {
+                  color: '#e5e9f2'
+                },
+                ticks: {
+                  beginAtZero:true,
+                  fontSize: 11,
+                  fontColor: '#6b7280',
+                  max: 100
+                }
+              }]
+            }
+          }
+        });
+
+
+        var ctx7 = document.getElementById('chartBar3').getContext('2d');
+        new Chart(ctx7, {
+          type: 'bar',
+          data: {
+            labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+            datasets: [{
+              data: [20, 60, 50, 45, 50, 60, 70],
+              backgroundColor: '#0cb67a'
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+              labels: {
+                display: false
+              }
+            },
+            scales: {
+              yAxes: [{
+                gridLines: {
+                  color: '#e7ebf3'
+                },
+                ticks: {
+                  beginAtZero: true,
+                  fontSize: 10,
+                  fontColor: '#6b7280',
+                  stepSize: 20,
+                  max: 80
+                }
+              }],
+              xAxes: [{
+                barPercentage: 0.3,
+                gridLines: {
+                  display: false
+                },
+                ticks: {
+                  beginAtZero:true,
+                  fontSize: 10
+                }
+              }]
+            }
+          }
+        });
+
+
+        var ctx8 = document.getElementById('chartBar4').getContext('2d');
+        new Chart(ctx8, {
+          type: 'bar',
+          data: {
+            labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+            datasets: [{
+              data: [45, 50, 60, 70, 20, 60, 50],
+              backgroundColor: '#5838f1'
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+              labels: {
+                display: false
+              }
+            },
+            scales: {
+              yAxes: [{
+                gridLines: {
+                  color: '#e7ebf3'
+                },
+                ticks: {
+                  beginAtZero: true,
+                  fontSize: 10,
+                  fontColor: '#6b7280',
+                  stepSize: 20,
+                  max: 80
+                }
+              }],
+              xAxes: [{
+                barPercentage: 0.3,
+                gridLines: {
+                  display: false
+                },
+                ticks: {
+                  beginAtZero:true,
+                  fontSize: 10
+                }
+              }]
+            }
+          }
+        });
+
+
+        var ctx9 = document.getElementById('chartBar5').getContext('2d');
+        new Chart(ctx9, {
+          type: 'horizontalBar',
+          data: {
+            labels: ['In-Person', 'Virtual Tour', 'Guided Virtual Tour', 'Facetime'],
+            datasets: [{
+              data: [50, 25, 10, 15],
+              backgroundColor: '#ff596a'
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+              display: false,
+              labels: {
+                display: false
+              }
+            },
+            scales: {
+              yAxes: [{
+                gridLines: {
+                  display: false
+                },
+                barPercentage: 0.4,
+                ticks: {
+                  beginAtZero:true,
+                  fontSize: 13,
+                  fontColor: '#414d5e'
+                }
+              }],
+              xAxes: [{
+                gridLines: {
+                  color: '#e5e9f2'
+                },
+                ticks: {
+                  beginAtZero:true,
+                  fontSize: 11,
+                  fontColor: '#6b7280',
+                  max: 100
+                }
+              }]
+            }
+          }
+        });
+
+
+        var ctx10 = document.getElementById('chartBar6').getContext('2d');
+        new Chart(ctx10, {
+          type: 'horizontalBar',
+          data: {
+            labels: ['In-Person', 'Virtual Tour', 'Guided Virtual Tour', 'Facetime'],
+            datasets: [{
+              data: [10, 15, 50, 25],
+              backgroundColor: '#00a4ea'
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+              display: false,
+              labels: {
+                display: false
+              }
+            },
+            scales: {
+              yAxes: [{
+                gridLines: {
+                  display: false
+                },
+                barPercentage: 0.4,
+                ticks: {
+                  beginAtZero:true,
+                  fontSize: 13,
+                  fontColor: '#414d5e'
+                }
+              }],
+              xAxes: [{
+                gridLines: {
+                  color: '#e5e9f2'
+                },
+                ticks: {
+                  beginAtZero:true,
+                  fontSize: 11,
+                  fontColor: '#6b7280',
+                  max: 100
+                }
+              }]
+            }
+          }
+        });
+
+
+        var ctx11 = document.getElementById('chartBar7').getContext('2d');
+        new Chart(ctx11, {
+          type: 'bar',
+          data: {
+            labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+            datasets: [{
+              data: [125,160,160,150,110,90,115],
+              backgroundColor: '#0ec1e8'
+            },{
+              data: [155,170,180,180,140,120,135],
+              backgroundColor: '#213aec'
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+              labels: {
+                display: false
+              }
+            },
+            scales: {
+              xAxes: [{
+                gridLines: { display: false },
+                barPercentage: 0.3
+              }],
+              yAxes: [{
+                gridLines: {
+                  color: '#ebeef3'
+                },
+                ticks: {
+                  beginAtZero: true,
+                  fontSize: 11,
+                  fontColor: '#6b7280',
+                  stepSize: 30
+                }
+              }]
+            }
+          }
+        });
+
+
+        var ctx12 = document.getElementById('chartDonut2');
+        var myDonutChart = new Chart(ctx12, {
+          type: 'doughnut',
+          data: {
+            labels: ['2', '24', '48'],
+            datasets: [{
+              data: [25,20,25],
+              backgroundColor: ['#f3c623', '#00b7c2','#e8505b']
+            }]
+          },
+          options: {
+            cutoutPercentage: 60,
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+              display: false,
+            },
+            animation: {
+              animateScale: true,
+              animateRotate: true
+            }
+          }
+        });
+
+        var ctx13 = document.getElementById('chartDonut3');
+        var myDonutChart = new Chart(ctx13, {
+          type: 'doughnut',
+          data: {
+            labels: ['2', '24', '48', '48+'],
+            datasets: [{
+              data: [45,55],
+              backgroundColor: ['#303960', '#ea9a96']
+            }]
+          },
+          options: {
+            cutoutPercentage: 60,
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+              display: false,
+            },
+            animation: {
+              animateScale: true,
+              animateRotate: true
+            }
+          }
+        });
+
+
+        var ctx14 = document.getElementById('chartBar8').getContext('2d');
+        new Chart(ctx14, {
+          type: 'horizontalBar',
+          data: {
+            labels: ['Test', 'Duplicate', 'Inactive (Lack of Response)', 'Spam', 'Availability', 'Cancelled', 'Not moving', 'Denied', 'Rented at MRT Community', 'Price', 'Parking', 'Rented Elsewhere'],
+            datasets: [{
+              data: [50, 30, 10, 20, 40, 25, 10, 35, 45, 60, 20, 30],
+              backgroundColor: '#2e75f9'
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+              display: false,
+              labels: {
+                display: false
+              }
+            },
+            scales: {
+              yAxes: [{
+                gridLines: {
+                  display: false
+                },
+                barPercentage: 0.6,
+                ticks: {
+                  beginAtZero:true,
+                  fontSize: 13,
+                  fontColor: '#414d5e'
+                }
+              }],
+              xAxes: [{
+                gridLines: {
+                  color: '#e5e9f2'
+                },
+                ticks: {
+                  beginAtZero:true,
+                  fontSize: 11,
+                  fontColor: '#6b7280',
+                  max: 100
+                }
+              }]
+            }
+          }
+        });
+
+
+        var ctx15 = document.getElementById('chartLine4').getContext('2d');
+        var gradient4 = ctx15.createLinearGradient(0, 0, 0, 150);
+        gradient4.addColorStop(0, 'rgba(223,35,109,.3)');
+        gradient4.addColorStop(1, 'rgba(255,255,255,.0)');
+        new Chart(ctx15, {
+          type: 'line',
+          data: {
+            labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+            datasets: [{
+              data: [60, 55, 45, 10, 40, 30, 40],
+              borderColor: '#df236d',
+              pointBackgroundColor: '#df236d',
+              backgroundColor: gradient4,
+              borderWidth: 1,
+              lineTension: 0
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+              labels: {
+                display: false
+              }
+            },
+            scales: {
+              yAxes: [{
+                gridLines: {
+                  color: '#e5e9f2'
+                },
+                ticks: {
+                  beginAtZero: true,
+                  fontSize: 10,
+                  fontColor: '#6b7280',
+                  stepSize: 20,
+                  max: 80
+                }
+              }],
+              xAxes: [{
+                gridLines: {
+                  display: false
+                },
+                ticks: {
+                  fontSize: 11
+                }
+              }]
+            }
+          }
+        });
+
+        var ctx16 = document.getElementById('chartLine4a').getContext('2d');
+        var gradient5 = ctx16.createLinearGradient(0, 0, 0, 150);
+        gradient5.addColorStop(0, 'rgba(12,182,122,.3)');
+        gradient5.addColorStop(1, 'rgba(255,255,255,.0)');
+        new Chart(ctx16, {
+          type: 'line',
+          data: {
+            labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+            datasets: [{
+              data: [60, 55, 45, 10, 40, 30, 40],
+              borderColor: '#0cb67a',
+              pointBackgroundColor: '#0cb67a',
+              backgroundColor: gradient5,
+              borderWidth: 1,
+              lineTension: 0
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+              labels: {
+                display: false
+              }
+            },
+            scales: {
+              yAxes: [{
+                gridLines: {
+                  color: '#e5e9f2'
+                },
+                ticks: {
+                  beginAtZero: true,
+                  fontSize: 10,
+                  fontColor: '#6b7280',
+                  stepSize: 20,
+                  max: 80
+                }
+              }],
+              xAxes: [{
+                gridLines: {
+                  display: false
+                },
+                ticks: {
+                  fontSize: 11
+                }
+              }]
+            }
+          }
+        });
+
+
+        /// Options
+
+        $('.dropdown-select .dropdown-item').bind('click', function(e){
+          var data = $(this).attr('data-value');
+          if(data === 'overview') {
+
+            $('#reportOverview').removeClass('d-none');
+            $('#reportMarketing').addClass('d-none');
+            $('#reportOperations').addClass('d-none');
+
+          } else if(data === 'marketing') {
+
+            $('#reportMarketing').removeClass('d-none');
+            $('#reportOverview').addClass('d-none');
+            $('#reportOperations').addClass('d-none');
+
+          } else if(data === 'operations') {
+
+            $('#reportOperations').removeClass('d-none');
+            $('#reportOverview').addClass('d-none');
+            $('#reportMarketing').addClass('d-none');
+
+          }
+
+        });
+
+        $('.link-score').on('click', function(e){
+          e.preventDefault();
+          $(this).toggleClass('toggle');
+          $(this).closest('tr').toggleClass('selected');
+          $(this).closest('tr').siblings('tr:not(.row-score)').removeClass('selected');
+        })
+
+
+        // For displaying modal directly from url
+        // For demo use only
+        $.urlParam = function(name){
+        	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        	return (results!=null)? results[1] || 0 : 0;
+        }
+
+        if($.urlParam('settings') && $.urlParam('settings') === 'advanced') {
+          $('body').addClass('page-advanced-report');
+        }
+
+      });
+    </script>
+  </body>
+</html>

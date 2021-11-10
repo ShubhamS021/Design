@@ -1,0 +1,77 @@
+.page-demo {
+  padding: 30px;
+}
+
+.git-info {
+  background-color: rgba($color-ui-02, .08);
+  padding: 20px 25px;
+  display: flex;
+  color: $gray-700;
+
+  > div { flex: 1; }
+
+  > div div {
+    display: flex;
+    padding: 3px 0;
+  }
+
+  strong {
+    width: 70px;
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+  }
+
+  .demo-label {
+    color: $gray-800;
+    font-weight: $font-weight-bold;
+  }
+
+  a {
+    font-size: $font-size-md;
+    font-weight: 500;
+  }
+}
+
+.template-pages {
+  display: flex;
+
+  > div + div { margin-left: 30px; }
+}
+
+.demo-label {
+  text-transform: uppercase;
+  color: $blue;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.demo-list li {
+  padding-left: 20px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: calc(50% - 1px);
+    width: 10px;
+    border-top: 1px solid $gray-400;
+  }
+
+  + li { margin-top: 5px; }
+
+  .badge {
+    font-weight: 300;
+    font-size: 10px;
+    font-family: $font-family-sans-serif;
+    border-radius: 2px;
+  }
+}
+
+.demo-link {
+  font-weight: 500;
+  color: $gray-800;
+}

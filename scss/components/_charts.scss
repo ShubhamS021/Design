@@ -1,0 +1,68 @@
+.radial-progress {
+  width: 64px;
+  height: 64px;
+  border: 8px solid $color-bg-02;
+  border-radius: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    font-weight: 500;
+    font-size: 15px;
+    font-family: $font-family-numeric;
+    color: $color-tx-01;
+    letter-spacing: -.5px;
+
+    small {
+      font-size: inherit;
+      color: $color-tx-03;
+      font-weight: 400;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    border: 8px solid transparent;
+    border-top-color: $yellow;
+    border-right-color: $yellow;
+    border-radius: 100%;
+    transform: rotate(45deg);
+    z-index: 10;
+  }
+
+  &.progress-70 {
+    &::after { transform: rotate(120deg); }
+  }
+}
+
+.progress-item {
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 3px;
+    font-family: $font-family-secondary;
+
+    span:first-child { font-weight: 500; }
+    span:last-child {
+      color: $color-tx-03;
+      font-weight: 400;
+    }
+  }
+
+  .progress {
+    border-radius: 2px;
+    height: 5px;
+  }
+
+  + .progress-item { margin-top: 10px; }
+}

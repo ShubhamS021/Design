@@ -1,0 +1,38 @@
+
+.mg-t-10 { margin-top: 10px; }
+.mg-t-20 { margin-top: 20px; }
+.mg-t-25 { margin-top: 25px; }
+.mg-t-30 { margin-top: 30px; }
+.mg-t-40 { margin-top: 40px; }
+.mg-t-70 { margin-top: 70px; }
+
+.mg-y-25 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.mg-lg-y-50 {
+  @include media-breakpoint-up(lg) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+.mg-lg-t-0 {
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
+  }
+}
+
+.mg-lg-t-30 {
+  @include media-breakpoint-up(lg) {
+    margin-top: 30px;
+  }
+}
+
+.py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.op-0 { opacity: 0; }

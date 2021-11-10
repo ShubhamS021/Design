@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/frontpage.min.css">
+  </head>
+  <body>
+
+    <div class="dr-panel">
+      <div class="drbox">
+        <div class="drbox-header">
+          <div class="dr-imglogo"><img src="../assets/img/dwell-logo.svg" alt=""></div>
+          <a href="" class="btn btn-login">Login</a>
+        </div><!-- drbox-header -->
+        <div class="drbox-body">
+          <div class="dr-sidebar">
+            <h1 class="dr-headline">Superlative lead<br>management software</h1>
+            <div class="dr-headline-quote">
+              <div class="dr-headline-body">
+                <h3 class="dr-headline-text">Dwell delivers.<br>During the pandemic, while our in-market competitors stumbled, 71% of our properties recorded record financial performance. We thrived.<br>Dwell made us Covid-proof.</h3>
+                <hr class="dr-author-separator">
+                <h6 class="dr-author"><strong>John Carlson</strong>, President at <a href="">Mark Taylor Residential</a></h6>
+              </div><!-- dr-headline-body -->
+              <div class="dr-headline-img"><img src="../assets/img/person.png" alt=""></div>
+            </div><!-- dr-headline-quote -->
+
+            <h6 class="dr-sidebar-footer">&copy; DWELL IO 2021. All Rights Reserved.</h6>
+          </div><!-- dr-sidebar -->
+          <div class="dr-form">
+            <div class="dr-formbox">
+              <h4 class="dr-title mg-b-20-f">Request a Demo</h4>
+
+              <label class="dr-form-label">Select your timezone</label>
+              <select class="custom-select mg-b-20">
+                <option value="">Mountain Standard (GMT-7)</option>
+              </select>
+
+              <label class="dr-form-label">Select a time</label>
+              <div class="row row-xs mg-b-10">
+                <div class="col-6"><div class="time-item">10:00 AM</div></div>
+                <div class="col-6"><div class="time-item">11:00 AM</div></div>
+                <div class="col-6"><div class="time-item">12:00 NN</div></div>
+                <div class="col-6"><div class="time-item selected">01:00 PM</div></div>
+                <div class="col-6"><div class="time-item">02:00 PM</div></div>
+                <div class="col-6"><div class="time-item">03:00 PM</div></div>
+                <div class="col-6"><div class="time-item">04:00 PM</div></div>
+                <div class="col-6"><div class="time-item">05:00 PM</div></div>
+              </div><!-- row -->
+
+              <div class="d-flex mg-t-auto">
+                <a href="request2.html" class="btn btn-outline-primary"><i class="ri-arrow-left-s-line"></i></a>
+                <a href="request4.html" class="btn btn-primary flex-fill">Continue</a>
+              </div>
+            </div><!-- dr-formbox -->
+          </div><!-- dr-form -->
+        </div><!-- drbox-body -->
+      </div><!-- drbox -->
+    </div><!-- dr-panel -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('.time-item').on('click', function(e){
+          e.preventDefault();
+
+          $('.time-item').removeClass('selected');
+          $(this).addClass('selected');
+        })
+
+
+      });
+    </script>
+  </body>
+</html>

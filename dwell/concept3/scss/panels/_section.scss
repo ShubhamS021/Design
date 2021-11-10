@@ -1,0 +1,53 @@
+
+.section {
+  position: relative;
+
+  .container { padding: 100px 40px; }
+}
+
+.section-header {
+  .container { padding-top: $height-header + 60px; }
+}
+
+.section-alt { background-color: $bg-color; }
+
+.section-label {
+  color: $primary;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+
+  &.text-teal { color: $teal; }
+  &.text-cyan { color: $cyan; }
+}
+
+.section-title {
+  font-weight: 600;
+  letter-spacing: -.5px;
+  text-indent: -2px;
+  color: $dark;
+  line-height: 1.25;
+
+  &.light { font-weight: 300; }
+}
+
+h1.section-title {
+  font-size: 50px;
+  letter-spacing: -1px;
+}
+
+h2.section-title { font-size: 42px; }
+h3.section-title { font-size: 36px; }
+h4.section-title { font-size: 30px; }
+
+.section-subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  color: $gray-700;
+  line-height: 1.5;
+}
+
+.section-text {
+  font-size: 18px;
+}

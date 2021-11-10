@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body>
+
+    <div class="header">
+      <a href="" id="headerMenu" class="header-switch-menu"><i class="ri-menu-2-line"></i></a>
+      <div class="header-body">
+        <a href=""  class="header-logo"><img src="../assets/img/logo1.png" alt="" class="ht-80p-f"></a>
+
+        <ul class="nav nav-header">
+          <li class="nav-item"><a href="" id="pipelineDot" class="nav-dot"></a></li>
+          <li class="nav-item nav-item-pipeline"><a href="pipeline-mytours.html" class="nav-link">Pipeline</a></li>
+          <li class="nav-item nav-item-communication">
+            <a href="" class="nav-link with-sub">Communication</a>
+            <nav class="nav nav-sub">
+              <a href="email-followups.html" class="nav-sub-link">Followups</a>
+              <a href="email-bulk.html" class="nav-sub-link">Bulk Email</a>
+              <a href="calls.html" class="nav-sub-link">Calls</a>
+            </nav>
+          </li>
+          <li class="nav-item nav-item-reports"><a href="reports.html" class="nav-link">Reports</a></li>
+          <li id="taskToday" class="nav-task-today">
+            <label>Tasks For Today</label>
+            <div class="row row-xs">
+              <div class="col">
+                <div class="radial-progress progress-70"><span>70<small>%</small></span></div>
+              </div><!-- col -->
+              <div class="col-8">
+                <div class="progress-item">
+                  <label><span>2 Tours</span><span>1 of 3 complete</span></label>
+                  <div class="progress">
+                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div><!-- progress-item -->
+                <div class="progress-item">
+                  <label><span>3 Tasks</span><span>3 of 5 complete</span></label>
+                  <div class="progress">
+                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div><!-- progress-item -->
+                <div class="progress-item">
+                  <label><span>3 Calls</span><span>1 of 4 complete</span></label>
+                  <div class="progress">
+                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div><!-- progress-item -->
+                <div class="progress-item">
+                  <label><span>0 Followups</span><span>3 of 3 complete</span></label>
+                  <div class="progress">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div><!-- progress-item -->
+              </div><!-- col -->
+            </div><!-- row -->
+          </li>
+        </ul>
+
+        <a href="#modalNewLead" data-toggle="modal" class="link-new-lead"><span data-toggle="tooltip" data-placement="bottom" data-title="Add New Lead"><i class="ri-user-add-line"></i></span></a>
+        <div class="dropdown dropdown-notification">
+          <a href="" class="header-link" data-toggle="dropdown" data-display="static"><i class="ri-notification-3-line"></i></a>
+          <div class="dropdown-menu dropdown-menu-right empty">
+            <div class="dropdown-header">
+              <h6>Notifications</h6>
+              <!-- <a href="">Clear All</a> -->
+            </div><!-- dropdown-header -->
+            <div class="notification-empty">
+              <i class="ri-checkbox-multiple-fill"></i>
+              <span>No new notifications</span>
+            </div>
+
+          </div><!-- dropdown-menu -->
+        </div><!-- dropdown -->
+
+        <div class="dropdown dropdown-profile">
+          <a href="" class="dropdown-link" data-toggle="dropdown" data-display="static"><span class="profile-initial">M</span></a>
+          <div id="dropdownMenuProfile" class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-menu-header">
+              <div class="dropdown-profile-initial">M</div>
+              <h6>Mienard Lumaad</h6>
+              <small>mienard@liftlytics.com</small>
+              <div class="profile-chat-status">Available to chat: <div class="form-switcher"></div></div>
+              <a id="switchAccount" href="#modalSwitchAccount" data-toggle="modal">Switch Account</a>
+            </div><!-- dropdown-menu-header -->
+            <a id="myProfileLink" href="#modalMyProfile" data-toggle="modal" class="dropdown-item"><i class="ri-user-settings-line"></i> My Profile</a>
+            <a href="settings.html" class="dropdown-item"><i class="ri-settings-4-line"></i> Settings</a>
+            <div class="dropdown-divider"></div>
+            <a href="reports.html?settings=advanced" class="dropdown-item"><i class="ri-pie-chart-line"></i> Advanced Reports</a>
+            <a href="compete-home.html" class="dropdown-item"><i class="ri-bar-chart-2-line"></i> Compete</a>
+            <div class="dropdown-divider"></div>
+            <a id="hsMenu" href="" class="dropdown-item"><i class="ri-question-line"></i> Help &amp; Support</a>
+            <a href="login.html" class="dropdown-item"><i class="ri-logout-box-r-line"></i> Logout</a>
+          </div><!-- dropdown-menu-->
+        </div><!-- dropdown -->
+      </div><!-- header-body -->
+    </div><!-- header -->
+
+    <div id="propMenu" class="property-menu">
+      <div id="menuSwitchProperty" class="property-menu-group property">
+        <div class="property-menu-header">
+          <div class="property-active-body">
+            <div class="dropdown">
+              <div class="dropdown-link" data-toggle="dropdown">
+                <strong id="curCustomer">Mark-Taylor</strong><a id="switchCustomer" href="">Switch Customer</a>
+              </div><!-- dropdown-link -->
+            </div><!-- dropdown -->
+            <div class="property-active-name">
+              <span>Emerson Mill Avenue</span>
+              <a href="" class="property-active-link" data-toggle="tooltip" title="Visit site"><i class="ri-external-link-line"></i></a>
+            </div><!-- property-active-name -->
+            <small>Glendale, Arizona</small>
+          </div><!-- property-active-body -->
+        </div><!-- property-menu-header -->
+        <label class="property-switch-label">Switch Property</label>
+        <div class="property-menu-search">
+          <i data-feather="search"></i>
+          <input type="text" class="form-control form-property-search" placeholder="Search property">
+        </div><!-- property-menu-search -->
+        <div class="property-menu-body">
+          <div class="property-item property-item-house">
+            <div class="property-item-logo">
+              <i class="ri-home-8-line"></i>
+              <span class="badge badge-danger">3</span>
+            </div>
+            <div class="property-item-body">
+              <h6>Mira Sante</h6>
+              <p>Chandler, Arizona</p>
+            </div>
+            <a href="" class="property-item-link" data-toggle="tooltip" title="Visit site"><i class="ri-external-link-line"></i></a>
+          </div><!-- property-item -->
+          <div class="property-item property-item-apartment">
+            <div class="property-item-logo"><i class="ri-building-line"></i></div>
+            <div class="property-item-body">
+              <h6>Azul at Spectrum</h6>
+              <p>Gilbert, Arizona</p>
+            </div>
+            <a href="" class="property-item-link" data-toggle="tooltip" title="Visit site"><i class="ri-external-link-line"></i></a>
+          </div><!-- property-item -->
+          <div class="property-item property-item-condo">
+            <div class="property-item-logo">
+              <i class="ri-building-2-line"></i>
+              <span class="badge badge-danger">4</span>
+            </div>
+            <div class="property-item-body">
+              <h6>Park on Bell</h6>
+              <p>Phoenix, Arizona</p>
+            </div>
+            <a href="" class="property-item-link" data-toggle="tooltip" title="Visit site"><i class="ri-external-link-line"></i></a>
+          </div><!-- property-item -->
+          <div class="property-item property-item-hotel">
+            <div class="property-item-logo">
+              <i class="ri-hotel-line"></i>
+              <span class="badge badge-danger">1</span>
+            </div>
+            <div class="property-item-body">
+              <h6>Retreat at the Raven</h6>
+              <p>Phoenix, Arizona</p>
+            </div>
+            <a href="" class="property-item-link" data-toggle="tooltip" title="Visit site"><i class="ri-external-link-line"></i></a>
+          </div><!-- property-item -->
+          <div class="property-item property-item-building">
+            <div class="property-item-logo"><i class="ri-building-4-line"></i></div>
+            <div class="property-item-body">
+              <h6>Ravenwood Heights</h6>
+              <p>Tempe, Arizona</p>
+            </div>
+            <a href="" class="property-item-link" data-toggle="tooltip" title="Visit site"><i class="ri-external-link-line"></i></a>
+          </div><!-- property-item -->
+          <div class="property-item property-item-building">
+            <div class="property-item-logo"><i class="ri-building-4-line"></i></div>
+            <div class="property-item-body">
+              <h6>Waterside at Ocotillo</h6>
+              <p>Chandler, Arizona</p>
+            </div>
+            <a href="" class="property-item-link" data-toggle="tooltip" title="Visit site"><i class="ri-external-link-line"></i></a>
+          </div><!-- property-item -->
+        </div><!-- property-menu-group -->
+      </div><!-- property-menu-group -->
+      <div id="menuSwitchCustomer" class="property-menu-group customer">
+        <div class="property-menu-header justify-content-between">
+          <a id="propMenuBack" href="" class="property-link-back"><i class="ri-arrow-left-line"></i> Back</a>
+          <a href="" class="property-link-cancel">Cancel</a>
+        </div><!-- property-menu-header -->
+        <label class="property-switch-label">Switch Customer</label>
+        <div class="property-menu-search">
+          <i data-feather="search"></i>
+          <input type="text" class="form-control form-property-search" placeholder="Search customer">
+        </div><!-- property-menu-search -->
+        <div class="property-menu-body">
+          <div class="property-item">
+            <div class="property-item-logo">
+              <i class="ri-home-8-line"></i>
+            </div>
+            <div class="property-item-body">
+              <h6>Mark-Taylor</h6>
+              <p>16 Properties</p>
+            </div><!-- property-item-body -->
+          </div><!-- property-item -->
+          <div class="property-item">
+            <div class="property-item-logo">
+              <i class="ri-home-8-line"></i>
+            </div>
+            <div class="property-item-body">
+              <h6>Primary Holdings, Inc.</h6>
+              <p>8 Properties</p>
+            </div><!-- property-item-body -->
+          </div><!-- property-item -->
+        </div><!-- property-menu-body -->
+      </div><!-- property-menu-group -->
+      <div id="menuSwitchPropertyNew" class="property-menu-group property-new">
+        <div class="property-menu-header justify-content-between">
+          <a id="propMenuBack2" href="" class="property-link-back"><i class="ri-arrow-left-line"></i> Back</a>
+          <a href="" class="property-link-cancel">Cancel</a>
+        </div><!-- property-menu-header -->
+        <label class="property-switch-label">Switch Property</label>
+        <div class="property-menu-search">
+          <i data-feather="search"></i>
+          <input type="text" class="form-control form-property-search" placeholder="Search property">
+        </div><!-- property-menu-search -->
+        <div class="property-menu-body">
+          <div class="property-item property-item-hotel">
+            <div class="property-item-logo">
+              <i class="ri-hotel-line"></i>
+              <span class="badge badge-danger">1</span>
+            </div>
+            <div class="property-item-body">
+              <h6>Retreat at the Raven</h6>
+              <p>Phoenix, Arizona</p>
+            </div>
+            <a href="" class="property-item-link" data-toggle="tooltip" title="Visit site"><i class="ri-external-link-line"></i></a>
+          </div><!-- property-item -->
+          <div class="property-item property-item-building">
+            <div class="property-item-logo"><i class="ri-building-4-line"></i></div>
+            <div class="property-item-body">
+              <h6>Ravenwood Heights</h6>
+              <p>Tempe, Arizona</p>
+            </div>
+            <a href="" class="property-item-link" data-toggle="tooltip" title="Visit site"><i class="ri-external-link-line"></i></a>
+          </div><!-- property-item -->
+          <div class="property-item property-item-building">
+            <div class="property-item-logo"><i class="ri-building-4-line"></i></div>
+            <div class="property-item-body">
+              <h6>Waterside at Ocotillo</h6>
+              <p>Chandler, Arizona</p>
+            </div>
+            <a href="" class="property-item-link" data-toggle="tooltip" title="Visit site"><i class="ri-external-link-line"></i></a>
+          </div><!-- property-item -->
+        </div><!-- property-menu-body -->
+      </div><!-- property-menu-group -->
+    </div><!-- property-menu -->
+
+
+    <div class="content">
+
+    </div><!-- content -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/select2/js/select2.min.js"></script>
+
+    <script>
+      $(function(){
+        'use strict';
+
+        new PerfectScrollbar('#menuSwitchProperty', {
+          suppressScrollX: true
+        });
+
+        new PerfectScrollbar('#menuSwitchCustomer', {
+          suppressScrollX: true
+        });
+
+        new PerfectScrollbar('#menuSwitchPropertyNew', {
+          suppressScrollX: true
+        });
+
+        $('.property-menu-search input').on('focusin focusout', function(e) {
+          var f = (e.type === 'focusin')? true : false;
+          $(this).parent().toggleClass('onfocus', f);
+        });
+
+        $('#switchCustomer').on('click', function(e){
+          e.preventDefault();
+          $(this).closest('#propMenu').addClass('switch-customer-show');
+        });
+
+        $('#propMenuBack').on('click', function(e){
+          e.preventDefault();
+          $(this).closest('#propMenu').removeClass('switch-customer-show');
+        });
+
+        $('#propMenuBack2').on('click', function(e){
+          e.preventDefault();
+          $(this).closest('#propMenu').removeClass('switch-property-show');
+        });
+
+        $('.property-link-cancel').on('click', function(e){
+          e.preventDefault();
+          $('body').removeClass('switch-property-show');
+          $(this).closest('#propMenu').removeClass('switch-customer-show switch-property-show');
+        });
+
+        $('#menuSwitchProperty .property-item').on('click', function(e){
+          e.preventDefault();
+          $('body').removeClass('switch-property-show');
+        });
+
+        $('#menuSwitchCustomer .property-item').on('click', function(e){
+          e.preventDefault();
+          $(this).closest('#propMenu').addClass('switch-property-show');
+        });
+
+        $('#menuSwitchPropertyNew .property-item').on('click', function(e){
+          e.preventDefault();
+          $('body').removeClass('switch-property-show');
+          $(this).closest('#propMenu').removeClass('switch-customer-show switch-property-show');
+        });
+
+        $('#pipelineDot').on('mouseenter mouseleave', function(e){
+          $('#taskToday').toggleClass('show', (e.type === 'mouseenter'));
+        });
+
+        $('.link-clear').tooltip();
+
+        $('.link-clear').on('click', function(e){
+          e.preventDefault();
+          //$(this).closest('.list-group-item').remove();
+        })
+      });
+    </script>
+  </body>
+</html>

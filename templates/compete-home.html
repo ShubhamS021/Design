@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body>
+
+    <div class="content content-compete">
+      <div class="container-fluid">
+        <div class="content-header align-items-center mg-b-15">
+          <h4 class="content-title mg-b-0 mg-r-auto">Dwell Compete</h4>
+          <nav class="nav nav-compete">
+            <a href="compete-comparison.html" class="nav-link"><i class="ri-line-chart-fill"></i><span>Comparison</span></a>
+            <a href="" class="nav-link"><i class="ri-notification-3-line"></i><span>Alerts</span></a>
+          </nav>
+        </div><!-- content-header -->
+        <div class="content-body content-body-compete">
+          <div class="content-sidebar">
+            <label class="content-label mg-b-15">Watchlist</label>
+            <ul id="navCompete" class="nav nav-multi">
+              <li class="nav-item">
+                <a href="" class="nav-link"><i class="ri-building-line"></i> Markets</a>
+                <ul class="nav nav-sub">
+                  <li><a href="" class="nav-sub-link">Phoenix</a> <a href="" class="nav-remove" data-toggle="tooltip" title="Remove"><i class="ri-close-circle-fill"></i></a></li>
+                  <li><a href="" class="nav-sub-link">Las Vegas</a> <a href="" class="nav-remove" data-toggle="tooltip" title="Remove"><i class="ri-close-circle-fill"></i></a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link"><i class="ri-store-3-line"></i> Submarkets</a>
+                <ul class="nav nav-sub">
+                  <li><a href="" class="nav-sub-link">North Scottdale</a></li>
+                  <li><a href="" class="nav-sub-link">South Scottdale</a></li>
+                  <li><a href="" class="nav-sub-link">Tempe Metro</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link"><i class="ri-home-8-line"></i> Properties</a>
+                <ul class="nav nav-sub">
+                  <li><a href="compete-property.html" class="nav-sub-link">The Grand</a></li>
+                  <li><a href="compete-property.html" class="nav-sub-link">San Milan</a></li>
+                  <li><a href="compete-property.html" class="nav-sub-link">Avenue 5th</a></li>
+                  <li><a href="compete-property.html" class="nav-sub-link">The Luxury Smithson</a></li>
+                  <li><a href="compete-property.html" class="nav-sub-link">All Northlands</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link"><i class="ri-line-chart-fill"></i> Comparison</a>
+                <ul class="nav nav-sub">
+                  <li><a href="compete-comparison.html" class="nav-sub-link">The Grand vs South Scottdale</a></li>
+                  <li><a href="compete-comparison.html" class="nav-sub-link">San Milan vs San Villante</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- content-sidebar -->
+          <div class="content-main">
+            <div class="card card-compete">
+              <div class="card-header">
+                <h5 class="card-title mg-r-auto">Explore Markets</h5>
+                <div class="dropdown dropdown-filter">
+                  <a href="" class="dropdown-link" data-toggle="dropdown" data-display="static"><i class="ri-list-settings-line"></i></a>
+                  <div id="ddSearchFilter" class="dropdown-menu dropdown-menu-right">
+                    <h6 class="dropdown-title mg-b-15">Search Filter</h6>
+                    <div class="row row-xs align-items-center">
+                      <div class="col-5">Market Coverage</div>
+                      <div class="col-7">
+                        <select class="select2">
+                          <option value="all" selected>All Markets</option>
+                          <option value="px">Phoenix</option>
+                          <option value="lv">Las Vegas</option>
+                        </select>
+                      </div><!-- col -->
+                      <div class="col-5 mg-t-10">Asset type</div>
+                      <div class="col-7 mg-t-10">
+                        <select class="select2">
+                          <option value="all" selected>All Assets</option>
+                          <option value="all">Markets only</option>
+                          <option value="sm">Submarkets only</option>
+                          <option value="pr">Properties only</option>
+                        </select>
+                      </div>
+                    </div><!-- row -->
+                  </div><!-- dropdown-menu -->
+                </div><!-- dropdown -->
+              </div><!-- card-header -->
+              <div class="card-body">
+                <div class="compete-search">
+                  <div class="form-search">
+                    <i data-feather="search"></i>
+                    <input id="competeSearch" type="text" class="form-control" placeholder="Search...">
+                  </div><!-- form-search -->
+                  <div class="search-results">
+                    <label>Markets</label>
+                    <nav class="nav">
+                      <a href="" class="nav-link">Market A</a>
+                      <a href="" class="nav-link">Market B</a>
+                    </nav>
+                    <label>Submarkets</label>
+                    <nav class="nav">
+                      <a href="" class="nav-link">Submarket A</a>
+                      <a href="" class="nav-link">Submarket B</a>
+                    </nav>
+                    <label>Properties</label>
+                    <nav class="nav">
+                      <a href="" class="nav-link">Property A</a>
+                      <a href="" class="nav-link">Property B</a>
+                    </nav>
+                  </div><!-- search-results -->
+                </div><!-- compete-search -->
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- content-main -->
+        </div><!-- content-body -->
+      </div><!-- container-fluid -->
+    </div><!-- content -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/select2/js/select2.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('#navCompete .nav-link').on('click', function(e){
+          e.preventDefault();
+
+          $(this).parent().toggleClass('toggle');
+          $(this).parent().siblings().removeClass('toggle');
+        });
+
+        $('.select2').select2({
+          minimumResultsForSearch: Infinity,
+          width: '100%',
+          dropdownParent: $('#ddSearchFilter')
+        });
+
+        $('#ddSearchFilter').on('click', function(e){
+          e.stopPropagation();
+        });
+
+        $('#competeSearch').bind('keydown keyup focusout', function(e){
+          $(this).closest('.compete-search').addClass('show-results');
+
+          if(e.type === 'focusout') {
+            $(this).closest('.compete-search').removeClass('show-results');
+          }
+        });
+
+      });
+    </script>
+  </body>
+</html>

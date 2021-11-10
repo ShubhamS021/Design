@@ -1,0 +1,21 @@
+.card {
+  border: 1px solid #000; }
+  .card span[contenteditable="true"] {
+    font-weight: 700;
+    outline: none; }
+
+.card-header {
+  padding: 10px;
+  background-color: #f7f8fc;
+  border-bottom: 1px solid #000;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase; }
+
+.card-body .row > div {
+  padding: 10px; }
+  .card-body .row > div + div {
+    border-left: 1px solid #000; }
+
+.card-body .row + .row {
+  border-top: 1px solid #000; }

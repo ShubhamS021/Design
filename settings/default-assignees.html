@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body class="page-settings">
+
+    <div class="content">
+      <div class="container-fluid">
+        <div class="content-header align-items-center mg-b-30">
+          <div class="mg-r-auto">
+            <h4 class="content-title mg-b-0">Property Settings</h4>
+          </div>
+        </div><!-- content-header -->
+        <div class="content-body content-body-settings">
+          <div class="settings-sidebar">
+            <label class="content-label">General Settings</label>
+            <nav class="nav">
+              <a href="../templates/settings.html" class="nav-link"><i class="ri-shield-user-line"></i> Assignment Rules</a>
+              <a href="../templates/settings-email.html" class="nav-link"><i class="ri-mail-line"></i> Email templates</a>
+              <a href="../templates/settings-calendar.html" class="nav-link"><i class="ri-calendar-todo-line"></i> Email &amp; Calendar sync</a>
+              <a href="../templates/settings-business.html" class="nav-link"><i class="ri-time-line"></i> Business hours</a>
+              <a href="community-features.html" class="nav-link"><i class="ri-community-line"></i> Community features</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">Report Settings</label>
+            <nav class="nav">
+              <a href="../templates/settings-competitors.html" class="nav-link"><i class="ri-group-line"></i> Competitors</a>
+              <a href="../templates/settings-paid-sources.html" class="nav-link"><i class="ri-wallet-3-line"></i> Paid sources</a>
+              <a href="../templates/settings-budget.html" class="nav-link"><i class="ri-bank-card-2-line"></i> Paid source budgets</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">Leasing</label>
+            <nav class="nav">
+              <a href="../templates/settings-lease.html" class="nav-link"><i class="ri-community-line"></i> Lease Defaults</a>
+              <a href="../templates/settings-policies.html" class="nav-link"><i class="ri-article-line"></i> Property Policies</a>
+              <a href="../templates/settings-rentable.html" class="nav-link"><i class="ri-handbag-line"></i> Rentable Items</a>
+              <a href="../templates/settings-screening.html" class="nav-link"><i class="ri-survey-line"></i> Screening Criteria</a>
+              <a href="../templates/settings-addenda.html" class="nav-link"><i class="ri-file-list-3-line"></i> Addenda</a>
+              <a href="pricing-duration.html" class="nav-link"><i class="ri-community-line"></i> Duration Pricing</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">Communication</label>
+            <nav class="nav">
+              <a href="../templates/settings-call-block.html" class="nav-link"><i class="ri-lock-line"></i> Call Block List</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">IVR Settings</label>
+            <nav class="nav">
+              <a href="vendors-list.html" class="nav-link"><i class="ri-contacts-line"></i> Vendors List</a>
+              <a href="default-assignees.html" class="nav-link active"><i class="ri-user-star-line"></i> Default Assignees</a>
+              <a href="oncall-schedule.html" class="nav-link"><i class="ri-calendar-event-line"></i> On-Call Schedule</a>
+              <a href="leasing-prompt.html" class="nav-link"><i class="ri-user-voice-line"></i> Leasing Prompt</a>
+            </nav>
+          </div><!-- settings-sidebar -->
+          <div class="settings-body">
+            <h5 class="content-title-sm">Default Assignees</h5>
+            <p class="content-text">Setup default on-call asignees for each IVR request.</p>
+
+            <hr class="mg-y-20 op-0">
+
+            <div class="settings-group">
+              <div class="row row-sm">
+                <div class="col-4 align-self-start">
+                  <div class="pd-r-20">
+                    <h6 class="content-subtitle">Routine Maintenance</h6>
+                    <p class="mg-b-0">Assignee receives an email when a new request is created from the IVR system.</p>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">Assignee for Office Hours</div>
+                    <div class="col">
+                      <select class="select2">
+                        <option value="">Choose assignee</option>
+                        <optgroup label="Property Team Members">
+                          <option value="1a">Team Member A</option>
+                          <option value="1b">Team Member B</option>
+                          <option value="1c">Team Member C</option>
+                          <option value="1d">Team Member D</option>
+                        </optgroup>
+                        <optgroup label="Vendors">
+                          <option value="2a">Vendor A</option>
+                          <option value="2b">Vendor B</option>
+                          <option value="2c">Vendor C</option>
+                          <option value="2d">Vendor D</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div><!-- row -->
+                  <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">Assignee for After Hours</div>
+                    <div class="col">
+                      <select class="select2">
+                        <option value="">Choose assignee</option>
+                        <optgroup label="Property Team Members">
+                          <option value="1a">Team Member A</option>
+                          <option value="1b">Team Member B</option>
+                          <option value="1c">Team Member C</option>
+                          <option value="1d">Team Member D</option>
+                        </optgroup>
+                        <optgroup label="Vendors">
+                          <option value="2a">Vendor A</option>
+                          <option value="2b">Vendor B</option>
+                          <option value="2c">Vendor C</option>
+                          <option value="2d">Vendor D</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div><!-- row -->
+                  <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">Notify others by email</div>
+                    <div class="col"><div class="form-switcher lg inactive"></div></div>
+                  </div><!-- row -->
+                  <div class="row hidden">
+                    <div class="col-1"></div>
+                    <div class="col-4">Other people to be notified</div>
+                    <div class="col">
+                      <select class="select2m" multiple>
+                        <optgroup label="Property Team Members">
+                          <option value="1a">Team Member A</option>
+                          <option value="1b">Team Member B</option>
+                          <option value="1c">Team Member C</option>
+                          <option value="1d">Team Member D</option>
+                        </optgroup>
+                        <optgroup label="Vendors">
+                          <option value="2a">Vendor A</option>
+                          <option value="2b">Vendor B</option>
+                          <option value="2c">Vendor C</option>
+                          <option value="2d">Vendor D</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div><!-- row -->
+                </div><!-- col -->
+              </div><!-- row -->
+            </div><!-- settings-group -->
+
+            <hr class="mg-y-30">
+
+            <div class="settings-group">
+              <div class="row row-sm">
+                <div class="col-4 align-self-start">
+                  <div class="pd-r-20">
+                    <h6 class="content-subtitle">Leasing</h6>
+                    <p class="mg-b-0">Assignee receives an email when a new request is created from the IVR system.</p>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">Assignee for Office Hours</div>
+                    <div class="col">
+                      <select class="select2">
+                        <option value="">Choose assignee</option>
+                        <optgroup label="Property Team Members">
+                          <option value="1a">Team Member A</option>
+                          <option value="1b">Team Member B</option>
+                          <option value="1c">Team Member C</option>
+                          <option value="1d">Team Member D</option>
+                        </optgroup>
+                        <optgroup label="Vendors">
+                          <option value="2a">Vendor A</option>
+                          <option value="2b">Vendor B</option>
+                          <option value="2c">Vendor C</option>
+                          <option value="2d">Vendor D</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div><!-- row -->
+                  <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">Assignee for After Hours</div>
+                    <div class="col">
+                      <select class="select2">
+                        <option value="">Choose assignee</option>
+                        <optgroup label="Property Team Members">
+                          <option value="1a">Team Member A</option>
+                          <option value="1b">Team Member B</option>
+                          <option value="1c">Team Member C</option>
+                          <option value="1d">Team Member D</option>
+                        </optgroup>
+                        <optgroup label="Vendors">
+                          <option value="2a">Vendor A</option>
+                          <option value="2b">Vendor B</option>
+                          <option value="2c">Vendor C</option>
+                          <option value="2d">Vendor D</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div><!-- row -->
+                  <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">Notify others by email</div>
+                    <div class="col"><div class="form-switcher lg inactive"></div></div>
+                  </div><!-- row -->
+                  <div class="row hidden">
+                    <div class="col-1"></div>
+                    <div class="col-4">Other people to be notified</div>
+                    <div class="col">
+                      <select class="select2m" multiple>
+                        <optgroup label="Property Team Members">
+                          <option value="1a">Team Member A</option>
+                          <option value="1b">Team Member B</option>
+                          <option value="1c">Team Member C</option>
+                          <option value="1d">Team Member D</option>
+                        </optgroup>
+                        <optgroup label="Vendors">
+                          <option value="2a">Vendor A</option>
+                          <option value="2b">Vendor B</option>
+                          <option value="2c">Vendor C</option>
+                          <option value="2d">Vendor D</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div><!-- row -->
+                </div><!-- col -->
+              </div><!-- row -->
+            </div><!-- settings-group -->
+
+            <hr class="mg-y-30">
+
+            <div class="settings-group">
+              <div class="row row-sm">
+                <div class="col-4 align-self-start">
+                  <div class="pd-r-20">
+                    <h6 class="content-subtitle">General</h6>
+                    <p class="mg-b-0">Assignee receives an email when a new request is created from the IVR system.</p>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">Assignee for Office Hours</div>
+                    <div class="col">
+                      <select class="select2">
+                        <option value="">Choose assignee</option>
+                        <optgroup label="Property Team Members">
+                          <option value="1a">Team Member A</option>
+                          <option value="1b">Team Member B</option>
+                          <option value="1c">Team Member C</option>
+                          <option value="1d">Team Member D</option>
+                        </optgroup>
+                        <optgroup label="Vendors">
+                          <option value="2a">Vendor A</option>
+                          <option value="2b">Vendor B</option>
+                          <option value="2c">Vendor C</option>
+                          <option value="2d">Vendor D</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div><!-- row -->
+                  <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">Assignee for After Hours</div>
+                    <div class="col">
+                      <select class="select2">
+                        <option value="">Choose assignee</option>
+                        <optgroup label="Property Team Members">
+                          <option value="1a">Team Member A</option>
+                          <option value="1b">Team Member B</option>
+                          <option value="1c">Team Member C</option>
+                          <option value="1d">Team Member D</option>
+                        </optgroup>
+                        <optgroup label="Vendors">
+                          <option value="2a">Vendor A</option>
+                          <option value="2b">Vendor B</option>
+                          <option value="2c">Vendor C</option>
+                          <option value="2d">Vendor D</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div><!-- row -->
+                  <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">Notify others by email</div>
+                    <div class="col"><div class="form-switcher lg inactive"></div></div>
+                  </div><!-- row -->
+                  <div class="row hidden">
+                    <div class="col-1"></div>
+                    <div class="col-4">Other people to be notified</div>
+                    <div class="col">
+                      <select class="select2m" multiple>
+                        <optgroup label="Property Team Members">
+                          <option value="1a">Team Member A</option>
+                          <option value="1b">Team Member B</option>
+                          <option value="1c">Team Member C</option>
+                          <option value="1d">Team Member D</option>
+                        </optgroup>
+                        <optgroup label="Vendors">
+                          <option value="2a">Vendor A</option>
+                          <option value="2b">Vendor B</option>
+                          <option value="2c">Vendor C</option>
+                          <option value="2d">Vendor D</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div><!-- row -->
+                </div><!-- col -->
+              </div><!-- row -->
+            </div><!-- settings-group -->
+
+            <hr class="mg-y-30">
+
+            <div class="settings-group">
+              <div class="row row-sm">
+                <div class="col-4 align-self-start">
+                  <div class="pd-r-20">
+                    <h6 class="content-subtitle">Emergency Maintenance</h6>
+                    <p class="mg-b-0">Assignee receives an email and call when a new request is created from the IVR system.</p>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">Assignee for Office Hours</div>
+                    <div class="col">
+                      <select class="select2">
+                        <option value="">Choose assignee</option>
+                        <optgroup label="Property Team Members">
+                          <option value="1a">Team Member A</option>
+                          <option value="1b">Team Member B</option>
+                          <option value="1c">Team Member C</option>
+                          <option value="1d">Team Member D</option>
+                        </optgroup>
+                        <optgroup label="Vendors">
+                          <option value="2a">Vendor A</option>
+                          <option value="2b">Vendor B</option>
+                          <option value="2c">Vendor C</option>
+                          <option value="2d">Vendor D</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div><!-- row -->
+                  <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">Assignee for After Hours</div>
+                    <div class="col">
+                      <select class="select2">
+                        <option value="">Choose assignee</option>
+                        <optgroup label="Property Team Members">
+                          <option value="1a">Team Member A</option>
+                          <option value="1b">Team Member B</option>
+                          <option value="1c">Team Member C</option>
+                          <option value="1d">Team Member D</option>
+                        </optgroup>
+                        <optgroup label="Vendors">
+                          <option value="2a">Vendor A</option>
+                          <option value="2b">Vendor B</option>
+                          <option value="2c">Vendor C</option>
+                          <option value="2d">Vendor D</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div><!-- row -->
+                  <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">Notify others by email</div>
+                    <div class="col"><div class="form-switcher lg inactive"></div></div>
+                  </div><!-- row -->
+                  <div class="row hidden">
+                    <div class="col-1"></div>
+                    <div class="col-4">Other people to be notified</div>
+                    <div class="col">
+                      <select class="select2m" multiple>
+                        <optgroup label="Property Team Members">
+                          <option value="1a">Team Member A</option>
+                          <option value="1b">Team Member B</option>
+                          <option value="1c">Team Member C</option>
+                          <option value="1d">Team Member D</option>
+                        </optgroup>
+                        <optgroup label="Vendors">
+                          <option value="2a">Vendor A</option>
+                          <option value="2b">Vendor B</option>
+                          <option value="2c">Vendor C</option>
+                          <option value="2d">Vendor D</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div><!-- row -->
+                </div><!-- col -->
+              </div><!-- row -->
+            </div><!-- settings-group -->
+
+            <hr class="mg-y-30">
+
+            <div class="settings-group">
+              <div class="row row-sm">
+                <div class="col-4 align-self-start">
+                  <div class="pd-r-20">
+                    <h6 class="content-subtitle">Courtesy Patrol</h6>
+                    <p class="mg-b-0">Assignee receives an email and call when a new request is created from the IVR system.</p>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">Assignee for Office Hours</div>
+                    <div class="col">
+                      <select class="select2">
+                        <option value="">Choose assignee</option>
+                        <optgroup label="Property Team Members">
+                          <option value="1a">Team Member A</option>
+                          <option value="1b">Team Member B</option>
+                          <option value="1c">Team Member C</option>
+                          <option value="1d">Team Member D</option>
+                        </optgroup>
+                        <optgroup label="Vendors">
+                          <option value="2a">Vendor A</option>
+                          <option value="2b">Vendor B</option>
+                          <option value="2c">Vendor C</option>
+                          <option value="2d">Vendor D</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div><!-- row -->
+                  <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">Assignee for After Hours</div>
+                    <div class="col">
+                      <select class="select2">
+                        <option value="">Choose assignee</option>
+                        <optgroup label="Property Team Members">
+                          <option value="1a">Team Member A</option>
+                          <option value="1b">Team Member B</option>
+                          <option value="1c">Team Member C</option>
+                          <option value="1d">Team Member D</option>
+                        </optgroup>
+                        <optgroup label="Vendors">
+                          <option value="2a">Vendor A</option>
+                          <option value="2b">Vendor B</option>
+                          <option value="2c">Vendor C</option>
+                          <option value="2d">Vendor D</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div><!-- row -->
+                  <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">Notify others by email</div>
+                    <div class="col"><div class="form-switcher lg inactive"></div></div>
+                  </div><!-- row -->
+                  <div class="row hidden">
+                    <div class="col-1"></div>
+                    <div class="col-4">Other people to be notified</div>
+                    <div class="col">
+                      <select class="select2m" multiple>
+                        <optgroup label="Property Team Members">
+                          <option value="1a">Team Member A</option>
+                          <option value="1b">Team Member B</option>
+                          <option value="1c">Team Member C</option>
+                          <option value="1d">Team Member D</option>
+                        </optgroup>
+                        <optgroup label="Vendors">
+                          <option value="2a">Vendor A</option>
+                          <option value="2b">Vendor B</option>
+                          <option value="2c">Vendor C</option>
+                          <option value="2d">Vendor D</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div><!-- row -->
+                </div><!-- col -->
+              </div><!-- row -->
+            </div><!-- settings-group -->
+
+            <div class="settings-footer mg-t-20">
+              <button type="button" class="btn btn-primary">Save Changes</button>
+            </div><!-- settings-footer -->
+          </div><!-- settings-body -->
+        </div><!-- content-body -->
+      </div><!-- container -->
+    </div><!-- content -->
+
+
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/select2/js/select2.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('.select2').select2({
+          minimumResultsForSearch: Infinity,
+          placeholder: 'Choose assignee',
+          width: '100%'
+        });
+
+        $('.select2m').select2({
+          minimumResultsForSearch: Infinity,
+          placeholder: 'Choose assignees',
+          width: '100%'
+        });
+
+        $('.form-switcher').on('click', function(){
+          var n = $(this).closest('.row').next();
+          if($(this).hasClass('inactive')) {
+            n.removeClass('hidden');
+          } else {
+            n.addClass('hidden');
+          }
+        });
+
+      });
+    </script>
+  </body>
+</html>

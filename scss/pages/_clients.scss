@@ -1,0 +1,91 @@
+
+.table-clients {
+  margin-bottom: 0;
+
+  thead th {
+    &:first-child { width: 4%; }
+    &:nth-child(2) {
+      padding-left: $height-lg + 20px;
+      width: 35%;
+    }
+
+    &:nth-child(3) { width: 23%; }
+
+    &:nth-child(4) { width: 15%; }
+
+    &:nth-child(5) { width: 8%; }
+    &:nth-child(6) { width: 6%; }
+    &:last-child { width: 9%; }
+  }
+
+  tbody td:nth-child(4) { font-size: $font-size-sm; }
+
+  .client-name {
+    margin-bottom: 0;
+    font-weight: $font-weight-medium;
+    color: $gray-700;
+  }
+
+  .media { align-items: center; }
+  .media-body { padding-left: 15px; }
+
+  .avatar {
+    width: $height-base;
+    height: $height-base;
+    background-color: $color-bg-01;
+    color: $color-tx-03;
+    font-size: 20px;
+    border-radius: $border-radius-sm;
+  }
+}
+
+.modal-new-client {
+  @extend .modal-new-user;
+
+  .modal-subtitle {
+    margin-top: 8px;
+    color: $color-tx-02;
+  }
+
+  .modal-body {
+    color: $color-tx-02;
+
+    .nav { padding-top: 10px; }
+  }
+
+  .nav-steps .nav-link {
+    + .nav-link {
+      margin-left: 30px;
+
+      &::before {
+        left: -23px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .modal-footer {
+    justify-content: flex-end;
+
+    .btn-skip { margin-right: auto !important; }
+  }
+
+  .card {
+    background-color: $color-bg-01;
+    border-width: 0;
+    border-radius: 4px;
+
+    &.card-body { padding: 15px; }
+
+    .form-label {
+      line-height: 1;
+      color: $color-tx-02;
+      margin-bottom: 10px;
+    }
+
+    h6 {
+      margin-bottom: 0;
+      color: $color-tx-01;
+    }
+  }
+}

@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell Lease</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/lease.min.css">
+  </head>
+  <body>
+
+    <div class="ls-content">
+      <div class="ls-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7 col-lg-8 pd-lg-r-15-f">
+              <h6 class="ls-page-title mg-b-30">People</h6>
+
+              <h6 class="section-title">Emergency Contact</h6>
+
+              <div class="formpanel">
+                <div class="row row-sm">
+                  <div class="col-sm-6">
+                    <label class="form-label">First Name</label>
+                    <input type="text" class="form-control" placeholder="Enter firstname">
+                  </div><!-- col -->
+                  <div class="col-sm-6">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" class="form-control" placeholder="Enter lastname">
+                  </div><!-- col -->
+                  <div class="col-sm-5 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                    <label class="form-label">Email Address</label>
+                    <input type="text" class="form-control" placeholder="Enter email address">
+                  </div><!-- col -->
+                  <div class="col-sm-7 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                    <label class="form-label">Primary Phone</label>
+                    <div class="row row-xxs">
+                      <div class="col-2"><input type="text" class="form-control" value="+1"></div>
+                      <div class="col-7"><input type="text" class="form-control" placeholder="Phone number"></div>
+                      <div class="col-3">
+                        <select class="custom-select">
+                          <option value="mobile" selected>Mobile</option>
+                          <option value="landline">Landline</option>
+                        </select>
+                      </div>
+                    </div><!-- row -->
+                  </div><!-- col -->
+                </div><!-- row -->
+              </div><!-- formpanel -->
+
+              <hr class="mg-y-30 op-0">
+
+              <h6 class="section-title mg-b-20-f">Occupants</h6>
+
+              <div class="formpanel">
+                <div class="row row-sm">
+                  <div class="col-lg-8 col-xl-6">
+                    <label class="form-label">Number of people living in the apartment with you</label>
+                    <select id="numOccupant" class="custom-select wd-60p wd-sm-40p">
+                      <option value="none" selected>None</option>
+                      <option label="---" disabled></option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div><!-- col -->
+                </div><!-- row -->
+              </div><!-- formpanel -->
+
+              <nav class="nav nav-tab nav-occupant mg-t-20 mg-lg-t-30 d-none">
+                <a href="#occupant1" data-toggle="tab" class="nav-link active">Occupant 1</a>
+                <a href="#occupant2" data-toggle="tab" class="nav-link d-none">Occupant 2</a>
+                <a href="#occupant3" data-toggle="tab" class="nav-link d-none">Occupant 3</a>
+              </nav>
+
+              <div class="tab-content tab-content-occupant mg-t-20 d-none">
+                <div id="occupant1" class="tab-pane active show">
+                  <div class="formpanel">
+                    <div class="custom-control custom-checkbox text-sm lh-7 mg-b-20">
+                      <input id="occupantAge" type="checkbox" class="custom-control-input custom-control-age" checked>
+                      <label class="custom-control-label" for="occupantAge">Occupant is 18 years or older</label>
+                    </div>
+                    <div class="row row-sm">
+                      <div class="col-sm-6 col-xl-4">
+                        <label class="form-label">First Name</label>
+                        <input id="firstName" type="text" class="form-control occupant-name" data-target="#fName" placeholder="Enter firstname">
+                      </div><!-- col -->
+                      <div class="col-sm-6 col-xl-4 mg-t-15 mg-sm-t-0">
+                        <label class="form-label">Last Name</label>
+                        <input id="lastName" type="text" class="form-control occupant-name" data-target="#lName" placeholder="Enter lastname">
+                      </div><!-- col -->
+                      <div class="col-sm-5 col-md-4 mg-t-15 mg-sm-t-20 mg-lg-t-30 mg-xl-t-0">
+                        <label class="form-label">Birthdate</label>
+                        <input type="text" class="form-control" placeholder="mm/dd/yyyy">
+                      </div><!-- col -->
+                      <div class="occupant-more-data col-sm-7 col-md-8 col-xl-5 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                        <label class="form-label">Email Address</label>
+                        <input type="text" class="form-control" placeholder="Enter email address">
+                      </div><!-- col -->
+                      <div class="occupant-more-data col-sm col-xl-7 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                        <label class="form-label">Primary Phone</label>
+                        <div class="row row-xxs">
+                          <div class="col-2"><input type="text" class="form-control" value="+1"></div>
+                          <div class="col-7"><input type="text" class="form-control" placeholder="Phone number"></div>
+                          <div class="col-3">
+                            <select class="custom-select">
+                              <option value="mobile" selected>Mobile</option>
+                              <option value="landline">Landline</option>
+                            </select>
+                          </div>
+                        </div><!-- row -->
+                      </div><!-- col -->
+                    </div><!-- row -->
+                    <div class="occupant-more-data">
+                      <div class="custom-control custom-checkbox mg-t-15">
+                        <input type="checkbox" class="custom-control-input custom-control-occupant" id="ck1" checked>
+                        <label class="custom-control-label text-sm" for="ck1">Email <span id="oName">occupant</span> <span id="fName"></span> <span id="lName"></span> to fill in their application with their own information.</label>
+                      </div>
+
+                      <div class="row row-sm more-info d-none">
+                        <div class="col-sm-4 col-lg-4 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Identification Type</label>
+                          <select class="custom-select">
+                            <option value="" selected>SSN</option>
+                          </select>
+                        </div><!-- col -->
+                        <div class="col-sm-8 col-lg-8 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">SSN</label>
+                          <input type="text" class="form-control" placeholder="Enter SSN number">
+                        </div><!-- col -->
+                        <div class="col-sm-6 col-md-12 col-lg-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Drivers License Number</label>
+                          <input type="text" class="form-control" placeholder="Enter license number">
+                        </div><!-- col -->
+                        <div class="col-sm-6 col-md-12 col-lg-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Drivers License State</label>
+                          <select class="custom-select">
+                            <option value="" selected>Choose...</option>
+                          </select>
+                        </div><!-- col -->
+                        <div class="col-sm-6 col-lg-6 mg-t-15 mg-lg-t-30">
+                          <label class="form-label mg-b-10-f">Drivers License - Front Photo</label>
+                          <div class="upload-panel">
+                            <h6>Drag &amp; Drop</h6>
+                            <span>or</span>
+                            <a href="#" class="btn btn-primary btn-upload"><i class="ri-upload-2-line"></i> Upload Photo</a>
+                          </div><!-- upload-panel -->
+                        </div><!-- col -->
+                        <div class="col-sm-6 col-lg-6 mg-t-15 mg-lg-t-30">
+                          <label class="form-label mg-b-10-f">Drivers License - Back Photo</label>
+                          <div class="upload-panel">
+                            <h6>Drag &amp; Drop</h6>
+                            <span>or</span>
+                            <a href="#" class="btn btn-primary btn-upload"><i class="ri-upload-2-line"></i> Upload Photo</a>
+                          </div><!-- upload-panel -->
+                        </div><!-- col -->
+                        <div class="col-sm-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Current Employer Name</label>
+                          <input type="text" class="form-control" placeholder="Enter employer name">
+                        </div><!-- col -->
+                        <div class="col-sm-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Supervisor Name</label>
+                          <input type="text" class="form-control" placeholder="Enter supervisor name">
+                        </div><!-- col -->
+                        <div class="col-sm-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Supervisor Email Address</label>
+                          <input type="text" class="form-control" placeholder="Enter email address">
+                        </div><!-- col -->
+                        <div class="col-sm-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Supervisor Phone Number</label>
+                          <div class="row row-xxs">
+                            <div class="col-2"><input type="text" class="form-control" value="+1"></div>
+                            <div class="col-7"><input type="text" class="form-control" placeholder="Phone number"></div>
+                            <div class="col-3">
+                              <select class="custom-select">
+                                <option value="mobile" selected>Mobile</option>
+                                <option value="landline">Landline</option>
+                              </select>
+                            </div>
+                          </div><!-- row -->
+                        </div><!-- col -->
+                        <div class="col-sm-5 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Position/Title</label>
+                          <input type="text" class="form-control" placeholder="Enter position/title">
+                        </div><!-- col -->
+                        <div class="col-sm mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Monthly Gross Income</label>
+                          <input type="text" class="form-control" placeholder="Enter gross income">
+                        </div><!-- col -->
+                        <div class="col-sm mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Employment Start Date</label>
+                          <input type="text" class="form-control" placeholder="Enter date">
+                        </div><!-- col -->
+                        <div class="col col-sm-12 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Income Verification Documents</label>
+                          <div class="d-sm-flex d-md-block d-lg-flex">
+                            <button class="btn btn-primary btn-upload wd-100p wd-sm-auto wd-md-100p wd-lg-auto justify-content-center"><i class="ri-upload-2-line"></i> Add Paystub 1</button>
+                            <button class="btn btn-primary btn-upload wd-100p wd-sm-auto wd-md-100p wd-lg-auto justify-content-center mg-l-5"><i class="ri-upload-2-line"></i> Add Paystub 2</button>
+                          </div>
+                        </div><!-- col -->
+                        <div class="col-12">
+                          <div id="employerDuplicate" class="employer-duplicate d-none">
+                            <hr class="hr-bdcolor mg-y-25">
+
+                            <div class="ed-title mg-b-25">
+                              <h6 class="mg-b-0">Employer 2</h6>
+                              <a href="" class="remove-employer"><i class="ri-delete-bin-line"></i> Remove</a>
+                            </div><!-- media-title -->
+
+                            <div class="row">
+                              <div class="col-sm-6">
+                                <label class="form-label">Employer Name</label>
+                                <input type="text" class="form-control" placeholder="Enter employer name">
+                              </div><!-- col -->
+                              <div class="col-sm-6">
+                                <label class="form-label">Supervisor Name</label>
+                                <input type="text" class="form-control" placeholder="Enter supervisor name">
+                              </div><!-- col -->
+                              <div class="col-sm-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                                <label class="form-label">Supervisor Email Address</label>
+                                <input type="text" class="form-control" placeholder="Enter email address">
+                              </div><!-- col -->
+                              <div class="col-sm-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                                <label class="form-label">Supervisor Phone Number</label>
+                                <div class="row row-xxs">
+                                  <div class="col-2"><input type="text" class="form-control" value="+1"></div>
+                                  <div class="col-7"><input type="text" class="form-control" placeholder="Phone number"></div>
+                                  <div class="col-3">
+                                    <select class="custom-select">
+                                      <option value="mobile" selected>Mobile</option>
+                                      <option value="landline">Landline</option>
+                                    </select>
+                                  </div>
+                                </div><!-- row -->
+                              </div><!-- col -->
+                              <div class="col-sm-5 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                                <label class="form-label">Position/Title</label>
+                                <input type="text" class="form-control" placeholder="Enter position/title">
+                              </div><!-- col -->
+                              <div class="col-sm mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                                <label class="form-label">Monthly Gross Income</label>
+                                <input type="text" class="form-control" placeholder="Enter gross income">
+                              </div><!-- col -->
+                              <div class="col-sm mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                                <label class="form-label">Employment Start Date</label>
+                                <input type="text" class="form-control" placeholder="Enter date">
+                              </div><!-- col -->
+                              <div class="col col-sm-12 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                                <label class="form-label">Income Verification Documents</label>
+                                <div class="d-sm-flex d-md-block d-lg-flex">
+                                  <button class="btn btn-primary btn-upload wd-100p wd-sm-auto wd-md-100p wd-lg-auto justify-content-center"><i class="ri-upload-2-line"></i> Add Paystub 1</button>
+                                  <button class="btn btn-primary btn-upload wd-100p wd-sm-auto wd-md-100p wd-lg-auto justify-content-center mg-l-5"><i class="ri-upload-2-line"></i> Add Paystub 2</button>
+                                </div>
+                              </div><!-- col -->
+                            </div><!-- row -->
+
+
+                          </div><!-- employer-duplicate -->
+                          <hr class="hr-bdcolor mg-y-30">
+
+                          <button id="btnDuplicateEmployer" class="btn btn-white btn-upload"><i class="ri-upload-2-line"></i> Add Another Income Source</button>
+
+                        </div><!-- col -->
+                      </div><!-- row -->
+
+                    </div><!-- #occupantMoreData -->
+                  </div><!-- formpanel -->
+                </div><!-- tab-pane -->
+                <div id="occupant2" class="tab-pane">
+                  <div class="formpanel">
+                    <div class="custom-control custom-checkbox text-sm lh-7 mg-b-20">
+                      <input id="occupantAge2" type="checkbox" class="custom-control-input custom-control-age" checked>
+                      <label class="custom-control-label" for="occupantAge2">Occupant is 18 years or older</label>
+                    </div>
+                    <div class="row row-sm">
+                      <div class="col-sm-6 col-xl-4">
+                        <label class="form-label">First Name</label>
+                        <input id="firstName2" type="text" class="form-control occupant-name" data-target="#fName2" placeholder="Enter firstname">
+                      </div><!-- col -->
+                      <div class="col-sm-6 col-xl-4 mg-t-15 mg-sm-t-0">
+                        <label class="form-label">Last Name</label>
+                        <input id="lastName2" type="text" class="form-control occupant-name" data-target="#lName2" placeholder="Enter lastname">
+                      </div><!-- col -->
+                      <div class="col-sm-5 col-md-4 mg-t-15 mg-sm-t-20 mg-lg-t-30 mg-xl-t-0">
+                        <label class="form-label">Birthdate</label>
+                        <input type="text" class="form-control" placeholder="mm/dd/yyyy">
+                      </div><!-- col -->
+                      <div class="occupant-more-data col-sm-7 col-md-8 col-xl-5 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                        <label class="form-label">Email Address</label>
+                        <input type="text" class="form-control" placeholder="Enter email address">
+                      </div><!-- col -->
+                      <div class="occupant-more-data col-sm col-xl-7 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                        <label class="form-label">Primary Phone</label>
+                        <div class="row row-xxs">
+                          <div class="col-2"><input type="text" class="form-control" value="+1"></div>
+                          <div class="col-7"><input type="text" class="form-control" placeholder="Phone number"></div>
+                          <div class="col-3">
+                            <select class="custom-select">
+                              <option value="mobile" selected>Mobile</option>
+                              <option value="landline">Landline</option>
+                            </select>
+                          </div>
+                        </div><!-- row -->
+                      </div><!-- col -->
+                    </div><!-- row -->
+                    <div class="occupant-more-data">
+                      <div class="custom-control custom-checkbox mg-t-15">
+                        <input type="checkbox" class="custom-control-input custom-control-occupant" id="ck2">
+                        <label class="custom-control-label text-sm" for="ck2">Email <span id="oName2">occupant</span> <span id="fName2"></span> <span id="lName2"></span> to fill in their application with their own information.</label>
+                      </div>
+
+                      <div class="row row-sm more-info">
+                        <div class="col-sm-4 col-lg-4 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Identification Type</label>
+                          <select class="custom-select">
+                            <option value="" selected>SSN</option>
+                          </select>
+                        </div><!-- col -->
+                        <div class="col-sm-8 col-lg-8 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">SSN</label>
+                          <input type="text" class="form-control" placeholder="Enter SSN number">
+                        </div><!-- col -->
+                        <div class="col-sm-6 col-md-12 col-lg-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Drivers License Number</label>
+                          <input type="text" class="form-control" placeholder="Enter license number">
+                        </div><!-- col -->
+                        <div class="col-sm-6 col-md-12 col-lg-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Drivers License State</label>
+                          <select class="custom-select">
+                            <option value="" selected>Choose...</option>
+                          </select>
+                        </div><!-- col -->
+                        <div class="col-sm-6 col-lg-6 mg-t-15 mg-lg-t-30">
+                          <label class="form-label mg-b-10-f">Drivers License - Front Photo</label>
+                          <div class="upload-panel">
+                            <h6>Drag &amp; Drop</h6>
+                            <span>or</span>
+                            <a href="#" class="btn btn-primary btn-upload"><i class="ri-upload-2-line"></i> Upload Photo</a>
+                          </div><!-- upload-panel -->
+                        </div><!-- col -->
+                        <div class="col-sm-6 col-lg-6 mg-t-15 mg-lg-t-30">
+                          <label class="form-label mg-b-10-f">Drivers License - Back Photo</label>
+                          <div class="upload-panel">
+                            <h6>Drag &amp; Drop</h6>
+                            <span>or</span>
+                            <a href="#" class="btn btn-primary btn-upload"><i class="ri-upload-2-line"></i> Upload Photo</a>
+                          </div><!-- upload-panel -->
+                        </div><!-- col -->
+                        <div class="col-sm-6 col-md-12 mg-t-15 mg-lg-t-30">
+                          <label class="form-label">Student ID Number</label>
+                          <input type="text" class="form-control" placeholder="Enter student id number">
+                        </div><!-- col -->
+                        <div class="col-sm-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Current Employer Name</label>
+                          <input type="text" class="form-control" placeholder="Enter employer name">
+                        </div><!-- col -->
+                        <div class="col-sm-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Supervisor Name</label>
+                          <input type="text" class="form-control" placeholder="Enter supervisor name">
+                        </div><!-- col -->
+                        <div class="col-sm-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Supervisor Email Address</label>
+                          <input type="text" class="form-control" placeholder="Enter email address">
+                        </div><!-- col -->
+                        <div class="col-sm-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Supervisor Phone Number</label>
+                          <div class="row row-xxs">
+                            <div class="col-2"><input type="text" class="form-control" value="+1"></div>
+                            <div class="col-7"><input type="text" class="form-control" placeholder="Phone number"></div>
+                            <div class="col-3">
+                              <select class="custom-select">
+                                <option value="mobile" selected>Mobile</option>
+                                <option value="landline">Landline</option>
+                              </select>
+                            </div>
+                          </div><!-- row -->
+                        </div><!-- col -->
+                        <div class="col-sm-5 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Position/Title</label>
+                          <input type="text" class="form-control" placeholder="Enter position/title">
+                        </div><!-- col -->
+                        <div class="col-sm mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Monthly Gross Income</label>
+                          <input type="text" class="form-control" placeholder="Enter gross income">
+                        </div><!-- col -->
+                        <div class="col-sm mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Employment Start Date</label>
+                          <input type="text" class="form-control" placeholder="Enter date">
+                        </div><!-- col -->
+                        <div class="col col-sm-12 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Income Verification Documents</label>
+                          <div class="d-sm-flex d-md-block d-lg-flex">
+                            <button class="btn btn-primary btn-upload wd-100p wd-sm-auto wd-md-100p wd-lg-auto justify-content-center"><i class="ri-upload-2-line"></i> Add Paystub 1</button>
+                            <button class="btn btn-primary btn-upload wd-100p wd-sm-auto wd-md-100p wd-lg-auto justify-content-center mg-l-5"><i class="ri-upload-2-line"></i> Add Paystub 2</button>
+                          </div>
+                        </div><!-- col -->
+                        <div class="col-12">
+                          <div id="employerDuplicate2" class="employer-duplicate d-none">
+                            <hr class="hr-bdcolor mg-y-25">
+
+                            <div class="ed-title mg-b-25">
+                              <h6 class="mg-b-0">Employer 2</h6>
+                              <a href="" class="remove-employer"><i class="ri-delete-bin-line"></i> Remove</a>
+                            </div><!-- media-title -->
+
+                            <div class="row">
+                              <div class="col-sm-6">
+                                <label class="form-label">Employer Name</label>
+                                <input type="text" class="form-control" placeholder="Enter employer name">
+                              </div><!-- col -->
+                              <div class="col-sm-6">
+                                <label class="form-label">Supervisor Name</label>
+                                <input type="text" class="form-control" placeholder="Enter supervisor name">
+                              </div><!-- col -->
+                              <div class="col-sm-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                                <label class="form-label">Supervisor Email Address</label>
+                                <input type="text" class="form-control" placeholder="Enter email address">
+                              </div><!-- col -->
+                              <div class="col-sm-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                                <label class="form-label">Supervisor Phone Number</label>
+                                <div class="row row-xxs">
+                                  <div class="col-2"><input type="text" class="form-control" value="+1"></div>
+                                  <div class="col-7"><input type="text" class="form-control" placeholder="Phone number"></div>
+                                  <div class="col-3">
+                                    <select class="custom-select">
+                                      <option value="mobile" selected>Mobile</option>
+                                      <option value="landline">Landline</option>
+                                    </select>
+                                  </div>
+                                </div><!-- row -->
+                              </div><!-- col -->
+                              <div class="col-sm-5 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                                <label class="form-label">Position/Title</label>
+                                <input type="text" class="form-control" placeholder="Enter position/title">
+                              </div><!-- col -->
+                              <div class="col-sm mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                                <label class="form-label">Monthly Gross Income</label>
+                                <input type="text" class="form-control" placeholder="Enter gross income">
+                              </div><!-- col -->
+                              <div class="col-sm mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                                <label class="form-label">Employment Start Date</label>
+                                <input type="text" class="form-control" placeholder="Enter date">
+                              </div><!-- col -->
+                              <div class="col col-sm-12 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                                <label class="form-label">Income Verification Documents</label>
+                                <div class="d-sm-flex d-md-block d-lg-flex">
+                                  <button class="btn btn-primary btn-upload wd-100p wd-sm-auto wd-md-100p wd-lg-auto justify-content-center"><i class="ri-upload-2-line"></i> Add Paystub 1</button>
+                                  <button class="btn btn-primary btn-upload wd-100p wd-sm-auto wd-md-100p wd-lg-auto justify-content-center mg-l-5"><i class="ri-upload-2-line"></i> Add Paystub 2</button>
+                                </div>
+                              </div><!-- col -->
+                            </div><!-- row -->
+
+
+                          </div><!-- employer-duplicate -->
+                          <hr class="hr-bdcolor mg-y-30">
+
+                          <button id="btnDuplicateEmployer2" class="btn btn-white btn-upload"><i class="ri-upload-2-line"></i> Add Another Income Source</button>
+
+                        </div><!-- col -->
+                      </div><!-- row -->
+                    </div><!-- #occupantMoreData -->
+                  </div><!-- formpanel -->
+                </div><!-- tab-pane -->
+                <div id="occupant3" class="tab-pane">
+                  <div class="formpanel">
+                    <div class="custom-control custom-checkbox text-sm lh-7 mg-b-20">
+                      <input id="occupantAge3" type="checkbox" class="custom-control-input custom-control-age" checked>
+                      <label class="custom-control-label" for="occupantAge3">Occupant is 18 years or older</label>
+                    </div>
+                    <div class="row row-sm">
+                      <div class="col-sm-6 col-xl-4">
+                        <label class="form-label">First Name</label>
+                        <input id="firstName3" type="text" class="form-control occupant-name" data-target="#fName3" placeholder="Enter firstname">
+                      </div><!-- col -->
+                      <div class="col-sm-6 col-xl-4 mg-t-15 mg-sm-t-0">
+                        <label class="form-label">Last Name</label>
+                        <input id="lastName3" type="text" class="form-control occupant-name" data-target="#lName3" placeholder="Enter lastname">
+                      </div><!-- col -->
+                      <div class="col-sm-5 col-md-4 mg-t-15 mg-sm-t-20 mg-lg-t-30 mg-xl-t-0">
+                        <label class="form-label">Birthdate</label>
+                        <input type="text" class="form-control" placeholder="mm/dd/yyyy">
+                      </div><!-- col -->
+                      <div class="occupant-more-data col-sm-7 col-md-8 col-xl-5 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                        <label class="form-label">Email Address</label>
+                        <input type="text" class="form-control" placeholder="Enter email address">
+                      </div><!-- col -->
+                      <div class="occupant-more-data col-sm col-xl-7 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                        <label class="form-label">Primary Phone</label>
+                        <div class="row row-xxs">
+                          <div class="col-2"><input type="text" class="form-control" value="+1"></div>
+                          <div class="col-7"><input type="text" class="form-control" placeholder="Phone number"></div>
+                          <div class="col-3">
+                            <select class="custom-select">
+                              <option value="mobile" selected>Mobile</option>
+                              <option value="landline">Landline</option>
+                            </select>
+                          </div>
+                        </div><!-- row -->
+                      </div><!-- col -->
+                    </div><!-- row -->
+                    <div class="occupant-more-data">
+                      <div class="custom-control custom-checkbox mg-t-15">
+                        <input type="checkbox" class="custom-control-input custom-control-occupant" id="ck3">
+                        <label class="custom-control-label text-sm" for="ck3">Email <span id="oName3">occupant</span> <span id="fName3"></span> <span id="lName3"></span> to fill in their application with their own information.</label>
+                      </div>
+
+                      <div class="row row-sm more-info">
+                        <div class="col-sm-4 col-lg-4 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Identification Type</label>
+                          <select class="custom-select">
+                            <option value="" selected>SSN</option>
+                          </select>
+                        </div><!-- col -->
+                        <div class="col-sm-8 col-lg-8 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">SSN</label>
+                          <input type="text" class="form-control" placeholder="Enter SSN number">
+                        </div><!-- col -->
+                        <div class="col-sm-6 col-md-12 col-lg-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Drivers License Number</label>
+                          <input type="text" class="form-control" placeholder="Enter license number">
+                        </div><!-- col -->
+                        <div class="col-sm-6 col-md-12 col-lg-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Drivers License State</label>
+                          <select class="custom-select">
+                            <option value="" selected>Choose...</option>
+                          </select>
+                        </div><!-- col -->
+                        <div class="col-sm-6 col-lg-6 mg-t-15 mg-lg-t-30">
+                          <label class="form-label mg-b-10-f">Drivers License - Front Photo</label>
+                          <div class="upload-panel">
+                            <h6>Drag &amp; Drop</h6>
+                            <span>or</span>
+                            <a href="#" class="btn btn-primary btn-upload"><i class="ri-upload-2-line"></i> Upload Photo</a>
+                          </div><!-- upload-panel -->
+                        </div><!-- col -->
+                        <div class="col-sm-6 col-lg-6 mg-t-15 mg-lg-t-30">
+                          <label class="form-label mg-b-10-f">Drivers License - Back Photo</label>
+                          <div class="upload-panel">
+                            <h6>Drag &amp; Drop</h6>
+                            <span>or</span>
+                            <a href="#" class="btn btn-primary btn-upload"><i class="ri-upload-2-line"></i> Upload Photo</a>
+                          </div><!-- upload-panel -->
+                        </div><!-- col -->
+                        <div class="col-sm-6 col-md-12 mg-t-15 mg-lg-t-30">
+                          <label class="form-label">Student ID Number</label>
+                          <input type="text" class="form-control" placeholder="Enter student id number">
+                        </div><!-- col -->
+                        <div class="col-sm-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Current Employer Name</label>
+                          <input type="text" class="form-control" placeholder="Enter employer name">
+                        </div><!-- col -->
+                        <div class="col-sm-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Supervisor Name</label>
+                          <input type="text" class="form-control" placeholder="Enter supervisor name">
+                        </div><!-- col -->
+                        <div class="col-sm-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Supervisor Email Address</label>
+                          <input type="text" class="form-control" placeholder="Enter email address">
+                        </div><!-- col -->
+                        <div class="col-sm-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Supervisor Phone Number</label>
+                          <div class="row row-xxs">
+                            <div class="col-2"><input type="text" class="form-control" value="+1"></div>
+                            <div class="col-7"><input type="text" class="form-control" placeholder="Phone number"></div>
+                            <div class="col-3">
+                              <select class="custom-select">
+                                <option value="mobile" selected>Mobile</option>
+                                <option value="landline">Landline</option>
+                              </select>
+                            </div>
+                          </div><!-- row -->
+                        </div><!-- col -->
+                        <div class="col-sm-5 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Position/Title</label>
+                          <input type="text" class="form-control" placeholder="Enter position/title">
+                        </div><!-- col -->
+                        <div class="col-sm mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Monthly Gross Income</label>
+                          <input type="text" class="form-control" placeholder="Enter gross income">
+                        </div><!-- col -->
+                        <div class="col-sm mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Employment Start Date</label>
+                          <input type="text" class="form-control" placeholder="Enter date">
+                        </div><!-- col -->
+                        <div class="col col-sm-12 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                          <label class="form-label">Income Verification Documents</label>
+                          <div class="d-sm-flex d-md-block d-lg-flex">
+                            <button class="btn btn-primary btn-upload wd-100p wd-sm-auto wd-md-100p wd-lg-auto justify-content-center"><i class="ri-upload-2-line"></i> Add Paystub 1</button>
+                            <button class="btn btn-primary btn-upload wd-100p wd-sm-auto wd-md-100p wd-lg-auto justify-content-center mg-l-5"><i class="ri-upload-2-line"></i> Add Paystub 2</button>
+                          </div>
+                        </div><!-- col -->
+                        <div class="col-12">
+                          <div id="employerDuplicate3" class="employer-duplicate d-none">
+                            <hr class="hr-bdcolor mg-y-25">
+
+                            <div class="ed-title mg-b-25">
+                              <h6 class="mg-b-0">Employer 2</h6>
+                              <a href="" class="remove-employer"><i class="ri-delete-bin-line"></i> Remove</a>
+                            </div><!-- media-title -->
+
+                            <div class="row">
+                              <div class="col-sm-6">
+                                <label class="form-label">Employer Name</label>
+                                <input type="text" class="form-control" placeholder="Enter employer name">
+                              </div><!-- col -->
+                              <div class="col-sm-6">
+                                <label class="form-label">Supervisor Name</label>
+                                <input type="text" class="form-control" placeholder="Enter supervisor name">
+                              </div><!-- col -->
+                              <div class="col-sm-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                                <label class="form-label">Supervisor Email Address</label>
+                                <input type="text" class="form-control" placeholder="Enter email address">
+                              </div><!-- col -->
+                              <div class="col-sm-6 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                                <label class="form-label">Supervisor Phone Number</label>
+                                <div class="row row-xxs">
+                                  <div class="col-2"><input type="text" class="form-control" value="+1"></div>
+                                  <div class="col-7"><input type="text" class="form-control" placeholder="Phone number"></div>
+                                  <div class="col-3">
+                                    <select class="custom-select">
+                                      <option value="mobile" selected>Mobile</option>
+                                      <option value="landline">Landline</option>
+                                    </select>
+                                  </div>
+                                </div><!-- row -->
+                              </div><!-- col -->
+                              <div class="col-sm-5 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                                <label class="form-label">Position/Title</label>
+                                <input type="text" class="form-control" placeholder="Enter position/title">
+                              </div><!-- col -->
+                              <div class="col-sm mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                                <label class="form-label">Monthly Gross Income</label>
+                                <input type="text" class="form-control" placeholder="Enter gross income">
+                              </div><!-- col -->
+                              <div class="col-sm mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                                <label class="form-label">Employment Start Date</label>
+                                <input type="text" class="form-control" placeholder="Enter date">
+                              </div><!-- col -->
+                              <div class="col col-sm-12 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                                <label class="form-label">Income Verification Documents</label>
+                                <div class="d-sm-flex d-md-block d-lg-flex">
+                                  <button class="btn btn-primary btn-upload wd-100p wd-sm-auto wd-md-100p wd-lg-auto justify-content-center"><i class="ri-upload-2-line"></i> Add Paystub 1</button>
+                                  <button class="btn btn-primary btn-upload wd-100p wd-sm-auto wd-md-100p wd-lg-auto justify-content-center mg-l-5"><i class="ri-upload-2-line"></i> Add Paystub 2</button>
+                                </div>
+                              </div><!-- col -->
+                            </div><!-- row -->
+
+
+                          </div><!-- employer-duplicate -->
+                          <hr class="hr-bdcolor mg-y-30">
+
+                          <button id="btnDuplicateEmployer3" class="btn btn-white btn-upload"><i class="ri-upload-2-line"></i> Add Another Income Source</button>
+
+                        </div><!-- col -->
+                      </div><!-- row -->
+                    </div><!-- #occupantMoreData -->
+                  </div><!-- formpanel -->
+                </div><!-- tab-pane -->
+              </div><!-- tab-content -->
+
+              <hr class="mg-t-30 mg-b-30">
+
+              <div class="page-pager d-md-flex justify-content-end">
+                <a href="" class="btn btn-white mg-r-15">Save &amp; Exit</a>
+                <a href="income.html" class="btn btn-primary mg-md-t-0-f">Save &amp; Continue</a>
+              </div><!-- page-pager -->
+
+            </div><!-- col -->
+            <div class="col-md-5 col-lg-4 d-none d-md-block">
+              <div class="ls-sidebar">
+                <ul class="nav nav-section mg-b-20">
+                  <li class="nav-item completed"><a href="floor-plan.html" class="nav-link">Floor Plan</a></li>
+                  <li class="nav-item completed"><a href="unit.html" class="nav-link">Unit</a></li>
+                  <li class="nav-item completed"><a href="length.html" class="nav-link">Lease Length</a></li>
+                  <li class="nav-item completed"><a href="options.html" class="nav-link">Options</a></li>
+                  <li class="nav-item completed"><a href="pets.html" class="nav-link">Pets &amp; Vehicles</a></li>
+                  <li class="nav-item incomplete">
+                    <a href="personal.html" class="nav-link">Personal Info</a>
+                    <div data-toggle="popover" data-content="Not all required information has been provided for this section"><i class="ri-information-line"></i></div>
+                  </li>
+                  <li class="nav-item active"><a href="#" class="nav-link">People</a></li>
+                  <li class="nav-item disabled"><a href="#" class="nav-link">Income</a></li>
+                  <li class="nav-item disabled"><a href="#" class="nav-link">Background</a></li>
+                </ul><!-- nav -->
+
+                <div id="unitTotal" class="unit-total">
+                  <div class="justify-content-start">
+                    <strong class="mg-r-auto">Monthly Total</strong>
+                    <strong>$1,550</strong>
+                  </div>
+                  <div class="justify-content-start">
+                    <span class="mg-r-auto">Application Fees</span>
+                    <span>$325.00</span>
+                  </div>
+                  <div class="justify-content-start">
+                    <span class="mg-r-auto">Tax (2.3%)</span>
+                    <span>$7.48</span>
+                  </div>
+                  <div class="justify-content-start">
+                    <strong class="mg-r-auto">Due Today</strong>
+                    <strong>$332.48</strong>
+                  </div>
+                </div><!-- unit-total -->
+              </div><!-- ls-sidebar -->
+            </div><!-- col -->
+          </div><!-- row -->
+        </div><!-- container -->
+      </div><!-- ls-body -->
+    </div><!-- ls-content -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+
+    <script src="../assets/js/lease.js"></script>
+    <script src="../assets/js/prospect-chat.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('.incomplete div').popover({
+          template: '<div class="popover popover-nav-section" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>',
+          trigger: 'hover'
+        });
+
+        $('#numOccupant').on('change', function(){
+          var v = $(this).val();
+          var n = ($(this).val() == 'none')? true : false;
+
+          $('.nav-occupant').toggleClass('d-none', n);
+          $('.tab-content-occupant').toggleClass('d-none', n);
+
+          if(v == '1') {
+            $('.nav-occupant .nav-link:nth-child(2)').addClass('d-none');
+            $('.nav-occupant .nav-link:nth-child(3)').addClass('d-none');
+          } else if(v == '2') {
+            $('.nav-occupant .nav-link:nth-child(2)').removeClass('d-none');
+            $('.nav-occupant .nav-link:nth-child(3)').addClass('d-none');
+          } else if(v == '3') {
+            $('.nav-occupant .nav-link:nth-child(2)').removeClass('d-none');
+            $('.nav-occupant .nav-link:nth-child(3)').removeClass('d-none');
+          }
+        });
+
+        $('.tab-content').on('click', '.custom-control-age', function(e){
+          var m = $(this).closest('.formpanel').find('.occupant-more-data');
+          m.toggleClass('d-none', !e.currentTarget.checked);
+        });
+
+        $('.occupant-name').on('change', function(e){
+          var v = $(this).val();
+          var t = $(this).attr('data-target');
+          $(t).text(v);
+          $('#oName').addClass('d-none');
+
+          if($('#firstName').val() == '' && $('#lastName').val() == '') {
+            $('#oName').removeClass('d-none');
+            $('#fName, #lName').text('');
+          }
+        });
+
+        $('.custom-control-occupant').on('click', function(e){
+          var c = $(this).is(':checked');
+          var m = $(this).closest('.custom-control').siblings('.more-info');
+
+          m.toggleClass('d-none', c);
+        });
+
+        $('.remove-employer').on('click', function(e){
+          e.preventDefault();
+
+          $(this).closest('.employer-duplicate').addClass('d-none');
+        });
+
+        $('#btnDuplicateEmployer').on('click', function(e){
+          e.preventDefault();
+          $('#employerDuplicate').removeClass('d-none');
+        });
+
+        $('#btnDuplicateEmployer2').on('click', function(e){
+          e.preventDefault();
+          $('#employerDuplicate2').removeClass('d-none');
+        });
+
+        $('#btnDuplicateEmployer3').on('click', function(e){
+          e.preventDefault();
+          $('#employerDuplicate3').removeClass('d-none');
+        })
+
+      });
+    </script>
+  </body>
+</html>

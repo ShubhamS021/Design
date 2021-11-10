@@ -1,0 +1,66 @@
+
+.formpanel-pet,
+.formpanel-vehicle {
+  padding-top: 30px;
+  position: relative;
+
+  &.multi {
+    margin-top: 40px;
+    border-top: 1px solid $color-bg-02;
+
+    .form-title { display: block; }
+    .form-label-pet span { display: inline; }
+  }
+
+  .form-title {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .2px;
+    background-color: #fff;
+    color: $color-tx-02;
+    padding-left: 10px;
+    margin-bottom: 0;
+    position: absolute;
+    top: -9.5px;
+    right: 0;
+    z-index: 1;
+    display: none;
+  }
+
+  .form-label {
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .custom-select {
+    color: $color-tx-03;
+    &.onfocus { color: $color-tx-01 ; }
+  }
+
+  .form-label-pet span { display: none; }
+}
+
+.modal-required {
+  .modal-content {
+    border-radius: 0;
+    border-width: 0;
+  }
+
+  .modal-body {
+    padding: 20px;
+    line-height: 1.6;
+
+    strong { font-weight: 600; }
+
+    p { margin-bottom: 0; }
+  }
+
+  .modal-footer {
+    border-top: 0;
+    padding: 0 20px 20px;
+  }
+}
+
+.formpanel-pet.has-error {
+  .form-required { border-color: $red; }
+}

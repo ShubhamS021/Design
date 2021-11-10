@@ -1,0 +1,26 @@
+
+.footer {
+  height: 64px;
+  color: $gray-600;
+  font-size: 14px;
+
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-icon {
+    align-items: center;
+
+    a {
+      font-size: 20px;
+      text-decoration: none;
+      color: $gray-600;
+      line-height: 1;
+
+      + a { margin-left: 12px; }
+    }
+  }
+}

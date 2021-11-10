@@ -1,0 +1,92 @@
+
+.card-criteria {
+  .form-group { margin-bottom: 20px; }
+
+  .form-label {
+    display: block;
+    margin-bottom: 10px;
+    line-height: 1;
+  }
+
+  .form-search svg {
+    width: 18px;
+    height: 18px;
+    color: $color-tx-03;
+  }
+
+  .compete-search .nav:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .card-body { padding-top: 0; }
+
+  .btn-block { border-radius: 4px; }
+}
+
+.comparison-welcome {
+  height: 100%;
+  background-color: $color-bg-01;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  i {
+    font-size: 48px;
+    line-height: .8;
+    margin-bottom: 15px;
+    color: $color-tx-03;
+  }
+
+  h5 { color: $color-tx-02; }
+
+  p {
+    margin-bottom: 0;
+    color: $color-tx-03;
+  }
+}
+
+.card-comproperty {
+  padding: 18px 20px 20px;
+  border-color: $color-bd-02;
+  border-radius: 5px;
+}
+
+.chart-legend {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+
+  li {
+    position: relative;
+    padding-left: 15px;
+    font-size: $font-size-sm;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: 2px;
+      width: 10px;
+      margin-top: -1px;
+    }
+
+    + li { margin-left: 20px; }
+  }
+
+  &.chart-legend-one {
+    li:first-child {
+      color: #4d8bfb;
+      &::before { background-color:  #4d8bfb; }
+    }
+
+    li:last-child {
+      color: $teal;
+      &::before { background-color:  $teal; }
+    }
+  }
+}

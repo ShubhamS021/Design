@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body>
+
+    <div class="content">
+      <div class="container-fluid">
+        <div class="content-header align-items-center mg-b-30">
+          <div class="mg-r-auto">
+            <h4 class="content-title mg-b-0">Property Settings</h4>
+          </div>
+        </div><!-- content-header -->
+        <div class="content-body content-body-settings">
+          <div class="settings-sidebar">
+            <label class="content-label">General Settings</label>
+            <nav class="nav">
+              <a href="settings.html" class="nav-link"><i class="ri-shield-user-line"></i> Assignment Rules</a>
+              <a href="settings-email.html" class="nav-link"><i class="ri-mail-line"></i> Email templates</a>
+              <a href="settings-calendar.html" class="nav-link active"><i class="ri-calendar-todo-line"></i> Email &amp; Calendar sync</a>
+              <a href="settings-business.html" class="nav-link"><i class="ri-time-line"></i> Business hours</a>
+              <a href="../settings/community-features.html" class="nav-link"><i class="ri-community-line"></i> Community features</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">Report Settings</label>
+            <nav class="nav">
+              <a href="settings-competitors.html" class="nav-link"><i class="ri-group-line"></i> Competitors</a>
+              <a href="settings-paid-sources.html" class="nav-link"><i class="ri-wallet-3-line"></i> Paid sources</a>
+              <a href="settings-budget.html" class="nav-link"><i class="ri-bank-card-2-line"></i> Paid source budgets</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">Leasing</label>
+            <nav class="nav">
+              <a href="settings-lease.html" class="nav-link"><i class="ri-community-line"></i> Lease Defaults</a>
+              <a href="settings-policies.html" class="nav-link"><i class="ri-article-line"></i> Property Policies</a>
+              <a href="settings-rentable.html" class="nav-link"><i class="ri-handbag-line"></i> Rentable Items</a>
+              <a href="settings-screening.html" class="nav-link"><i class="ri-survey-line"></i> Screening Criteria</a>
+              <a href="settings-addenda.html" class="nav-link"><i class="ri-file-list-3-line"></i> Addenda</a>
+              <a href="../settings/pricing-duration.html" class="nav-link"><i class="ri-community-line"></i> Duration Pricing</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">Communication</label>
+            <nav class="nav">
+              <a href="settings-call-block.html" class="nav-link"><i class="ri-lock-line"></i> Call Block List</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">IVR Settings</label>
+            <nav class="nav">
+              <a href="../settings/vendors-list.html" class="nav-link"><i class="ri-contacts-line"></i> Vendors List</a>
+              <a href="../settings/default-assignees.html" class="nav-link"><i class="ri-user-star-line"></i> Default Assignees</a>
+              <a href="../settings/oncall-schedule.html" class="nav-link"><i class="ri-calendar-event-line"></i> On-Call Schedule</a>
+              <a href="../settings/leasing-prompt.html" class="nav-link"><i class="ri-user-voice-line"></i> Leasing Prompt</a>
+            </nav>
+          </div><!-- settings-sidebar -->
+          <div class="settings-body">
+            <div class="settings-header">
+              <div>
+                <h5 class="content-title-sm">Email & Calendar Sync</h5>
+                <p class="content-text mg-b-0-f">Connect and sync a shared email address and calendar to manage lead communication and tours directly from Dwell.</p>
+              </div>
+              <a href="" id="btnDisconnect" class="btn btn-outline-primary"><i class="ri-lock-unlock-fill"></i> Disconnect</a>
+            </div><!-- settings-header -->
+
+            <hr class="op-0">
+
+            <div id="syncEmailCalendar">
+              <div class="media media-sync">
+                <div class="media-icon"><i class="ri-mail-line"></i></div>
+                <div class="media-body">
+                  <small class="text-muted">Email address</small>
+                  <h5>mienard@liftlytics.com</h5>
+                  <span class="text-success"><i class="ri-checkbox-circle-fill"></i> Connected</span>
+                </div><!-- media-body -->
+              </div><!--media -->
+
+              <div class="card card-sync">
+                <label class="content-label">Sync Settings</label>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio1" name="emailsync" value="" class="custom-control-input" checked>
+                  <label class="custom-control-label" for="customRadio1">All emails will be synced with Dwell</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio2" name="emailsync" value="1" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio2">Only emails with certain labels will be synced with Dwell</label>
+                </div>
+                <div class="checkbox-wrapper d-none" id="emailSyncCollapse">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">All Mail</label>
+                  </div><!-- custom-checkbox -->
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck2">
+                    <label class="custom-control-label" for="customCheck2">Drafts</label>
+                  </div><!-- custom-checkbox -->
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                    <label class="custom-control-label" for="customCheck3">Deleted Items</label>
+                  </div><!-- custom-checkbox -->
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck4">
+                    <label class="custom-control-label" for="customCheck4">Archive</label>
+                  </div><!-- custom-checkbox -->
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck5">
+                    <label class="custom-control-label" for="customCheck5">Important</label>
+                  </div><!-- custom-checkbox -->
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck6">
+                    <label class="custom-control-label" for="customCheck6">Inbox</label>
+                  </div><!-- custom-checkbox -->
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck7">
+                    <label class="custom-control-label" for="customCheck7">Sent Items</label>
+                  </div><!-- custom-checkbox -->
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck55">
+                    <label class="custom-control-label" for="customCheck55">YAMM - Questions on prospect and resident communication workflows</label>
+                  </div><!-- custom-checkbox -->
+                </div><!-- checkbox-wrapper -->
+              </div><!-- card -->
+
+              <hr class="mg-y-30">
+
+              <div class="media media-sync">
+                <div class="media-icon"><i class="ri-mail-line"></i></div>
+                <div class="media-body">
+                  <small class="text-muted">Calendar</small>
+                  <h5>mienard@liftlytics.com</h5>
+                  <span class="text-success"><i class="ri-checkbox-circle-fill"></i> Connected</span>
+                </div><!-- media-body -->
+              </div><!--media -->
+
+              <div class="card card-sync">
+                <label class="content-label">Sync Settings</label>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio3" name="calsync" value="" class="custom-control-input" checked>
+                  <label class="custom-control-label" for="customRadio3">All calendar events will be synced with Dwell</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio4" name="calsync" value="1" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio4">Only calendar events with certain labels will be synced with Dwell</label>
+                </div>
+                <div class="checkbox-wrapper d-none" id="calSyncCollapse">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck21">
+                    <label class="custom-control-label" for="customCheck21">Holiday in United States</label>
+                  </div><!-- custom-checkbox -->
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck22">
+                    <label class="custom-control-label" for="customCheck22">Contacts</label>
+                  </div><!-- custom-checkbox -->
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck23">
+                    <label class="custom-control-label" for="customCheck23">Emailed Events</label>
+                  </div><!-- custom-checkbox -->
+                </div><!-- checkbox-wrapper -->
+              </div><!-- card -->
+            </div>
+
+            <button id="btnSync" type="button" class="btn btn-white btn-with-icon d-none"><i class="ri-add-circle-fill"></i> Connect Email &amp; Calendar</button>
+          </div><!-- settings-body -->
+        </div><!-- content-body -->
+      </div><!-- container -->
+    </div><!-- content -->
+
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('.nav-icon span').tooltip();
+
+        $('input[name="emailsync"]').on('change', function(e){
+          if($(this).val()) {
+            $('#emailSyncCollapse').removeClass('d-none');
+          } else {
+            $('#emailSyncCollapse').addClass('d-none');
+          }
+        });
+
+        $('input[name="calsync"]').on('change', function(e){
+          if($(this).val()) {
+            $('#calSyncCollapse').removeClass('d-none');
+          } else {
+            $('#calSyncCollapse').addClass('d-none');
+          }
+        });
+
+        // For displaying modal directly from url
+        // For demo use only
+        $.urlParam = function(name){
+        	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        	return results[1] || 0;
+        }
+
+        if($.urlParam('page')) {
+          if($.urlParam('page') === 'empty') {
+            $('#syncEmailCalendar').addClass('d-none');
+            $('#btnDisconnect').addClass('d-none');
+
+            $('#btnSync').removeClass('d-none');
+          }
+        }
+
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell Lease</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/lease.min.css">
+  </head>
+  <body>
+
+    <div class="ls-content">
+      <div class="ls-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7 col-lg-8 pd-lg-r-15-f">
+              <h6 class="ls-page-title mg-b-30">Pets &amp; Vehicles</h6>
+
+              <h6 class="section-title">Pets</h6>
+              <div class="formpanel">
+                <label class="form-label">Number of Pets</label>
+                <select id="numPets" class="custom-select wd-200">
+                  <option value="none" selected>None</option>
+                  <option label="---" disabled></option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div><!-- formpanel -->
+              <div id="formPet" class="formpanel formpanel-pet d-none">
+                <h6 class="form-title">Pet <span>1</span> of <span>1</span></h6>
+                <div class="row row-sm">
+                  <div class="col-lg-7">
+                    <label class="form-label form-label-pet">Name of Pet <span>1</span></label>
+                    <input type="text" class="form-control form-required" placeholder="Enter name of pet">
+                  </div><!-- col -->
+                  <div class="col-sm-6 col-md-12 col-lg-5 mg-t-15 mg-sm-t-20 mg-lg-t-0">
+                    <div class="d-flex align-items-center mg-b-8">
+                      <label class="form-label mg-b-0-f">Type</label>
+                      <a href="" class="link-help link-hobbes mg-l-5" data-subject="Pet Type"><i class="ri-question-fill"></i></a>
+                    </div>
+                    <select class="custom-select">
+                      <option value="">Choose type</option>
+                      <option value="1">Type A</option>
+                      <option value="2">Type B</option>
+                      <option value="3">Type C</option>
+                    </select>
+                  </div><!-- col -->
+                  <div class="col-sm-6 col-md-12 col-lg-4 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                    <div class="d-flex align-items-center mg-b-8">
+                      <label class="form-label mg-b-0-f">Breed</label>
+                      <a href="" class="link-help link-hobbes mg-l-5" data-subject="Pet Breed"><i class="ri-question-fill"></i></a>
+                    </div>
+                    <input type="text" class="form-control form-required" placeholder="Enter breed of pet">
+                  </div><!-- col -->
+                  <div class="col-sm-4 col-lg mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                    <label class="form-label">Color</label>
+                    <select class="custom-select">
+                      <option value="">Choose color</option>
+                      <option value="1">Black</option>
+                      <option value="2">Brown</option>
+                      <option value="3">White</option>
+                    </select>
+                  </div><!-- col -->
+                  <div class="col-sm col-lg mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                    <label class="form-label">Age</label>
+                    <input type="text" class="form-control" placeholder="Enter age of pet">
+                  </div><!-- col -->
+                  <div class="col-sm col-lg mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                    <div class="d-flex align-items-center mg-b-8">
+                      <label class="form-label mg-b-0-f">Weigh (lbs)</label>
+                      <a href="" class="link-help link-hobbes mg-l-5" data-subject="Pet Weight"><i class="ri-question-fill"></i></a>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Enter weight of pet">
+                  </div><!-- col -->
+                </div><!-- row -->
+              </div><!-- formpanel -->
+              <div id="formPetMulti"></div>
+              <hr class="mg-y-30 op-0">
+
+              <h6 class="section-title">Vehicles</h6>
+              <div class="formpanel">
+                <div class="d-flex align-items-center mg-b-8">
+                  <label class="form-label mg-b-0-f">Number of Vehicles</label>
+                  <a href="" class="link-help link-hobbes mg-l-5" data-subject="Number of Vehicles"><i class="ri-question-fill"></i></a>
+                </div>
+                <select id="numVehicles" class="custom-select wd-200">
+                  <option value="none" selected>None</option>
+                  <option label="---" disabled></option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div><!-- formpanel -->
+              <div id="formVehicle" class="formpanel formpanel-vehicle d-none">
+                <h6 class="form-title">Vehicle <span>1</span> of <span>1</span></h6>
+                <div class="row row-sm">
+                  <div class="col-lg-2">
+                    <label class="form-label">Year</label>
+                    <select class="custom-select">
+                      <option value="">2021</option>
+                      <option value="1">2020</option>
+                      <option value="2">2019</option>
+                      <option value="3">2018</option>
+                    </select>
+                  </div><!-- col -->
+                  <div class="col-lg mg-t-15 mg-sm-t-20 mg-lg-t-0">
+                    <label class="form-label">Make</label>
+                    <select class="custom-select">
+                      <option value="">Choose make</option>
+                      <option value="1">Ford</option>
+                      <option value="2">Honda</option>
+                      <option value="3">Hyundai</option>
+                      <option value="4">Toyota</option>
+                    </select>
+                  </div><!-- col -->
+                  <div class="col-lg mg-t-15 mg-sm-t-20 mg-lg-t-0">
+                    <label class="form-label">Model</label>
+                    <select class="custom-select">
+                      <option value="">Choose model</option>
+                      <option value="1">Ford</option>
+                      <option value="2">Honda</option>
+                      <option value="3">Hyundai</option>
+                      <option value="4">Toyota</option>
+                    </select>
+                  </div><!-- col -->
+                </div><!-- row -->
+                <div class="row row-sm">
+                  <div class="col-lg-3 mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                    <label class="form-label">Color</label>
+                    <select class="custom-select">
+                      <option value="">Choose color</option>
+                      <option value="1">Red</option>
+                      <option value="2">Blue</option>
+                      <option value="3">Black</option>
+                      <option value="4">White</option>
+                    </select>
+                  </div><!-- col -->
+                  <div class="col-lg mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                    <label class="form-label">License Plate Number</label>
+                    <input type="text" class="form-control" placeholder="Enter license number">
+                  </div><!-- col -->
+                  <div class="col-lg mg-t-15 mg-sm-t-20 mg-lg-t-30">
+                    <label class="form-label">License Plate State</label>
+                    <select class="custom-select">
+                      <option value="">Choose state</option>
+                      <option value="alab">Alabama</option>
+                      <option value="alas">Alaska</option>
+                      <option value="ari">Arizona</option>
+                      <option value="ark">Arkansas</option>
+                      <option value="ca">California</option>
+                      <option value="col">Colorado</option>
+                      <option value="con">Connecticut</option>
+                      <option value="d">Delaware</option>
+                      <option value="f">Florida</option>
+                      <option value="g">Georgia</option>
+                      <option value="h">Hawaii</option>
+                      <option value="id">Idaho</option>
+                      <option value="il">Illinois</option>
+                      <option value="in">Indiana</option>
+                      <option value="io">Iowa</option>
+                      <option value="ka">Kansas</option>
+                      <option value="ke">Kentucky</option>
+                      <option value="l">Louisiana</option>
+                      <option value="mai">Maine</option>
+                      <option value="mar">Maryland</option>
+                      <option value="mas">Massachusetts</option>
+                      <option value="mic">Michigan</option>
+                      <option value="min">Minnesota</option>
+                      <option value="missi">Mississippi</option>
+                      <option value="misso">Missouri</option>
+                      <option value="m">Montana</option>
+                      <option value="neb">Nebraska</option>
+                      <option value="nev">Nevada</option>
+                      <option value="new h">New Hampshire</option>
+                      <option value="new j">New Jersey</option>
+                      <option value="new m">New Mexico</option>
+                      <option value="new y">New York</option>
+                      <option value="north c">North Carolina</option>
+                      <option value="north d">North Dakota</option>
+                      <option value="oh">Ohio</option>
+                      <option value="ok">Ohio</option>
+                      <option value="or">Oregon</option>
+                      <option value="p">Pennsylvania</option>
+                      <option value="r">Rhode Island</option>
+                      <option value="south c">South Carolina</option>
+                      <option value="south d">South Dakota</option>
+                      <option value="ten">Tennessee</option>
+                      <option value="tex">Texas</option>
+                      <option value="u">Utah</option>
+                      <option value="ve">Vermont</option>
+                      <option value="vi">Virginia</option>
+                      <option value="wa">Washington</option>
+                      <option value="we">West Virginia</option>
+                      <option value="wi">Wisconsin</option>
+                      <option value="wy">Wyoming</option>
+                    </select>
+                  </div><!-- col -->
+                </div><!-- row -->
+              </div><!-- formpanel -->
+              <div id="formVehicleMulti"></div>
+              <hr class="mg-t-50 mg-b-30">
+
+              <div class="page-pager d-md-flex justify-content-end">
+                <a href="" class="btn btn-white mg-r-15">Save &amp; Exit</a>
+                <a id="saveContinue" href="#" class="btn btn-primary mg-md-t-0-f">Save &amp; Continue</a>
+              </div><!-- page-pager -->
+
+            </div><!-- col -->
+            <div class="col-md-5 col-lg-4 d-none d-md-block">
+              <div class="ls-sidebar">
+                <div class="card card-plan-selected">
+                  <div class="card-body">
+                    <div class="card-content">
+                      <div class="d-flex justify-content-between">
+                        <h6><strong class="model">Floor Plan: 1B</strong></h6>
+                        <a href="floor-plan.html" class="link link-primary"><i class="ri-edit-2-fill"></i> <span>Edit</span></a>
+                      </div>
+                    </div><!-- card-content -->
+                  </div><!-- card-body -->
+                </div><!-- card -->
+                <div id="cardUnit" class="card card-plan-selected mg-t-2">
+                  <div class="card-body">
+                    <div class="card-content">
+                      <div class="d-flex justify-content-between mg-b-20">
+                        <h6><strong class="model">Unit: 512</strong></h6>
+                        <a href="unit.html" class="link link-primary"><i class="ri-edit-2-fill"></i> <span>Edit</span></a>
+                      </div>
+                      <ul class="list-group unit-info">
+                        <li class="list-group-item"><span>Rent</span><span>$1,550/month</span></li>
+                        <li class="list-group-item"><span>Utilities</span><span>$25.0/month</span></li>
+                        <li class="list-group-item"><span>Deposit</span><span>$700 or $275</span></li>
+                      </ul>
+                    </div><!-- card-content -->
+                  </div><!-- card-body -->
+                </div><!-- card -->
+                <div class="card card-plan-selected mg-t-2">
+                  <div class="card-body">
+                    <div class="card-content">
+                      <div class="d-flex justify-content-between">
+                        <h6><strong class="model">Lease Length:</strong> 10 months</h6>
+                        <a href="length.html" class="link link-primary"><i class="ri-edit-2-fill"></i> <span>Edit</span></a>
+                      </div>
+                    </div><!-- card-content -->
+                  </div><!-- card-body -->
+                </div><!-- card -->
+                <div class="card card-plan-selected mg-t-2">
+                  <div class="card-body">
+                    <div class="card-content">
+                      <div class="d-flex justify-content-between mg-b-20">
+                        <h6><strong class="model">Added Options</strong></h6>
+                        <a href="options.html" class="link link-primary"><i class="ri-edit-2-fill"></i> <span>Edit</span></a>
+                      </div>
+                      <ul class="list-group unit-info">
+                        <li class="list-group-item"><span>Garage</span><span>Rent: $350/month</span></li>
+                      </ul>
+                    </div><!-- card-content -->
+                  </div><!-- card-body -->
+                </div><!-- card -->
+                <div id="unitPet" class="card card-plan-selected mg-t-2">
+                  <div class="card-body">
+                    <div class="card-content">
+                      <div class="d-flex justify-content-between mg-b-20">
+                        <h6><strong class="model">Pets</strong></h6>
+                        <a href="" id="petRemove" class="link link-danger"><i class="ri-delete-bin-line"></i> <span>Remove</span></a>
+                      </div>
+                      <ul class="list-group unit-info">
+                        <li class="list-group-item"><span>Charge</span><span>$50/month</span></li>
+                        <li class="list-group-item"><span>Deposit</span><span>$100</span></li>
+                      </ul>
+                    </div><!-- card-content -->
+                  </div><!-- card-body -->
+                </div><!-- card -->
+
+                <div id="unitTotal" class="unit-total">
+                  <div class="justify-content-start">
+                    <strong class="mg-r-auto">Monthly Total</strong>
+                    <strong>$1,550</strong>
+                  </div>
+                  <div class="justify-content-start">
+                    <span class="mg-r-auto">Application Fees</span>
+                    <span>$325.00</span>
+                  </div>
+                  <div class="justify-content-start">
+                    <span class="mg-r-auto">Tax (2.3%)</span>
+                    <span>$7.48</span>
+                  </div>
+                  <div class="justify-content-start">
+                    <strong class="mg-r-auto">Due Today</strong>
+                    <strong>$332.48</strong>
+                  </div>
+                </div><!-- unit-total -->
+              </div><!-- ls-sidebar -->
+            </div><!-- col -->
+          </div><!-- row -->
+        </div><!-- container -->
+      </div><!-- ls-body -->
+    </div><!-- ls-content -->
+
+    <div class="modal modal-required fade" id="modalRequired" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p>The following required fields have not been filled in: <strong>Name of Pet</strong>, <strong>Breed</strong>. Continue?</p>
+
+          </div><!-- modal-body -->
+          <div class="modal-footer">
+            <button id="btnRequiredYes" type="button" class="btn btn-primary">Yes</button>
+            <button id="btnRequiredNo" type="button" class="btn btn-white" data-dismiss="modal">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+
+    <script src="../assets/js/lease.js"></script>
+    <script src="../assets/js/prospect-chat.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('#petRemove').on('click', function(e){
+          e.preventDefault();
+
+          $('#unitPet').addClass('d-none');
+        });
+
+        // pets
+        $('#numPets').on('change', function(e){
+          var v = $(this).val();
+          var c = 0;
+
+          switch(v) {
+            case 'none':
+              $('.formpanel-pet').addClass('d-none');
+            break;
+
+            case '1':
+              $('.formpanel-pet').removeClass('d-none');
+              $('#formPet').removeClass('multi');
+            break;
+
+            default:
+              $('.formpanel-pet').removeClass('d-none');
+              $('#formPet').addClass('multi');
+          }
+
+          $('#formPetMulti .formpanel-pet').remove();
+          $('.formpanel-pet .form-title span:last-child').text(v);
+
+          while(c < (parseInt(v) - 1)) {
+            var n = $('#formPet').clone().appendTo('#formPetMulti');
+
+            n.find('.form-label-pet span').text(c + 2);
+            n.find('.form-title span:not(:last-child)').text(c + 2);
+            n.find('.form-control').val('');
+            n.find('.custom-select').val('');
+            c++;
+          }
+
+          if(v != 'none') {
+
+          }
+        });
+
+        // vehicles
+        $('#numVehicles').on('change', function(e){
+          var v = $(this).val();
+          var c = 0;
+
+          switch(v) {
+            case 'none':
+              $('.formpanel-vehicle').addClass('d-none');
+            break;
+
+            case '1':
+              $('.formpanel-vehicle').removeClass('d-none');
+              $('#formVehicle').removeClass('multi');
+            break;
+
+            default:
+              $('.formpanel-vehicle').removeClass('d-none');
+              $('#formVehicle').addClass('multi');
+          }
+
+          $('#formVehicleMulti .formpanel-vehicle').remove();
+          $('.formpanel-vehicle .form-title span:last-child').text(v);
+
+          while(c < (parseInt(v) - 1)) {
+            var n = $('#formVehicle').clone().appendTo('#formVehicleMulti');
+            n.find('.form-title span:not(:last-child)').text(c + 2);
+            n.find('.form-control').val('');
+            n.find('.custom-select').val('');
+            c++;
+          }
+        });
+
+        $('body').on('focusin focusout', '.custom-select', function(e){
+          if(e.type === 'focusin') {
+            $(this).addClass('onfocus')
+          } else {
+            if($(this).val() == '') {
+              $(this).removeClass('onfocus');
+            }
+          }
+        });
+
+        $('#saveContinue').on('click', function(e){
+          e.preventDefault();
+
+          if($('#numPets').val() != 'none') {
+            $('#modalRequired').modal('show');
+          } else {
+            window.location.href = 'personal.html';
+          }
+        });
+
+        $('#btnRequiredYes').on('click', function(e){
+          window.location.href = 'personal.html';
+        });
+
+        $('#btnRequiredNo').on('click', function(e){
+          $('.formpanel-pet').addClass('has-error');
+        });
+
+      });
+    </script>
+  </body>
+</html>

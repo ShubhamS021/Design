@@ -1,0 +1,31 @@
+@import "variables";
+
+.card {
+  border: 1px solid $border-color;
+
+  span[contenteditable="true"] {
+    font-weight: 700;
+    outline: none;
+  }
+}
+
+.card-header {
+  padding: 10px;
+  background-color: $body-bg;
+  border-bottom: 1px solid $border-color;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card-body {
+  .row > div {
+    padding: 10px;
+
+    + div {
+      border-left: 1px solid $border-color;
+    }
+  }
+
+  .row + .row { border-top: 1px solid $border-color; }
+}

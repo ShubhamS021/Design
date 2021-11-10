@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="Dwell">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>HTML2PDF</title>
+
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link id="docStyle" rel="stylesheet" href="css/animal-addendum.css">
+    <style>
+      .page-body-guarantor.to-pdf .page {
+        font-size: 8pt;
+        line-height: 1.25;
+        height: 760px;
+      }
+
+      .page-body-guarantor.to-pdf .page.num-bottom-center::after {
+        top: auto;
+        bottom: 0;
+        position: absolute;
+      }
+
+      .page-body-guarantor.to-pdf .ordered-list li { line-height: 1.25; }
+
+      .page-body-personal.to-pdf {
+        width: 430pt;
+        font-size: 8pt;
+        line-height: 1.22;
+      }
+
+      .page-body-personal.to-pdf .page {
+        height: 755px;
+      }
+
+      .page-body-personal.to-pdf .page.num-bottom-center::after {
+        top: auto;
+        bottom: 0;
+        position: absolute;
+      }
+
+      .page-body-personal.to-pdf .ordered-list li + li { margin-top: 10px; }
+    </style>
+  </head>
+  <body>
+
+    <div class="doc-sidebar">
+      <label class="content-label">Documents</label>
+      <nav id="navDocs" class="nav">
+        <a href="deposit-agreement-a.html" class="nav-link">Deposit Agreement A</a>
+        <a href="lease-agreement-a.html" class="nav-link">Lease Agreement A</a>
+        <a href="assistive-animal-addendum.html" class="nav-link">Assistive Animal Addendum</a>
+        <a href="automatic-gate-entry-addendum.html" class="nav-link">Automatic Gate Entry Addendum</a>
+        <a href="building-facilities-addendum.html" class="nav-link">Building &amp; Facilities Addendum</a>
+        <a href="club-house-addendum.html" class="nav-link">Club House Addendum</a>
+        <a href="community-policies-addendum.html" class="nav-link">Community Policies Addendum</a>
+        <a href="concession-addendum.html" class="nav-link">Concession Addendum</a>
+        <a href="crime-free-addendum.html" class="nav-link">Crime Free Addendum</a>
+        <a href="employee-addendum.html" class="nav-link">Employee Addendum</a>
+        <a href="employee-rent-discount-addendum.html" class="nav-link">Employee Rent Disount Addendum</a>
+        <a href="fitness-center-addendum.html" class="nav-link">Fitness Center Addendum</a>
+        <a href="garage-use-addendum.html" class="nav-link">Garage Use Addendum</a>
+        <a href="guarantor-addendum.html" class="nav-link">Guarantor Addendum</a>
+        <a href="mold-mildew-addendum.html" class="nav-link">Mold &amp; Mildew Addendum</a>
+        <a href="non-refundable-deposit-addendum.html" class="nav-link">Non-Refundable De... Addendum</a>
+        <a href="parking-addendum.html" class="nav-link">Parking Addendum</a>
+        <a href="personal-security-camera-addendum.html" class="nav-link">Personal Security C... Addendum</a>
+        <a href="pest-control-addendum.html" class="nav-link">Pest Control Addendum</a>
+        <a href="pet-addendum.html" class="nav-link">Pet Addendum</a>
+        <a href="renters-insurance-addendum.html" class="nav-link">Renter's Insurance Addendum</a>
+        <a href="roommate-addendum.html" class="nav-link">Roommate Addendum</a>
+        <a href="satellite-dish-addendum.html" class="nav-link">Satellite Dish Addendum</a>
+        <a href="security-policy-addendum.html" class="nav-link">Security Policy Addendum</a>
+        <a href="smoke-free-addendum.html" class="nav-link">Smoke Free Addendum</a>
+        <a href="storage-addendum.html" class="nav-link">Storage Addendum</a>
+        <a href="swimming-pool-addendum.html" class="nav-link">Swimming Pool Addendum</a>
+        <a href="tip-trip-addendum.html" class="nav-link">Tip Trip Addendum</a>
+        <a href="trash-disposal-addendum.html" class="nav-link">Trash Disposal Addendum</a>
+        <a href="trash-removal-addendum.html" class="nav-link">Trash Removal Addendum</a>
+        <a href="detached-garage-use-addendum.html" class="nav-link">Detached Garage Use Addendum</a>
+      </nav>
+      <a id="btnExport" href="" class="btn btn-primary btn-block disabled">Export to PDF</a>
+    </div><!-- doc-sidebar -->
+
+    <div id="docFrame" class="doc-frame empty" data-filename="">
+      <!-- <iframe id="frameDocs" width="100%" height="100%" src=""></iframe> -->
+    </div><!-- doc-frame -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/html2canvas/html2canvas.min.js"></script>
+    <script src="../lib/jspdf/jspdf.umd.min.js"></script>
+    <script>
+      const { jsPDF } = window.jspdf;
+
+      var exp = document.getElementById('btnExport');
+      exp.onclick = function(e){
+        e.preventDefault();
+
+        const doc = new jsPDF('p', 'pt', 'letter');
+        const input = document.getElementById('pageBody');
+        const frame = document.getElementById('docFrame');
+
+        input.classList.add('to-pdf');
+        frame.classList.add('loading');
+
+        doc.html(input, {
+          callback: function(doc) {
+            //doc.save(frame.getAttribute('data-filename')+'.pdf');
+            doc.output('dataurlnewwindow');
+
+            input.classList.remove('to-pdf');
+            frame.classList.remove('loading');
+          },
+          x: 10,
+          y: 10
+        });
+      };
+
+      // var navDocs = document.getElementById('navDocs').children;
+      // for(var i = 0; i < navDocs.length; i++) {
+      //   navDocs[i].onclick = function(e) {
+      //     e.preventDefault();
+      //
+      //     var src = this.getAttribute('href');
+      //     console.log(src);
+      //   }
+      // }
+
+      $(document).ready(function() {
+        'use strict'
+
+        $('#navDocs .nav-link').on('click', function(e){
+          e.preventDefault();
+          var src = $(this).attr('href');
+
+          $(this).addClass('active').siblings().removeClass('active');
+
+          $.ajax({
+            url: src,
+            success: function(result){
+              $('#docFrame').html(result);
+
+              var pb = $('#docFrame').find('#pageBody');
+              var xs = $('#docFrame').find('#xStyle').attr('href');
+
+              if(xs) {
+                $('#docStyle').attr('href', xs);
+              } else {
+                $('#docStyle').attr('href', '');
+              }
+
+              var title = $('#docFrame').find('title').text();
+              title = title.split(' ').join('');
+
+              $('#docFrame').html(pb);
+              $('#docFrame').removeClass('empty');
+              $('#docFrame').attr('data-filename', title);
+            }
+          });
+
+          $('#btnExport').removeClass('disabled');
+        });
+      });
+    </script>
+
+  </body>
+</html>

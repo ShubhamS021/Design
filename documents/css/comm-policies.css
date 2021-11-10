@@ -1,0 +1,20 @@
+.page-body.to-pdf {
+  line-height: 1.3;
+  font-size: 8pt;
+  width: 430pt; }
+  .page-body.to-pdf p {
+    margin-bottom: 8px; }
+  .page-body.to-pdf .ordered-list {
+    line-height: inherit; }
+    .page-body.to-pdf .ordered-list li + li {
+      margin-top: 7px; }
+    .page-body.to-pdf .ordered-list strong.d-block {
+      margin-bottom: 2px; }
+  .page-body.to-pdf .page {
+    height: auto; }
+    .page-body.to-pdf .page::after {
+      font-size: 8pt; }
+    .page-body.to-pdf .page:first-child .ordered-list {
+      margin-bottom: 68px; }
+    .page-body.to-pdf .page:nth-child(2) .mb-4 {
+      margin-bottom: 15px !important; }

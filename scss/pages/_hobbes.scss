@@ -1,0 +1,16 @@
+
+.site-body-hobbes {
+  .card-basic .card-body + .card-body {
+    border-top: 1px solid $color-bg-01;
+  }
+
+  .media { align-items: center; }
+  .media-left { width: 160px; }
+  .media-body { padding-left: 25px; }
+
+  .form-row {
+    flex-wrap: nowrap;
+
+    .col:first-child { max-width: 280px; }
+  }
+}

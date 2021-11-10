@@ -1,0 +1,24 @@
+// Fonts Import
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+// Variables & Mixins
+@import "variables";
+@import "mixins";
+
+// Bootstrap Framework
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Components
+@import "components/grid";
+
+// Project Styles
+@import "pages/frontpage";
+
+// Utilities
+@import "util/background";
+@import "util/height";
+@import "util/margin";
+@import "util/misc";
+@import "util/padding";
+@import "util/width";
+@import "util/typography";

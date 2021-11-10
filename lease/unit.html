@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell Lease</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/lease.min.css">
+  </head>
+  <body>
+
+    <div class="ls-content">
+      <div class="ls-body">
+        <div class="container">
+          <div class="row">
+            <div id="fpLeft" class="col col-md-8">
+              <h6 class="ls-page-title mg-b-20 mg-lg-b-30">Unit</h6>
+              <div class="form-group">
+                <div class="d-flex align-items-center mg-b-8">
+                  <label class="form-label ls-form-label mg-b-0-f">Desired Move-In Date</label>
+                  <a href="" class="link-help link-hobbes mg-l-5" data-subject="Move-In Date"><i class="ri-question-fill"></i></a>
+                </div>
+                <input type="text" class="form-control ls-form-control" placeholder="mm/dd/yy">
+              </div><!-- form-group -->
+
+              <hr class="mg-t-25 mg-lg-t-40 mg-lg-y-35">
+
+              <div class="form-group">
+                <div class="d-flex align-items-center justify-content-between mg-b-15">
+                  <div class="d-flex align-items-center">
+                    <label class="form-label ls-form-label mg-b-0-f">Select a Unit</label>
+                    <a href="" class="link-help link-hobbes mg-l-5" data-subject="Unit"><i class="ri-question-fill"></i></a>
+                  </div>
+                  <a href="#modalMap" data-toggle="modal" class="tx-15">View Community Map</a>
+                </div>
+                <div class="table-unit">
+                  <div class="table-header">
+                    <p>Unit</p>
+                    <p>Rent</p>
+                    <p>Deposit</p>
+                    <p>Details</p>
+                    <p>Available</p>
+                  </div><!-- table-header -->
+                  <div class="table-body">
+                    <div class="table-row">
+                      <p><span>Unit</span>501</p>
+                      <p><span>Rent</span>$1,500</p>
+                      <p><span>Deposit</span>$700 or $275</p>
+                      <p><span>Details</span>+$30 Valet Waste</p>
+                      <p><span>Available</span>Now</p>
+                      <p><a href="" class="btn btn-select">Select</a></p>
+                    </div><!-- table-row -->
+                    <div class="table-row">
+                      <p><span>Unit</span>503</p>
+                      <p><span>Rent</span>$1,750</p>
+                      <p><span>Deposit</span>$700 or $275</p>
+                      <p><span>Details</span>+$30 Valet Waste</p>
+                      <p><span>Available</span>Mar 20, 2021</p>
+                      <p><a href="" class="btn btn-select">Select</a></p>
+                    </div><!-- table-row -->
+                    <div class="table-row">
+                      <p><span>Unit</span>512</p>
+                      <p><span>Rent</span>$1,550</p>
+                      <p><span>Deposit</span>$700 or $275</p>
+                      <p><span>Details</span>+$30 Valet Waste</p>
+                      <p><span>Available</span>Mar 18, 2021</p>
+                      <p><a href="" class="btn btn-select">Select</a></p>
+                    </div><!-- table-row -->
+                    <div class="table-row">
+                      <p><span>Unit</span>602</p>
+                      <p><span>Rent</span>$2,000</p>
+                      <p><span>Deposit</span>$700 or $275</p>
+                      <p><span>Details</span>+$30 Valet Waste</p>
+                      <p><span>Available</span>Mar 15, 2021</p>
+                      <p><a href="" class="btn btn-select">Select</a></p>
+                    </div><!-- table-row -->
+                    <div class="table-row">
+                      <p><span>Unit</span>709</p>
+                      <p><span>Rent</span>$1,950</p>
+                      <p><span>Deposit</span>$700 or $275</p>
+                      <p><span>Details</span>+$30 Valet Waste</p>
+                      <p><span>Available</span>Mar 10, 2021</p>
+                      <p><a href="" class="btn btn-select">Select</a></p>
+                    </div><!-- table-row -->
+                  </div><!-- table-body -->
+                </div><!-- table-unit -->
+
+              </div><!-- form-group -->
+
+            </div><!-- col -->
+            <div id="fpRight" class="col-md-4 d-none d-md-block">
+              <div class="ls-sidebar">
+                <div class="card card-plan-selected">
+                  <div class="card-body">
+                    <div class="card-content">
+                      <div class="d-flex justify-content-between mg-b-20">
+                        <h6><strong class="model">Floor Plan: 1B</strong></h6>
+                        <a href="floor-plan.html" class="link link-primary"><i class="ri-edit-2-fill"></i> <span>Edit</span></a>
+                      </div>
+                      <img src="../assets/img/bp2.png" alt="" class="img-fluid">
+                    </div><!-- card-content -->
+                  </div><!-- card-body -->
+                </div><!-- card -->
+                <div id="cardUnit" class="card card-plan-selected mg-t-2 d-none">
+                  <div class="card-body">
+                    <div class="card-content">
+                      <div class="d-flex justify-content-between mg-b-20">
+                        <h6><strong class="model">Unit: 512</strong></h6>
+                        <a href="" id="planRemove" class="link link-danger"><i class="ri-delete-bin-line"></i> <span>Remove</span></a>
+                      </div>
+                      <ul class="list-group unit-info">
+                        <li class="list-group-item"><span>Rent</span><span>$1,550/month</span></li>
+                        <li class="list-group-item"><span>Utilities</span><span>$25.0/month</span></li>
+                        <li class="list-group-item"><span>Deposit</span><span>$700 or $275</span></li>
+                      </ul>
+                    </div><!-- card-content -->
+                  </div><!-- card-body -->
+                </div><!-- card -->
+
+                <div id="unitTotal" class="unit-total">
+                  <div class="justify-content-start">
+                    <strong class="mg-r-auto">Monthly Total</strong>
+                    <strong>$1,550</strong>
+                  </div>
+                  <div class="justify-content-start">
+                    <span class="mg-r-auto">Application Fees</span>
+                    <span>$325.00</span>
+                  </div>
+                  <div class="justify-content-start">
+                    <span class="mg-r-auto">Tax (2.3%)</span>
+                    <span>$7.48</span>
+                  </div>
+                  <div class="justify-content-start">
+                    <strong class="mg-r-auto">Due Today</strong>
+                    <strong>$332.48</strong>
+                  </div>
+                </div><!-- unit-total -->
+
+                <div class="page-pager mg-t-20">
+                  <a href="" class="btn btn-white">Save &amp; Exit</a>
+                  <a href="length.html" class="btn btn-primary">Save &amp; Continue</a>
+                </div><!-- page-pager -->
+              </div><!-- ls-sidebar -->
+            </div><!-- col -->
+          </div><!-- row -->
+        </div><!-- container -->
+      </div><!-- ls-body -->
+    </div><!-- ls-content -->
+
+    <div class="modal fade" id="modalMap" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img src="../assets/img/map.png" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+
+    <script src="../assets/js/lease.js"></script>
+    <script src="../assets/js/prospect-chat.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('.btn-select').on('click', function(e){
+          e.preventDefault();
+
+          var par = $(this).closest('.table-row');
+          var sib = par.siblings();
+
+          $(this).toggleClass('active');
+
+          if($(this).hasClass('active')) {
+            $(this).text('Selected');
+
+            par.addClass('selected');
+            sib.removeClass('selected');
+
+            sib.find('.btn-select').removeClass('active');
+            sib.find('.btn-select').text('Select');
+
+            $('#cardUnit').removeClass('d-none');
+            $('#unitTotal').removeClass('d-none');
+
+          } else {
+            $(this).text('Select');
+
+            $('#cardUnit').addClass('d-none');
+            $('#unitTotal').addClass('d-none');
+            par.removeClass('selected');
+          }
+        });
+
+        $('#planRemove').bind('click', function(e){
+          $(this).closest('.card').addClass('d-none');
+          $('.table-unit .table-row').removeClass('selected');
+          $('.table-unit .btn-select').removeClass('active').text('Select');
+        });
+
+      });
+    </script>
+  </body>
+</html>

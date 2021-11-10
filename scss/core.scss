@@ -1,0 +1,36 @@
+// Fonts Import
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+
+@import "fonts";
+
+// Variables & Mixins
+@import "variables";
+@import "mixins";
+
+// Bootstrap Framework
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Components
+@import "components/alert";
+@import "components/avatar";
+@import "components/buttons";
+@import "components/card";
+@import "components/charts";
+@import "components/dropdown";
+@import "components/forms";
+@import "components/grid";
+@import "components/modal";
+@import "components/nav";
+@import "components/pagination";
+@import "components/tooltip";
+@import "components/table";
+@import "components/skeleton";
+
+// Plugins
+@import "plugins/animate";
+@import "plugins/datepicker";
+@import "plugins/scrollbar";
+@import "plugins/select2";
+@import "plugins/tagsinput";

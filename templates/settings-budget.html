@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body>
+
+    <div class="content">
+      <div class="container-fluid">
+        <div class="content-header align-items-center mg-b-30">
+          <div class="mg-r-auto">
+            <h4 class="content-title mg-b-0">Property Settings</h4>
+          </div>
+        </div><!-- content-header -->
+        <div class="content-body content-body-settings">
+          <div class="settings-sidebar">
+            <label class="content-label">General Settings</label>
+            <nav class="nav">
+              <a href="settings.html" class="nav-link"><i class="ri-shield-user-line"></i> Assignment Rules</a>
+              <a href="settings-email.html" class="nav-link"><i class="ri-mail-line"></i> Email templates</a>
+              <a href="settings-calendar.html" class="nav-link"><i class="ri-calendar-todo-line"></i> Email &amp; Calendar sync</a>
+              <a href="settings-business.html" class="nav-link"><i class="ri-time-line"></i> Business hours</a>
+              <a href="../settings/community-features.html" class="nav-link"><i class="ri-community-line"></i> Community features</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">Report Settings</label>
+            <nav class="nav">
+              <a href="settings-competitors.html" class="nav-link"><i class="ri-group-line"></i> Competitors</a>
+              <a href="settings-paid-sources.html" class="nav-link"><i class="ri-wallet-3-line"></i> Paid sources</a>
+              <a href="settings-budget.html" class="nav-link active"><i class="ri-bank-card-2-line"></i> Paid source budgets</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">Leasing</label>
+            <nav class="nav">
+              <a href="settings-lease.html" class="nav-link"><i class="ri-community-line"></i> Lease Defaults</a>
+              <a href="settings-policies.html" class="nav-link"><i class="ri-article-line"></i> Property Policies</a>
+              <a href="settings-rentable.html" class="nav-link"><i class="ri-handbag-line"></i> Rentable Items</a>
+              <a href="settings-screening.html" class="nav-link"><i class="ri-survey-line"></i> Screening Criteria</a>
+              <a href="settings-addenda.html" class="nav-link"><i class="ri-file-list-3-line"></i> Addenda</a>
+              <a href="../settings/pricing-duration.html" class="nav-link"><i class="ri-community-line"></i> Duration Pricing</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">Communication</label>
+            <nav class="nav">
+              <a href="settings-call-block.html" class="nav-link"><i class="ri-lock-line"></i> Call Block List</a>
+            </nav>
+
+            <hr class="mg-y-15 op-0">
+
+            <label class="content-label">IVR Settings</label>
+            <nav class="nav">
+              <a href="../settings/vendors-list.html" class="nav-link"><i class="ri-contacts-line"></i> Vendors List</a>
+              <a href="../settings/default-assignees.html" class="nav-link"><i class="ri-user-star-line"></i> Default Assignees</a>
+              <a href="../settings/oncall-schedule.html" class="nav-link"><i class="ri-calendar-event-line"></i> On-Call Schedule</a>
+              <a href="../settings/leasing-prompt.html" class="nav-link"><i class="ri-user-voice-line"></i> Leasing Prompt</a>
+            </nav>
+          </div><!-- settings-sidebar -->
+          <div class="settings-body">
+            <h5 class="content-title-sm">Paid source budgets</h5>
+            <p class="content-text">Record paid source budgets to track spend and understand source performance across key business outcomes.</p>
+
+            <hr class="op-0">
+
+            <div class="form-group form-group-bar">
+              <label class="form-label">March 2020</label>
+              <nav class="nav nav-icon mg-l-auto">
+                <a href="#modalEditBudget" data-toggle="modal"><span data-toggle="tooltip" data-title="Edit budget"><i class="ri-pencil-line"></i></span></a>
+                <a href="#modalConfirmDelete" data-toggle="modal"><span data-toggle="tooltip" data-title="Delete budget"><i class="ri-delete-bin-5-line"></i></span></a>
+              </nav>
+            </div><!-- form-group -->
+            <div class="form-group form-group-bar">
+              <label class="form-label">April 2020</label>
+              <nav class="nav nav-icon mg-l-auto">
+                <a href="#modalEditBudget" data-toggle="modal"><span data-toggle="tooltip" data-title="Edit budget"><i class="ri-pencil-line"></i></span></a>
+                <a href="#modalConfirmDelete" data-toggle="modal"><span data-toggle="tooltip" data-title="Delete budget"><i class="ri-delete-bin-5-line"></i></span></a>
+              </nav>
+            </div><!-- form-group -->
+            <div class="settings-footer">
+              <button type="button" class="btn btn-white btn-with-icon" data-toggle="modal" data-target="#modalNewBudget"><i class="ri-add-circle-fill"></i> Add Budget</button>
+            </div><!-- settings-footer -->
+
+          </div><!-- settings-body -->
+        </div><!-- content-body -->
+      </div><!-- container -->
+    </div><!-- content -->
+
+    <div class="modal modal-site fade" id="modalNewBudget" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title">Add New Budget</h5>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="form-label">Budget Month</label>
+              <input type="text" class="form-control" placeholder="">
+            </div><!-- form-group -->
+            <div class="form-group">
+              <label class="form-label">ApartmentList.com</label>
+              <input type="text" class="form-control" placeholder="">
+            </div><!-- form-group -->
+            <div class="form-group mg-b-0-f">
+              <label class="form-label">G5</label>
+              <input type="text" class="form-control" placeholder="">
+            </div><!-- form-group -->
+          </div><!-- modal-body -->
+          <div class="modal-footer pd-t-0-f">
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Add Budget</button>
+          </div>
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-site fade" id="modalEditBudget" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title">Edit Budget</h5>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="form-label">Budget Month</label>
+              <input type="text" class="form-control" placeholder="">
+            </div><!-- form-group -->
+            <div class="form-group">
+              <label class="form-label">ApartmentList.com</label>
+              <input type="text" class="form-control" placeholder="">
+            </div><!-- form-group -->
+            <div class="form-group mg-b-0-f">
+              <label class="form-label">G5</label>
+              <input type="text" class="form-control" placeholder="">
+            </div><!-- form-group -->
+          </div><!-- modal-body -->
+          <div class="modal-footer pd-t-0-f">
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-confirmation" id="modalConfirmDelete" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+
+            <h5 class="modal-title" id="leaveModalLabel">Confirm Delete</h5>
+            <p class="modal-text">You are about to delete this budget. Continue delete?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('.nav-icon a').tooltip();
+
+      });
+    </script>
+  </body>
+</html>

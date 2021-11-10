@@ -1,0 +1,64 @@
+
+.text-sm { font-size: $font-size-sm !important; }
+.text-xs { font-size: $font-size-xs !important; }
+
+.tx-uppercase { text-transform: uppercase !important; }
+
+.lh-0 { line-height: 0; }
+.lh--1 { line-height: .1; }
+.lh--2 { line-height: .2; }
+.lh--3 { line-height: .3; }
+.lh--4 { line-height: .4; }
+.lh--5 { line-height: .5; }
+.lh--6 { line-height: .6; }
+.lh--7 { line-height: .7; }
+.lh--8 { line-height: .8; }
+.lh--9 { line-height: .9; }
+.lh--1 { line-height: 1; }
+.lh-1 { line-height: 1.1; }
+.lh-2 { line-height: 1.2; }
+.lh-3 { line-height: 1.3; }
+.lh-4 { line-height: 1.4; }
+.lh-5 { line-height: 1.5; }
+.lh-6 { line-height: 1.6; }
+.lh-7 { line-height: 1.7; }
+.lh-8 { line-height: 1.8; }
+.lh-9 { line-height: 1.9; }
+.lh-10 { line-height: 2.0; }
+
+// Font weight
+.tx-light { font-weight: 300 !important; }
+.tx-medium { font-weight: 500 !important; }
+.tx-semibold { font-weight: 600 !important; }
+.tx-normal { font-weight: 400 !important; }
+
+// Font sizes
+.tx-base { font-size: $font-size-base; }
+.tx-12 { font-size: 12px; }
+
+@mixin font-size($num, $viewport:"") {
+  @if $viewport == "" {
+    $viewport: "-";
+  } @else {
+    $viewport: "-" + $viewport + "-";
+  }
+
+  .tx#{$viewport}#{$num} { font-size: #{$num}px; }
+  .tx#{$viewport}#{$num}-f { font-size: #{$num}px !important; }
+}
+
+$num: 8;
+@while $num <= 16 {
+  @include font-size($num);
+  $num: $num + 1;
+}
+
+$num: 18;
+@while $num <= 140 {
+  @include font-size($num);
+  $num: $num + 2;
+}
+
+.tx-lg-14 {
+  @include media-breakpoint-up(lg) { font-size: 14px !important; }
+}

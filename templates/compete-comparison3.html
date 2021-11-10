@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body>
+
+    <div class="content content-compete-subpage">
+      <div class="container-fluid">
+        <div class="content-header">
+          <div class="mg-r-auto">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="compete-home.html">Dwell Compete</a></li>
+                <li class="breadcrumb-item"><a href="compete-comparison.html">Comparison</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><div class="skeleton"><div class="skeleton-text sm wd-100"></div></div><div class="skeleton-content">San Milan vs Scottsdale</div></li>
+              </ol>
+            </nav>
+            <div class="skeleton"><span class="skeleton-text wd-200"></span></div>
+            <div class="d-flex align-items-center mg-r-auto skeleton-content">
+              <h4 class="content-title mg-b-0 mg-r-5">San Milan vs Scottsdale</h4>
+              <a href="" class="compete-star">
+                <i class="ri-star-line"></i>
+                <i class="ri-star-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div class="btn-group mg-r-10">
+            <a href="compete-comparison2.html" class="btn">Comparison</a>
+            <a href="compete-comparison3.html" class="btn active">Ranking</a>
+          </div><!-- btn-group -->
+          <div class="dropdown dropdown-filter">
+            <a href="" class="dropdown-link" data-toggle="dropdown" data-display="static"><i class="ri-list-settings-line"></i></a>
+            <div id="ddSearchFilter" class="dropdown-menu dropdown-menu-right">
+              <h6 class="dropdown-title mg-b-15">Report Settings</h6>
+              <div class="row row-xs align-items-center">
+                <div class="col-5">Express rent as</div>
+                <div class="col-7">
+                  <select class="select2">
+                    <option value="1" selected>Market Rent</option>
+                    <option value="2">Effective Rent</option>
+                  </select>
+                </div><!-- col -->
+                <div class="col-5 mg-t-10">Reporting period</div>
+                <div class="col-7 mg-t-10">
+                  <select class="select2">
+                    <option value="1">Previous Month</option>
+                    <option value="2">Last 3 months</option>
+                    <option value="3">Last 6 months</option>
+                    <option value="4" selected>Last 12 months</option>
+                  </select>
+                </div>
+                <div class="col-5 mg-t-10">Reporting group</div>
+                <div class="col-7 mg-t-10">
+                  <select class="select2">
+                    <option value="1" selected>Monthly</option>
+                    <option value="2">Weekly</option>
+                  </select>
+                </div>
+              </div><!-- row -->
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+        </div><!-- content-header -->
+        <div class="content-body">
+          <div class="row">
+            <div class="col-3">
+              <div class="card card-compete card-compete-sm card-criteria">
+                <div class="card-header">
+                  <h6 class="card-title">Comparison Criteria</h6>
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <div class="form-group">
+                    <label class="form-label text-muted text-sm">Subject Asset</label>
+                    <div class="compete-search">
+                      <div class="form-search">
+                        <i data-feather="search"></i>
+                        <input id="competeSearch" type="text" class="form-control" value="San Milan" placeholder="Search...">
+                      </div><!-- form-search -->
+                      <div class="search-results">
+                        <label>Submarkets</label>
+                        <nav class="nav">
+                          <a href="" class="nav-link">Submarket A</a>
+                          <a href="" class="nav-link">Submarket B</a>
+                        </nav>
+                        <label>Properties</label>
+                        <nav class="nav">
+                          <a href="" class="nav-link">Property A</a>
+                          <a href="" class="nav-link">Property B</a>
+                        </nav>
+                      </div><!-- search-results -->
+                    </div><!-- compete-search -->
+                  </div><!-- form-group -->
+
+                  <div class="form-group">
+                    <label class="form-label text-muted text-sm">Compared Against</label>
+                    <div class="compete-search">
+                      <div class="form-search">
+                        <i data-feather="search"></i>
+                        <input type="text" class="form-control" value="Scottsdale" placeholder="Search...">
+                      </div><!-- form-search -->
+                      <div class="search-results">
+                        <label>Submarkets</label>
+                        <nav class="nav">
+                          <a href="" class="nav-link">Submarket A</a>
+                          <a href="" class="nav-link">Submarket B</a>
+                        </nav>
+                        <label>Properties</label>
+                        <nav class="nav">
+                          <a href="" class="nav-link">Property A</a>
+                          <a href="" class="nav-link">Property B</a>
+                        </nav>
+                      </div><!-- search-results -->
+                    </div><!-- compete-search -->
+                  </div><!-- form-group -->
+
+                  <a href="compete-comparison2.html" class="btn btn-primary btn-block justify-content-center">Generate Report</a>
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+            <div class="col">
+              <div class="card card-comprop">
+                <div class="card-header">
+                  <h6 class="card-title mg-b-5-f mg-r-auto">Highest Average Rents</h6>
+                  <div class="skeleton-text sm skeleton wd-300"></div>
+                  <span class="card-subtitle skeleton-content">Subject property San Milan ranks #3 of #45</span>
+
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <table class="table table-alpha table-compete mg-b-0-f">
+                    <thead>
+                      <tr>
+                        <th class="wd-30p">Asset</th>
+                        <th class="wd-10p">Rank</th>
+                        <th class="wd-20p text-right">Avg Rent</th>
+                        <th class="wd-20p text-right">Avg Rent/SqFt</th>
+                        <th class="wd-20p text-right">Number of Units</th>
+                      </tr>
+                    </thead>
+                    <tbody class="skeleton">
+                      <tr>
+                        <td><div class="skeleton-text sm wd-150"></div></td>
+                        <td><div class="skeleton-text sm wd-50"></div></td>
+                        <td class="text-right"><div class="skeleton-text sm wd-70"></div></td>
+                        <td class="text-right"><div class="skeleton-text sm wd-70"></div></td>
+                        <td class="text-right"><div class="skeleton-text sm wd-70"></div></td>
+                      </tr>
+                      <tr>
+                        <td><div class="skeleton-text sm wd-150"></div></td>
+                        <td><div class="skeleton-text sm wd-50"></div></td>
+                        <td class="text-right"><div class="skeleton-text sm wd-70"></div></td>
+                        <td class="text-right"><div class="skeleton-text sm wd-70"></div></td>
+                        <td class="text-right"><div class="skeleton-text sm wd-70"></div></td>
+                      </tr>
+                      <tr>
+                        <td><div class="skeleton-text sm wd-100"></div></td>
+                        <td><div class="skeleton-text sm wd-50"></div></td>
+                        <td class="text-right"><div class="skeleton-text sm wd-70"></div></td>
+                        <td class="text-right"><div class="skeleton-text sm wd-70"></div></td>
+                        <td class="text-right"><div class="skeleton-text sm wd-70"></div></td>
+                      </tr>
+                    </tbody>
+                    <tbody class="skeleton-content">
+                      <tr>
+                        <td><a href="">Morrison Chandler</a></td>
+                        <td>#1</td>
+                        <td class="text-right">$1,850</td>
+                        <td class="text-right">$2.35</td>
+                        <td class="text-right">400</td>
+                      </tr>
+                      <tr>
+                        <td><a href="">Tempe Metro</a></td>
+                        <td>#2</td>
+                        <td class="text-right">$1,775</td>
+                        <td class="text-right">$2.20</td>
+                        <td class="text-right">280</td>
+                      </tr>
+                      <tr class="selected">
+                        <td><a href="">San Milan</a></td>
+                        <td>#3</td>
+                        <td class="text-right">$1,300</td>
+                        <td class="text-right">$1.98</td>
+                        <td class="text-right">315</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="d-flex justify-content-end mg-t-15 skeleton-content">
+                    <nav aria-label="Page navigation example">
+                      <ul class="pagination pagination-sm pagination-lead mg-b-0">
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true"><i class="ri-arrow-right-s-line"></i></span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div><!-- card-body -->
+              </div><!-- card -->
+
+              <div class="card card-comprop mg-t-20">
+                <div class="card-header">
+                  <h6 class="card-title mg-b-5-f mg-r-auto">Highest Occupancy Rates</h6>
+                  <div class="skeleton-text sm skeleton wd-300"></div>
+                  <span class="card-subtitle skeleton-content">Subject property San Milan ranks #13 of #45</span>
+
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <table class="table table-alpha table-compete mg-b-0-f">
+                    <thead>
+                      <tr>
+                        <th class="wd-30p">Asset</th>
+                        <th class="wd-10p">Rank</th>
+                        <th class="wd-20p text-right">Occupancy Rate</th>
+                        <th class="wd-20p text-right">Number of Units</th>
+                      </tr>
+                    </thead>
+                    <tbody class="skeleton">
+                      <tr>
+                        <td><div class="skeleton-text sm wd-150"></div></td>
+                        <td><div class="skeleton-text sm wd-50"></div></td>
+                        <td class="text-right"><div class="skeleton-text sm wd-70"></div></td>
+                        <td class="text-right"><div class="skeleton-text sm wd-70"></div></td>
+                      </tr>
+                      <tr>
+                        <td><div class="skeleton-text sm wd-150"></div></td>
+                        <td><div class="skeleton-text sm wd-50"></div></td>
+                        <td class="text-right"><div class="skeleton-text sm wd-70"></div></td>
+                        <td class="text-right"><div class="skeleton-text sm wd-70"></div></td>
+                      </tr>
+                      <tr>
+                        <td><div class="skeleton-text sm wd-100"></div></td>
+                        <td><div class="skeleton-text sm wd-50"></div></td>
+                        <td class="text-right"><div class="skeleton-text sm wd-70"></div></td>
+                        <td class="text-right"><div class="skeleton-text sm wd-70"></div></td>
+                      </tr>
+                    </tbody>
+                    <tbody class="skeleton-content">
+                      <tr>
+                        <td><a href="">Morrison Chandler</a></td>
+                        <td>#1</td>
+                        <td class="text-right">85%</td>
+                        <td class="text-right">400</td>
+                      </tr>
+                      <tr>
+                        <td><a href="">Tempe Metro</a></td>
+                        <td>#2</td>
+                        <td class="text-right">49%</td>
+                        <td class="text-right">280</td>
+                      </tr>
+                      <tr class="selected">
+                        <td><a href="">San Milan</a></td>
+                        <td>#3</td>
+                        <td class="text-right">39%</td>
+                        <td class="text-right">315</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="d-flex justify-content-end mg-t-15 skeleton-content">
+                    <nav aria-label="Page navigation example">
+                      <ul class="pagination pagination-sm pagination-lead mg-b-0">
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true"><i class="ri-arrow-right-s-line"></i></span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+          </div><!-- row -->
+        </div><!-- content-body -->
+      </div><!-- container-fluid -->
+    </div><!-- content -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/select2/js/select2.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('.select2').select2({
+          minimumResultsForSearch: Infinity,
+          width: '100%',
+          dropdownParent: $('#ddSearchFilter')
+        });
+
+
+        $('.compete-search .form-control').bind('keydown keyup focusout', function(e){
+          $(this).closest('.compete-search').addClass('show-results');
+
+          if(e.type === 'focusout') {
+            $(this).closest('.compete-search').removeClass('show-results');
+          }
+        });
+
+
+
+      });
+    </script>
+  </body>
+</html>

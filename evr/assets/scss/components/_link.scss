@@ -1,0 +1,39 @@
+.link-readmore {
+  font-family: $ff-secondary;
+  font-size: 15px;
+  font-weight: 700;
+  color: $ui-cyan;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  @include transition(all 0.3s);
+
+  &::before,
+  &::after {
+    content: '';
+    height: 2px;
+    background-color: #7BADD3;
+    border-radius: 2px;
+    display: inline-block;
+    @include transition(all 0.3s);
+  }
+
+  &::before {
+    width: 40px;
+    margin-right: 10px;
+  }
+
+  &::after {
+    width: 12px;
+    margin-left: 10px;
+  }
+
+  &:hover {
+    color: darken($ui-cyan, 5%);
+    &::before,&::after { background-color: darken($ui-cyan, 5%); }
+
+    &::before { width: 20px; }
+    &::after { width: 40px; }
+  }
+}

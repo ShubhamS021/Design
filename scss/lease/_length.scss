@@ -1,0 +1,109 @@
+
+.card-length {
+  position: relative;
+  border-color: $border-color;
+
+  &.selected {
+    border-color: $color-ui-03;
+    box-shadow: inset 0 0 0 .5px $color-ui-03;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-top: 35px solid $color-ui-03;
+      border-bottom: 35px solid transparent;
+      border-left: 35px solid transparent;
+      z-index: 10;
+    }
+
+    &::after {
+      content: '\EB7B';
+      font-family: 'remixicon';
+      font-size: 16px;
+      color: #fff;
+      position: absolute;
+      top: -2px;
+      right: 2px;
+      z-index: 10;
+    }
+  }
+
+  .card-header {
+    background-color: transparent;
+    border-bottom-width: 0;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .2px;
+    text-transform: uppercase;
+    color: $color-tx-02;
+    padding: 15px 15px 0;
+  }
+
+  .card-body {
+    padding: 5px 15px 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: $color-tx-01;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 24px;
+      letter-spacing: -.5px;
+    }
+
+    @include media-breakpoint-only(md) { font-size: 18px; }
+
+    small {
+      font-weight: 300;
+      font-size: 14px;
+      font-family: $font-family-sans-serif;
+      color: $color-tx-03;
+      padding-right: 2px;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 16px;
+      color: $color-tx-02;
+      letter-spacing: normal;
+      padding-left: 2px;
+
+      @include media-breakpoint-only(md) { font-size: 14px; }
+    }
+  }
+
+  .card-footer {
+    padding: 0 10px 10px;
+    border-top-width: 0;
+    background-color: transparent;
+
+    .btn-select {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+      padding: 0;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $color-ui-03;
+      border: 1.5px solid $color-ui-03;
+      @include transition(none);
+
+      @include media-breakpoint-up(lg) { font-size: 13px; }
+
+      @include hover-focus() {
+        background-color: rgba($color-ui-03, .08);
+        color: $color-ui-03;
+      }
+
+      &.active {
+        background-color: $color-ui-03;
+        color: #fff;
+      }
+    }
+  }
+}

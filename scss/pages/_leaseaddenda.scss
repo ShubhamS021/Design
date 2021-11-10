@@ -1,0 +1,210 @@
+
+.table-addenda {
+  font-size: 13px;
+}
+
+.card-form-addendum {
+  .form-group {
+    margin: 0;
+    padding: 15px 0;
+    border-bottom: 1px solid $color-bg-02;
+    font-size: 13px;
+    align-items: center;
+
+    > label,
+    > div {
+      padding: 0;
+      + div { padding-left: 20px; }
+    }
+
+    .custom-select {
+      font-size: 13px;
+      color: $color-tx-03;
+
+      &.onfocus { color: $body-color; }
+    }
+
+    &:last-child { border-bottom-width: 0; }
+  }
+
+  .form-addendum-field {
+    .form-control,
+    .custom-select {
+      font-size: $font-size-sm;
+      height: 34px;
+      border-radius: 4px;
+    }
+
+    .form-control { padding-left: 10px; }
+    .custom-select { padding-left: 6px; }
+  }
+}
+
+.form-addendum-field {
+  font-size: 13px;
+  padding: 0;
+
+  .row {
+    align-items: center;
+    margin: 0;
+    padding: 8px 0;
+
+    > div {
+      padding: 0;
+      + div { padding-left: 5px; }
+    }
+
+    &:first-child { padding: 0; }
+    + .row { border-bottom: 1px solid $color-bg-01; }
+  }
+
+  .btn-close {
+    min-height: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border-color: transparent;
+    font-size: 18px;
+
+    @include hover-focus() {
+      background-color: $color-bg-01;
+      border-color: $color-bg-03;
+    }
+
+    &:focus { box-shadow: none; }
+  }
+}
+
+.card-addenda-fields {
+  border-color: $color-bg-02;
+  border-radius: 4px;
+
+  .card-header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-color: $color-bg-02;
+
+    .btn { border-radius: 4px; }
+  }
+
+  .card-body {
+    padding: 10px;
+    min-height: 150px;
+  }
+
+  .addenda-fields .field-item {
+    font-size: 12px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.modal-addendum-entry {
+  .modal-dialog { max-width: 680px; }
+
+  .modal-header {
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-color: $color-bg-02;
+  }
+
+  .close {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    position: relative;
+    top: 2px;
+  }
+
+  .modal-title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .modal-body { padding: 20px 25px; }
+
+
+  .modal-footer {
+    display: flex;
+    align-items: center;
+    padding: 18px 20px;
+    border-top-color: $color-bg-02;
+
+    .btn { margin: 0; }
+    .btn.mg-r-auto { margin-right: auto; }
+  }
+
+  .row {
+    align-items: center;
+    padding: 10px 0;
+    margin: 0;
+
+    + .row { border-top: 1px solid $color-bg-02; }
+
+    > label,
+    > div {
+      padding: 0;
+
+      + div { padding-left: 20px; }
+    }
+  }
+
+  .form-label {
+    margin-bottom: 0;
+    color: $color-tx-02;
+  }
+
+  .form-control {
+    height: $height-base;
+    border-radius: 4px;
+    border-color: $border-color;
+
+    &:focus {
+      box-shadow: 0 0 0 .5px lighten($color-ui-01, 12%);
+      border-color: lighten($color-ui-01, 12%);
+    }
+  }
+}
+
+.lpb-body {
+  background-color: rgba($body-bg, .6);
+  height: calc(100% - 64px);
+  display: flex;
+  flex-direction: column;
+
+  .addenda-fields {
+    //flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid $color-bd-01;
+    @include shadow-sharp($color-bd-01);
+  }
+
+  iframe {
+    border: 0;
+    height: 100%;
+  }
+}
+
+.addenda-source {
+  padding: relative;
+  height: 40%;
+  margin-top: 10px;
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid $color-bd-01;
+  @include shadow-sharp($color-bd-01);
+
+  pre { overflow: hidden; }
+
+  .hljs { background-color: $color-bg-01; }
+}

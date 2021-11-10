@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body>
+
+    <div class="content content-compete-subpage">
+      <div class="container-fluid">
+        <div class="content-header">
+          <div>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="compete-home.html">Dwell Compete</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Comparison</li>
+              </ol>
+            </nav>
+            <h4 class="content-title mg-b-0 mg-r-auto">Comparison Reporting</h4>
+          </div>
+        </div><!-- content-header -->
+        <div class="content-body">
+          <div class="row">
+            <div class="col-3">
+              <div class="card card-compete card-compete-sm card-criteria">
+                <div class="card-header">
+                  <h6 class="card-title">Comparison Criteria</h6>
+                </div><!-- card-header -->
+                <div class="card-body">
+                  <div class="form-group">
+                    <label class="form-label text-muted text-sm">Subject Asset</label>
+                    <div class="compete-search">
+                      <div class="form-search">
+                        <i data-feather="search"></i>
+                        <input id="competeSearch" type="text" class="form-control" placeholder="Search...">
+                      </div><!-- form-search -->
+                      <div class="search-results">
+                        <label>Submarkets</label>
+                        <nav class="nav">
+                          <a href="" class="nav-link">Submarket A</a>
+                          <a href="" class="nav-link">Submarket B</a>
+                        </nav>
+                        <label>Properties</label>
+                        <nav class="nav">
+                          <a href="" class="nav-link">Property A</a>
+                          <a href="" class="nav-link">Property B</a>
+                        </nav>
+                      </div><!-- search-results -->
+                    </div><!-- compete-search -->
+                  </div><!-- form-group -->
+
+                  <div class="form-group">
+                    <label class="form-label text-muted text-sm">Compared Against</label>
+                    <div class="compete-search">
+                      <div class="form-search">
+                        <i data-feather="search"></i>
+                        <input type="text" class="form-control" placeholder="Search...">
+                      </div><!-- form-search -->
+                      <div class="search-results">
+                        <label>Submarkets</label>
+                        <nav class="nav">
+                          <a href="" class="nav-link">Submarket A</a>
+                          <a href="" class="nav-link">Submarket B</a>
+                        </nav>
+                        <label>Properties</label>
+                        <nav class="nav">
+                          <a href="" class="nav-link">Property A</a>
+                          <a href="" class="nav-link">Property B</a>
+                        </nav>
+                      </div><!-- search-results -->
+                    </div><!-- compete-search -->
+                  </div><!-- form-group -->
+
+                  <a href="compete-comparison2.html" class="btn btn-primary btn-block justify-content-center">Generate Report</a>
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+            <div class="col">
+              <div class="comparison-welcome">
+                <i class="ri-line-chart-line"></i>
+                <h5>Select Comparison Criteria</h5>
+                <p>Once you select the comparison criteria, the associated reports will display here.</p>
+              </div><!-- comparison-welcome -->
+            </div><!-- col -->
+          </div><!-- row -->
+        </div><!-- content-body -->
+      </div><!-- container-fluid -->
+    </div><!-- content -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/select2/js/select2.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        $('.compete-search .form-control').bind('keydown keyup focusout', function(e){
+          $(this).closest('.compete-search').addClass('show-results');
+
+          if(e.type === 'focusout') {
+            $(this).closest('.compete-search').removeClass('show-results');
+          }
+        });
+
+      });
+    </script>
+  </body>
+</html>

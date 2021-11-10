@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/lease.min.css">
+  </head>
+  <body>
+
+    <div class="page-signin">
+      <div class="signin">
+        <div class="signin-body">
+          <h4 class="signin-title">Login</h4>
+          <p class="signin-text">If you have started an application, please login below.</p>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter email address" value="ethan@dwell.io">
+          </div><!-- form-group -->
+          <div class="form-group text-right">
+            <input type="password" class="form-control" placeholder="Enter password">
+            <a href="forgot.html" class="link-forgot">Forgot password?</a>
+          </div><!-- form-group -->
+          <button type="submit" class="btn btn-primary btn-block justify-content-center mg-b-20">Login To Your Application</button>
+          <a href="" class="btn btn-link btn-block">Start New Application</a>
+        </div><!-- signin-body -->
+      </div><!-- signin -->
+    </div><!-- page-signin -->
+
+
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict'
+
+        // append header panel
+        $.ajax({
+          url: '../lease/header.html',
+          success: function(result){
+            $('body').prepend(result);
+          }
+        });
+
+      });
+    </script>
+  </body>
+</html>

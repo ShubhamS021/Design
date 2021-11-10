@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="ThemePixels">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Dwell</title>
+
+    <!-- Vendor CSS -->
+    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="../lib/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link href="../lib/quill/quill.core.css" rel="stylesheet">
+    <link href="../lib/quill/quill.snow.css" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/core.min.css">
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+  </head>
+  <body>
+
+    <div class="content content-lead content-lead-fixed">
+      <div class="content-header content-header-lead">
+        <div class="media media-lead">
+          <div class="media-avatar"><span>s</span></div>
+          <div class="media-body">
+            <h5>Scott <strong>Richardson</strong></h5>
+            <div class="media-summary">
+              <span><i class="ri-refresh-line"></i>Not synced (7 months ago)</span>
+            </div>
+          </div><!-- media-body -->
+          <div class="media-info">
+            <label class="media-label">Move-in Date</label>
+            <h6 class="media-value">February 10, 2020</h6>
+          </div><!-- media-info -->
+          <div class="media-info">
+            <label class="media-label">Last Followup Date</label>
+            <h6 class="media-value">2 weeks ago</h6>
+          </div><!-- media-info -->
+          <div class="media-info">
+            <label class="media-label">Last Activity Date</label>
+            <h6 class="media-value">Yesterday</h6>
+          </div><!-- media-info -->
+          <div class="media-info">
+            <label class="media-label">Date Created</label>
+            <h6 class="media-value">January 30, 2020</h6>
+          </div><!-- media-info -->
+          <nav class="nav">
+            <a id="sendMail" href="#modalComposeMail" data-toggle="modal" class="nav-link active"><i class="ri-mail-line"></i></a>
+            <a id="sendText" href="" class="nav-link"><i class="ri-message-2-line"></i></a>
+          </nav>
+        </div><!-- media -->
+      </div><!-- content-header -->
+      <div class="content-navbar">
+        <nav class="nav nav-pager">
+          <a href="" class="nav-link"><i class="ri-arrow-left-s-line"></i></a>
+          <a href="" class="nav-link"><i class="ri-arrow-right-s-line"></i></a>
+        </nav>
+        <nav class="nav nav-line">
+          <a href="lead.html" class="nav-link">Overview</a>
+          <a href="lead-roommates.html" class="nav-link">Roommates</a>
+          <a href="lead-notes.html" class="nav-link">Notes</a>
+          <a href="lead-email.html" class="nav-link active">Email</a>
+          <a href="lead-calls.html" class="nav-link">Calls</a>
+          <a href="lead-chats.html" class="nav-link">Chats</a>
+        </nav>
+        <nav class="nav nav-lead-option">
+          <div class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-link dropdown-link-stage apppending">Application Pending</a>
+            <div class="dropdown-menu dropdown-menu-stage">
+              <a href="" class="dropdown-item">Inquiry</a>
+              <a href="" class="dropdown-item">Contact Made</a>
+              <a href="" class="dropdown-item">Tour Set</a>
+              <a href="" class="dropdown-item">Tour Completed</a>
+              <a href="" class="dropdown-item">Waitlist</a>
+              <a href="" class="dropdown-item">Application Pending</a>
+              <a href="" class="dropdown-item">Application Complete</a>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+          <div class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-link dropdown-link-owner">Unassigned</a>
+            <div class="dropdown-menu">
+              <a href="" class="dropdown-item">Mienard Lumaad</a>
+              <a href="" class="dropdown-item">Socrates Itumay</a>
+              <a href="" class="dropdown-item">Ryan Salahid Cerro</a>
+              <a href="" class="dropdown-item">Clark Mejorada</a>
+              <a href="" class="dropdown-item">Diana Zubiri</a>
+              <a href="" class="dropdown-item">Yassi Pressman</a>
+              <a href="" class="dropdown-item">Liza Soberano</a>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+          <div class="dropdown">
+            <a href="#" data-toggle="dropdown" data-display="static" class="dropdown-link">Active</a>
+            <div class="dropdown-menu">
+              <a href="" class="dropdown-item">Active</a>
+              <a href="" class="dropdown-item">Leased</a>
+              <a href="" class="dropdown-item">Lost</a>
+              <a href="" class="dropdown-item">Deleted</a>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+          <a href="#modalShareLead" data-toggle="modal" class="nav-icon"><i class="ri-share-line"></i></a>
+          <a href="" class="nav-icon"><i class="ri-delete-bin-line"></i></a>
+        </nav>
+      </div><!-- content-navbar -->
+      <div class="content-body">
+        <div class="content-lead-sidebar">
+          <div class="lead-sidebar-header">
+            <label>Followups <span class="skeleton-content">5</span></label>
+          </div><!-- lead-sidebar-header -->
+          <div class="lead-sidebar-body">
+            <nav class="nav nav-mail skeleton-content">
+              <a href="" class="mail-link active">
+                <div class="mail-avatar bg-purple"><span>cb</span></div>
+                <div class="mail-body">
+                  <div class="mail-from">
+                    <p>Cassidy <span>(cassidy@mail.com)</span></p>
+                    <p>2 days</p>
+                  </div>
+                  <h6 class="mail-subject">Advanced local system engine</h6>
+                  <p class="mail-text">Your SmartRent account was recently logged in to from a new location or device...</p>
+                </div><!-- mail-body -->
+              </a><!-- mail-link -->
+              <a href="" class="mail-link">
+                <div class="mail-avatar bg-indigo"><span>lc</span></div>
+                <div class="mail-body">
+                  <div class="mail-from">
+                    <p>Larry <span>(larry@mail.com)</span></p>
+                    <p>2 days</p>
+                  </div>
+                  <h6 class="mail-subject">Multi-layered motivating matrix</h6>
+                  <p class="mail-text">Can we get Carol a Slack account and add her to the LL team. Managing this projec...</p>
+                </div><!-- mail-body -->
+              </a><!-- mail-link -->
+              <a href="" class="mail-link">
+                <div class="mail-avatar bg-primary"><span>mi</span></div>
+                <div class="mail-body">
+                  <div class="mail-from">
+                    <p>Michelle <span>(michelle@mail.com)</span></p>
+                    <p>5 days</p>
+                  </div>
+                  <h6 class="mail-subject">Cross-platform stable model</h6>
+                  <p class="mail-text">Polarized contextually-based throu...</p>
+                </div><!-- mail-body -->
+              </a><!-- mail-link -->
+              <a href="" class="mail-link">
+                <div class="mail-avatar bg-dark"><span>sl</span></div>
+                <div class="mail-body">
+                  <div class="mail-from">
+                    <p>Shawn <span>(shawn@mail.com)</span></p>
+                    <p>1 week</p>
+                  </div>
+                  <h6 class="mail-subject">Right-sized grid-enabled</h6>
+                  <p class="mail-text">Stand-alone 24hour ability</p>
+                </div><!-- mail-body -->
+              </a><!-- mail-link -->
+              <a href="" class="mail-link">
+                <div class="mail-avatar bg-danger"><span>bx</span></div>
+                <div class="mail-body">
+                  <div class="mail-from">
+                    <p>Benjamin <span>(benjamin@mail.com)</span></p>
+                    <p>1 week</p>
+                  </div>
+                  <h6 class="mail-subject">Mandatory bandwidth-monito...</h6>
+                  <p class="mail-text">Down-sized dedicated instruction...  </p>
+                </div><!-- mail-body -->
+              </a><!-- mail-link -->
+            </nav><!-- nav -->
+            <nav class="nav nav-mail skeleton">
+              <a href="" class="mail-link bg-white">
+                <div class="skeleton-avatar mg-r-10"></div>
+                <div class="mail-body">
+                  <div class="mail-from mg-b-10-f">
+                    <div class="skeleton-text xs wd-100"></div>
+                    <div class="skeleton-text xs wd-30"></div>
+                  </div>
+                  <div class="skeleton-text wd-100p d-block mg-b-10"></div>
+                  <div class="skeleton-text sm wd-100p d-block"></div>
+                  <div class="skeleton-text sm wd-80p d-block mg-t-5"></div>
+                </div><!-- mail-body -->
+              </a><!-- mail-link -->
+              <a href="" class="mail-link bg-white">
+                <div class="skeleton-avatar mg-r-10"></div>
+                <div class="mail-body">
+                  <div class="mail-from mg-b-10-f">
+                    <div class="skeleton-text xs wd-100"></div>
+                    <div class="skeleton-text xs wd-30"></div>
+                  </div>
+                  <div class="skeleton-text wd-100p d-block mg-b-10"></div>
+                  <div class="skeleton-text sm wd-100p d-block"></div>
+                  <div class="skeleton-text sm wd-80p d-block mg-t-5"></div>
+                </div><!-- mail-body -->
+              </a><!-- mail-link -->
+              <a href="" class="mail-link bg-white">
+                <div class="skeleton-avatar mg-r-10"></div>
+                <div class="mail-body">
+                  <div class="mail-from mg-b-10-f">
+                    <div class="skeleton-text xs wd-100"></div>
+                    <div class="skeleton-text xs wd-30"></div>
+                  </div>
+                  <div class="skeleton-text wd-100p d-block mg-b-10"></div>
+                  <div class="skeleton-text sm wd-100p d-block"></div>
+                  <div class="skeleton-text sm wd-80p d-block mg-t-5"></div>
+                </div><!-- mail-body -->
+              </a><!-- mail-link -->
+              <a href="" class="mail-link bg-white">
+                <div class="skeleton-avatar mg-r-10"></div>
+                <div class="mail-body">
+                  <div class="mail-from mg-b-10-f">
+                    <div class="skeleton-text xs wd-100"></div>
+                    <div class="skeleton-text xs wd-30"></div>
+                  </div>
+                  <div class="skeleton-text wd-100p d-block mg-b-10"></div>
+                  <div class="skeleton-text sm wd-100p d-block"></div>
+                  <div class="skeleton-text sm wd-80p d-block mg-t-5"></div>
+                </div><!-- mail-body -->
+              </a><!-- mail-link -->
+              <a href="" class="mail-link bg-white">
+                <div class="skeleton-avatar mg-r-10"></div>
+                <div class="mail-body">
+                  <div class="mail-from mg-b-10-f">
+                    <div class="skeleton-text xs wd-100"></div>
+                    <div class="skeleton-text xs wd-30"></div>
+                  </div>
+                  <div class="skeleton-text wd-100p d-block mg-b-10"></div>
+                  <div class="skeleton-text sm wd-100p d-block"></div>
+                  <div class="skeleton-text sm wd-80p d-block mg-t-5"></div>
+                </div><!-- mail-body -->
+              </a><!-- mail-link -->
+            </nav>
+          </div><!-- lead-sidebar-body -->
+        </div><!-- content-lead-sidebar -->
+        <div class="content-lead-body content-mail-body skeleton-content">
+          <div class="mail-header">
+            <div class="media media-mail-from">
+              <div class="media-avatar bg-teal">cb</div>
+              <div class="media-body">
+                <p>From: <strong>Cassidy</strong> (cassidy@company.com)</p>
+                <p>To: <strong>Ethan</strong> (ethan@mail.com)</p>
+                <p>August 25, 2020 10:50am</p>
+              </div><!-- media-body -->
+            </div>
+
+            <hr class="op-0">
+
+            <h4 class="mail-subject">Advanced local system engine</h4>
+          </div><!-- mail-header -->
+          <div class="mail-text">
+            <p>Maecenas volutpat blandit aliquam etiam erat velit scelerisque in dictum. Justo laoreet sit amet cursus sit amet dictum sit. Eget nunc scelerisque viverra mauris in aliquam sem. Orci phasellus egestas tellus rutrum tellus. Ac turpis egestas maecenas pharetra convallis posuere morbi leo. Tortor condimentum lacinia quis vel eros donec ac odio. Rutrum quisque non tellus orci.</p>
+          </div><!-- mail-content -->
+          <hr class="mg-y-30">
+          <label class="content-label">Attachments:</label>
+          <ul class="attach-group">
+            <li class="attach-item">
+              <div><i class="ri-file-pdf-line"></i></div>
+              <small>guide.pdf</small>
+            </li>
+            <li class="attach-item">
+              <div><i class="ri-image-line"></i></div>
+              <small>logo.jpg</small>
+            </li>
+          </ul>
+        </div><!-- content-mail-body -->
+        <div class="content-lead-body content-mail-body skeleton">
+          <div class="mail-header">
+            <div class="media media-mail-from align-items-center">
+              <div class="skeleton-avatar wd-45 ht-45"></div>
+              <div class="media-body">
+                <div class="skeleton-text wd-200 d-block mg-b-8"></div>
+                <div class="skeleton-text wd-200 d-block"></div>
+              </div><!-- media-body -->
+            </div>
+
+            <hr class="op-0">
+
+            <div class="skeleton-text lg wd-60p d-block mg-b-20"></div>
+          </div><!-- mail-header -->
+          <div class="mail-text">
+            <div class="skeleton-paragraph">
+              <span></span>
+              <span></span>
+              <span class="wd-65p"></span>
+            </div>
+          </div><!-- mail-content -->
+          <hr class="mg-y-30">
+          <label class="content-label">Attachments:</label>
+          <div class="skeleton-box wd-80 ht-80 d-block"></div>
+          <span class="skeleton-text xs wd-60 d-block mg-t-10"></span>
+        </div><!-- content-mail-body -->
+      </div><!-- content-body -->
+    </div><!-- content -->
+
+    <div class="modal modal-compose-mail fade" id="modalComposeMail" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title">Compose Mail</h5>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="form-label">To:</label>
+              <h6 class="form-value">Sam Smith <span>(samsmith@gmail.com)</span></h6>
+            </div><!-- form-group -->
+            <div class="form-group">
+              <label class="form-label">From:</label>
+              <h6 class="form-value">Staging Team <span>(jake@liftlytics.com)</span></h6>
+            </div><!-- form-group -->
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Subject">
+            </div><!-- form-group -->
+            <div class="form-group form-group-block">
+              <div id="mailToolbar">
+                <span class="ql-formats">
+                  <select class="ql-font"></select>
+                  <select class="ql-size"></select>
+                </span>
+                <span class="ql-formats">
+                  <button class="ql-bold"></button>
+                  <button class="ql-italic"></button>
+                  <button class="ql-underline"></button>
+                </span>
+                <span class="ql-formats">
+                  <select class="ql-color"></select>
+                  <select class="ql-background"></select>
+                </span>
+                <span class="ql-formats">
+                  <button class="ql-list" value="ordered"></button>
+                  <button class="ql-list" value="bullet"></button>
+                </span>
+                <span class="ql-formats">
+                  <button class="ql-link"></button>
+                  <button class="ql-image"></button>
+                </span>
+                <span class="ql-formats">
+                  <select class="ql-pholder">
+                    <option value="[=Lead full name=]">Lead full name</option>
+                    <option value="[=Lead first name=]">Lead first name</option>
+                    <option value="[=Lead last name=]">Lead last name</option>
+                  </select>
+                </span>
+              </div><!-- #mailToolbar -->
+
+              <div id="mailEditor"></div>
+            </div><!-- form-group -->
+          </div><!-- modal-body -->
+          <div class="modal-footer">
+            <div class="d-flex mg-r-auto">
+              <select class="custom-select mg-r-10">
+                <option value="">Insert Template</option>
+                <option value="1">Test Template A</option>
+                <option value="2">Facetime remind email</option>
+                <option value="3">Self guided remind email</option>
+                <option value="4">Guided virtual tour remind email</option>
+                <option value="5">Confirmation of tour date</option>
+                <option value="6">In person remind email</option>
+              </select>
+              <button type="button" class="btn btn-white btn-icon" data-toggle="tooltip" title="Upload file"><i class="ri-upload-2-fill"></i></button>
+            </div>
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-white">Preview mail</button>
+            <button type="button" class="btn btn-primary">Send mail</button>
+          </div>
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div class="modal modal-new-user fade" id="modalShareLead" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title">Share Lead</h5>
+              <p>Select the properties to share the lead with:</p>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+          </div>
+          <div class="modal-body mg-t-0-f">
+            <div class="row row-sm">
+              <div class="col-6">
+                <div class="form-property">
+                  <div class="form-property-search">
+                    <i data-feather="search"></i>
+                    <input type="text" placeholder="Search...">
+                  </div><!-- form-property-search -->
+                  <div class="form-property-header">
+                    <a href="" class="mg-l-auto">Select None</a>
+                    <a href="">Select All</a>
+                  </div><!-- form-property-header -->
+                  <div class="form-property-body">
+                    <ul class="prop-group">
+                      <li class="prop-item">
+                        <div class="prop-label">
+                          <div class="form-checkbox"><input type="checkbox"></div>
+                          <span>Rosewood</span>
+                        </div><!-- prop-label -->
+                        <ul class="prop-sub">
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>Jeferson Chandler</span>
+                          </li>
+                        </ul><!-- prop-sub -->
+                      </li>
+                      <li class="prop-item">
+                        <div class="prop-label">
+                          <div class="form-checkbox"><input type="checkbox"></div>
+                          <span>Warren Beecroft</span>
+                        </div><!-- prop-label -->
+                        <ul class="prop-sub">
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>Lakeside Drive Apartments</span>
+                          </li>
+                        </ul><!-- prop-sub -->
+                      </li>
+                      <li class="prop-item">
+                        <div class="prop-label">
+                          <div class="form-checkbox"><input type="checkbox"></div>
+                          <span>Beecroft Management</span>
+                        </div><!-- prop-label -->
+                        <ul class="prop-sub">
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>Waterside at Ocotillo</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>The Reserve at Gilbert Town</span>
+                          </li>
+                        </ul><!-- prop-sub -->
+                      </li>
+                      <li class="prop-item">
+                        <div class="prop-label">
+                          <div class="form-checkbox"><input type="checkbox"></div>
+                          <span>Trammel Crow Company</span>
+                        </div><!-- prop-label -->
+                        <ul class="prop-sub">
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>The Astor at Osborn</span>
+                          </li>
+                        </ul><!-- prop-sub -->
+                      </li>
+                      <li class="prop-item">
+                        <div class="prop-label">
+                          <div class="form-checkbox"><input type="checkbox"></div>
+                          <span>Colin Brown</span>
+                        </div><!-- prop-label -->
+                        <ul class="prop-sub">
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>District Lofts</span>
+                          </li>
+                        </ul><!-- prop-sub -->
+                      </li>
+                      <li class="prop-item">
+                        <div class="prop-label">
+                          <div class="form-checkbox"><input type="checkbox"></div>
+                          <span>Richmark Holdings</span>
+                        </div><!-- prop-label -->
+                        <ul class="prop-sub">
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Norterra</span>
+                          </li>
+                        </ul><!-- prop-sub -->
+                      </li>
+                      <li class="prop-item">
+                        <div class="prop-label">
+                          <div class="form-checkbox"><input type="checkbox"></div>
+                          <span>Kevan Millstein</span>
+                        </div><!-- prop-label -->
+                        <ul class="prop-sub">
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Posada</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Hacienda</span>
+                          </li>
+                        </ul><!-- prop-sub -->
+                      </li>
+                      <li class="prop-item">
+                        <div class="prop-label">
+                          <div class="form-checkbox"><input type="checkbox"></div>
+                          <span>Mark Taylor</span>
+                        </div><!-- prop-label -->
+                        <ul class="prop-sub">
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Portales</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Milan</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Capella</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Valencia</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Prado</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Privada</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Travesia</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Palmilla</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>San Sonoma</span>
+                          </li>
+                        </ul><!-- prop-sub -->
+                      </li>
+                      <li class="prop-item">
+                        <div class="prop-label">
+                          <div class="form-checkbox"><input type="checkbox"></div>
+                          <span>The Hudye Group</span>
+                        </div><!-- prop-label -->
+                        <ul class="prop-sub">
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>Retreat at the Raven</span>
+                          </li>
+                          <li class="prop-label">
+                            <div class="form-checkbox"><input type="checkbox"></div>
+                            <span>Ravenwood Heights</span>
+                          </li>
+                        </ul><!-- prop-sub -->
+                      </li>
+                    </ul>
+                  </div><!-- form-property-body -->
+                </div><!-- form-property -->
+              </div><!-- col -->
+              <div class="col-6">
+                <div class="form-property">
+                  <div class="form-property-search">
+                    <i data-feather="search"></i>
+                    <input type="text" placeholder="Search...">
+                  </div><!-- form-property-search -->
+                  <div class="form-property-header">
+                    <span>4 selected</span>
+                    <a href="" class="mg-l-auto">Clear all</a>
+                  </div><!-- form-property-header -->
+                  <div class="form-property-body">
+                    <ul class="prop-list">
+                      <li class="prop-list-item">
+                        <span>San Marbeya</span>
+                        <a href=""><i class="ri-close-line"></i></a>
+                      </li>
+                      <li class="prop-list-item">
+                        <span>Emerson Mill Avenue</span>
+                        <a href=""><i class="ri-close-line"></i></a>
+                      </li>
+                      <li class="prop-list-item">
+                        <span>San Portales</span>
+                        <a href=""><i class="ri-close-line"></i></a>
+                      </li>
+                      <li class="prop-list-item">
+                        <span>Remington Ranch</span>
+                        <a href=""><i class="ri-close-line"></i></a>
+                      </li>
+                    </ul>
+                  </div><!-- form-property-body -->
+                </div><!-- form-property -->
+              </div><!-- col -->
+            </div><!-- row -->
+          </div><!-- modal-body -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Save Changes</button>
+          </div>
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/feather-icons/feather.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/quill/quill.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/compose.js"></script>
+    <script>
+      $(document).ready(function() {
+        'use strict';
+
+        $('.header').addClass('header-sticky');
+
+        $('.mail-link').on('click', function(e){
+          e.preventDefault();
+          $(this).addClass('active');
+          $(this).siblings().removeClass('active');
+        });
+
+      });
+    </script>
+  </body>
+</html>

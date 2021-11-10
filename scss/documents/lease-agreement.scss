@@ -1,0 +1,244 @@
+@import "variables";
+
+.multipage-body.to-pdf {
+  width: 435pt;
+  font-size: 8.1pt;
+  padding-left: 16pt;
+  word-spacing: -1pt;
+
+  .page {
+    padding: 0;
+    width: auto;
+    height: auto;
+
+    &:first-child {
+      padding-top: 10px;
+
+      .page-footer {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+    }
+
+    &:nth-child(2) .page-footer {
+      margin-top: 35px;
+      margin-bottom: 45px;
+    }
+
+    &:nth-child(3) .page-footer {
+      margin-top: 65px;
+      margin-bottom: 48px;
+    }
+
+    &:nth-child(4) {
+      ol > li > ol > li  { padding-left: 25px; }
+
+      .page-footer {
+        margin-top: 28px;
+        margin-bottom: 47px;
+      }
+    }
+
+    &:nth-child(5) {
+      ol > li > ol > li { padding-left: 25px; }
+
+      .page-footer {
+        margin-top: 22px;
+        margin-bottom: 47px;
+      }
+    }
+
+    &:nth-child(6) .page-footer {
+      margin-top: 22px;
+      margin-bottom: 47px;
+    }
+
+    &:nth-child(7) .page-footer {
+      margin-top: 22px;
+      margin-bottom: 47px;
+    }
+
+    &:nth-child(8) .page-footer {
+      margin-top: 22px;
+      margin-bottom: 47px;
+    }
+
+    &:nth-child(9) .page-footer {
+      margin-top: 610px;
+      margin-bottom: 50px;
+    }
+
+    &:nth-child(10) .page-footer { margin-top: 425px; }
+  }
+
+  p {
+    margin-bottom: 12px;
+    line-height: 1.22;
+  }
+
+  .ordered-list li {
+    padding-left: 15pt;
+
+    + li { margin-top: 0pt; }
+  }
+
+  .card-body .row > div { padding: 2pt 5pt; }
+
+  .card { font-size: 8pt !important; }
+  .card-header { padding: 3pt 4pt; }
+  .card-item > span {
+    padding: 1pt 3pt 2pt;
+    line-height: 1.3;
+  }
+
+  .row {
+    margin-right: -6pt;
+    margin-left: -6pt;
+
+    > div {
+      padding-left: 6pt;
+      padding-right: 6pt;
+    }
+  }
+
+  .page-footer {
+    position: static;
+    font-size: 7pt;
+  }
+
+  ol { line-height: 1.3; }
+  ol > li { padding-left: 15px; }
+  ol > li > ol > li { padding-left: 20px; }
+  ol > li > ol > li ol > li { padding-left: 30px; }
+  ol > li + li { margin-top: 2pt; }
+  ol.mt-10 { margin-top: 2pt; }
+  ul li + li { margin-top: 2pt; }
+}
+
+.page-footer {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+
+  @media print {
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.card {
+  border: 1px solid $border-color;
+  font-size: 14px;
+
+  @media print { font-size: 13px; }
+}
+
+.card-header {
+  background-color: darken($body-bg, 2%);
+  padding: 7px 10px;
+  border-bottom: 1px solid $border-color;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  @media print {
+    padding: 5px 10px;
+  }
+}
+
+.card-item {
+  display: flex;
+
+  + .card-item { border-top: 1px solid $border-color; }
+
+  > span {
+    flex: 1;
+    flex-shrink: 0;
+    padding: 5px 10px;
+    max-width: 50%;
+    outline: none;
+
+    @media print { padding: 3px 5px; }
+
+    &:first-child > span { white-space: nowrap; }
+
+    + span { border-left: 1px solid $border-color; }
+  }
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+
+  > li {
+    position: relative;
+    list-style-type: none;
+    padding-left: 30px;
+
+    + li { margin-top: 10px; }
+
+    > ol {
+      > li {
+        padding-left: 40px;
+
+        ol {
+          > li {
+            padding-left: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 700;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 25px;
+
+    + li { margin-top: 5px; }
+  }
+
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 700;
+  }
+}
+
+.table-lease {
+  > div,
+  > [class*="col-"] {
+    border: 1px solid $border-color;
+    padding: 10px !important;
+
+    + div { margin-left: -1px; }
+  }
+
+  .input-field { border-bottom: 0; }
+}
+
+// Utilities
+.lh-7 { line-height: 1.7; }
+.mw-8p { min-width: 8%; }
+.mw-6p { min-width: 6%; }
+
+.mt-6 { margin-top: 6px; }
